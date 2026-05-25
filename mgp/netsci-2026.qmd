@@ -1,13 +1,347 @@
 ---
 title: "PhD Mentorship <span style='color: #aeaeae;'>and</span> <br>Gender Representation <span style='color: #aeaeae;'>in</span> <br>Academic Mathematics"  
-subtitle: "CU Boulder Applied Math Seminar <br> April 16th, 2026"  
+subtitle: "NetSci <br> June 4th, 2026"  
 date: ""
-author: '<span class="speaker-highlight">Phil Chodrow</span> <br>Department of Computer Science<br>Middlebury College'    
-title-slide-attributes:
-  data-background-opacity: "0.0"  
-  data-background-color: "#3a2d4b"  
 ---
 
-## Test slide
 
-bleh blah blarh
+
+## {.split-50 background-image="../img/midd/midd-banner-light.jpg" background-size="cover" background-position="center" background-repeat="no-repeat"} 
+
+
+#### Hi everyone! I'm Phil Chodrow
+
+
+::: {.column}
+
+<br> <br> 
+
+::: {.textblock .fragment}
+
+New-ish professor of CS at Middlebury College, a small liberal arts college in Vermont.  
+
+:::
+
+::: {.textblock-inverse .fragment}
+
+*Students/postdocs: ask me about [**\#LiberalArtsLife**]{.alert} if you're curious.*
+
+:::
+
+
+::: {.textblock .fragment}
+
+PhD: Operations Research at MIT
+
+Postdoc: Math at UCLA (with Mason Porter)
+
+:::
+
+:::
+
+
+::: {.column}
+
+<br> <br> 
+
+::: {.textblock-inverse .fragment}
+
+
+#### *I work on...*
+
+- Higher-order networks, hypergraphs
+- Math models of social systems
+- Misc. data science
+
+#### *I teach...*
+
+- Machine learning
+- Network science
+- Discrete math
+
+:::
+
+::: 
+
+
+<br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> 
+
+## {.split-50 background-image="../img/midd/midd-banner-light.jpg" background-size="cover" background-position="center" background-repeat="no-repeat"} 
+
+#### Also: *aikido, hiking, cycling, tea, chess, gardening, reading, cats*
+
+
+
+![](../img/personal/aikido.png){.absolute left=50 top=150 width=27%}
+
+![](../img/personal/tea.jpeg){.absolute left=450 top=130 width=29%}
+
+![](../img/personal/cats.jpeg){.absolute left=150 bottom=10 width=30%}
+
+![](../img/personal/cycling.jpeg){.absolute right=200 bottom=50 width=30%}
+
+
+![](../img/personal/garden.jpeg){.absolute right=50 bottom=300 width=20%}
+
+## 
+
+#### Gender Representation in Academic Math
+
+![](../img/mgp/ams-data-viz.png){.absolute left=0 top=100 width=80% align=left}
+
+::: {.absolute right=50 top=90 width=40% align=right}
+
+Data from the [**2020**]{.alert-3} AMS Departmental Profile 🤦🏻‍♂️
+
+
+<br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> 
+
+
+
+[*\*Actually this one is from 2017-2018 (Report on New Doctorates)* 🤦🏻‍♂️🤦🏻‍♂️🤦🏻‍♂️]{.fragment}
+
+:::
+
+## 
+
+#### Much Work (Including From Here!)
+
+![](../img/mgp/ams-data-viz-upward.png){.absolute left=0 top=100 width=80% align=left}
+
+
+
+![](../img/mgp/pay-gaps.png){.absolute right=0 top=100 width=30% align=right}
+
+![](../img/mgp/gender-retention.png){.absolute right=0 top=200 width=30% align=right}
+
+![](../img/mgp/labor-advantages.png){.absolute right=0 top=300 width=30% align=right}
+
+![](../img/mgp/quantifying-hierarchy.png){.absolute width=30% top=400 right=0}
+
+![](../img/mgp/clifton.png){.absolute width=30% top=500 right=0}
+
+
+## 
+
+#### Focus For Today
+
+![](../img/mgp/ams-data-viz-upward-downward.png){.absolute left=0 top=100 width=80% align=left}
+
+
+
+## 
+
+#### The Team
+
+<table style="padding:0px;border-bottom:0pxmargin: 0px auto; ">
+<tr style="border:0px;padding:0px;margin:0px;">
+<td style="padding:0px;border-bottom:0px"> 
+![](../img/people/brooks.jpg){.portrait-small} 
+</td>
+<td style="vertical-align: middle;white-space:nowrap;padding:0px;border-bottom:0px">
+<p style="padding:0px">**Heather Brooks** <br> Harvey Mudd</p>
+</td>
+
+<td style="vertical-align: middle;padding:0px;border-bottom:0px"> 
+![](../img/people/lee.jpg){.portrait-small} 
+</td>
+<td style="vertical-align: middle;white-space:nowrap;padding:0px;border-bottom:0px">
+<p style="padding:0px">**Harlin Lee** <br> UNC Chapel Hill</p>
+</td>
+
+</tr>
+
+<tr>
+
+<td style="vertical-align: middle;padding:0px;border-bottom:0px"> 
+![](../img/people/porter.jpg){.portrait-small} 
+</td>
+<td style="vertical-align: middle;white-space:nowrap;padding:0px;border-bottom:0px">
+<p style="padding:0px">**Mason Porter** <br> UCLA</p>
+</td>
+
+<td style="vertical-align: middle;padding:0px;border-bottom:0px"> 
+![](../img/people/restrepo.jpg){.portrait-small} 
+</td>
+<td style="vertical-align: middle;white-space:nowrap;padding:0px;border-bottom:0px">
+<p style="padding:0px">**Juan G. Restrepo** <br> CU Boulder</p>
+</td>
+
+</tr>
+
+<tr>
+<td style="vertical-align: middle;padding:0px;border-bottom:0px"> 
+![](../img/people/haensch.jpg){.portrait-small} 
+</td>
+<td style="vertical-align: middle;white-space:nowrap;padding:0px;border-bottom:0px">
+<p style="padding:0px">**Anna Haensch** <br> Tufts</p>
+</td>
+
+
+<td style="vertical-align: middle;padding:0px;border-bottom:0px"> 
+![](../img/people/chodrow.jpg){.portrait-small} 
+</td>
+<td style="vertical-align: middle;white-space:nowrap;padding:0px;border-bottom:0px">
+<p style="padding:0px">**Phil Chodrow** <br> Middlebury</p>
+</td>
+
+</tr>
+
+</table>
+
+
+
+## {.split-50}
+
+### Our Data
+
+::: {.column}
+
+
+<br><br><br>
+
+![](../img/mgp/juan-mgp.png)
+
+:::
+
+
+::: {.column}
+
+![](../img/mgp/nmqg.png){.absolute left=50 top=20 width=80%}
+![](../img/mgp/wgnd.jpeg){.absolute left=250 top=20}
+
+![](../img/people/ben-brill.jpg){.absolute width=40% top=300}
+
+[Ben Brill, UCLA '22]{.absolute width=30% top=350 left=300}
+
+
+[Total of 116,306 advisor-student pairs in the US since 1950, representing 21,781 distinct advisors. 
+We observe or estimate math subfields for 94% of these pairs (predictions based on thesis titles). 
+We estimate gender for 95% of PhD students and 97% of advisors. ]{.footnote}
+
+:::
+
+
+## {background-image="../img/mgp/tree.png" background-size="contain" background-position="center" background-repeat="no-repeat"}
+
+## {background-image="../img/mgp/basic-counts-and-trajectories.png" background-size="contain" background-position="center" }
+
+
+
+##
+
+### First Model: PhD Production
+
+::: {.textblock}
+
+What gendered differences exist in the *PhD production power* of advisors?
+
+:::
+
+<br> 
+
+![](../img/mgp/generative-model.png){fig-align="center"}
+
+##
+
+##### Men have estimated careers ~4 years longer (on average)
+
+![](../img/mgp/career-distributions.png)
+
+
+:::{.textblock-vertical .fragment .absolute right=20 top=220}
+
+[**Attrition**]{.alert}
+
+*Addressing disparities in career attrition for female faculty would help to close the gender gap.* 
+
+:::
+
+[<br><br><br>Qualitative match to Barrett-Walker et al. (2023).]{.footnote}
+
+## 
+
+##### Longer careers $\times$ more students per year = more students per career
+
+![](../img/mgp/career-production-rates.png){fig-align="center"}
+
+:::{.textblock-vertical .fragment .absolute right=20 top=220}
+
+Hypothesis: greater student production per year by male advisors reflects unequal access to research resources; cf. Zhang et al. (2022)
+
+:::
+
+
+##
+
+### Logistic model for advisee gender
+
+Estimate the odds that the next student produced by an advsior is female based on subfield, advisor gender, and representation of women in advisor group and subfield.
+
+
+$$
+\begin{aligned}
+  \log (\text{odds F}) = & \beta_0 \;+ &\quad \beta_0 &= -2.14 \; (0.04)\\ 
+                         & \rho \times (\text{advisor is F}) \;+ &\quad\rho &= \phantom{-}0.42 \;(0.02)\\
+                         & \gamma \times (\text{proportion F advisees in group}) \;+ &\quad \gamma &= \phantom{-}1.16\; (0.06)\\ 
+                         & \eta \times (\text{proportion F in subfield})  &\quad \eta &= \phantom{-}3.27 \; (0.12)\\ 
+\end{aligned}
+$$  
+
+
+*We tried a lot of more complex models; this one had best validation AUC.* 
+
+
+
+
+<table>
+
+<tr>
+<td style="padding:0.5rem;border-bottom:0px">
+
+:::{.textblock-vertical .fragment  fragment-index=1}
+
+[**Mentorship**]{.alert}
+
+*Female advisors are more effective in attracting or retaining female graduate students.*
+:::
+
+</td>
+<td style="padding:0.5rem;border-bottom:0px">
+
+:::{.textblock-vertical .fragment fragment-index=1}
+
+[**Belonging**]{.alert }
+
+*Greater representation in the grad student community attracts women to programs and subfields.*
+
+:::
+
+</td>
+
+
+</tr>
+
+</table>
+
+
+
+## {.split-40}
+
+::: {.column}
+
+##### Homophily effects: advisor-student and student-student
+
+Both the gender of a students' specific advisor *and* the overall proportion of female advisors in the subfield's population contribute to the likelihood that the student is female. 
+
+*High uncertainty in the model predictions for large $p_F$ reflects the fact that we have very little data in that region.* 
+
+:::
+
+::: {.column}
+
+<br><br> 
+
+![](../img/mgp/gender-model-prediction-illustration-1.png){.absolute top=100 right=50 width=140%}
+
+:::

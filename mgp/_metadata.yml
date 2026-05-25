@@ -3,3 +3,8 @@ theme:
   - ../assets/reveal-style/layouts.css 
   - ../assets/reveal-style/components.css 
   - ../assets/reveal-style/colors-fonts/mgp.scss
+
+author: '<span class="speaker-highlight">Phil Chodrow</span> <br>Department of Computer Science<br>Middlebury College'    
+title-slide-attributes:
+  data-background-opacity: "0.0"  
+  data-background-color: "#3a2d4b"  
