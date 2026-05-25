@@ -4,116 +4,109 @@
     "href": "mgp/netsci-2026.html#section",
     "title": "PhD Mentorship and Gender Representation in Academic Mathematics",
     "section": "",
-    "text": "Hi everyone! I’m Phil Chodrow\n\n \n\nNew-ish professor of CS at Middlebury College, a small liberal arts college in Vermont.\n\n\nStudents/postdocs: ask me about #LiberalArtsLife if you’re curious.\n\n\nPhD: Operations Research at MIT\nPostdoc: Math at UCLA (with Mason Porter)\n\n\n \n\nI work on…\n\nHigher-order networks, hypergraphs\nMath models of social systems\nMisc. data science\n\nI teach…\n\nMachine learning\nNetwork science\nDiscrete math"
+    "text": "Hi everyone! I’m Phil Chodrow\n\n \n\nProf. of CS at Middlebury College, a small liberal arts college in Vermont.\n\n\nStudents/postdocs: ask me about #LiberalArtsLife if you’re curious.\n\n\nI like aikido, tea, my cats, being outside, hypergraphs, and math models of social systems."
   },
   {
     "objectID": "mgp/netsci-2026.html#section-1",
     "href": "mgp/netsci-2026.html#section-1",
     "title": "PhD Mentorship and Gender Representation in Academic Mathematics",
     "section": "",
-    "text": "Also: aikido, hiking, cycling, tea, chess, gardening, reading, cats"
+    "text": "Gender Representation in Academic Math\n\n\nData from the 2020 AMS Departmental Profile 🤦🏻‍♂️\n           \n*Actually this one is from 2017-2018 (Report on New Doctorates) 🤦🏻‍♂️🤦🏻‍♂️🤦🏻‍♂️"
   },
   {
     "objectID": "mgp/netsci-2026.html#section-2",
     "href": "mgp/netsci-2026.html#section-2",
     "title": "PhD Mentorship and Gender Representation in Academic Mathematics",
     "section": "",
-    "text": "Gender Representation in Academic Math\n\n\nData from the 2020 AMS Departmental Profile 🤦🏻‍♂️\n           \n*Actually this one is from 2017-2018 (Report on New Doctorates) 🤦🏻‍♂️🤦🏻‍♂️🤦🏻‍♂️"
+    "text": "Career advancement shapes the ecosystem"
   },
   {
     "objectID": "mgp/netsci-2026.html#section-3",
     "href": "mgp/netsci-2026.html#section-3",
     "title": "PhD Mentorship and Gender Representation in Academic Mathematics",
     "section": "",
-    "text": "Much Work (Including From Here!)"
+    "text": "But so does mentorship!"
   },
   {
     "objectID": "mgp/netsci-2026.html#section-4",
     "href": "mgp/netsci-2026.html#section-4",
     "title": "PhD Mentorship and Gender Representation in Academic Mathematics",
     "section": "",
-    "text": "Focus For Today"
+    "text": "The Team\n\n\n\n\n\n\n\nHeather Brooks  Harvey Mudd\n\n\n\n\n\n\n\nHarlin Lee  UNC Chapel Hill\n\n\n\n\n\n\n\n\n\nMason Porter  UCLA\n\n\n\n\n\n\n\nJuan G. Restrepo  CU Boulder\n\n\n\n\n\n\n\n\n\nAnna Haensch  Tufts\n\n\n\n\n\n\n\nPhil Chodrow  Middlebury"
   },
   {
     "objectID": "mgp/netsci-2026.html#section-5",
     "href": "mgp/netsci-2026.html#section-5",
     "title": "PhD Mentorship and Gender Representation in Academic Mathematics",
     "section": "",
-    "text": "The Team\n\n\n\n\n\n\n\nHeather Brooks  Harvey Mudd\n\n\n\n\n\n\n\nHarlin Lee  UNC Chapel Hill\n\n\n\n\n\n\n\n\n\nMason Porter  UCLA\n\n\n\n\n\n\n\nJuan G. Restrepo  CU Boulder\n\n\n\n\n\n\n\n\n\nAnna Haensch  Tufts\n\n\n\n\n\n\n\nPhil Chodrow  Middlebury"
+    "text": "Our Data\n\n\n\n\n \n\nBen Brill, UCLA ’22\nTotal of 116,306 advisor-student pairs in the US since 1950, representing 21,781 distinct advisors.  We observe or estimate math subfields for 94% of these pairs (predictions based on thesis titles).  We estimate gender for 95% of PhD students and 97% of advisors."
   },
   {
-    "objectID": "mgp/netsci-2026.html#section-6",
-    "href": "mgp/netsci-2026.html#section-6",
+    "objectID": "mgp/netsci-2026.html#section-8",
+    "href": "mgp/netsci-2026.html#section-8",
     "title": "PhD Mentorship and Gender Representation in Academic Mathematics",
     "section": "",
-    "text": "Our Data\n\n\n\n\n \n\nBen Brill, UCLA ’22\nTotal of 116,306 advisor-student pairs in the US since 1950, representing 21,781 distinct advisors.  We observe or estimate math subfields for 94% of these pairs (predictions based on thesis titles).  We estimate gender for 95% of PhD students and 97% of advisors."
+    "text": "Modeling Gendered PhD Production by an Advisor"
   },
   {
     "objectID": "mgp/netsci-2026.html#section-9",
     "href": "mgp/netsci-2026.html#section-9",
     "title": "PhD Mentorship and Gender Representation in Academic Mathematics",
     "section": "",
-    "text": "First Model: PhD Production\n\nWhat gendered differences exist in the PhD production power of advisors?"
+    "text": "Men have estimated careers ~4 years longer (on average)\n\n\nAttrition\nAddressing disparities in career attrition for female faculty would help to close the gender gap.\n\nQualitative match to Barrett-Walker et al. (2023)."
   },
   {
     "objectID": "mgp/netsci-2026.html#section-10",
     "href": "mgp/netsci-2026.html#section-10",
     "title": "PhD Mentorship and Gender Representation in Academic Mathematics",
     "section": "",
-    "text": "Men have estimated careers ~4 years longer (on average)\n\n\nAttrition\nAddressing disparities in career attrition for female faculty would help to close the gender gap.\n\nQualitative match to Barrett-Walker et al. (2023)."
+    "text": "Longer careers \\(\\times\\) more students per year = more students per career\n\n\nHypothesis: greater student production per year by male advisors reflects unequal access to research resources; cf. Zhang et al. (2022)"
   },
   {
     "objectID": "mgp/netsci-2026.html#section-11",
     "href": "mgp/netsci-2026.html#section-11",
     "title": "PhD Mentorship and Gender Representation in Academic Mathematics",
     "section": "",
-    "text": "Longer careers \\(\\times\\) more students per year = more students per career\n\n\nHypothesis: greater student production per year by male advisors reflects unequal access to research resources; cf. Zhang et al. (2022)"
+    "text": "Logistic model for advisee gender\nEstimate the odds that the next student produced by an advsior is female based on subfield, advisor gender, and representation of women in advisor group and subfield.\n\\[\n\\begin{aligned}\n  \\log (\\text{odds F}) = & \\beta_0 \\;+ &\\quad \\beta_0 &= -2.14 \\; (0.04)\\\\\n                         & \\rho \\times (\\text{advisor is F}) \\;+ &\\quad\\rho &= \\phantom{-}0.42 \\;(0.02)\\\\\n                         & \\gamma \\times (\\text{proportion F advisees in group}) \\;+ &\\quad \\gamma &= \\phantom{-}1.16\\; (0.06)\\\\\n                         & \\eta \\times (\\text{proportion F in subfield})  &\\quad \\eta &= \\phantom{-}3.27 \\; (0.12)\\\\\n\\end{aligned}\n\\]\nWe tried a lot of more complex models; this one had best validation AUC.\n\n\n\n\nMentorship\nFemale advisors are more effective in attracting or retaining female graduate students.\n\n\n\n\nBelonging\nGreater representation in the grad student community attracts women to programs and subfields."
   },
   {
     "objectID": "mgp/netsci-2026.html#section-12",
     "href": "mgp/netsci-2026.html#section-12",
     "title": "PhD Mentorship and Gender Representation in Academic Mathematics",
     "section": "",
-    "text": "Logistic model for advisee gender\nEstimate the odds that the next student produced by an advsior is female based on subfield, advisor gender, and representation of women in advisor group and subfield.\n\\[\n\\begin{aligned}\n  \\log (\\text{odds F}) = & \\beta_0 \\;+ &\\quad \\beta_0 &= -2.14 \\; (0.04)\\\\\n                         & \\rho \\times (\\text{advisor is F}) \\;+ &\\quad\\rho &= \\phantom{-}0.42 \\;(0.02)\\\\\n                         & \\gamma \\times (\\text{proportion F advisees in group}) \\;+ &\\quad \\gamma &= \\phantom{-}1.16\\; (0.06)\\\\\n                         & \\eta \\times (\\text{proportion F in subfield})  &\\quad \\eta &= \\phantom{-}3.27 \\; (0.12)\\\\\n\\end{aligned}\n\\]\nWe tried a lot of more complex models; this one had best validation AUC.\n\n\n\n\nMentorship\nFemale advisors are more effective in attracting or retaining female graduate students.\n\n\n\n\nBelonging\nGreater representation in the grad student community attracts women to programs and subfields."
+    "text": "Homophily effects: advisor-student and student-student\n\n  \nBoth the gender of a students’ specific advisor and the overall proportion of female advisors in the subfield’s population contribute to the likelihood that the student is female."
   },
   {
     "objectID": "mgp/netsci-2026.html#section-13",
     "href": "mgp/netsci-2026.html#section-13",
     "title": "PhD Mentorship and Gender Representation in Academic Mathematics",
     "section": "",
-    "text": "Homophily effects: advisor-student and student-student\nBoth the gender of a students’ specific advisor and the overall proportion of female advisors in the subfield’s population contribute to the likelihood that the student is female."
+    "text": "Modeling Interventions on Medium Timescales: Hiring\n\n\nEqual hiring rates\nSuggested in most recent AMS survey data.\n\n\nMale-biased hiring\nMen 20% more likely than women to be hired as faculty.\n\n\nFemale-biased hiring\nWomen 20% more likely than men to be hired as faculty."
   },
   {
     "objectID": "mgp/netsci-2026.html#section-14",
     "href": "mgp/netsci-2026.html#section-14",
     "title": "PhD Mentorship and Gender Representation in Academic Mathematics",
     "section": "",
-    "text": "Modeling Interventions on Medium Timescales: Hiring\n\n\nEqual hiring rates\nSuggested in most recent AMS survey data.\n\n\nMale-biased hiring\nMen 20% more likely than women to be hired as faculty.\n\n\nFemale-biased hiring\nWomen 20% more likely than men to be hired as faculty."
+    "text": "Intervening on Attrition + PhD Production\n\n\nNo intervention\nAttrition + PhD production as estimated by model.\n\n\nFaculty Intervention\nGender parity among current faculty on attrition and PhD production.\n\n\nStudent Intervention\nGender parity among future students on attrition and PhD production.\n\n\nFaculty + Student Intervention\nBoth interventions combined."
   },
   {
     "objectID": "mgp/netsci-2026.html#section-15",
     "href": "mgp/netsci-2026.html#section-15",
     "title": "PhD Mentorship and Gender Representation in Academic Mathematics",
     "section": "",
-    "text": "Intervening on Attrition + PhD Production\n\n\nNo intervention\nAttrition + PhD production as estimated by model.\n\n\nFaculty Intervention\nGender parity among current faculty on attrition and PhD production.\n\n\nStudent Intervention\nGender parity among future students on attrition and PhD production.\n\n\nFaculty + Student Intervention\nBoth interventions combined."
+    "text": "What We’ve Learned\n\n\n\n\nMentorship: Female advisors are more effective in attracting or retaining female graduate students.\n\n\n\n\n\n\nBelonging: Representation in the grad student community attracts women to programs and subfields.\n\n\n\n\n\n\nAttrition: Addressing disparities in career attrition for female faculty would help to close the gender gap."
   },
   {
     "objectID": "mgp/netsci-2026.html#section-16",
     "href": "mgp/netsci-2026.html#section-16",
     "title": "PhD Mentorship and Gender Representation in Academic Mathematics",
     "section": "",
-    "text": "What We’ve Learned\n\n\n\n\nMentorship: Female advisors are more effective in attracting or retaining female graduate students.\n\n\n\n\n\n\nBelonging: Representation in the grad student community attracts women to programs and subfields.\n\n\n\n\n\n\nAttrition: Addressing disparities in career attrition for female faculty would help to close the gender gap."
+    "text": "Next?"
   },
   {
     "objectID": "mgp/netsci-2026.html#section-17",
     "href": "mgp/netsci-2026.html#section-17",
-    "title": "PhD Mentorship and Gender Representation in Academic Mathematics",
-    "section": "",
-    "text": "Next?"
-  },
-  {
-    "objectID": "mgp/netsci-2026.html#section-18",
-    "href": "mgp/netsci-2026.html#section-18",
     "title": "PhD Mentorship and Gender Representation in Academic Mathematics",
     "section": "",
     "text": "Thanks everyone!\n\n\n\n\n\n\n\n\nHeather Brooks  Harvey Mudd\n\n\n\n\n\n\n\nHarlin Lee  UNC Chapel Hill\n\n\n\n\n\n\n\nMason Porter  UCLA\n\n\n\n\n\n\n\n\n\nJuan G. Restrepo  CU Boulder\n\n\n\n\n\n\n\nAnna Haensch  Tufts\n\n\n\n\n\n\n\nBen Brill  UCLA ’22\n\n\n\n\n\n\n\n\n\n\n\nNational Science Foundation\n\n\n\n\n\n\n\nICERM @Brown  Two summer programs!\n\n\n\n\nPreprint coming soon 😬😬😬"

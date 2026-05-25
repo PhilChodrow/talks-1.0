@@ -6,7 +6,7 @@ date: ""
 
 
 
-## {.split-50 background-image="../img/midd/midd-banner-light.jpg" background-size="cover" background-position="center" background-repeat="no-repeat"} 
+## {.split-40 background-image="../img/midd/midd-banner-light.jpg" background-size="cover" background-position="center" background-repeat="no-repeat"} 
 
 
 #### Hi everyone! I'm Phil Chodrow
@@ -16,72 +16,40 @@ date: ""
 
 <br> <br> 
 
-::: {.textblock .fragment}
+::: {.textblock}
 
-New-ish professor of CS at Middlebury College, a small liberal arts college in Vermont.  
+Prof. of CS at Middlebury College, a small liberal arts college in Vermont.  
 
 :::
 
-::: {.textblock-inverse .fragment}
+::: {.textblock-inverse}
 
 *Students/postdocs: ask me about [**\#LiberalArtsLife**]{.alert} if you're curious.*
 
 :::
 
+::: {.textblock}
 
-::: {.textblock .fragment}
-
-PhD: Operations Research at MIT
-
-Postdoc: Math at UCLA (with Mason Porter)
+I like  aikido, tea, my cats, being outside, hypergraphs, and [math models of social systems]{.alert}. 
 
 :::
 
-:::
 
+:::
 
 ::: {.column}
 
-<br> <br> 
-
-::: {.textblock-inverse .fragment}
-
-
-#### *I work on...*
-
-- Higher-order networks, hypergraphs
-- Math models of social systems
-- Misc. data science
-
-#### *I teach...*
-
-- Machine learning
-- Network science
-- Discrete math
-
-:::
+![](../img/personal/aikido.png){.absolute left=50 top=120 width=45%}
+![](../img/personal/opinion-dynamics.png){.absolute left=50 top=400 width=45%}
+![](../img/personal/cats.jpeg){.absolute right=80 top=120 width=25.5%}
+![](../img/personal/xgi-hypergraph.webp){.absolute right=80 top=250 width=25.5%}
+![](../img/personal/tea.jpeg){.absolute right=80 top=380 width=25.5%}
+![](../img/personal/cycling-2.jpeg){.absolute right=80 top=510 width=25.5%}
 
 ::: 
 
 
-<br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> 
 
-## {.split-50 background-image="../img/midd/midd-banner-light.jpg" background-size="cover" background-position="center" background-repeat="no-repeat"} 
-
-#### Also: *aikido, hiking, cycling, tea, chess, gardening, reading, cats*
-
-
-
-![](../img/personal/aikido.png){.absolute left=50 top=150 width=27%}
-
-![](../img/personal/tea.jpeg){.absolute left=450 top=130 width=29%}
-
-![](../img/personal/cats.jpeg){.absolute left=150 bottom=10 width=30%}
-
-![](../img/personal/cycling.jpeg){.absolute right=200 bottom=50 width=30%}
-
-
-![](../img/personal/garden.jpeg){.absolute right=50 bottom=300 width=20%}
 
 ## 
 
@@ -98,13 +66,13 @@ Data from the [**2020**]{.alert-3} AMS Departmental Profile 🤦🏻‍♂️
 
 
 
-[*\*Actually this one is from 2017-2018 (Report on New Doctorates)* 🤦🏻‍♂️🤦🏻‍♂️🤦🏻‍♂️]{.fragment}
+*\*Actually this one is from 2017-2018 (Report on New Doctorates)* 🤦🏻‍♂️🤦🏻‍♂️🤦🏻‍♂️
 
 :::
 
 ## 
 
-#### Much Work (Including From Here!)
+#### Career *advancement* shapes the ecosystem
 
 ![](../img/mgp/ams-data-viz-upward.png){.absolute left=0 top=100 width=80% align=left}
 
@@ -123,7 +91,7 @@ Data from the [**2020**]{.alert-3} AMS Departmental Profile 🤦🏻‍♂️
 
 ## 
 
-#### Focus For Today
+#### But so does mentorship!
 
 ![](../img/mgp/ams-data-viz-upward-downward.png){.absolute left=0 top=100 width=80% align=left}
 
@@ -230,13 +198,9 @@ We estimate gender for 95% of PhD students and 97% of advisors. ]{.footnote}
 
 ##
 
-### First Model: PhD Production
+### Modeling Gendered PhD Production by an Advisor
 
-::: {.textblock}
 
-What gendered differences exist in the *PhD production power* of advisors?
-
-:::
 
 <br> 
 
@@ -328,9 +292,11 @@ $$
 
 ## {.split-40}
 
+##### Homophily effects: advisor-student and student-student
+
 ::: {.column}
 
-##### Homophily effects: advisor-student and student-student
+<br><br> <br><br> <br><br> 
 
 Both the gender of a students' specific advisor *and* the overall proportion of female advisors in the subfield's population contribute to the likelihood that the student is female. 
 
@@ -339,9 +305,9 @@ Both the gender of a students' specific advisor *and* the overall proportion of 
 
 ::: {.column}
 
-<br><br> 
+<br><br> <br><br> 
 
-![](../img/mgp/gender-model-prediction-illustration-1.png){.absolute top=100 right=50 width=140%}
+![](../img/mgp/gender-model-prediction-illustration-1.png){.absolute top=120 right=50 width=140%}
 
 :::
 
@@ -419,7 +385,7 @@ Gender parity among *current faculty* on attrition and PhD production.
 
 ::: {.textblock .fragment .fade-in-then-out .absolute left=20 top=250  fragment-index=2 style="background-color:#9e8b13;"}
 
-[**Student Intervention**]{.alert}
+[**Student Intervention**]{.alert-3}
 
 Gender parity among *future students* on attrition and PhD production.
 
