@@ -334,7 +334,6 @@ $$
 
 Both the gender of a students' specific advisor *and* the overall proportion of female advisors in the subfield's population contribute to the likelihood that the student is female. 
 
-*High uncertainty in the model predictions for large $p_F$ reflects the fact that we have very little data in that region.* 
 
 :::
 
@@ -345,3 +344,258 @@ Both the gender of a students' specific advisor *and* the overall proportion of 
 ![](../img/mgp/gender-model-prediction-illustration-1.png){.absolute top=100 right=50 width=140%}
 
 :::
+
+
+
+
+
+## {.split-40}
+
+#### Modeling Interventions on Medium Timescales: Hiring
+
+::: {.column}
+
+::: {.textblock  .absolute left=20 top=250 style="background-color:#5c5c5c;"}
+
+[**Equal hiring rates**]{.alert} 
+
+Suggested in most recent AMS survey data.
+
+:::
+
+::: {.textblock .fragment .fade-in-then-out .absolute left=20 top=250  fragment-index=1}
+
+[**Male-biased hiring**]{.alert}
+
+Men 20% more likely than women to be hired as faculty. 
+
+:::
+
+::: {.textblock-inverse .fragment .fade-in .absolute left=20 top=250  fragment-index=2}
+
+[**Female-biased hiring**]{.alert}
+
+Women 20% more likely than men to be hired as faculty.
+
+:::
+
+
+:::
+
+
+::: {.column}
+
+![](../img/mgp/hiring-intervention-1.png){.absolute top=160 right=50 width=100%}
+
+![](../img/mgp/hiring-intervention-2.png){.absolute top=160 right=50 width=100% .fragment fragment-index=1}
+
+![](../img/mgp/hiring-intervention-3.png){.absolute top=160 right=50 width=100% .fragment fragment-index=2}
+
+:::
+
+
+
+## {.split-40}
+
+#### Intervening on Attrition + PhD Production
+
+::: {.column}
+
+::: {.textblock .absolute left=20 top=250 style="background-color:#5c5c5c;"}
+
+[**No intervention**]{.alert} 
+
+Attrition + PhD production as estimated by model. 
+
+:::
+
+::: {.textblock .fragment .fade-in-then-out .absolute left=20 top=250  fragment-index=1 style="background-color:#cc6d7f;"}
+
+[**Faculty Intervention**]{.alert}
+
+Gender parity among *current faculty* on attrition and PhD production.
+
+:::
+
+::: {.textblock .fragment .fade-in-then-out .absolute left=20 top=250  fragment-index=2 style="background-color:#9e8b13;"}
+
+[**Student Intervention**]{.alert}
+
+Gender parity among *future students* on attrition and PhD production.
+
+:::
+
+::: {.textblock .fragment .fade-in .absolute left=20 top=250  fragment-index=3 style="background-color:#159db7;"}
+
+[**Faculty + Student Intervention**]{.alert}
+
+Both interventions combined.
+
+:::
+
+:::
+
+
+::: {.column}
+
+<br> 
+
+![](../img/mgp/career-intervention-1.png){.absolute top=160 right=50 width=100%}
+
+![](../img/mgp/career-intervention-2.png){.absolute top=160 right=50 width=100% .fragment fragment-index=1}
+
+![](../img/mgp/career-intervention-3.png){.absolute top=160 right=50 width=100% .fragment fragment-index=2}
+
+![](../img/mgp/career-intervention-4.png){.absolute top=160 right=50 width=100% .fragment fragment-index=3}
+
+:::
+
+
+## 
+
+### What We've Learned
+
+
+<table style="width:50%;padding:0px;border-bottom:0px;margin:0px;">
+
+<tr>
+<td style="border-bottom:0px;margin:0px;">
+
+:::{.textblock .fragment .semi-fade-out fragment-index=1 style="width:90%;"}
+
+[**Mentorship**]{.alert}: *Female advisors are more effective in attracting or retaining female graduate students.*
+
+:::
+
+</td>
+
+
+
+</tr>
+
+<tr>
+<td style="border-bottom:0px;margin:0px;">
+
+
+
+:::{.textblock .fragment .semi-fade-out fragment-index=1 style="width:90%;"}
+
+[**Belonging**]{.alert }: *Representation in the grad student community attracts women to programs and subfields.*
+
+:::
+
+
+</td>
+
+</tr>
+
+<tr>
+
+<td style="border-bottom:0px;margin:0px;">
+
+:::{.textblock .fragment .fade-in fragment-index=1 style="width:90%;"}
+[**Attrition**]{.alert}: *Addressing disparities in career attrition for female faculty would help to close the gender gap.* 
+
+:::
+</td>
+
+</tr>
+
+</table>
+
+
+
+
+![](../img/mgp/gender-model-prediction-illustration-1.png){.absolute .fragment .fade-out fragment-index=1 top=120  width=50% left=550}
+
+
+![](../img/mgp/career-intervention-4.png){.absolute .fragment .fade-in fragment-index=1 top=200  width=50% left=550}
+
+
+
+## {background-image="../img/mgp/tree.png" background-size="contain" background-position="center" background-repeat="no-repeat"}
+
+
+
+### Next?
+
+## 
+
+#### Thanks everyone!
+
+<br> 
+
+<table style="padding:0px;border-bottom:0pxmargin: 0px auto; ">
+<tr style="border:0px;padding:0px;margin:0px;">
+<td style="padding:0px;border-bottom:0px"> 
+![](../img/people/brooks.jpg){.portrait-smaller} 
+</td>
+<td style="vertical-align: middle;white-space:nowrap;padding:0px;border-bottom:0px">
+<p style="padding:0px">**Heather Brooks** <br> Harvey Mudd</p>
+</td>
+
+<td style="vertical-align: middle;padding:0px;border-bottom:0px"> 
+![](../img/people/lee.jpg){.portrait-smaller} 
+</td>
+<td style="vertical-align: middle;white-space:nowrap;padding:0px;border-bottom:0px">
+<p style="padding:0px">**Harlin Lee** <br> UNC Chapel Hill</p>
+</td>
+
+
+<td style="vertical-align: middle;padding:0px;border-bottom:0px"> 
+![](../img/people/porter.jpg){.portrait-smaller} 
+</td>
+<td style="vertical-align: middle;white-space:nowrap;padding:0px;border-bottom:0px">
+<p style="padding:0px">**Mason Porter** <br> UCLA</p>
+</td>
+</tr>
+
+<tr>
+
+<td style="vertical-align: middle;padding:0px;border-bottom:0px"> 
+![](../img/people/restrepo.jpg){.portrait-smaller} 
+</td>
+<td style="vertical-align: middle;white-space:nowrap;padding:0px;border-bottom:0px">
+<p style="padding:0px">**Juan G. Restrepo** <br> CU Boulder</p>
+</td>
+
+<td style="vertical-align: middle;padding:0px;border-bottom:0px"> 
+![](../img/people/haensch.jpg){.portrait-smaller} 
+</td>
+<td style="vertical-align: middle;white-space:nowrap;padding:0px;border-bottom:0px">
+<p style="padding:0px">**Anna Haensch** <br> Tufts</p>
+</td>
+
+
+<td style="vertical-align: middle;padding:0px;border-bottom:0px"> 
+![](../img/people/ben-brill.jpg){.portrait-smaller} 
+</td>
+<td style="vertical-align: middle;white-space:nowrap;padding:0px;border-bottom:0px">
+<p style="padding:0px">***Ben Brill*** <br> *UCLA '22*</p>
+</td>
+
+</tr>
+
+
+</table>
+
+
+<table>
+<tr>
+<td style="padding:0px;border-bottom:0px">
+![](../img/orgs/nsf-logo.jpeg){.portrait-small}
+</td>
+<td style="vertical-align: middle;white-space:nowrap;padding:0px;border-bottom:0px">
+<p style="padding:0px"> National Science Foundation </p>
+</td>
+<td style="padding:0px;border-bottom:0px">
+![](../img/orgs/icerm.jpeg){.portrait-small}
+</td>
+<td style="vertical-align: middle;white-space:nowrap;padding:0px;border-bottom:0px">
+<p style="padding:0px"> ICERM \@Brown <br> Two summer programs!</p>
+</td>
+</tr>
+</table>
+
+*Preprint coming soon* 😬😬😬
+
