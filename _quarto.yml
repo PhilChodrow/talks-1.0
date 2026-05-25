@@ -1,0 +1,15 @@
+project:
+  type: website
+  output-dir: docs
+
+format:
+  revealjs:
+    menu: false
+    slide-level: 2
+    margin: 0.00
+    self-contained: false
+    transition: fade
+warning: false 
+message: false
+cache: true 
+from: markdown+emoji

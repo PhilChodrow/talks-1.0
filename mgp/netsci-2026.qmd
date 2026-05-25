@@ -1,0 +1,13 @@
+---
+title: "PhD Mentorship <span style='color: #aeaeae;'>and</span> <br>Gender Representation <span style='color: #aeaeae;'>in</span> <br>Academic Mathematics"  
+subtitle: "CU Boulder Applied Math Seminar <br> April 16th, 2026"  
+date: ""
+author: '<span class="speaker-highlight">Phil Chodrow</span> <br>Department of Computer Science<br>Middlebury College'    
+title-slide-attributes:
+  data-background-opacity: "0.0"  
+  data-background-color: "#3a2d4b"  
+---
+
+## Test slide
+
+bleh blah blarh

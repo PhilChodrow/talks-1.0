@@ -1,0 +1,5 @@
+theme: 
+  - default      
+  - ../assets/reveal-style/layouts.css 
+  - ../assets/reveal-style/components.css 
+  - ../assets/reveal-style/colors-fonts/mgp.scss
