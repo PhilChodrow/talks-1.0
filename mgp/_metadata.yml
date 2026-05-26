@@ -1,8 +1,8 @@
 theme: 
   - default      
-  - ../assets/reveal-style/layouts.css 
-  - ../assets/reveal-style/components.css 
-  - ../assets/reveal-style/colors-fonts/mgp.scss
+  - ../_assets/reveal-style/layouts.css 
+  - ../_assets/reveal-style/components.css 
+  - ../_assets/reveal-style/colors-fonts/mgp.scss
 
 author: '<span class="speaker-highlight">Phil Chodrow</span> <br>Department of Computer Science<br>Middlebury College'    
 title-slide-attributes:
