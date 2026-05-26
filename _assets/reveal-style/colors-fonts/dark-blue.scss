@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/*-- scss:defaults --*/
+
+$bg-main0: #ffffff;
+$color-main0: #154c79;
+$bg-main1: #293b49;
+$bg-main2: #293b49;
+$color-main1: #fff;
+$alert-color: #ff9f1c;
+$alert-color-2: #ffb371;
+$background-color: #ffffff;
+$block-bg: #154c79;
+// $link-color: #42affa;
+
+/*-- scss:rules --*/
+
+.reveal .slide blockquote {
+  border-left: 3px solid $text-muted;
+  padding-left: 0.5em;
+}
+
+.reveal .slide blockquote {
+    border-left: 3px solid $text-muted;
+    padding-left: 0.5em;
+  }
+
+.bg0 { 
+    background-color: $bg-main0;
+    color: $color-main0;
+}
+
+.bg1 {
+    background-color: $bg-main1;
+    color: $color-main1; 
+}
+
+
+.column.bg1 h1 { 
+    color: $color-main1; 
+}
+
+.column.bg1 h2 {
+    color: $color-main1; 
+}
+
+.column.bg1 h3 {
+    color: $color-main1; 
+}
+
+.column.bg1 h4 {
+    color: $color-main1; 
+}
+
+.column.bg1 h5 {
+    color: $color-main1; 
+}
+
+.column.bg1 h6 {
+    color: $color-main1; 
+}
+
+
+
+
+.alert {
+	color: $alert-color;
+}
+
+.alert-2 {
+	color: $alert-color-2;
+}
+
+
+
+.slide-background:first-child {
+    background-color: $bg-main1;
+}
+
+.reveal .slide-background {
+    background-color: $background-color;
+}
+
+// .reveal .vmiddle p, h1, h2, h3, h4, h5, ul, ol {
+//     margin: 0;
+//     position: absolute;
+//     top: 50%;
+//     -ms-transform: translateY(-50%);
+//     transform: translateY(-50%);
+//   }
+
+
+
+.reveal h1, .reveal h2, .reveal h3 { 
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+
+.reveal p { 
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 1.4rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+
+.reveal li { 
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 1.4rem;
+}
+
+
+.speaker-highlight { 
+    color: $alert-color-2;
+    text-align: right;
+}
+
+
+.bg1 a { 
+    color: $alert-color-2;
+}
+
+.bg1 code { 
+    color: $alert-color-2;
+}
+
+.textblock { 
+    font-family: 'Figtree', sans-serif;
+    font-size: 1.4rem;
+    color: $bg-main0;
+    padding: 0.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    background-color: $block-bg;
+    border-radius: 1rem;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+.textblock-inverse { 
+    font-family: 'Figtree', sans-serif;
+    font-size: 1.4rem;
+    color: $bg-main2;
+    padding: 0.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    background-color: $alert-color;
+    border-radius: 1rem;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.textblock-vertical { 
+    font-family: 'Figtree', sans-serif;
+    color: $bg-main0;
+    text-align: left;
+    background-color: $block-bg;
+    border-radius: 1rem;
+    width: 13rem;
+    height:13rem;
+    padding: 0.05rem;
+}
+
+.textblock-vertical-inverse-flex { 
+    font-family: 'Figtree', sans-serif;
+    color: $bg-main2;
+    text-align: left;
+    background-color: $alert-color;
+    border-radius: 1rem;
+    width: 13rem;
+    padding: 0.05rem;
+}
+
+.textblock-vertical-inverse { 
+    font-family: 'Figtree', sans-serif;
+    color: $bg-main2;
+    text-align: left;
+    background-color: $alert-color;
+    border-radius: 1rem;
+    width: 13rem;
+    height:13rem;
+    padding: 0.05rem;
+}
+
+
+.textblock-vertical-inverse-flex p { 
+    padding: 0.0rem;
+    font-size: 1rem;
+    padding: 0px;
+    margin:0.75rem;
+}
+
+.textblock-vertical p { 
+    padding: 0.0rem;
+    font-size: 1rem;
+    padding: 0px;
+}
+
+.textblock-vertical-inverse p { 
+    padding: 0.0rem;
+    font-size: 1rem;
+}
+
+.textblock-vertical-inverse .alert { 
+    color: $bg-main2;
+}
+
+.textblock p { 
+    padding: 0px;
+}
+
+.textblock-inverse p { 
+    padding: 0px;
+}
+
+.textblock-inverse .alert { 
+    color: $bg-main2;
+}
+
+
+.textblock-var-1 { 
+    background-color: $alert-color-2;
+    color: $bg-main0;
+}
+
+.bg-beige {
+    background-color: #f5f5dc;
+    color: $color-main0;
+}
+
+
+.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5 { 
+    font-family: 'Figtree', sans-serif;
+}

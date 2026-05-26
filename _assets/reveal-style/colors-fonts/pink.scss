@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/*-- scss:defaults --*/
+
+$bg-main0: #ffffff;
+$color-main0: #000;
+$bg-main1: #EF476F;
+$bg-main2: #23395B;
+$color-main1: #fff;
+$color-main2: #fff;
+$alert-color: #FFD447;
+$alert-color-2: #59C9A5;
+$alert-color-3: #23395B;
+$alert-color-4: #e56d89;
+$background-color: #ffffff;
+
+// $link-color: #42affa;
+
+/*-- scss:rules --*/
+
+.reveal .slide blockquote {
+  border-left: 3px solid $text-muted;
+  padding-left: 0.5em;
+}
+
+.reveal .slide blockquote {
+    border-left: 3px solid $text-muted;
+    padding-left: 0.5em;
+  }
+
+.bg0 { 
+    background-color: $bg-main0;
+    color: $color-main0;
+}
+
+.bg1 {
+    background-color: $bg-main1;
+    color: $color-main1; 
+}
+
+.bg2 {
+    background-color: $bg-main2;
+    color: $color-main2; 
+}
+
+
+
+
+.column.bg1 h1 { 
+    color: $color-main1; 
+}
+
+.column.bg1 h2 {
+    color: $color-main1; 
+}
+
+.column.bg1 h3 {
+    color: $color-main1; 
+}
+
+.column.bg1 h4 {
+    color: $color-main1; 
+}
+
+.column.bg1 h5 {
+    color: $color-main1; 
+}
+
+.column.bg1 h6 {
+    color: $color-main1; 
+}
+
+.column.bg0 h1 { 
+    color: $color-main0; 
+}
+
+.column.bg0 h2 {
+    color: $color-main0; 
+}
+
+.column.bg0 h3 {
+    color: $color-main0; 
+}
+
+.column.bg0 h4 {
+    color: $color-main0; 
+}
+
+.bg0 h4 {
+    color: $color-main0; 
+}
+
+.column.bg0 h5 {
+    color: $color-main0; 
+}
+
+.column.bg0 h6 {
+    color: $color-main0; 
+}
+
+
+
+
+.alert {
+	color: $alert-color;
+}
+
+.alert-2 {
+	color: $alert-color-2;
+}
+
+.alert-3 { 
+    color: $alert-color-3;
+}
+
+.bg2 .alert {
+    color: $alert-color;
+}
+
+.bg2 .alert-2 {
+    color: $alert-color-4;
+}
+
+.bg2 .alert-3 {
+    color: $alert-color-2;
+}
+
+.bg0 .alert {
+    color: $alert-color-3;
+}
+
+.bg0 .alert-3 {
+    color: $bg-main1;
+}
+
+.bg0 .alert-2 {
+    color: $alert-color-2;
+}
+
+.bg0 .highlight {
+    color: $alert-color;
+}
+
+.bg0 .highlight-2 {
+    color: $alert-color-2;
+}
+
+.bg0 .hide {
+    color: $bg-main0;
+}
+
+.bg1 .hide {
+    color: $bg-main1;
+}
+
+.bg2 .hide {
+    color: $bg-main2;
+}
+
+
+
+
+
+.slide-background:first-child {
+    background-color: $bg-main1;
+}
+
+.reveal .slide-background {
+    background-color: $background-color;
+}
+
+// .reveal .vmiddle p, h1, h2, h3, h4, h5, ul, ol {
+//     margin: 0;
+//     position: absolute;
+//     top: 50%;
+//     -ms-transform: translateY(-50%);
+//     transform: translateY(-50%);
+//   }
+
+
+
+.reveal h1, .reveal h2, .reveal h3 { 
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+
+.reveal p { 
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 1.4rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+
+.reveal li { 
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 1.4rem;
+}
+
+
+.speaker-highlight { 
+    color: $alert-color;
+    text-align: right;
+}
+
+
+.bg1 a { 
+    color: $alert-color-2;
+}
+
+.bg1 code { 
+    color: $alert-color-2;
+}
+
+.bg1 a {
+    color: $alert-color;
+}
+
+section.has-dark-background a, section.has-dark-background a:hover {
+    color: $alert-color;
+}
+
+.fade { 
+    opacity: 0.5;
+}

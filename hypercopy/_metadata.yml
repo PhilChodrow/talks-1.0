@@ -1,0 +1,10 @@
+theme: 
+  - default      
+  - ../_assets/reveal-style/layouts.css 
+  - ../_assets/reveal-style/components.css 
+  - ../_assets/reveal-style/colors-fonts/dark-blue.scss
+
+author: '<span class="speaker-highlight">Phil Chodrow</span> <br>Department of Computer Science<br>Middlebury College'    
+title-slide-attributes:
+  data-background-opacity: "0.0"  
+  data-background-color: "#154c79"  

@@ -1,5 +1,173 @@
 [
   {
+    "objectID": "hypercopy/netsci-2026.html#section",
+    "href": "hypercopy/netsci-2026.html#section",
+    "title": "Growing Hypergraphs with Edge Copying",
+    "section": "",
+    "text": "Hi everyone! I’m Phil Chodrow\n\n \n\nProf. of CS at Middlebury College, a small liberal arts college in Vermont.\n\n\nStudents/postdocs: ask me about #LiberalArtsLife if you’re curious.\n\n\nI like aikido, tea, my cats, being outside, math models of social systems, and hypergraphs."
+  },
+  {
+    "objectID": "hypercopy/netsci-2026.html#section-1",
+    "href": "hypercopy/netsci-2026.html#section-1",
+    "title": "Growing Hypergraphs with Edge Copying",
+    "section": "",
+    "text": "My Intellectual Journey in Hypergraphs\n\n   \nnetwork_topics = [\n    \"configuration models\", \n    \"directed configuration models\",\n    \"modularity\", \n    \"spectral clustering\", \n    \"detectability thresholds\"\n    ]\n\nfor topic in network_topics:\n    do_but_for_hypergraphs(topic)\nTBH this was a reliable source of low-risk theory problems as I established my career."
+  },
+  {
+    "objectID": "hypercopy/netsci-2026.html#section-2",
+    "href": "hypercopy/netsci-2026.html#section-2",
+    "title": "Growing Hypergraphs with Edge Copying",
+    "section": "",
+    "text": "But…\n\n     \nWhat structures exist in hypergraphs that we can’t study in graphs at all?\n  \n\nOne answer: two-edge motifs."
+  },
+  {
+    "objectID": "hypercopy/netsci-2026.html#section-3",
+    "href": "hypercopy/netsci-2026.html#section-3",
+    "title": "Growing Hypergraphs with Edge Copying",
+    "section": "",
+    "text": "2-edge motifs in (simple) undirected graphs"
+  },
+  {
+    "objectID": "hypercopy/netsci-2026.html#section-4",
+    "href": "hypercopy/netsci-2026.html#section-4",
+    "title": "Growing Hypergraphs with Edge Copying",
+    "section": "",
+    "text": "2-edge motifs in hypergraphs\nClaim: What’s special about the structure of hypergraphs is that they have diverse, undirected, two-edge motifs: intersections."
+  },
+  {
+    "objectID": "hypercopy/netsci-2026.html#section-5",
+    "href": "hypercopy/netsci-2026.html#section-5",
+    "title": "Growing Hypergraphs with Edge Copying",
+    "section": "",
+    "text": "Intersections in Temporal Hypergraphs\n\n\nLet \\(r_k^{(t)}\\) be the probability that two uniformly random hyperedges which arrive before time \\(t\\) have an intersection of size \\(k\\).\nIn empirical hypergraphs, \\(r_k^{(t)}\\) often decays at rates close to \\(t^{-1}\\) or \\(t^{-2}\\), regardless of \\(k\\).\nBenson, Abebe, Schaub, and Kleinberg (2018). Simplicial closure and higher-order link prediction. PNAS  Chodrow (2020). Configuration models of random hypergraphs. JCN  Landry, Young, and Eikmeier (2023). The simpliciality of higher-order networks. EPJ Data Sci.\n\n\n\n\n\n\n\nDashed lines give slope of \\(t^{-1}\\) and \\(t^{-2}\\) decay."
+  },
+  {
+    "objectID": "hypercopy/netsci-2026.html#section-6",
+    "href": "hypercopy/netsci-2026.html#section-6",
+    "title": "Growing Hypergraphs with Edge Copying",
+    "section": "",
+    "text": "Xie He  Dartmouth + Microsoft\n\n\n\n\n\n\n\n\n\nPhil Chodrow  Middlebury\n\n\n\n\n\n\n\n\n\nPeter Mucha  Dartmouth"
+  },
+  {
+    "objectID": "hypercopy/netsci-2026.html#section-7",
+    "href": "hypercopy/netsci-2026.html#section-7",
+    "title": "Growing Hypergraphs with Edge Copying",
+    "section": "",
+    "text": "Xie He  Dartmouth + Microsoft\n\n\n\n\n\n\n\n\n\nPhil Chodrow  Middlebury\n\n\n\n\n\n\n\n\n\nPeter Mucha  Dartmouth\n\n\n\n\n\n   \nHe\nChodrow\nMucha"
+  },
+  {
+    "objectID": "hypercopy/netsci-2026.html#section-8",
+    "href": "hypercopy/netsci-2026.html#section-8",
+    "title": "Growing Hypergraphs with Edge Copying",
+    "section": "",
+    "text": "Xie He  Dartmouth + Microsoft\n\n\n\n\n\n\n\n\n\nPhil Chodrow  Middlebury\n\n\n\n\n\n\n\n\n\nPeter Mucha  Dartmouth\n\n\n\n\n\n   \nHyperedge\nCopy\nModel"
+  },
+  {
+    "objectID": "hypercopy/netsci-2026.html#section-9",
+    "href": "hypercopy/netsci-2026.html#section-9",
+    "title": "Growing Hypergraphs with Edge Copying",
+    "section": "",
+    "text": "Hyperedge Copy Model\n\n  \nInspo from…\nBenson, Kumar, and Tomkins (2018). “Sequences of Sets.” KDD   Benson, Abebe, Schaub, and Kleinberg (2018). “Simplicial closure and higher-order link prediction.” PNAS  Avin, Lotker, Nahum, and Peleg (2019). “Random preferential attachment hypergraph.” ASONAM"
+  },
+  {
+    "objectID": "hypercopy/netsci-2026.html#section-10",
+    "href": "hypercopy/netsci-2026.html#section-10",
+    "title": "Growing Hypergraphs with Edge Copying",
+    "section": "",
+    "text": "Hyperedge Copy Model\n\n  \nIn each timestep…"
+  },
+  {
+    "objectID": "hypercopy/netsci-2026.html#section-11",
+    "href": "hypercopy/netsci-2026.html#section-11",
+    "title": "Growing Hypergraphs with Edge Copying",
+    "section": "",
+    "text": "Hyperedge Copy Model\n\n  \nSelect a random edge"
+  },
+  {
+    "objectID": "hypercopy/netsci-2026.html#section-12",
+    "href": "hypercopy/netsci-2026.html#section-12",
+    "title": "Growing Hypergraphs with Edge Copying",
+    "section": "",
+    "text": "Hyperedge Copy Model\n\n  \nSelect random nodes from edge"
+  },
+  {
+    "objectID": "hypercopy/netsci-2026.html#section-13",
+    "href": "hypercopy/netsci-2026.html#section-13",
+    "title": "Growing Hypergraphs with Edge Copying",
+    "section": "",
+    "text": "Hyperedge Copy Model\n\n  \nAdd nodes from hypergraph\nAdd novel nodes"
+  },
+  {
+    "objectID": "hypercopy/netsci-2026.html#section-14",
+    "href": "hypercopy/netsci-2026.html#section-14",
+    "title": "Growing Hypergraphs with Edge Copying",
+    "section": "",
+    "text": "Hyperedge Copy Model\n\n  \nForm edge"
+  },
+  {
+    "objectID": "hypercopy/netsci-2026.html#section-15",
+    "href": "hypercopy/netsci-2026.html#section-15",
+    "title": "Growing Hypergraphs with Edge Copying",
+    "section": "",
+    "text": "Hyperedge Copy Model\n\n  \nRepeat"
+  },
+  {
+    "objectID": "hypercopy/netsci-2026.html#section-16",
+    "href": "hypercopy/netsci-2026.html#section-16",
+    "title": "Growing Hypergraphs with Edge Copying",
+    "section": "",
+    "text": "Hyperedge Copy Model\n\n  \nRepeat"
+  },
+  {
+    "objectID": "hypercopy/netsci-2026.html#section-17",
+    "href": "hypercopy/netsci-2026.html#section-17",
+    "title": "Growing Hypergraphs with Edge Copying",
+    "section": "",
+    "text": "Hyperedge Copy Model\n\n\nFormally\nIn each timestep \\(t\\):\n\nStart with an empty edge \\(f = \\emptyset\\).\nSelect an edge \\(e \\in H\\).\nAccept each node from \\(e\\) into \\(f\\) with probability \\(\\eta\\) (condition on at least one).\n\nAdd \\(X \\sim \\boldsymbol{\\beta}\\) novel nodes.\nAdd \\(Y \\sim \\boldsymbol{\\gamma}\\) nodes from \\(H \\setminus e\\)."
+  },
+  {
+    "objectID": "hypercopy/netsci-2026.html#section-18",
+    "href": "hypercopy/netsci-2026.html#section-18",
+    "title": "Growing Hypergraphs with Edge Copying",
+    "section": "",
+    "text": "“Tractable” Asymptotics\n\nProposition (HCM ’25): There exist constants \\(q_k\\) such that, as \\(t\\rightarrow \\infty\\), \\[\n\\begin{aligned}\nr_{k}(t) = \\text{Rate of $k$-intersections at time $t$}\\simeq \\begin{cases}\n  q_k & \\quad \\text{if } k = 0\\\\\n  \\color{#ff9f1c}{t^{-1}} q_k &\\quad \\mathrm{otherwise}\\;.\n\\end{cases}\n\\end{aligned}\n\\]\nHere, \\(q_k = \\sum_{ij} q_{ijk}\\) and \\(\\{q_{ijk}\\}\\) solve the system\n\\[\nq_{ijk} = \\begin{cases}\n  \\frac{1}{2}\\sum_{\\ell} \\left(q_{\\ell j 0} \\alpha_{i0|\\ell j0} + q_{j \\ell 0} \\alpha_{i0|j\\ell 0}\\right) & \\quad  k = 0\\\\\n  \\frac{1}{2}\\beta_{ik|j} \\sum_{\\ell} (q_{\\ell j0} + q_{j\\ell 0}) + \\frac{1}{2}\\sum_{\\ell, h\\geq k}  \\left(q_{\\ell j h} \\alpha_{ik|\\ell jh} + q_{j \\ell h} \\alpha_{ik|j\\ell h}\\right) &\\quad k \\geq 1\\;,\n\\end{cases}\n\\]\nwhere \\(\\alpha_{ik|\\ell jh}\\) and \\(\\beta_{ik|j}\\) are constants determined by the model parameters.\n\nThese come out of linearized compartmental equations."
+  },
+  {
+    "objectID": "hypercopy/netsci-2026.html#section-19",
+    "href": "hypercopy/netsci-2026.html#section-19",
+    "title": "Growing Hypergraphs with Edge Copying",
+    "section": "",
+    "text": "Edge intersections\nProposition (HCM ’25): There exist constants \\(q_k\\) such that, as \\(t\\rightarrow \\infty\\), \\(r_{k}(t) \\simeq \\begin{cases} q_k & \\quad \\text{if } k = k_0\\\\ \\color{#ff9f1c}{t^{-1}} q_k &\\quad \\mathrm{otherwise}\\;. \\end{cases}\\)"
+  },
+  {
+    "objectID": "hypercopy/netsci-2026.html#section-20",
+    "href": "hypercopy/netsci-2026.html#section-20",
+    "title": "Growing Hypergraphs with Edge Copying",
+    "section": "",
+    "text": "Degree and edge-size distributions\n\nFrom statistically-inferred parameters, not regression fits!"
+  },
+  {
+    "objectID": "hypercopy/netsci-2026.html#section-21",
+    "href": "hypercopy/netsci-2026.html#section-21",
+    "title": "Growing Hypergraphs with Edge Copying",
+    "section": "",
+    "text": "Scalable online learning via stochastic EM\n\n \nAim: given the sequence of edges \\(\\{e_t\\}\\), estimate:\n\n\\(\\eta\\), the edge retention rate.\n\\(\\beta\\), the distribution of the number of novel nodes added to each edge.\n\\(\\gamma\\), distribution of the number of pre-existing nodes added to each edge.\n\n\nSample \\(e_t\\) and form a belief about seed edge \\(f\\).\nUpdate a vector of expected sufficient statistics \\(\\theta_t\\) and current parameter estimates \\(\\bar{\\eta}\\), \\(\\bar{\\beta}\\), and \\(\\bar{\\gamma}\\).\nRepeat until tired."
+  },
+  {
+    "objectID": "hypercopy/netsci-2026.html#section-22",
+    "href": "hypercopy/netsci-2026.html#section-22",
+    "title": "Growing Hypergraphs with Edge Copying",
+    "section": "",
+    "text": "Simple models can be predictive!\nWe computed AUC scores for a link prediction task in which our model learns parameters on 20% training data from three metabolic and organic reaction data sets with edges up to size 5. We compared these against previously-reported AUC scores on the same task for two dedicated neural network hypergraph link prediction algorithms.\nYadati et al. (2020) NHP: Neural Hypergraph Link Prediction. CIKM   Yang et al. (2023) LHP: Logical hypergraph link prediction. Expert Systems with Applications\n\n\n\n\n\n\n\n\n\n\n\n\n\n\\(n\\)\n\\(m\\)\nHCM\nNHP\nLHP\n\n\n\n\niAF1260b\n1,668\n2,084\n0.605\n0.582\n0.639\n\n\niJO1366\n1,805\n2,253\n0.774\n0.599\n0.638\n\n\nUSPTO\n16,293\n11,433\n0.515\n0.662\n0.733\n\n\n\n\nWe are competitive with neural networks (on some data sets) using an 11-parameter model!"
+  },
+  {
+    "objectID": "hypercopy/netsci-2026.html#section-23",
+    "href": "hypercopy/netsci-2026.html#section-23",
+    "title": "Growing Hypergraphs with Edge Copying",
+    "section": "",
+    "text": "Thank you!!\nHypergraphs have interesting two-edge motifs (intersections). Learnable, mechanistic models of hypergraph growth can be tractable and predictive. \nEdge correlations and link prediction in growing hypergraphs. He, Chodrow, and Mucha. Physical Review E (2025)\n\n Xie He\n Peter Mucha\n\n   \n\nCommunity structure??\n\n\n Violet Ross (CU Boulder)\n \nModeling Homophilic Hypergraph Growth Using Edge Copying (#201)\nWednesday @4:45pm in Central Square"
+  },
+  {
     "objectID": "mgp/netsci-2026.html#section",
     "href": "mgp/netsci-2026.html#section",
     "title": "PhD Mentorship and Gender Representation in Academic Mathematics",
