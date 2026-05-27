@@ -11,7 +11,7 @@
     "href": "hypercopy/netsci-2026.html#section-1",
     "title": "Growing Hypergraphs with Edge Copying",
     "section": "",
-    "text": "My Intellectual Journey in Hypergraphs\n\n   \nnetwork_topics = [\n    \"configuration models\", \n    \"directed configuration models\",\n    \"modularity\", \n    \"spectral clustering\", \n    \"detectability thresholds\"\n    ]\n\nfor topic in network_topics:\n    do_but_for_hypergraphs(topic)\nTBH this was a reliable source of low-risk theory problems as I established my career."
+    "text": "My Intellectual Journey in Hypergraphs\n\n   \nnetwork_topics = [\n    \"configuration models\", \n    \"directed configuration models\",\n    \"modularity\", \n    \"spectral clustering\", \n    \"detectability thresholds\"\n    ]\n\nfor topic in network_topics:\n    do_but_for_hypergraphs(topic)\nReal talk: this was a reliable source of low-risk theory problems as I established my career."
   },
   {
     "objectID": "hypercopy/netsci-2026.html#section-2",
@@ -158,14 +158,14 @@
     "href": "hypercopy/netsci-2026.html#section-22",
     "title": "Growing Hypergraphs with Edge Copying",
     "section": "",
-    "text": "Simple models can be predictive!\nWe computed AUC scores for a link prediction task in which our model learns parameters on 20% training data from three metabolic and organic reaction data sets with edges up to size 5. We compared these against previously-reported AUC scores on the same task for two dedicated neural network hypergraph link prediction algorithms.\nYadati et al. (2020) NHP: Neural Hypergraph Link Prediction. CIKM   Yang et al. (2023) LHP: Logical hypergraph link prediction. Expert Systems with Applications\n\n\n\n\n\n\n\n\n\n\n\n\n\n\\(n\\)\n\\(m\\)\nHCM\nNHP\nLHP\n\n\n\n\niAF1260b\n1,668\n2,084\n0.605\n0.582\n0.639\n\n\niJO1366\n1,805\n2,253\n0.774\n0.599\n0.638\n\n\nUSPTO\n16,293\n11,433\n0.515\n0.662\n0.733\n\n\n\n\nWe are competitive with neural networks (on some data sets) using an 11-parameter model!"
+    "text": "Simple models can be predictive!\nWe computed AUC scores for a link prediction task in which our model learns parameters on 20% training data from three metabolic and organic reaction data sets with edges up to size 5. We compared these against previously-reported AUC scores on the same task for two dedicated neural network hypergraph link prediction algorithms.\nYadati et al. (2020) NHP: Neural Hypergraph Link Prediction. CIKM   Yang et al. (2023) LHP: Logical hypergraph link prediction. Expert Systems with Applications\n\n\n\n\n\n\n\n\n\n\n\n\n\n\\(n\\)\n\\(m\\)\nHCM 11 pars\nNHP ?? pars\nLHP \\(10^6\\) pars\n\n\n\n\niAF1260b\n1,668\n2,084\n0.605\n0.582\n0.639\n\n\niJO1366\n1,805\n2,253\n0.774\n0.599\n0.638\n\n\nUSPTO\n16,293\n11,433\n0.515\n0.662\n0.733\n\n\n\n\nWe are competitive with neural networks (on some data sets) using an 11-parameter model!"
   },
   {
     "objectID": "hypercopy/netsci-2026.html#section-23",
     "href": "hypercopy/netsci-2026.html#section-23",
     "title": "Growing Hypergraphs with Edge Copying",
     "section": "",
-    "text": "Thank you!!\nHypergraphs have interesting two-edge motifs (intersections). Learnable, mechanistic models of hypergraph growth can be tractable and predictive. \nEdge correlations and link prediction in growing hypergraphs. He, Chodrow, and Mucha. Physical Review E (2025)\n\n Xie He\n Peter Mucha\n\n   \n\nCommunity structure??\n\n\n Violet Ross (CU Boulder)\n \nModeling Homophilic Hypergraph Growth Using Edge Copying (#201)\nWednesday @4:45pm in Central Square"
+    "text": "Thank you!!\nHypergraphs have interesting two-edge motifs (intersections). Learnable, mechanistic models of hypergraph growth can be tractable and predictive. \nEdge correlations and link prediction in growing hypergraphs. He, Chodrow, and Mucha. Physical Review E (2025)\n\n Xie He\n Peter Mucha\n\n   \n\nHompohily in Hypergraph Growth??\n\n\n Violet Ross (CU Boulder)\n \nModeling Homophilic Hypergraph Growth Using Edge Copying (#201)\nWednesday @4:45pm in Central Square"
   },
   {
     "objectID": "mgp/netsci-2026.html#section",

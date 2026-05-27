@@ -70,7 +70,7 @@ for topic in network_topics:
 ```
 
 
-[TBH this was a reliable source of low-risk theory problems as I established my career.]{.footnote .fragment fragment-index=2}
+[Real talk: this was a reliable source of low-risk theory problems as I established my career.]{.footnote .fragment fragment-index=2}
 
 :::
 
@@ -617,7 +617,7 @@ Yang et al. (2023) LHP: Logical hypergraph link prediction. *Expert Systems with
 
 ::: {.font_65}
 
-|          	| $n$    	| $m$    	| HCM   | NHP     | LHP       	|
+|          	| $n$    	| $m$    	| HCM <br>11 pars   | NHP <br>?? pars    | LHP <br>$10^6$ pars       	|
 |:----------|--------:|--------:|------------:|--------:|------------:|
 | iAF1260b 	| 1,668  	| 2,084  	| 0.605 	    | 0.582  	| **[0.639]{.alert}**   |
 | iJO1366  	| 1,805  	| 2,253  	| **[0.774]{.alert}** 	| 0.599  	| 0.638     	|
@@ -656,14 +656,14 @@ Hypergraphs have interesting two-edge motifs (intersections). **Learnable, mecha
 
 ::: {.fragment}
 
-##### Community structure??
+##### Hompohily in Hypergraph Growth??
 
 <br> 
 
 ::: {.textblock}
 
 ![](../_img/people/violet.gif){.absolute top=330 left=50 .portrait-medium}
-[[**Violet Ross**]{.alert} (CU Boulder)]{.absolute top=410 left=200}
+[[**Violet Ross**]{.alert} (CU Boulder)]{.absolute top=420 left=200}
 
 <br> <br> 
 
@@ -676,5 +676,9 @@ Wednesday \@4:45pm in Central Square
 :::
 
 :::
+
+
+
+
 
 
