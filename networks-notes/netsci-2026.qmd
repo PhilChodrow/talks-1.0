@@ -1,0 +1,185 @@
+---
+title: "Teaching Network Science <span style='color: #aeaeae;'>with</span> <br>Online Interactive Notes<span style='color: #aeaeae;'>"  
+subtitle: "NetSciEd@NetSci <br> June 1st, 2026"  
+date: ""
+---
+
+
+## {.split-40 background-image="../_img/midd/midd-banner-light.jpg" background-size="cover" background-position="center" background-repeat="no-repeat" background-color="white"} 
+
+
+#### Hi everyone! I'm Phil Chodrow
+
+
+::: {.column}
+
+<br> <br> 
+
+::: {.textblock}
+
+Prof. of CS at Middlebury College, a small liberal arts college in Vermont.  
+
+:::
+
+::: {.textblock-inverse}
+
+*Students/postdocs: ask me about [**\#LiberalArtsLife**]{.alert} if you're curious.*
+
+:::
+
+::: {.textblock}
+
+I like  aikido, tea, my cats, being outside, math, and [teaching about networks]{.alert}. 
+
+:::
+
+
+:::
+
+::: {.column}
+
+![](../_img/personal/aikido.png){.absolute left=50 top=120 width=45%}
+![](../_img/personal/opinion-dynamics.png){.absolute left=50 top=400 width=45%}
+![](../_img/personal/cats.jpeg){.absolute right=80 top=120 width=25.5%}
+![](../_img/personal/xgi-hypergraph.webp){.absolute right=80 top=250 width=25.5%}
+![](../_img/personal/tea.jpeg){.absolute right=80 top=380 width=25.5%}
+![](../_img/personal/cycling-2.jpeg){.absolute right=80 top=510 width=25.5%}
+
+::: 
+
+## 
+
+##### This is a story about teaching network science to undergrads at the intersection of math and computer science
+
+- **[MATH]{.alert} 189: Network Science** by Heather Brooks at Harvey Mudd College (Fall '24) 
+- **[CS]{.alert} 442: Network Science** by Phil Chodrow at Middlebury College (Spring '25) 
+
+![](https://www.hmc.edu/about/wp-content/uploads/sites/2/2022/11/news-campus-evening.jpg){.absolute left=50 top=250 width=40%}
+
+![](https://www.middlebury.edu/college/sites/default/files/styles/832x468/public/2025-09/20221025---Middlebury-Fall-2022---MM---0069-960x540_1.jpg?fv=21YLBBbR&itok=w_n2Kk0r){.absolute right=80 top=250 width=40%}
+
+<br> <br> <br> <br> <br> <br> <br>
+
+::: {.textblock}
+
+Target audience: advanced undergraduates with interests/experience in **both** math and programming. 
+
+:::
+
+## 
+
+### This works because of...
+
+![](../_img/people/brooks.jpg){.portrait-smaller .absolute width=200 height=200 left=50 top=120} 
+
+::: {.absolute left=250 top=140 width=600}
+
+**Heather Brooks** 
+<br>
+Harvey Mudd College
+<br>
+*Taught the course first, wrote many notes and most accompanying assignments*
+
+:::
+
+![](https://quarto.org/quarto.png){.absolute width=200 height=50 left=50 top=350}
+
+::: {.absolute left=250 top=320 width=400}
+**Quarto** 
+<br>
+Open-source scientific publishing system  
+
+:::
+
+![](https://colab.research.google.com/img/colab_favicon_256px.png){.absolute width=200 height=200 left=50 top=420}  
+
+::: {.absolute left=250 top=450 width=400}
+**Google Colab**
+<br>
+Free Jupyter notebook environment in the cloud
+:::
+
+
+## {.split-50}
+
+::: {.column}
+
+#### Join me, friends
+
+![](../_img/networks-notes/qr-code.svg)
+
+:::
+
+::: {.column}
+
+<br> <br> <br> <br> <br> <br>
+
+#### `https://network-science-notes.github.io/`
+
+:::
+
+## {.split-50}
+
+#### Awesome student projects!
+
+::: {.column}
+<br> 
+
+![](../_img/networks-notes/math-network-mural.png)
+
+:::
+
+::: {.column}
+
+<br> <br> <br> <br> 
+
+::: {.textblock}
+
+Network of mathematical concepts on Wikipedia by HMC students Theo Rode , Maddie Reeve, Christian Johnson, and Bea Araiza in Heather Brooks’ course MATH 189: Network Science at Harvey Mudd College.
+
+:::
+:::
+
+## 
+
+### Thank you everyone!
+
+![](../_img/people/brooks.jpg){.portrait-smaller .absolute width=200 height=200 left=50 top=120} 
+
+::: {.absolute left=250 top=180 width=400}
+
+**Heather Brooks** 
+<br>
+Harvey Mudd College
+
+:::
+
+::: {.fragment fragment-index=1}
+
+![](https://thumbs.dreamstime.com/b/man-question-mark-black-silhouette-portrait-young-vector-illustration-eps-stock-image-304983815.jpg){.absolute width=200 height=200 left=50 top=330}
+
+:::
+
+::: {.absolute left=250 top=350 width=400 .fragment fragment-index=1}
+
+[**Future you**]{.alert}
+<br>
+For using, sharing, sending feedback, and contributing to the notes. 
+
+:::
+
+::: {.textblock .absolute left=650 top=350 width=400 .fragment}
+
+[**You need**]{.alert}
+<br>
+Python, GitHub, Quarto
+
+:::
+
+<br> <br> <br> <br> <br> <br> <br>  <br> <br> <br> <br>  <br> 
+
+::: {.fragment}
+
+#### `https://network-science-notes.github.io/`
+
+:::
