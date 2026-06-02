@@ -28,6 +28,72 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-9e66b8fcd8c0cdd50030fb8069e34db9.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -156,12 +222,431 @@
 </div><div class="column">
 <p><img data-src="../_img/personal/aikido.png" class="absolute" style="top: 120px; left: 50px; width: 45%; "> <img data-src="../_img/personal/opinion-dynamics.png" class="absolute" style="top: 400px; left: 50px; width: 45%; "> <img data-src="../_img/personal/cats.jpeg" class="absolute" style="top: 120px; right: 80px; width: 25.5%; "> <img data-src="../_img/personal/xgi-hypergraph.webp" class="absolute" style="top: 250px; right: 80px; width: 25.5%; "> <img data-src="../_img/personal/tea.jpeg" class="absolute" style="top: 380px; right: 80px; width: 25.5%; "> <img data-src="../_img/personal/cycling-2.jpeg" class="absolute" style="top: 510px; right: 80px; width: 25.5%; "></p>
 </div></section>
-<section id="thanks" class="slide level2">
-<h2>Thanks!</h2>
+<section id="section-1" class="slide level2 split-50">
+<h2></h2>
+<h4 id="my-intellectual-journey-in-hypergraphs">My Intellectual Journey in Hypergraphs</h4>
+<div class="column">
+<p><br> <br> <br><br> <br></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a>network_topics <span class="op">=</span> [</span>
+<span id="cb1-2"><a></a>    <span class="st">"configuration models"</span>, </span>
+<span id="cb1-3"><a></a>    <span class="st">"directed configuration models"</span>,</span>
+<span id="cb1-4"><a></a>    <span class="st">"modularity"</span>, </span>
+<span id="cb1-5"><a></a>    <span class="st">"spectral clustering"</span>, </span>
+<span id="cb1-6"><a></a>    <span class="st">"detectability thresholds"</span></span>
+<span id="cb1-7"><a></a>    ]</span>
+<span id="cb1-8"><a></a></span>
+<span id="cb1-9"><a></a><span class="cf">for</span> topic <span class="kw">in</span> network_topics:</span>
+<span id="cb1-10"><a></a>    do_but_for_hypergraphs(topic)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><span class="footnote fragment" data-fragment-index="2">Real talk: this was a reliable source of low-risk theory problems as I established my career.</span></p>
+</div><div class="column fragment" data-fragment-index="1">
+<p><br> <br></p>
+<p><img data-src="../_img/personal/configuration-models.png"> <img data-src="../_img/personal/annotated.png"> <img data-src="../_img/personal/modularity.png"> <img data-src="../_img/personal/nonbacktracking.png"></p>
+</div></section>
+<section id="section-2" class="slide level2 split-50">
+<h2></h2>
+<h3 id="but">But…</h3>
+<div class="column">
+<p><br> <br> <br> <br> <br> <br></p>
+<p>What structures exist in hypergraphs that we can’t study in graphs <em>at all</em>?</p>
+<p><br> <br> <br></p>
+<div class="fragment">
+<p>One answer: <span class="alert">two-edge motifs</span>.</p>
+</div>
+</div><div class="column">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../_img/hypercopy/hypergraph_viz_unlabeled.png" class="quarto-figure quarto-figure-center" height="600"></p>
+</figure>
+</div>
+</div></section>
+<section id="section-3" class="slide level2">
+<h2></h2>
+<h3 id="edge-motifs-in-simple-undirected-graphs">2-edge motifs in (simple) undirected graphs</h3>
 
+<img data-src="../_img/hypercopy/undirected-graph-motifs.svg" class="r-stretch"></section>
+<section id="section-4" class="slide level2">
+<h2></h2>
+<h3 id="edge-motifs-in-hypergraphs">2-edge motifs in hypergraphs</h3>
+<p><strong>Claim</strong>: <em>What’s special about the structure of hypergraphs is that they have diverse, undirected, two-edge motifs: <span class="alert"><strong>intersections</strong></span>.</em></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../_img/hypercopy/hypergraph-2-edge-motifs.svg" class="quarto-figure quarto-figure-center" height="400"></p>
+</figure>
+</div>
+</section>
+<section id="section-5" class="slide level2 split-40">
+<h2></h2>
+<h4 id="intersections-in-temporal-hypergraphs">Intersections in Temporal Hypergraphs</h4>
+<div class="column">
+<p><br></p>
+<p>Let <span class="math inline">\(r_k^{(t)}\)</span> be the probability that two uniformly random hyperedges which arrive before time <span class="math inline">\(t\)</span> have an intersection of size <span class="math inline">\(k\)</span>.</p>
+<p>In empirical hypergraphs, <span class="math inline">\(r_k^{(t)}\)</span> often decays at rates close to <span class="math inline">\(t^{-1}\)</span> or <span class="math inline">\(t^{-2}\)</span>, <em>regardless of <span class="math inline">\(k\)</span></em>.</p>
+<p><span class="footnote absolute" style="bottom: 0px; ">Benson, Abebe, Schaub, and Kleinberg (2018). Simplicial closure and higher-order link prediction. <em>PNAS</em><br> <br> Chodrow (2020). Configuration models of random hypergraphs. <em>JCN</em> <br><br> Landry, Young, and Eikmeier (2023). The simpliciality of higher-order networks. <em>EPJ Data Sci.</em></span></p>
+</div><div class="column">
+<p><br></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../_img/hypercopy/empirical-intersections.png" class="quarto-figure quarto-figure-center" height="500"></p>
+</figure>
+</div>
+<p><span class="footnote">Dashed lines give slope of <span class="math inline">\(t^{-1}\)</span> and <span class="math inline">\(t^{-2}\)</span> decay.</span></p>
+</div></section>
+<section id="section-6" class="slide level2">
+<h2></h2>
+<div class="column">
+<table style="padding:0px;border-bottom:0pxmargin: 0px auto; ">
+<tbody><tr style="border:0px;padding:0px;margin:0px;">
+<td style="padding:0px;border-bottom:0px">
+<img data-src="../_img/people/xie-he.jpeg" class="portrait-small">
+</td>
+<td style="vertical-align: middle;white-space:nowrap;padding:0px;border-bottom:0px">
+<p style="padding:0px">
+<strong>Xie He</strong> <br> Dartmouth + Microsoft
+</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align: middle;padding:0px;border-bottom:0px">
+<img data-src="../_img/people/chodrow.jpg" class="portrait-small">
+</td>
+<td style="vertical-align: middle;white-space:nowrap;padding:0px;border-bottom:0px">
+<p style="padding:0px">
+<strong>Phil Chodrow</strong> <br> Middlebury
+</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align: middle;padding:0px;border-bottom:0px">
+<img data-src="../_img/people/mucha.jpeg" class="portrait-small">
+</td>
+<td style="vertical-align: middle;white-space:nowrap;padding:0px;border-bottom:0px">
+<p style="padding:0px">
+<strong>Peter Mucha</strong> <br> Dartmouth
+</p>
+</td>
+</tr>
+</tbody></table>
+</div><div class="column">
+<p><img data-src="../_img/hypercopy/pre.png"></p>
+</div></section>
+<section id="section-7" class="slide level2">
+<h2></h2>
+<div class="column">
+<table style="padding:0px;border-bottom:0pxmargin: 0px auto; ">
+<tbody><tr style="border:0px;padding:0px;margin:0px;">
+<td style="padding:0px;border-bottom:0px">
+<img data-src="../_img/people/xie-he.jpeg" class="portrait-small">
+</td>
+<td style="vertical-align: middle;white-space:nowrap;padding:0px;border-bottom:0px">
+<p style="padding:0px">
+<strong>Xie He</strong> <br> Dartmouth + Microsoft
+</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align: middle;padding:0px;border-bottom:0px">
+<img data-src="../_img/people/chodrow.jpg" class="portrait-small">
+</td>
+<td style="vertical-align: middle;white-space:nowrap;padding:0px;border-bottom:0px">
+<p style="padding:0px">
+<strong>Phil Chodrow</strong> <br> Middlebury
+</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align: middle;padding:0px;border-bottom:0px">
+<img data-src="../_img/people/mucha.jpeg" class="portrait-small">
+</td>
+<td style="vertical-align: middle;white-space:nowrap;padding:0px;border-bottom:0px">
+<p style="padding:0px">
+<strong>Peter Mucha</strong> <br> Dartmouth
+</p>
+</td>
+</tr>
+</tbody></table>
+</div><div class="column">
+<p><br> <br> <br> <br></p>
+<h3 id="he"><span class="alert">H</span>e</h3>
+<h3 id="chodrow"><span class="alert">C</span>hodrow</h3>
+<h3 id="mucha"><span class="alert">M</span>ucha</h3>
+</div></section>
+<section id="section-8" class="slide level2">
+<h2></h2>
+<div class="column">
+<table style="padding:0px;border-bottom:0pxmargin: 0px auto; ">
+<tbody><tr style="border:0px;padding:0px;margin:0px;">
+<td style="padding:0px;border-bottom:0px">
+<img data-src="../_img/people/xie-he.jpeg" class="portrait-small">
+</td>
+<td style="vertical-align: middle;white-space:nowrap;padding:0px;border-bottom:0px">
+<p style="padding:0px">
+<strong>Xie He</strong> <br> Dartmouth + Microsoft
+</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align: middle;padding:0px;border-bottom:0px">
+<img data-src="../_img/people/chodrow.jpg" class="portrait-small">
+</td>
+<td style="vertical-align: middle;white-space:nowrap;padding:0px;border-bottom:0px">
+<p style="padding:0px">
+<strong>Phil Chodrow</strong> <br> Middlebury
+</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align: middle;padding:0px;border-bottom:0px">
+<img data-src="../_img/people/mucha.jpeg" class="portrait-small">
+</td>
+<td style="vertical-align: middle;white-space:nowrap;padding:0px;border-bottom:0px">
+<p style="padding:0px">
+<strong>Peter Mucha</strong> <br> Dartmouth
+</p>
+</td>
+</tr>
+</tbody></table>
+</div><div class="column">
+<p><br> <br> <br> <br></p>
+<h3 id="hyperedge"><span class="alert">H</span><span class="fragment">yperedge</span></h3>
+<h3 id="copy"><span class="alert">C</span><span class="fragment">opy</span></h3>
+<h3 id="model"><span class="alert">M</span><span class="fragment">odel</span></h3>
+</div></section>
+<section id="section-9" class="slide level2 split-50">
+<h2></h2>
+<h4 id="hyperedge-copy-model"><span class="alert">H</span>yperedge <span class="alert">C</span>opy <span class="alert">M</span>odel</h4>
+<div class="column">
+<p><br> <br> <br></p>
+<h5 id="inspo-from">Inspo from…</h5>
+<p>Benson, Kumar, and Tomkins (2018). “Sequences of Sets.” <em>KDD</em> <br> <br> Benson, Abebe, Schaub, and Kleinberg (2018). “Simplicial closure and higher-order link prediction.” <em>PNAS</em> <br><br> Avin, Lotker, Nahum, and Peleg (2019). “Random preferential attachment hypergraph.” <em>ASONAM</em></p>
+</div><div class="column">
+<p><br></p>
+<p><img data-src="../_img/hypercopy/hypergraph-sequence-0.svg"></p>
+</div></section>
+<section id="section-10" class="slide level2 split-30">
+<h2></h2>
+<h4 id="hyperedge-copy-model-1"><span class="alert">H</span>yperedge <span class="alert">C</span>opy <span class="alert">M</span>odel</h4>
+<div class="column">
+<p><br> <br> <br></p>
+<h4 id="in-each-timestep">In each timestep…</h4>
+</div><div class="column">
+<p><br></p>
+<p><img data-src="../_img/hypercopy/hypergraph-sequence-0.svg"></p>
+</div></section>
+<section id="section-11" class="slide level2 split-30">
+<h2></h2>
+<h4 id="hyperedge-copy-model-2"><span class="alert">H</span>yperedge <span class="alert">C</span>opy <span class="alert">M</span>odel</h4>
+<div class="column">
+<p><br> <br> <br></p>
+<h4 id="select-a-random-edge">Select a random edge</h4>
+</div><div class="column">
+<p><br></p>
+<p><img data-src="../_img/hypercopy/hypergraph-sequence-1.svg"></p>
+</div></section>
+<section id="section-12" class="slide level2 split-30">
+<h2></h2>
+<h4 id="hyperedge-copy-model-3"><span class="alert">H</span>yperedge <span class="alert">C</span>opy <span class="alert">M</span>odel</h4>
+<div class="column">
+<p><br> <br> <br></p>
+<h4 id="select-random-nodes-from-edge">Select random nodes from edge</h4>
+</div><div class="column">
+<p><br></p>
+<p><img data-src="../_img/hypercopy/hypergraph-sequence-2.svg"></p>
+</div></section>
+<section id="section-13" class="slide level2 split-30">
+<h2></h2>
+<h4 id="hyperedge-copy-model-4"><span class="alert">H</span>yperedge <span class="alert">C</span>opy <span class="alert">M</span>odel</h4>
+<div class="column">
+<p><br> <br> <br></p>
+<h4 id="add-nodes-from-hypergraph">Add nodes from hypergraph</h4>
+<h4 id="add-novel-nodes">Add novel nodes</h4>
+</div><div class="column">
+<p><br></p>
+<p><img data-src="../_img/hypercopy/hypergraph-sequence-3.svg"></p>
+</div></section>
+<section id="section-14" class="slide level2 split-30">
+<h2></h2>
+<h4 id="hyperedge-copy-model-5"><span class="alert">H</span>yperedge <span class="alert">C</span>opy <span class="alert">M</span>odel</h4>
+<div class="column">
+<p><br> <br> <br></p>
+<h4 id="form-edge">Form edge</h4>
+</div><div class="column">
+<p><br></p>
+<p><img data-src="../_img/hypercopy/hypergraph-sequence-4.svg"></p>
+</div></section>
+<section id="section-15" class="slide level2 split-30">
+<h2></h2>
+<h4 id="hyperedge-copy-model-6"><span class="alert">H</span>yperedge <span class="alert">C</span>opy <span class="alert">M</span>odel</h4>
+<div class="column">
+<p><br> <br> <br></p>
+<h4 id="repeat">Repeat</h4>
+</div><div class="column">
+<p><br></p>
+<p><img data-src="../_img/hypercopy/hypergraph-sequence-5.svg"></p>
+</div></section>
+<section id="section-16" class="slide level2 split-30">
+<h2></h2>
+<h4 id="hyperedge-copy-model-7"><span class="alert">H</span>yperedge <span class="alert">C</span>opy <span class="alert">M</span>odel</h4>
+<div class="column">
+<p><br> <br> <br></p>
+<h4 id="repeat-1">Repeat</h4>
+</div><div class="column">
+<p><br></p>
+<p><img data-src="../_img/hypercopy/hypergraph-sequence-6.svg"></p>
+</div></section>
+<section id="section-17" class="slide level2 split-30">
+<h2></h2>
+<h4 id="hyperedge-copy-model-8"><span class="alert">H</span>yperedge <span class="alert">C</span>opy <span class="alert">M</span>odel</h4>
+<div class="column">
+<p><br></p>
+<h5 id="formally">Formally</h5>
+<p>In each timestep <span class="math inline">\(t\)</span>:</p>
+<ul>
+<li>Start with an empty edge <span class="math inline">\(f = \emptyset\)</span>.</li>
+<li>Select an edge <span class="math inline">\(e \in H\)</span>.</li>
+<li>Accept each node from <span class="math inline">\(e\)</span> into <span class="math inline">\(f\)</span> with probability <span class="math inline">\(\eta\)</span> (condition on at least one).<br>
+</li>
+<li>Add <span class="math inline">\(X \sim \boldsymbol{\beta}\)</span> novel nodes.</li>
+<li>Add <span class="math inline">\(Y \sim \boldsymbol{\gamma}\)</span> nodes from <span class="math inline">\(H \setminus e\)</span>.</li>
+</ul>
+</div><div class="column">
+<p><br></p>
+<p><img data-src="../_img/hypercopy/hypergraph-sequence-4-annotated.svg"></p>
+</div></section>
+<section id="section-18" class="slide level2">
+<h2></h2>
+<h4 id="tractable-asymptotics">“Tractable” Asymptotics</h4>
+<div class="font_80">
+<p><strong>Proposition</strong> (HCM ’25): There exist constants <span class="math inline">\(q_k\)</span> such that, as <span class="math inline">\(t\rightarrow \infty\)</span>, <span class="math display">\[
+\begin{aligned}
+r_{k}(t) = \text{Rate of $k$-intersections at time $t$}\simeq \begin{cases}
+  q_k &amp; \quad \text{if } k = 0\\
+  \color{#ff9f1c}{t^{-1}} q_k &amp;\quad \mathrm{otherwise}\;.
+\end{cases}
+\end{aligned}
+\]</span></p>
+<p>Here, <span class="math inline">\(q_k = \sum_{ij} q_{ijk}\)</span> and <span class="math inline">\(\{q_{ijk}\}\)</span> solve the system</p>
+<p><span class="math display">\[
+q_{ijk} = \begin{cases}
+  \frac{1}{2}\sum_{\ell} \left(q_{\ell j 0} \alpha_{i0|\ell j0} + q_{j \ell 0} \alpha_{i0|j\ell 0}\right) &amp; \quad  k = 0\\
+  \frac{1}{2}\beta_{ik|j} \sum_{\ell} (q_{\ell j0} + q_{j\ell 0}) + \frac{1}{2}\sum_{\ell, h\geq k}  \left(q_{\ell j h} \alpha_{ik|\ell jh} + q_{j \ell h} \alpha_{ik|j\ell h}\right) &amp;\quad k \geq 1\;,
+\end{cases}
+\]</span></p>
+<p>where <span class="math inline">\(\alpha_{ik|\ell jh}\)</span> and <span class="math inline">\(\beta_{ik|j}\)</span> are constants determined by the model parameters.</p>
+</div>
+<p><span class="footnote">These come out of linearized compartmental equations.</span></p>
+</section>
+<section id="section-19" class="slide level2">
+<h2></h2>
+<h4 id="edge-intersections">Edge intersections</h4>
+<p><strong>Proposition</strong> (HCM ’25): There exist constants <span class="math inline">\(q_k\)</span> such that, as <span class="math inline">\(t\rightarrow \infty\)</span>, <span class="math inline">\(r_{k}(t) \simeq \begin{cases} q_k &amp; \quad \text{if } k = k_0\\ \color{#ff9f1c}{t^{-1}} q_k &amp;\quad \mathrm{otherwise}\;. \end{cases}\)</span> <!-- $$
+\begin{aligned}
 
+\end{aligned}
+$$ --></p>
 
-<img data-src="../_img/people/brooks.jpg" class="portrait-smaller r-stretch"></section>
+<img data-src="../_img/hypercopy/intersection-asymptotics-2-panel.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="section-20" class="slide level2">
+<h2></h2>
+<h4 id="degree-and-edge-size-distributions">Degree and edge-size distributions</h4>
+
+<img data-src="../_img/hypercopy/degree-and-edge-sizes.png" class="quarto-figure quarto-figure-center r-stretch"><p><span class="footnote">From statistically-inferred parameters, not regression fits!</span></p>
+</section>
+<section id="section-21" class="slide level2 split-50">
+<h2></h2>
+<h4 id="scalable-online-learning-via-stochastic-em">Scalable online learning via stochastic EM</h4>
+<div class="column font_smaller">
+<p><br> <br></p>
+<p><strong>Aim</strong>: given the sequence of edges <span class="math inline">\(\{e_t\}\)</span>, estimate:</p>
+<ul>
+<li><span class="math inline">\(\eta\)</span>, the edge retention rate.</li>
+<li><span class="math inline">\(\beta\)</span>, the distribution of the number of novel nodes added to each edge.</li>
+<li><span class="math inline">\(\gamma\)</span>, distribution of the number of pre-existing nodes added to each edge.</li>
+</ul>
+<ol type="1">
+<li>Sample <span class="math inline">\(e_t\)</span> and form a belief about seed edge <span class="math inline">\(f\)</span>.</li>
+<li>Update a vector of expected sufficient statistics <span class="math inline">\(\theta_t\)</span> and current parameter estimates <span class="math inline">\(\bar{\eta}\)</span>, <span class="math inline">\(\bar{\beta}\)</span>, and <span class="math inline">\(\bar{\gamma}\)</span>.</li>
+<li>Repeat until tired.</li>
+</ol>
+</div><div class="column">
+<p><br> <br> <br> <img data-src="../_img/hypercopy/sem-example.png" class="absolute" style="left: 0px; width: 700px; "></p>
+</div></section>
+<section id="section-22" class="slide level2">
+<h2></h2>
+<h5 id="simple-models-can-be-predictive">Simple models can be predictive!</h5>
+<p>We computed AUC scores for a link prediction task in which our model learns parameters on 20% training data from three metabolic and organic reaction data sets with edges up to size 5. We compared these against previously-reported AUC scores on the same task for two dedicated <strong>neural</strong> network hypergraph link prediction algorithms.</p>
+<p><span class="footnote">Yadati et al.&nbsp;(2020) NHP: Neural Hypergraph Link Prediction. <em>CIKM</em> <br> <br> Yang et al.&nbsp;(2023) LHP: Logical hypergraph link prediction. <em>Expert Systems with Applications</em></span></p>
+<div class="font_65">
+<table class="caption-top">
+<colgroup>
+<col style="width: 17%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 20%">
+<col style="width: 14%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: right;"><span class="math inline">\(n\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(m\)</span></th>
+<th style="text-align: right;">HCM <br>11 pars</th>
+<th style="text-align: right;">NHP <br>?? pars</th>
+<th style="text-align: right;">LHP <br><span class="math inline">\(10^6\)</span> pars</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">iAF1260b</td>
+<td style="text-align: right;">1,668</td>
+<td style="text-align: right;">2,084</td>
+<td style="text-align: right;">0.605</td>
+<td style="text-align: right;">0.582</td>
+<td style="text-align: right;"><strong><span class="alert">0.639</span></strong></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">iJO1366</td>
+<td style="text-align: right;">1,805</td>
+<td style="text-align: right;">2,253</td>
+<td style="text-align: right;"><strong><span class="alert">0.774</span></strong></td>
+<td style="text-align: right;">0.599</td>
+<td style="text-align: right;">0.638</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">USPTO</td>
+<td style="text-align: right;">16,293</td>
+<td style="text-align: right;">11,433</td>
+<td style="text-align: right;">0.515</td>
+<td style="text-align: right;">0.662</td>
+<td style="text-align: right;"><strong><span class="alert">0.733</span></strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>We are competitive with neural networks (on some data sets) using an 11-parameter model!</p>
+</section>
+<section id="section-23" class="slide level2 split-40">
+<h2></h2>
+<div class="column">
+<h3 id="thank-you">Thank you!!</h3>
+<p>Hypergraphs have interesting two-edge motifs (intersections). <strong>Learnable, mechanistic</strong> models of hypergraph growth can be tractable and predictive. <img data-src="../_img/hypercopy/hypergraph-sequence-4-annotated.svg" height="250"></p>
+<p><span class="footnote">Edge correlations and link prediction in growing hypergraphs. He, Chodrow, and Mucha. <em>Physical Review E</em> (2025)</span></p>
+</div><div class="column">
+<p><img data-src="../_img/people/xie-he.jpeg" class="absolute portrait-medium" style="top: 80px; left: 50px; "> <span class="absolute" style="top: 240px; left: 60px; ">Xie He</span></p>
+<p><img data-src="../_img/people/mucha.jpeg" class="absolute portrait-medium" style="top: 80px; left: 220px; "> <span class="absolute" style="top: 240px; left: 230px; ">Peter Mucha</span></p>
+<p><img data-src="../_img/orgs/nsf-logo.jpeg" class="absolute portrait-medium" style="top: 80px; left: 390px; "></p>
+<p><br> <br> <br> <br></p>
+<div class="fragment">
+<h5 id="hompohily-in-hypergraph-growth">Hompohily in Hypergraph Growth??</h5>
+<p><br></p>
+<div class="textblock">
+<p><img data-src="../_img/people/violet.gif" class="absolute portrait-medium" style="top: 330px; left: 50px; "> <span class="absolute" style="top: 420px; left: 200px; "><span class="alert"><strong>Violet Ross</strong></span> (CU Boulder)</span></p>
+<p><br> <br></p>
+<p><em>Modeling Homophilic Hypergraph Growth Using Edge Copying</em> (#201)</p>
+<p>Wednesday @4:45pm in Central Square</p>
+</div>
+</div>
+</div></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
