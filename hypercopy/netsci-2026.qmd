@@ -656,7 +656,7 @@ Hypergraphs have interesting two-edge motifs (intersections). **Learnable, mecha
 
 ::: {.fragment}
 
-##### Hompohily in Hypergraph Growth??
+##### Homophily in Hypergraph Growth??
 
 <br> 
 
