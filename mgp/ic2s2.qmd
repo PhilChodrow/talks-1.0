@@ -18,7 +18,7 @@ date: ""
 
 ::: {.textblock}
 
-Prof. of CS at Middlebury College, a small liberal arts college in Vermont.  
+Prof. of CS at Middlebury College, a small liberal arts college here in VT!  
 
 :::
 
