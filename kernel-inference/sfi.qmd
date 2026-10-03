@@ -1,0 +1,91 @@
+---
+title: "Learning Social Influence"  
+subtitle: "The Santa Fe Institute <br> October 21st, 2026"  
+date: ""
+---
+
+## {.split-40 background-image="../_img/midd/midd-banner-light.jpg" background-size="cover" background-position="center" background-repeat="no-repeat"} 
+
+
+#### Hi everyone! I'm Phil Chodrow
+
+
+::: {.column}
+
+<br> <br> 
+
+::: {.textblock}
+
+Prof. of CS at Middlebury College, a small liberal arts college in Vermont.  
+
+:::
+
+::: {.textblock-inverse}
+
+*Students/postdocs: ask me about [**\#LiberalArtsLife**]{.alert} if you're curious.*
+
+:::
+
+::: {.textblock}
+
+I like  aikido, tea, my cats, being outside, hypergraphs, and [math models of social systems]{.alert}. 
+
+:::
+
+
+:::
+
+::: {.column}
+
+![](../_img/personal/aikido.png){.absolute left=50 top=120 width=45%}
+![](../_img/personal/opinion-dynamics.png){.absolute left=50 top=400 width=45%}
+![](../_img/personal/cats.jpeg){.absolute right=80 top=120 width=25.5%}
+![](../_img/personal/xgi-hypergraph.webp){.absolute right=80 top=250 width=25.5%}
+![](../_img/personal/tea.jpeg){.absolute right=80 top=380 width=25.5%}
+![](../_img/personal/cycling-2.jpeg){.absolute right=80 top=510 width=25.5%}
+
+::: 
+
+## {.split-50}
+
+### Social Influence...
+
+::: {.column}
+
+<br> <br> 
+
+Goes back at least as far as 1936. 
+
+:::
+
+::: {.column}
+
+![](../_img/kernel-inference/sherif.jpg){.absolute top=0 left=0 width="100%" height="100%"}
+
+:::
+
+## {background-color="black"}
+
+<br> <br> <br> <br> <br> <br> <br> <br> <br> 
+
+::: {.r-stack}
+
+::: {data-id="box1" style="background: #ffffff; width: 10px; height: 10px; border-radius: 200px;"}
+
+:::
+
+{{< countdown minutes=0 seconds=5 >}}
+
+:::
+
+## 
+
+![](../_img/kernel-inference/autokinetic.png)
+
+## Abstracting Social Influence
+
+DeGroot etc. here
+
+
+
+
