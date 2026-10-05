@@ -8,3 +8,5 @@ author: '<span class="speaker-highlight">Phil Chodrow</span> <br>Department of C
 title-slide-attributes:
   data-background-opacity: "0.0"  
   data-background-color: "#A4303F"  
+bibliography: 
+  - refs.bib

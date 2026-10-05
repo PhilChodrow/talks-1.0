@@ -30,7 +30,26 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-  </style>
+    /* CSS for citations */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+    }
+    .hanging-indent div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }  </style>
   <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-dfeaed4c0fa18b3c9183e469be429158.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
@@ -174,17 +193,102 @@
 <div data-id="box1" style="background: #ffffff; width: 10px; height: 10px; border-radius: 200px;">
 
 </div>
-<countdown-timer id="timer_0b8e635e38c1e212df33110719f8ff0bb54a96ea" minutes="00" seconds="05" class="countdown" warn-when="0" update-every="1" play-sound="false" blink-colon="false" start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
- </countdown-timer>
+<!--  -->
 </div>
 </section>
 <section id="section-3" class="slide level2">
 <h2></h2>
 
 <img data-src="../_img/kernel-inference/autokinetic.png" class="r-stretch"></section>
-<section id="abstracting-social-influence" class="slide level2">
-<h2>Abstracting Social Influence</h2>
-<p>DeGroot etc. here</p>
+<section id="section-4" class="slide level2">
+<h2></h2>
+<h4 id="abstracting-social-influence">Abstracting Social Influence</h4>
+<p>Let <span class="math inline">\(x_i(t) \in \mathbb{R}\)</span> be the opinion of agent <span class="math inline">\(i\)</span> at time <span class="math inline">\(t\)</span>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../_img/kernel-inference/triad.png" class="quarto-figure quarto-figure-center" style="height:2.5in"></p>
+</figure>
+</div>
+<p><span class="math display">\[
+\begin{aligned}
+    \underbrace{\color{#d0bfff}{x_1}(t+1) - \color{#a5d8ff}{x_1}(t)}_{\text{opinion change } \delta_i(t+1)} = \overbrace{\lambda}^{\text{Learning rate}} \underbrace{\frac{\color{#fa5252}{x_2}(t) + \color{#ffc9c9}{x_3}(t)}{2}}_{\text{average opinion of neighbors}}
+\end{aligned}
+\]</span></p>
+</section>
+<section id="section-5" class="slide level2 split-40">
+<h2></h2>
+<h4 id="more-generally">More generally,</h4>
+<div class="column">
+<p><br><br><br></p>
+<p><img data-src="../_img/kernel-inference/network.png" style="width:100.0%"></p>
+<p><span class="footnote">DeGroot (1974). “Reaching a consensus.” <em>JASA</em></span></p>
+</div><div class="column">
+<p><br><br><br><br><br></p>
+<p>Let <span class="math inline">\(\partial i\)</span> be the set of neighbors of agent <span class="math inline">\(i\)</span>.</p>
+<p><span class="math display">\[
+\begin{aligned}
+    \underbrace{x_i(t+1) - x_i(t)}_{\text{opinion change } \delta_i(t+1)} &amp;= \lambda \underbrace{\frac{1}{|\partial i|}\sum_{j \in \partial i} x_j(t)}_{\text{average opinion of neighbors}} \\
+\end{aligned}
+\]</span></p>
+</div></section>
+<section id="section-6" class="slide level2 split-50">
+<h2></h2>
+<h4 id="a-realistic-model">A realistic model?</h4>
+<div class="column">
+<p><br><br></p>
+<p><img data-src="../_img/kernel-inference/autokinetic.png"></p>
+</div><div class="column">
+<p><br><br><br></p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="sfi_files/figure-revealjs/unnamed-chunk-1-1.png" width="576"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><p><br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br></p>
+<p>On a connected social graph where all agents listen (at least a little bit) to all their neighbors, DeGroot dynamics always converge to a consensus.</p>
+</section>
+<section id="section-7" class="slide level2" data-background-image="../_img/kernel-inference/polarized-report.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+<h2></h2>
+</section>
+<section id="section-8" class="slide level2">
+<h2></h2>
+<h4 id="generalizing-with-influence-kernels">Generalizing with Influence Kernels</h4>
+<div class="column">
+<p><span class="math display">\[
+\begin{aligned}
+    \delta_i(t+1) &amp;= x_i(t+1) - x_i(t) \\
+    &amp;= \lambda \frac{1}{|\partial i|}\sum_{j \in \partial i} x_j(t)   \quad \quad (\text{DeGroot})
+\end{aligned}
+\]</span></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../_img/shared/downarrow.png" class="quarto-figure quarto-figure-center" height="30"></p>
+</figure>
+</div>
+<p><span class="math display">\[
+\begin{aligned}
+    \delta_i(t+1) &amp;= x_i(t+1) - x_i(t) \\
+    &amp;=  \lambda \frac{\sum_{j \in \partial i} \color{#A4303F}{K(x_j(t) - x_i(t))} x_j(t)}{\sum_{j \in \partial i} \color{#A4303F}{K(x_j(t) - x_i(t))}}
+\end{aligned}
+\]</span></p>
+</div><div class="column">
+<p><br> <br> <br></p>
+<ul>
+<li><em>Attraction</em>: <span class="math inline">\(K(x_j - x_i) &gt; 0\)</span></li>
+<li><em>Repulsion</em>: <span class="math inline">\(K(x_j - x_i) &lt; 0\)</span></li>
+<li><em>Indifference</em>: <span class="math inline">\(K(x_j - x_i) = 0\)</span></li>
+</ul>
+<p>We recover DeGroot dynamics if <span class="math inline">\(K(y) \equiv 1\)</span>.</p>
+</div></section>
+<section id="references" class="slide level2 smaller scrollable">
+<h2>References</h2>
+<div id="refs" role="list">
+
+</div>
 
 
 </section>
@@ -403,6 +507,44 @@
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
       window.document.addEventListener("DOMContentLoaded", function (event) {
         const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")

@@ -487,6 +487,55 @@
     "href": "kernel-inference/sfi.html#abstracting-social-influence",
     "title": "Learning Social Influence",
     "section": "Abstracting Social Influence",
-    "text": "Abstracting Social Influence\nDeGroot etc. here"
+    "text": "Abstracting Social Influence\n\nLet \\(x_i(t) \\in \\mathbb{R}\\) be the opinion of agent \\(i\\) at time \\(t\\).\n\\[\n\\begin{aligned}\n    \\underbrace{\\color{#d0bfff}{x_1}(t+1) - \\color{#a5d8ff}{x_1}(t)}_{\\delta_i(t+1)} = \\lambda \\underbrace{\\frac{\\color{#fa5252}{x_2}(t) + \\color{#ffc9c9}{x_3}(t)}{2}}_{\\text{average opinion of neighbors}}\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "kernel-inference/sfi.html#section-4",
+    "href": "kernel-inference/sfi.html#section-4",
+    "title": "Learning Social Influence",
+    "section": "",
+    "text": "Abstracting Social Influence\nLet \\(x_i(t) \\in \\mathbb{R}\\) be the opinion of agent \\(i\\) at time \\(t\\).\n\n\n\n\n\n\\[\n\\begin{aligned}\n    \\underbrace{\\color{#d0bfff}{x_1}(t+1) - \\color{#a5d8ff}{x_1}(t)}_{\\text{opinion change } \\delta_i(t+1)} = \\overbrace{\\lambda}^{\\text{Learning rate}} \\underbrace{\\frac{\\color{#fa5252}{x_2}(t) + \\color{#ffc9c9}{x_3}(t)}{2}}_{\\text{average opinion of neighbors}}\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "kernel-inference/sfi.html#references",
+    "href": "kernel-inference/sfi.html#references",
+    "title": "Learning Social Influence",
+    "section": "References",
+    "text": "References"
+  },
+  {
+    "objectID": "kernel-inference/sfi.html#section-5",
+    "href": "kernel-inference/sfi.html#section-5",
+    "title": "Learning Social Influence",
+    "section": "",
+    "text": "More generally,\n\n\n\nDeGroot (1974). “Reaching a consensus.” JASA\n\n\nLet \\(\\partial i\\) be the set of neighbors of agent \\(i\\).\n\\[\n\\begin{aligned}\n    \\underbrace{x_i(t+1) - x_i(t)}_{\\text{opinion change } \\delta_i(t+1)} &= \\lambda \\underbrace{\\frac{1}{|\\partial i|}\\sum_{j \\in \\partial i} x_j(t)}_{\\text{average opinion of neighbors}} \\\\\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "kernel-inference/sfi.html#section-6",
+    "href": "kernel-inference/sfi.html#section-6",
+    "title": "Learning Social Influence",
+    "section": "",
+    "text": "A realistic model?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n           \nOn a connected social graph where all agents listen (at least a little bit) to all their neighbors, DeGroot dynamics always converge to a consensus."
+  },
+  {
+    "objectID": "kernel-inference/sfi.html#generalized",
+    "href": "kernel-inference/sfi.html#generalized",
+    "title": "Learning Social Influence",
+    "section": "Generalized",
+    "text": "Generalized"
+  },
+  {
+    "objectID": "kernel-inference/sfi.html#generalizing-with-influence-kernels",
+    "href": "kernel-inference/sfi.html#generalizing-with-influence-kernels",
+    "title": "Learning Social Influence",
+    "section": "Generalizing with Influence Kernels",
+    "text": "Generalizing with Influence Kernels"
+  },
+  {
+    "objectID": "kernel-inference/sfi.html#section-8",
+    "href": "kernel-inference/sfi.html#section-8",
+    "title": "Learning Social Influence",
+    "section": "",
+    "text": "Generalizing with Influence Kernels\n\n\\[\n\\begin{aligned}\n    \\delta_i(t+1) &= x_i(t+1) - x_i(t) \\\\\n    &= \\lambda \\frac{1}{|\\partial i|}\\sum_{j \\in \\partial i} x_j(t)   \\quad \\quad (\\text{DeGroot})\n\\end{aligned}\n\\]\n\n\n\n\n\n\\[\n\\begin{aligned}\n    \\delta_i(t+1) &= x_i(t+1) - x_i(t) \\\\\n    &=  \\lambda \\frac{\\sum_{j \\in \\partial i} \\color{#A4303F}{K(x_j(t) - x_i(t))} x_j(t)}{\\sum_{j \\in \\partial i} \\color{#A4303F}{K(x_j(t) - x_i(t))}}\n\\end{aligned}\n\\]\n\n  \n\nAttraction: \\(K(x_j - x_i) &gt; 0\\)\nRepulsion: \\(K(x_j - x_i) &lt; 0\\)\nIndifference: \\(K(x_j - x_i) = 0\\)\n\nWe recover DeGroot dynamics if \\(K(y) \\equiv 1\\)."
   }
 ]
