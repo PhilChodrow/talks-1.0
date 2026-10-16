@@ -31,7 +31,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-12ed566aec2248296d4e61a4f044c584.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-f975e6f1923e6b5778e8276e67b7d61d.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -179,11 +179,17 @@
 <p><br><br><br></p>
 <p><span class="fragment"><strong><em>Autokinetic effect</em></strong>: a still point of light in a dark room will appear to move if you stare at it long enough.</span></p>
 </section>
-<section id="todo-highlight-line-at-0" class="slide level2">
-<h2>TODO: highlight line at 0</h2>
-
-<img data-src="../_img/kernel-inference/autokinetic.png" class="r-stretch"></section>
 <section id="section-3" class="slide level2">
+<h2></h2>
+
+<img data-src="../_img/kernel-inference/autokinetic.png" class="quarto-figure quarto-figure-center r-stretch" style="width:90.0%"><p><span class="footnote">Sherif (1935)</span></p>
+</section>
+<section id="section-4" class="slide level2">
+<h2></h2>
+
+<img data-src="../_img/kernel-inference/autokinetic-line.png" class="quarto-figure quarto-figure-center r-stretch" style="width:90.0%"><p><span class="footnote">Sherif (1935)</span></p>
+</section>
+<section id="section-5" class="slide level2">
 <h2></h2>
 <h4 id="abstracting-social-influence">Abstracting Social Influence</h4>
 <p>Let <span class="math inline">\(x_i(t) \in \mathbb{R}\)</span> be the opinion of agent <span class="math inline">\(i\)</span> at time <span class="math inline">\(t\)</span>.</p>
@@ -198,7 +204,7 @@
 \end{aligned}
 \]</span></p>
 </section>
-<section id="section-4" class="slide level2 split-40">
+<section id="section-6" class="slide level2 split-40">
 <h2></h2>
 <h4 id="more-generally">More generally,</h4>
 <div class="column">
@@ -214,7 +220,7 @@
 \end{aligned}
 \]</span></p>
 </div></section>
-<section id="section-5" class="slide level2 split-50">
+<section id="section-7" class="slide level2 split-50">
 <h2></h2>
 <h4 id="a-realistic-model">A realistic model?</h4>
 <div class="column">
@@ -234,10 +240,10 @@
 </div><p><br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br></p>
 <p>On a connected social graph where all agents listen (at least a little bit) to all their neighbors, DeGroot dynamics always converge to a consensus.</p>
 </section>
-<section id="section-6" class="slide level2" data-background-image="../_img/kernel-inference/polarized-report.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+<section id="section-8" class="slide level2" data-background-image="../_img/kernel-inference/polarized-report.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
 <h2></h2>
 </section>
-<section id="section-7" class="slide level2">
+<section id="section-9" class="slide level2">
 <h2></h2>
 <h4 id="generalizing-with-influence-kernels">Generalizing with Influence Kernels</h4>
 <div class="column">
@@ -268,7 +274,7 @@
 <p>We recover DeGroot dynamics if <span class="math inline">\(K(y) \equiv 1\)</span>.</p>
 <p><span class="footnote">There are other possible ways to normalize this</span></p>
 </div></section>
-<section id="section-8" class="slide level2 split-60">
+<section id="section-10" class="slide level2 split-60">
 <h2></h2>
 <h4 id="kernel-zoo-degroot-dynamics">Kernel Zoo: DeGroot Dynamics</h4>
 <div class="column">
@@ -289,7 +295,7 @@
 \]</span></p>
 <p><em>Simulated on a random graph with a small amount of random noise incorporated into the update for interest.</em></p>
 </div></section>
-<section id="section-9" class="slide level2 split-60">
+<section id="section-11" class="slide level2 split-60">
 <h2></h2>
 <h4 id="kernel-zoo-bounded-confidence">Kernel Zoo: Bounded Confidence</h4>
 <div class="column">
@@ -311,7 +317,7 @@
 <p>Creates sustained opinion clusters at approximately distance <span class="math inline">\(\phi\)</span>.</p>
 <p><span class="footnote">Hegselmann &amp; Krause (2002). “Opinion dynamics and bounded confidence models, analysis, and simulation.” <em>JASSS</em>. <br><br> Deffuant et al.&nbsp;(2000). “Mixing beliefs among interacting agents.” <em>Advances in Complex Systems</em>.</span></p>
 </div></section>
-<section id="section-10" class="slide level2 split-60">
+<section id="section-12" class="slide level2 split-60">
 <h2></h2>
 <h4 id="kernel-zoo-sigmoidal-bounded-confidence">Kernel Zoo: ✨Sigmoidal✨ Bounded Confidence</h4>
 <div class="column">
@@ -334,7 +340,7 @@
 <p>Allows linear stability analysis of bounded-confidence type behavior.</p>
 <p><span class="footnote">Brooks, <strong>PSC</strong>, Porter (2024). “Emergence of polarization in a sigmoidal bounded-confidence model of opinion dynamics.” <em>SIADS</em>.</span></p>
 </div></section>
-<section id="section-11" class="slide level2 split-60">
+<section id="section-13" class="slide level2 split-60">
 <h2></h2>
 <h4 id="kernel-zoo-smooth-attraction-repulsion">Kernel Zoo: Smooth Attraction-Repulsion</h4>
 <div class="column">
@@ -357,7 +363,7 @@
 <p>Generates close-knit communities that slowly diverge.</p>
 <p><span class="footnote">Ryan (1994). “Ricker, Ormsby, Klauder, Butterworth - A Choice of Wavelets.” <em>CSEG Recorder</em>.</span></p>
 </div></section>
-<section id="section-12" class="slide level2 split-30">
+<section id="section-14" class="slide level2 split-30">
 <h2></h2>
 <h4 id="how-do-we-learn-the-kernel-from-data">How do we learn the kernel from data?</h4>
 <div class="column">
@@ -379,16 +385,16 @@
 </div>
 <p><span class="footnote">Adams, White, and Araujo (2022). “Person-to-person opinion dynamics: An empirical study using an online game.” <em>PLoS ONE</em>.</span></p>
 </div></section>
-<section id="section-13" class="slide level2">
+<section id="section-15" class="slide level2">
 <h2></h2>
 <p><img data-src="../_img/kernel-inference/adams_p08_scatter_only.png" class="absolute" style="top: 50px; right: 150px; width: 30%; "></p>
 </section>
-<section id="section-14" class="slide level2" data-background-image="../_img/kernel-inference/is-this-a.jpeg" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat" data-background-color="black">
+<section id="section-16" class="slide level2" data-background-image="../_img/kernel-inference/is-this-a.jpeg" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat" data-background-color="black">
 <h2></h2>
 <p><img data-src="../_img/kernel-inference/adams_p08_scatter_only.png" class="absolute" style="top: 50px; right: 150px; width: 30%; "></p>
 <p><img data-src="../_img/kernel-inference/adams_p08_scatter_and_conditional_mean.png" class="absolute fragment" style="top: 50px; right: 150px; width: 30%; "></p>
 </section>
-<section id="section-15" class="slide level2 split-30">
+<section id="section-17" class="slide level2 split-30">
 <h2></h2>
 <h4 id="a-more-complex-case-multiple-neighbors">A more complex case: multiple neighbors</h4>
 <div class="column">
@@ -404,7 +410,7 @@
 <p><img data-src="../_img/kernel-inference/plos_gauging_scatter_and_conditional_mean.png"></p>
 <p><span class="footnote">Vande Kerckhove + al.&nbsp;(2016). “Modelling Influence and Opinion Evolution in Online Collective Behaviour.” <em>PLoS ONE</em>.</span></p>
 </div></section>
-<section id="section-16" class="slide level2 split-40">
+<section id="section-18" class="slide level2 split-40">
 <h2></h2>
 <h4 id="some-implicit-assumptions">Some implicit assumptions</h4>
 <div class="column">
@@ -424,7 +430,7 @@
 </figure>
 </div>
 </div></section>
-<section id="section-17" class="slide level2 split-50">
+<section id="section-19" class="slide level2 split-50">
 <h2></h2>
 <h3 id="core-idea-for-today-selective-attention">Core idea for today: selective attention</h3>
 <div class="column">
@@ -438,7 +444,7 @@
 </figure>
 </div>
 </div></section>
-<section id="section-18" class="slide level2">
+<section id="section-20" class="slide level2">
 <h2></h2>
 <h4 id="the-team">The Team</h4>
 <table style="padding:0px;border-bottom:0pxmargin: 0px auto; ">
@@ -477,6 +483,10 @@
 </p>
 </td>
 <td style="vertical-align: middle;padding:0px;border-bottom:0px">
+</td>
+<td style="vertical-align: middle;padding:0px;border-bottom:0px">
+</td>
+<td style="vertical-align: middle;padding:0px;border-bottom:0px">
 <img data-src="../_img/people/vicki-modisette.jpg" class="portrait-smallish">
 </td>
 <td style="vertical-align: middle;white-space:nowrap;padding:0px;border-bottom:0px">
@@ -484,6 +494,8 @@
 <strong>Vicki Modisette</strong> <br> Eastern Kentucky
 </p>
 </td>
+</tr>
+<tr>
 <td style="vertical-align: middle;padding:0px;border-bottom:0px">
 <img data-src="../_img/people/phil-cartoon.png" class="portrait-smallish">
 </td>
@@ -492,11 +504,9 @@
 <strong>Phil Chodrow</strong> <br> Middlebury College
 </p>
 </td>
-</tr>
-<tr>
-<td>
+<td style="vertical-align: middle;padding:0px;border-bottom:0px">
 </td>
-<td>
+<td style="vertical-align: middle;padding:0px;border-bottom:0px">
 </td>
 <td style="vertical-align: middle;padding:0px;border-bottom:0px">
 <img data-src="../_img/people/brooks.jpg" class="portrait-smallish">
@@ -508,19 +518,137 @@
 </td>
 </tr>
 </tbody></table>
-<p><span class="footnote">Work initiated at the AMS Math Research Community on <em>Mathematics of Social Systems</em> (2023).</span></p>
-<h3 id="section-19"></h3>
+<p><img data-src="../_img/kernel-inference/ams-logo.png" class="absolute fragment" style="top: 250px; right: 400px; width: 25%; " data-fragment-index="1"></p>
+<div class="textblock-vertical absolute fragment" data-fragment-index="1" style="height: 7rem;top: 450px; right: 400px; width: 25%; ">
+<p>Work initiated at the AMS Mathematics Research Community on <em>Complex Social Systems</em> (2023)!</p>
+</div>
+<h3 id="section-21"></h3>
 </section>
-<section id="section-20" class="slide level2">
+<section id="section-22" class="slide level2">
+<h2></h2>
+<h3 id="visualizing-retention">Visualizing Retention</h3>
+<p><img data-src="../_img/kernel-inference/plos_gauging_scatter_only.png" class="absolute" style="top: 110px; left: 150px; width: 60%; "> <img data-src="../_img/kernel-inference/plos_gauging_scatter_and_conditional_mean.png" class="fragment absolute" style="top: 110px; left: 150px; width: 60%; "> <img data-src="../_img/kernel-inference/plos_gauging_scatter_and_arms.png" class="fragment absolute" style="top: 110px; left: 150px; width: 60%; "></p>
+<p><span class="footnote">Vande Kerckhove + al.&nbsp;(2016). “Modelling Influence and Opinion Evolution in Online Collective Behaviour.” <em>PLoS ONE</em>.</span></p>
+</section>
+<section id="section-23" class="slide level2">
 <h2></h2>
 
 <img data-src="../_img/kernel-inference/network-selective.png" style="width:100.0%" class="r-stretch"></section>
-<section id="section-21" class="slide level2">
+<section id="section-24" class="slide level2">
 <h2></h2>
 <h3 id="our-model">Our Model</h3>
-
-
+<p>TODO: see if we can replicate some of Will’s outstanding diagrams here.</p>
 </section>
+<section id="section-25" class="slide level2">
+<h2></h2>
+<h3 id="our-kernels">Our Kernels</h3>
+<p>Plus: nonparametric RFF kernel</p>
+</section>
+<section id="section-26" class="slide level2">
+<h2></h2>
+<h3 id="expectation-maximization-em">Expectation Maximization (EM)</h3>
+</section>
+<section id="section-27" class="slide level2">
+<h2></h2>
+<h3 id="overview-model-selection-pipeline">Overview: Model Selection Pipeline</h3>
+</section>
+<section id="section-28" class="slide level2">
+<h2></h2>
+<h3 id="omitting-these-mechanisms-can-lead-to-model-misspecification">Omitting these mechanisms can lead to model misspecification</h3>
+</section>
+<section id="section-29" class="slide level2">
+<h2></h2>
+<h3 id="our-data">Our Data</h3>
+</section>
+<section id="section-30" class="slide level2">
+<h2></h2>
+<h3 id="capability-ladder">Capability Ladder</h3>
+</section>
+<section id="section-31" class="slide level2">
+<h2></h2>
+<h3 id="comparison-of-arms-on-different-data-sets">Comparison of Arms on Different Data Sets</h3>
+</section>
+<section id="section-32" class="slide level2">
+<h2></h2>
+<h3 id="some-learnings">Some Learnings</h3>
+</section>
+<section id="section-33" class="slide level2 split-60">
+<h2></h2>
+<h3 id="thanks-everyone">Thanks everyone!</h3>
+<div class="column">
+<p><br></p>
+<p><img data-src="../_img/kernel-inference/preprint.png"></p>
+<p><a href="arxiv.org/abs/2610.12616">arxiv:2610.12616</a></p>
+</div><div class="column">
+<table style="padding:0px;border-bottom:0pxmargin: 0px auto; ">
+<tbody><tr style="border:0px;padding:0px;margin:0px;">
+<td style="padding:0px;border-bottom:0px">
+<img data-src="../_img/people/will-thompson.jpg" class="portrait-smallest">
+</td>
+<td style="vertical-align: middle;white-space:nowrap;padding:0px;border-bottom:0px">
+<p style="padding:0px">
+<strong>Will Thompson</strong> <br> UVM
+</p>
+</td>
+</tr>
+<tr style="border:0px;padding:0px;margin:0px;">
+<td style="vertical-align: middle;padding:0px;border-bottom:0px">
+<img data-src="../_img/people/moyi-tian.jpeg" class="portrait-smallest">
+</td>
+<td style="vertical-align: middle;white-space:nowrap;padding:0px;border-bottom:0px">
+<p style="padding:0px">
+<strong>Moyi Tian</strong> <br> CU Boulder
+</p>
+</td>
+</tr>
+<tr style="border:0px;padding:0px;margin:0px;">
+<td style="vertical-align: middle;padding:0px;border-bottom:0px">
+<img data-src="../_img/people/linh-huynh.jpg" class="portrait-smallest">
+</td>
+<td style="vertical-align: middle;white-space:nowrap;padding:0px;border-bottom:0px">
+<p style="padding:0px">
+<strong>Linh Huynh</strong> <br> Texas Tech
+</p>
+</td>
+</tr>
+<tr style="border:0px;padding:0px;margin:0px;">
+<td style="vertical-align: middle;padding:0px;border-bottom:0px">
+<img data-src="../_img/people/alex-wiedemann.jpg" class="portrait-smallest">
+</td>
+<td style="vertical-align: middle;white-space:nowrap;padding:0px;border-bottom:0px">
+<p style="padding:0px">
+<strong>Alex Wiedemann</strong> <br> Hamline University
+</p>
+</td>
+</tr>
+<tr style="border:0px;padding:0px;margin:0px;">
+<td style="vertical-align: middle;padding:0px;border-bottom:0px">
+</td>
+<td style="vertical-align: middle;padding:0px;border-bottom:0px">
+</td>
+</tr>
+<tr style="border:0px;padding:0px;margin:0px;">
+<td style="vertical-align: middle;padding:0px;border-bottom:0px">
+<img data-src="../_img/people/vicki-modisette.jpg" class="portrait-smallest">
+</td>
+<td style="vertical-align: middle;white-space:nowrap;padding:0px;border-bottom:0px">
+<p style="padding:0px">
+<strong>Vicki Modisette</strong> <br> Eastern Kentucky
+</p>
+</td>
+</tr>
+<tr style="border:0px;padding:0px;margin:0px;">
+<td style="vertical-align: middle;padding:0px;border-bottom:0px">
+<img data-src="../_img/people/brooks.jpg" class="portrait-smallest">
+</td>
+<td style="vertical-align: middle;white-space:nowrap;padding:0px;border-bottom:0px">
+<p style="padding:0px">
+<strong>Heather Brooks</strong> <br> Harvey Mudd
+</p>
+</td>
+</tr>
+</tbody></table>
+</div></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">

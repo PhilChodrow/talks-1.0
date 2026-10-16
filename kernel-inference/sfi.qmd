@@ -58,6 +58,7 @@ I like  aikido, tea, my cats, being outside, hypergraphs, and [math models of so
 
 TODO: add white rectangles over top here to reveal the components of this figure one by one
 
+
 :::
 
 ::: {.column}
@@ -85,10 +86,17 @@ TODO: add white rectangles over top here to reveal the components of this figure
 
 [***Autokinetic effect***: a still point of light in a dark room will appear to move if you stare at it long enough.]{.fragment}
 
-## TODO: highlight line at 0
+## 
 
-![](../_img/kernel-inference/autokinetic.png)
+![](../_img/kernel-inference/autokinetic.png){fig-align="center" width="90%"}
 
+[Sherif (1935)]{.footnote}
+
+## 
+
+![](../_img/kernel-inference/autokinetic-line.png){fig-align="center" width="90%"}
+
+[Sherif (1935)]{.footnote}
 
 ## 
 
@@ -575,6 +583,10 @@ $$
 
 
 
+<td style="vertical-align: middle;padding:0px;border-bottom:0px"> 
+</td>
+<td style="vertical-align: middle;padding:0px;border-bottom:0px"> 
+</td>
 
 <td style="vertical-align: middle;padding:0px;border-bottom:0px"> 
 ![](../_img/people/vicki-modisette.jpg){.portrait-smallish} 
@@ -583,6 +595,10 @@ $$
 <p style="padding:0px">**Vicki Modisette** <br> Eastern Kentucky</p>
 </td>
 
+
+</tr>
+
+<tr>
 <td style="vertical-align: middle;padding:0px;border-bottom:0px"> 
 ![](../_img/people/phil-cartoon.png){.portrait-smallish} 
 </td>
@@ -590,15 +606,11 @@ $$
 <p style="padding:0px">**Phil Chodrow** <br> Middlebury College</p>
 </td>
 
-
-</tr>
-
-<tr>
-
-<td>
+<td style="vertical-align: middle;padding:0px;border-bottom:0px"> 
 </td>
-<td>
+<td style="vertical-align: middle;padding:0px;border-bottom:0px"> 
 </td>
+
 
 <td style="vertical-align: middle;padding:0px;border-bottom:0px"> 
 ![](../_img/people/brooks.jpg){.portrait-smallish} 
@@ -611,7 +623,13 @@ $$
 
 </table>
 
-[Work initiated at the AMS Math Research Community on *Mathematics of Social Systems* (2023).]{.footnote}
+![](../_img/kernel-inference/ams-logo.png){.absolute top=250 right=400 width=25% .fragment fragment-index=1}
+
+::: {.textblock-vertical .absolute top=450 right=400 width=25% .fragment fragment-index=1 style="height: 7rem;"}
+
+Work initiated at the AMS Mathematics Research Community on *Complex Social Systems* (2023)!
+
+:::
 
 
 
@@ -620,9 +638,163 @@ $$
 
 ## 
 
+### Visualizing Retention
+
+![](../_img/kernel-inference/plos_gauging_scatter_only.png){.absolute top=110 left=150 width="60%"}
+![](../_img/kernel-inference/plos_gauging_scatter_and_conditional_mean.png){.fragment .absolute top=110 left=150 width="60%"}
+![](../_img/kernel-inference/plos_gauging_scatter_and_arms.png){.fragment .absolute top=110 left=150 width="60%"}
+
+[Vande Kerckhove + al. (2016). "Modelling Influence and Opinion Evolution in Online Collective Behaviour." *PLoS ONE*.]{.footnote}
+
+
+## 
+
 ![](../_img/kernel-inference/network-selective.png){width="100%"}
 
 ## 
 
 ### Our Model
+
+TODO: see if we can replicate some of Will's outstanding diagrams here. 
+
+## 
+
+### Our Kernels 
+
+Plus: nonparametric RFF kernel
+
+
+
+
+## 
+
+### Expectation Maximization (EM) 
+
+
+## 
+
+### Overview: Model Selection Pipeline 
+
+## 
+
+### Omitting these mechanisms can lead to model misspecification
+
+
+## 
+
+### Our Data
+
+## 
+
+### Capability Ladder 
+
+## 
+
+### Comparison of Arms on Different Data Sets
+
+##
+
+### Some Learnings
+
+## {.split-60}
+
+### Thanks everyone!
+
+::: {.column}
+
+<br>
+
+![](../_img/kernel-inference/preprint.png)
+
+[arxiv:2610.12616](arxiv.org/abs/2610.12616)
+
+
+
+:::
+
+::: {.column}
+
+
+
+
+<table style="padding:0px;border-bottom:0pxmargin: 0px auto; ">
+<tr style="border:0px;padding:0px;margin:0px;">
+<td style="padding:0px;border-bottom:0px"> 
+![](../_img/people/will-thompson.jpg){.portrait-smallest} 
+</td>
+<td style="vertical-align: middle;white-space:nowrap;padding:0px;border-bottom:0px">
+<p style="padding:0px">**Will Thompson** <br> UVM</p>
+</td>
+
+</tr>
+<tr style="border:0px;padding:0px;margin:0px;">
+
+<td style="vertical-align: middle;padding:0px;border-bottom:0px"> 
+![](../_img/people/moyi-tian.jpeg){.portrait-smallest} 
+</td>
+<td style="vertical-align: middle;white-space:nowrap;padding:0px;border-bottom:0px">
+<p style="padding:0px">**Moyi Tian** <br> CU Boulder</p>
+</td>
+
+</tr>
+<tr style="border:0px;padding:0px;margin:0px;">
+
+
+<td style="vertical-align: middle;padding:0px;border-bottom:0px"> 
+![](../_img/people/linh-huynh.jpg){.portrait-smallest} 
+</td>
+<td style="vertical-align: middle;white-space:nowrap;padding:0px;border-bottom:0px">
+<p style="padding:0px">**Linh Huynh** <br> Texas Tech</p>
+</td>
+
+</tr>
+<tr style="border:0px;padding:0px;margin:0px;">
+
+<td style="vertical-align: middle;padding:0px;border-bottom:0px"> 
+![](../_img/people/alex-wiedemann.jpg){.portrait-smallest} 
+</td>
+<td style="vertical-align: middle;white-space:nowrap;padding:0px;border-bottom:0px">
+<p style="padding:0px">**Alex Wiedemann** <br> Hamline University</p>
+</td>
+
+</tr>
+<tr style="border:0px;padding:0px;margin:0px;">
+
+<td style="vertical-align: middle;padding:0px;border-bottom:0px"> 
+</td>
+<td style="vertical-align: middle;padding:0px;border-bottom:0px"> 
+</td>
+
+</tr>
+<tr style="border:0px;padding:0px;margin:0px;">
+
+<td style="vertical-align: middle;padding:0px;border-bottom:0px"> 
+![](../_img/people/vicki-modisette.jpg){.portrait-smallest} 
+</td>
+<td style="vertical-align: middle;white-space:nowrap;padding:0px;border-bottom:0px">
+<p style="padding:0px">**Vicki Modisette** <br> Eastern Kentucky</p>
+</td>
+
+
+</tr>
+<tr style="border:0px;padding:0px;margin:0px;">
+
+<td style="vertical-align: middle;padding:0px;border-bottom:0px"> 
+![](../_img/people/brooks.jpg){.portrait-smallest} 
+</td>
+<td style="vertical-align: middle;white-space:nowrap;padding:0px;border-bottom:0px">
+<p style="padding:0px">**Heather Brooks** <br> Harvey Mudd</p>
+</td>
+
+</tr>
+
+</table>
+
+
+:::
+
+
+
+
+
 
