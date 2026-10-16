@@ -48,19 +48,21 @@ I like  aikido, tea, my cats, being outside, hypergraphs, and [math models of so
 
 ## {.split-50}
 
-### Social Influence...
+
 
 ::: {.column}
 
-<br> <br> 
+##### [Hey y'all, on a scale from 0-5, how good is this talk?]{.fragment}
 
-Goes back at least as far as 1936. 
+![](../_img/kernel-inference/experiment.png){.fragment}
+
+TODO: add white rectangles over top here to reveal the components of this figure one by one
 
 :::
 
 ::: {.column}
 
-![](../_img/kernel-inference/sherif.jpg){.absolute top=0 left=0 width="100%" height="100%"}
+![](../_img/kernel-inference/sherif.jpg){.absolute top=0 left=0 width="100%" height="100%" .fragment}
 
 :::
 
@@ -74,13 +76,19 @@ Goes back at least as far as 1936.
 
 :::
 
+
 <!-- {{< countdown minutes=0 seconds=5 >}} -->
 
 :::
 
-## 
+<br><br><br>
+
+[***Autokinetic effect***: a still point of light in a dark room will appear to move if you stare at it long enough.]{.fragment}
+
+## TODO: highlight line at 0
 
 ![](../_img/kernel-inference/autokinetic.png)
+
 
 ## 
 
@@ -202,9 +210,11 @@ $$
 $$
 \begin{aligned}
     \delta_i(t+1) &= x_i(t+1) - x_i(t) \\
-    &=  \lambda \frac{\sum_{j \in \partial i} \color{#A4303F}{K(x_j(t) - x_i(t))} x_j(t)}{\sum_{j \in \partial i} \color{#A4303F}{K(x_j(t) - x_i(t))}}
+    &=  \lambda \frac{1}{|\partial i|} \sum_{j \in \partial i} \color{#A4303F}{K(\underbrace{ |x_j(t) - x_i(t)| }_{\text{unsigned distance } d_{ij}})} x_j(t)
 \end{aligned}
 $$
+
+
 
 :::
 
@@ -212,15 +222,407 @@ $$
 
 <br> <br> <br> 
 
-- *Attraction*: $K(x_j - x_i) > 0$
-- *Repulsion*: $K(x_j - x_i) < 0$
-- *Indifference*: $K(x_j - x_i) = 0$
+- *Attraction*: $K(d_{ij}) > 0$
+- *Repulsion*: $K(d_{ij}) < 0$
+- *Indifference*: $K(d_{ij}) = 0$
 
 We recover DeGroot dynamics if $K(y) \equiv 1$.
 
+[There are other possible ways to normalize this]{.footnote}
+
+:::
+
+## {.split-60}
+
+#### Kernel Zoo: DeGroot Dynamics
+
+::: {.column}
+
+<br>
+
+$$
+\begin{aligned}
+    \color{#A4303F}{k(d)} &= 1
+\end{aligned}
+$$
+
+![](../_img/kernel-inference/fig_kernel_atlas_simplified_degroot.png){.absolute top=210 left=0 width="100%"}
+
+:::
+
+::: {.column}
+
+<br>
+
+$$
+\begin{aligned}
+  \delta_i 
+    =  \lambda \frac{1}{|\partial i|} \sum_{j \in \partial i} \color{#A4303F}{k_\phi(d_{ij})} x_j 
+\end{aligned}
+$$
+
+
+
+*Simulated on a random graph with a small amount of random noise incorporated into the update for interest.* 
+
 :::
 
 
-## References
-::: {#refs}
+## {.split-60}
+
+#### Kernel Zoo: Bounded Confidence
+
+::: {.column}
+
+<br> 
+
+$$
+\begin{aligned}
+    \color{#A4303F}{k_\phi(d)} &= \mathbb{1}[d < \phi]
+\end{aligned}
+$$
+
+![](../_img/kernel-inference/fig_kernel_atlas_bounded_confidence.png){.absolute top=210 left=0 width="100%"}
+
 :::
+
+::: {.column}
+
+<br> 
+
+$$
+\begin{aligned}
+  \delta_i 
+    =  \lambda \frac{1}{|\partial i|} \sum_{j \in \partial i} \color{#A4303F}{k_\phi(d_{ij})} x_j 
+\end{aligned}
+$$
+
+
+
+Creates sustained opinion clusters at approximately distance $\phi$.
+
+
+  
+[Hegselmann & Krause (2002). "Opinion dynamics and bounded confidence models, analysis, and simulation." *JASSS*.
+<br><br>
+Deffuant et al. (2000). "Mixing beliefs among interacting agents." *Advances in Complex Systems*.]{.footnote}
+
+
+
+
+:::
+
+
+## {.split-60}
+
+#### Kernel Zoo: ✨Sigmoidal✨ Bounded Confidence
+
+::: {.column}
+
+<br> 
+
+$$
+\begin{aligned}
+    \color{#A4303F}{k_\phi(d)} &= \left(1 + \exp \left[\phi_1(d^2 - \phi_0^2)\right]\right)^{-1}
+\end{aligned}
+$$
+
+![](../_img/kernel-inference/fig_kernel_atlas_sigmoidal_bounded_confidence.png){.absolute top=210 left=0 width="100%"}
+
+:::
+
+::: {.column}
+
+<br> 
+
+$$
+\begin{aligned}
+  \delta_i 
+    =  \lambda \frac{1}{|\partial i|} \sum_{j \in \partial i} \color{#A4303F}{k_\phi(d_{ij})} x_j 
+\end{aligned}
+$$
+
+
+Converges to bounded-confidence dynamics with radius $\phi_0$ as $\phi_1 \rightarrow \infty$ and to DeGroot dynamics as $\phi_1 \rightarrow 0$.
+
+Allows linear stability analysis of bounded-confidence type behavior. 
+
+[Brooks, **PSC**, Porter (2024). "Emergence of polarization in a sigmoidal bounded-confidence model of opinion dynamics." *SIADS*.]{.footnote}
+
+:::
+
+
+
+## {.split-60}
+
+#### Kernel Zoo: Smooth Attraction-Repulsion
+
+::: {.column}
+
+<br>
+
+$$
+\begin{aligned}
+  \color{#A4303F}{k_\phi(d)} = \left(1 - \frac{d^2}{\phi^2}\right) \exp\left(\frac{d^2}{-2\phi}\right)
+\end{aligned}
+$$
+
+![](../_img/kernel-inference/fig_kernel_atlas_rzb.png){.absolute top=210 left=0 width="100%"}
+
+:::
+
+::: {.column}
+
+<br> 
+
+$$
+\begin{aligned}
+  \delta_i 
+    =  \lambda \frac{1}{|\partial i|} \sum_{j \in \partial i} \color{#A4303F}{k_\phi(d_{ij})} x_j 
+\end{aligned}
+$$
+
+
+No standard attraction-repulsion kernel; we use a Ricker wavelet. 
+
+Generates close-knit communities that slowly diverge.
+
+[Ryan (1994). "Ricker, Ormsby, Klauder, Butterworth - A Choice of Wavelets." *CSEG Recorder*.]{.footnote}
+
+:::
+
+## {.split-30}
+
+
+
+#### How do we learn the kernel from data?
+
+::: {.column}
+
+<br> <br> 
+
+Easiest case: for each $i$ there is only one neighbor $j$. 
+
+![](../_img/kernel-inference/pair.png)
+
+$$
+\begin{aligned}
+  \delta_i
+    \approx  \lambda \color{#228be6}{k_\phi}(|\color{#fd7e14}{x_j} - \color{#fd7e14}{x_i}|) \color{#fd7e14}{x_j}
+\end{aligned}
+$$
+
+:::
+
+::: {.column}
+
+<br> <br> 
+
+![](../_img/kernel-inference/adams_p08_scatter_only.png){fig-align="center"}
+
+[Adams, White, and Araujo (2022). "Person-to-person opinion dynamics: An empirical study using an online game." *PLoS ONE*.]{.footnote}
+
+:::
+
+
+## 
+
+![](../_img/kernel-inference/adams_p08_scatter_only.png){.absolute top=50 right=150 width="30%"}
+
+
+## {background-image="../_img/kernel-inference/is-this-a.jpeg" background-size="contain" background-position="center" background-repeat="no-repeat" background-color="black"}
+
+![](../_img/kernel-inference/adams_p08_scatter_only.png){.absolute top=50 right=150 width="30%"}
+
+![](../_img/kernel-inference/adams_p08_scatter_and_conditional_mean.png){.absolute top=50 right=150 width="30%" .fragment}
+
+## {.split-30}
+
+#### A more complex case: multiple neighbors
+
+::: {.column}
+
+<br> 
+
+![](../_img/kernel-inference/mini-neighborhood.png)
+$$
+\begin{aligned}
+  \delta_i
+    &\approx  \lambda \frac{1}{|\partial i|} \sum_{j \in \partial i} \color{#228be6}{k_\phi}(|\color{#fd7e14}{x_j} - \color{#fd7e14}{x_i}|) \color{#fd7e14}{x_j}
+\end{aligned}
+$$
+
+:::
+
+::: {.column}
+
+<br> <br> 
+
+![](../_img/kernel-inference/plos_gauging_scatter_and_conditional_mean.png)
+
+[Vande Kerckhove + al. (2016). "Modelling Influence and Opinion Evolution in Online Collective Behaviour." *PLoS ONE*.]{.footnote}
+
+:::
+
+
+## {.split-40}
+
+#### Some implicit assumptions
+
+::: {.column}
+
+<br> <br> <br> 
+
+
+
+[
+  At each timestep <br> 
+  each agent [***always***]{.alert}  interacts <br> 
+  with [***all***]{.alert-2} of their neighbors.
+]{style="font-size: 2em;"} 
+
+
+
+
+
+
+:::
+
+::: {.column}
+
+<br> <br>
+
+
+$$
+\begin{aligned}
+  \delta_i
+    &=  \lambda \frac{1}{|\partial i|} \sum_{j \in \partial i} k_\phi(d_{ij}) x_j
+\end{aligned}
+$$
+
+![](../_img/kernel-inference/network.png){width="70%" fig-align="center"}
+
+::: 
+
+## {.split-50}
+
+### Core idea for today: selective attention
+
+::: {.column} 
+
+<br> <br> 
+
+[
+  At each timestep <br> 
+  each agent [***~~always~~ sometimes***]{.alert} interacts <br> 
+  with [***~~all~~ some***]{.alert-2} of their neighbors.
+]{style="font-size: 2em;"} 
+
+:::
+
+::: {.column}
+
+<br> <br> 
+
+![](../_img/kernel-inference/twitter-feed.jpg){width="60%" fig-align="center"}
+
+:::
+
+
+
+
+## 
+
+#### The Team
+
+
+
+
+
+<table style="padding:0px;border-bottom:0pxmargin: 0px auto; ">
+<tr style="border:0px;padding:0px;margin:0px;">
+<td style="padding:0px;border-bottom:0px"> 
+![](../_img/people/will-thompson.jpg){.portrait-smallish} 
+</td>
+<td style="vertical-align: middle;white-space:nowrap;padding:0px;border-bottom:0px">
+<p style="padding:0px">**Will Thompson** <br> UVM</p>
+</td>
+
+<td style="vertical-align: middle;padding:0px;border-bottom:0px"> 
+![](../_img/people/moyi-tian.jpeg){.portrait-smallish} 
+</td>
+<td style="vertical-align: middle;white-space:nowrap;padding:0px;border-bottom:0px">
+<p style="padding:0px">**Moyi Tian** <br> CU Boulder</p>
+</td>
+
+
+
+<td style="vertical-align: middle;padding:0px;border-bottom:0px"> 
+![](../_img/people/linh-huynh.jpg){.portrait-smallish} 
+</td>
+<td style="vertical-align: middle;white-space:nowrap;padding:0px;border-bottom:0px">
+<p style="padding:0px">**Linh Huynh** <br> Texas Tech</p>
+</td>
+
+<tr>
+
+<td style="vertical-align: middle;padding:0px;border-bottom:0px"> 
+![](../_img/people/alex-wiedemann.jpg){.portrait-smallish} 
+</td>
+<td style="vertical-align: middle;white-space:nowrap;padding:0px;border-bottom:0px">
+<p style="padding:0px">**Alex Wiedemann** <br> Hamline University</p>
+</td>
+
+
+
+
+<td style="vertical-align: middle;padding:0px;border-bottom:0px"> 
+![](../_img/people/vicki-modisette.jpg){.portrait-smallish} 
+</td>
+<td style="vertical-align: middle;white-space:nowrap;padding:0px;border-bottom:0px">
+<p style="padding:0px">**Vicki Modisette** <br> Eastern Kentucky</p>
+</td>
+
+<td style="vertical-align: middle;padding:0px;border-bottom:0px"> 
+![](../_img/people/phil-cartoon.png){.portrait-smallish} 
+</td>
+<td style="vertical-align: middle;white-space:nowrap;padding:0px;border-bottom:0px">
+<p style="padding:0px">**Phil Chodrow** <br> Middlebury College</p>
+</td>
+
+
+</tr>
+
+<tr>
+
+<td>
+</td>
+<td>
+</td>
+
+<td style="vertical-align: middle;padding:0px;border-bottom:0px"> 
+![](../_img/people/brooks.jpg){.portrait-smallish} 
+</td>
+<td style="vertical-align: middle;white-space:nowrap;padding:0px;border-bottom:0px">
+<p style="padding:0px">**Heather Brooks** <br> Harvey Mudd</p>
+</td>
+
+</tr>
+
+</table>
+
+[Work initiated at the AMS Math Research Community on *Mathematics of Social Systems* (2023).]{.footnote}
+
+
+
+
+### 
+
+## 
+
+![](../_img/kernel-inference/network-selective.png){width="100%"}
+
+## 
+
+### Our Model
+

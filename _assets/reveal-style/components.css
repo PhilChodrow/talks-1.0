@@ -190,6 +190,18 @@ filter: none;
     /* vertical-align:top; */
   } 
   
+  .portrait-smallish {
+    width: 3em;
+    height: 3em;
+    max-width: 3em;
+    max-height: 3em;
+    min-width: 3em;
+    min-height: 3em;
+    border-radius: 50%;
+    /* overflow: hidden; */
+    display:inline-block;
+    /* vertical-align:top; */
+  } 
 
   .portrait-smaller {
     width: 2em;

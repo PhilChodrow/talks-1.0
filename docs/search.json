@@ -445,14 +445,14 @@
     "href": "kernel-inference/sfi.html#section-1",
     "title": "Learning Social Influence",
     "section": "",
-    "text": "Social Influence…\n\n \nGoes back at least as far as 1936."
+    "text": "Hey y’all, on a scale from 0-5, how good is this talk?\n\nTODO: add white rectangles over top here to reveal the components of this figure one by one"
   },
   {
     "objectID": "kernel-inference/sfi.html#section-3",
     "href": "kernel-inference/sfi.html#section-3",
     "title": "Learning Social Influence",
     "section": "",
-    "text": "Social Influence…\n\n \nGoes back at least as far as 1936."
+    "text": "Abstracting Social Influence\nLet \\(x_i(t) \\in \\mathbb{R}\\) be the opinion of agent \\(i\\) at time \\(t\\).\n\n\n\n\n\n\\[\n\\begin{aligned}\n    \\underbrace{\\color{#d0bfff}{x_1}(t+1) - \\color{#a5d8ff}{x_1}(t)}_{\\text{opinion change } \\delta_i(t+1)} = \\overbrace{\\lambda}^{\\text{Learning rate}} \\underbrace{\\frac{\\color{#fa5252}{x_2}(t) + \\color{#ffc9c9}{x_3}(t)}{2}}_{\\text{average opinion of neighbors}}\n\\end{aligned}\n\\]"
   },
   {
     "objectID": "kernel-inference/sfi.html#exercise-slide-auto-countdown",
@@ -480,7 +480,7 @@
     "href": "kernel-inference/sfi.html#section-2",
     "title": "Learning Social Influence",
     "section": "",
-    "text": "Social Influence…\n\n \nGoes back at least as far as 1936."
+    "text": "Autokinetic effect: a still point of light in a dark room will appear to move if you stare at it long enough."
   },
   {
     "objectID": "kernel-inference/sfi.html#abstracting-social-influence",
@@ -494,7 +494,7 @@
     "href": "kernel-inference/sfi.html#section-4",
     "title": "Learning Social Influence",
     "section": "",
-    "text": "Abstracting Social Influence\nLet \\(x_i(t) \\in \\mathbb{R}\\) be the opinion of agent \\(i\\) at time \\(t\\).\n\n\n\n\n\n\\[\n\\begin{aligned}\n    \\underbrace{\\color{#d0bfff}{x_1}(t+1) - \\color{#a5d8ff}{x_1}(t)}_{\\text{opinion change } \\delta_i(t+1)} = \\overbrace{\\lambda}^{\\text{Learning rate}} \\underbrace{\\frac{\\color{#fa5252}{x_2}(t) + \\color{#ffc9c9}{x_3}(t)}{2}}_{\\text{average opinion of neighbors}}\n\\end{aligned}\n\\]"
+    "text": "More generally,\n\n\n\nDeGroot (1974). “Reaching a consensus.” JASA\n\n\nLet \\(\\partial i\\) be the set of neighbors of agent \\(i\\).\n\\[\n\\begin{aligned}\n    \\underbrace{x_i(t+1) - x_i(t)}_{\\text{opinion change } \\delta_i(t+1)} &= \\lambda \\underbrace{\\frac{1}{|\\partial i|}\\sum_{j \\in \\partial i} x_j(t)}_{\\text{average opinion of neighbors}} \\\\\n\\end{aligned}\n\\]"
   },
   {
     "objectID": "kernel-inference/sfi.html#references",
@@ -508,7 +508,7 @@
     "href": "kernel-inference/sfi.html#section-5",
     "title": "Learning Social Influence",
     "section": "",
-    "text": "More generally,\n\n\n\nDeGroot (1974). “Reaching a consensus.” JASA\n\n\nLet \\(\\partial i\\) be the set of neighbors of agent \\(i\\).\n\\[\n\\begin{aligned}\n    \\underbrace{x_i(t+1) - x_i(t)}_{\\text{opinion change } \\delta_i(t+1)} &= \\lambda \\underbrace{\\frac{1}{|\\partial i|}\\sum_{j \\in \\partial i} x_j(t)}_{\\text{average opinion of neighbors}} \\\\\n\\end{aligned}\n\\]"
+    "text": "A realistic model?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n           \nOn a connected social graph where all agents listen (at least a little bit) to all their neighbors, DeGroot dynamics always converge to a consensus."
   },
   {
     "objectID": "kernel-inference/sfi.html#section-6",
@@ -536,6 +536,118 @@
     "href": "kernel-inference/sfi.html#section-8",
     "title": "Learning Social Influence",
     "section": "",
-    "text": "Generalizing with Influence Kernels\n\n\\[\n\\begin{aligned}\n    \\delta_i(t+1) &= x_i(t+1) - x_i(t) \\\\\n    &= \\lambda \\frac{1}{|\\partial i|}\\sum_{j \\in \\partial i} x_j(t)   \\quad \\quad (\\text{DeGroot})\n\\end{aligned}\n\\]\n\n\n\n\n\n\\[\n\\begin{aligned}\n    \\delta_i(t+1) &= x_i(t+1) - x_i(t) \\\\\n    &=  \\lambda \\frac{\\sum_{j \\in \\partial i} \\color{#A4303F}{K(x_j(t) - x_i(t))} x_j(t)}{\\sum_{j \\in \\partial i} \\color{#A4303F}{K(x_j(t) - x_i(t))}}\n\\end{aligned}\n\\]\n\n  \n\nAttraction: \\(K(x_j - x_i) &gt; 0\\)\nRepulsion: \\(K(x_j - x_i) &lt; 0\\)\nIndifference: \\(K(x_j - x_i) = 0\\)\n\nWe recover DeGroot dynamics if \\(K(y) \\equiv 1\\)."
+    "text": "Kernel Zoo: DeGroot Dynamics\n\n\n\\[\n\\begin{aligned}\n    \\color{#A4303F}{k(d)} &= 1\n\\end{aligned}\n\\]\n\n\n\n\\[\n\\begin{aligned}\n  \\delta_i\n    =  \\lambda \\frac{1}{|\\partial i|} \\sum_{j \\in \\partial i} \\color{#A4303F}{k_\\phi(d_{ij})} x_j\n\\end{aligned}\n\\]\nSimulated on a random graph with a small amount of random noise incorporated into the update for interest."
+  },
+  {
+    "objectID": "kernel-inference/sfi.html#todo-highlight-line-at-0",
+    "href": "kernel-inference/sfi.html#todo-highlight-line-at-0",
+    "title": "Learning Social Influence",
+    "section": "TODO: highlight line at 0",
+    "text": "TODO: highlight line at 0"
+  },
+  {
+    "objectID": "kernel-inference/sfi.html#section-7",
+    "href": "kernel-inference/sfi.html#section-7",
+    "title": "Learning Social Influence",
+    "section": "",
+    "text": "Generalizing with Influence Kernels\n\n\\[\n\\begin{aligned}\n    \\delta_i(t+1) &= x_i(t+1) - x_i(t) \\\\\n    &= \\lambda \\frac{1}{|\\partial i|}\\sum_{j \\in \\partial i} x_j(t)   \\quad \\quad (\\text{DeGroot})\n\\end{aligned}\n\\]\n\n\n\n\n\n\\[\n\\begin{aligned}\n    \\delta_i(t+1) &= x_i(t+1) - x_i(t) \\\\\n    &=  \\lambda \\frac{1}{|\\partial i|} \\sum_{j \\in \\partial i} \\color{#A4303F}{K(\\underbrace{ |x_j(t) - x_i(t)| }_{\\text{unsigned distance } d_{ij}})} x_j(t)\n\\end{aligned}\n\\]\n\n  \n\nAttraction: \\(K(d_{ij}) &gt; 0\\)\nRepulsion: \\(K(d_{ij}) &lt; 0\\)\nIndifference: \\(K(d_{ij}) = 0\\)\n\nWe recover DeGroot dynamics if \\(K(y) \\equiv 1\\).\nThere are other possible ways to normalize this"
+  },
+  {
+    "objectID": "kernel-inference/sfi.html#section-9",
+    "href": "kernel-inference/sfi.html#section-9",
+    "title": "Learning Social Influence",
+    "section": "",
+    "text": "Kernel Zoo: Bounded Confidence\n\n\n\\[\n\\begin{aligned}\n    \\color{#A4303F}{k_\\phi(d)} &= \\mathbb{1}[d &lt; \\phi]\n\\end{aligned}\n\\]\n\n\n\n\\[\n\\begin{aligned}\n  \\delta_i\n    =  \\lambda \\frac{1}{|\\partial i|} \\sum_{j \\in \\partial i} \\color{#A4303F}{k_\\phi(d_{ij})} x_j\n\\end{aligned}\n\\]\nCreates sustained opinion clusters at approximately distance \\(\\phi\\).\nHegselmann & Krause (2002). “Opinion dynamics and bounded confidence models, analysis, and simulation.” JASSS.  Deffuant et al. (2000). “Mixing beliefs among interacting agents.” Advances in Complex Systems."
+  },
+  {
+    "objectID": "kernel-inference/sfi.html#section-10",
+    "href": "kernel-inference/sfi.html#section-10",
+    "title": "Learning Social Influence",
+    "section": "",
+    "text": "Kernel Zoo: ✨Sigmoidal✨ Bounded Confidence\n\n\n\\[\n\\begin{aligned}\n    \\color{#A4303F}{k_\\phi(d)} &= \\left(1 + \\exp \\left[\\phi_1(d^2 - \\phi_0^2)\\right]\\right)^{-1}\n\\end{aligned}\n\\]\n\n\n\n\\[\n\\begin{aligned}\n  \\delta_i\n    =  \\lambda \\frac{1}{|\\partial i|} \\sum_{j \\in \\partial i} \\color{#A4303F}{k_\\phi(d_{ij})} x_j\n\\end{aligned}\n\\]\nConverges to bounded-confidence dynamics with radius \\(\\phi_0\\) as \\(\\phi_1 \\rightarrow \\infty\\) and to DeGroot dynamics as \\(\\phi_1 \\rightarrow 0\\).\nAllows linear stability analysis of bounded-confidence type behavior.\nBrooks, PSC, Porter (2024). “Emergence of polarization in a sigmoidal bounded-confidence model of opinion dynamics.” SIADS."
+  },
+  {
+    "objectID": "kernel-inference/sfi.html#section-11",
+    "href": "kernel-inference/sfi.html#section-11",
+    "title": "Learning Social Influence",
+    "section": "",
+    "text": "Kernel Zoo: Smooth Attraction-Repulsion\n\n\n\\[\n\\begin{aligned}\n  \\color{#A4303F}{k_\\phi(d)} = \\left(1 - \\frac{d^2}{\\phi^2}\\right) \\exp\\left(\\frac{d^2}{-2\\phi}\\right)\n\\end{aligned}\n\\]\n\n\n\n\\[\n\\begin{aligned}\n  \\delta_i\n    =  \\lambda \\frac{1}{|\\partial i|} \\sum_{j \\in \\partial i} \\color{#A4303F}{k_\\phi(d_{ij})} x_j\n\\end{aligned}\n\\]\nNo standard attraction-repulsion kernel; we use a Ricker wavelet.\nGenerates close-knit communities that slowly diverge.\nRyan (1994). “Ricker, Ormsby, Klauder, Butterworth - A Choice of Wavelets.” CSEG Recorder."
+  },
+  {
+    "objectID": "kernel-inference/sfi.html#section-12",
+    "href": "kernel-inference/sfi.html#section-12",
+    "title": "Learning Social Influence",
+    "section": "",
+    "text": "How do we learn the kernel from data?\n\n \nEasiest case: for each \\(i\\) there is only one neighbor \\(j\\).\n\n\\[\n\\begin{aligned}\n  \\delta_i\n    \\approx  \\lambda \\color{#228be6}{k_\\phi}(|\\color{#fd7e14}{x_j} - \\color{#fd7e14}{x_i}|) \\color{#fd7e14}{x_j}\n\\end{aligned}\n\\]\n\n \n\n\n\n\n\nAdams, White, and Araujo (2022). “Person-to-person opinion dynamics: An empirical study using an online game.” PLoS ONE."
+  },
+  {
+    "objectID": "kernel-inference/sfi.html#section-13",
+    "href": "kernel-inference/sfi.html#section-13",
+    "title": "Learning Social Influence",
+    "section": "",
+    "text": "}"
+  },
+  {
+    "objectID": "kernel-inference/sfi.html#section-14",
+    "href": "kernel-inference/sfi.html#section-14",
+    "title": "Learning Social Influence",
+    "section": "",
+    "text": "Least-squares regression\n\\[\n\\hat{\\phi} = \\arg\\min_\\phi \\sum_{i,t} \\left(\\color{#fd7e14}{x_i(t+1)} - \\color{#fd7e14}{x_i(t)} - \\lambda \\frac{1}{|\\partial i|} \\sum_{j \\in \\partial i} \\color{#228be6}{k_\\phi}(|\\color{#fd7e14}{x_j(t)} - \\color{#fd7e14}{x_i(t)}|) \\color{#fd7e14}{x_j(t)}\\right)^2\n\\]"
+  },
+  {
+    "objectID": "kernel-inference/sfi.html#section-15",
+    "href": "kernel-inference/sfi.html#section-15",
+    "title": "Learning Social Influence",
+    "section": "",
+    "text": "A more complex case: multiple neighbors\n\n\n \\[\n\\begin{aligned}\n  \\delta_i\n    &\\approx  \\lambda \\frac{1}{|\\partial i|} \\sum_{j \\in \\partial i} \\color{#228be6}{k_\\phi}(|\\color{#fd7e14}{x_j} - \\color{#fd7e14}{x_i}|) \\color{#fd7e14}{x_j}\n\\end{aligned}\n\\]\n\n \n\nVande Kerckhove + al. (2016). “Modelling Influence and Opinion Evolution in Online Collective Behaviour.” PLoS ONE."
+  },
+  {
+    "objectID": "kernel-inference/sfi.html#section-16",
+    "href": "kernel-inference/sfi.html#section-16",
+    "title": "Learning Social Influence",
+    "section": "",
+    "text": "Some implicit assumptions\n\n  \nAt each timestep  each agent always interacts  with all of their neighbors.\n\n \n\\[\n\\begin{aligned}\n  \\delta_i\n    &=  \\lambda \\frac{1}{|\\partial i|} \\sum_{j \\in \\partial i} k_\\phi(d_{ij}) x_j\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "kernel-inference/sfi.html#section-17",
+    "href": "kernel-inference/sfi.html#section-17",
+    "title": "Learning Social Influence",
+    "section": "",
+    "text": "Core idea for today: selective attention\n\n \nAt each timestep  each agent always sometimes interacts  with all some of their neighbors."
+  },
+  {
+    "objectID": "kernel-inference/sfi.html#section-18",
+    "href": "kernel-inference/sfi.html#section-18",
+    "title": "Learning Social Influence",
+    "section": "",
+    "text": "The Team\n\n\n\n\n\n\n\nWill Thompson  UVM\n\n\n\n\n\n\n\nMoyi Tian  CU Boulder\n\n\n\n\n\n\n\nLinh Huynh  Texas Tech\n\n\n\n\n\n\n\n\nAlex Wiedemann  Hamline University\n\n\n\n\n\n\n\nVicki Modisette  Eastern Kentucky\n\n\n\n\n\n\n\nPhil Chodrow  Middlebury College\n\n\n\n\n\n\n\n\n\n\n\n\n\nHeather Brooks  Harvey Mudd\n\n\n\n\nWork initiated at the AMS Math Research Community on Mathematics of Social Systems (2023)."
+  },
+  {
+    "objectID": "kernel-inference/sfi.html#section-19",
+    "href": "kernel-inference/sfi.html#section-19",
+    "title": "Learning Social Influence",
+    "section": "",
+    "text": "Our Model"
+  },
+  {
+    "objectID": "kernel-inference/sfi.html#section-20",
+    "href": "kernel-inference/sfi.html#section-20",
+    "title": "Learning Social Influence",
+    "section": "",
+    "text": "Our Model"
+  },
+  {
+    "objectID": "kernel-inference/sfi.html#section-21",
+    "href": "kernel-inference/sfi.html#section-21",
+    "title": "Learning Social Influence",
+    "section": "",
+    "text": "Our Model"
+  },
+  {
+    "objectID": "kernel-inference/sfi.html#the-team",
+    "href": "kernel-inference/sfi.html#the-team",
+    "title": "Learning Social Influence",
+    "section": "The Team",
+    "text": "The Team"
   }
 ]
