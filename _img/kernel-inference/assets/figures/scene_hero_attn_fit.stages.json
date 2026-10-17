@@ -1,0 +1,30 @@
+{
+  "figure": "scene_hero_attn_fit",
+  "bbox_pt": [
+    872.64,
+    397.44
+  ],
+  "stages": [
+    {
+      "k": 1,
+      "name": "data",
+      "claim": "the three mechanisms, shrunk, and the data beside them: the network and every agent's opinion over time",
+      "pdf": "scene_hero_attn_fit_step_1.pdf",
+      "svg": "scene_hero_attn_fit_step_1.svg"
+    },
+    {
+      "k": 2,
+      "name": "frames",
+      "claim": "the mechanisms are unobserved; the network and the time series are observed",
+      "pdf": "scene_hero_attn_fit_step_2.pdf",
+      "svg": "scene_hero_attn_fit_step_2.svg"
+    },
+    {
+      "k": 3,
+      "name": "backward",
+      "claim": "from the data, EM infers the kernel shape, retention and selection",
+      "pdf": "scene_hero_attn_fit_step_3.pdf",
+      "svg": "scene_hero_attn_fit_step_3.svg"
+    }
+  ]
+}

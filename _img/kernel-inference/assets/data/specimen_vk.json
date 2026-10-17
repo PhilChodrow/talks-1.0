@@ -1,0 +1,275 @@
+{
+ "panel": "plos_counting",
+ "source": "Vande Kerckhove et al. 2016, PLOS ONE 11(6):e0157685 (S1 Dataset, via correction 10.1371/journal.pone.0230584)",
+ "raw_file": "data/plos_pone_0157685/S1_Dataset/Xpers_counting_game_plos_one_header.csv",
+ "uploader": "kernel_inference/run_scripts/upload_plos_takacs_to_db.py:prepare_plos (counting_norm=affine_div500; sim_id 118645)",
+ "x_meaning": "a player's count estimate for the number of items in an image, divided by 500 (declared answer scale 0-500)",
+ "x_range": [
+  0.0,
+  1.0
+ ],
+ "t_meaning": "round 1..3 (synchronous; each player sees the other 5 players' previous estimates before revising); an event is the revision from round t to t+1",
+ "selection_rule": "among units (gameset x image) with all 6 players observed in all 3 rounds, those whose number of non-zero revisions equals the lower median (8); ties broken by numpy default_rng(0).choice; focal = player with most non-zero revisions",
+ "summary": {
+  "n_units": 2130,
+  "n_nodes": 6,
+  "n_events": 18689,
+  "n_events_nonzero": 12627,
+  "note": "n_events = active transitions as written by the uploader (is_active); zero deltas are kept in the DB and only dropped at fit time by the delta filter"
+ },
+ "units": [
+  {
+   "id": "gameset61_image4",
+   "nodes": [
+    {
+     "id": "p1",
+     "role": "focal"
+    },
+    {
+     "id": "p2",
+     "role": "other"
+    },
+    {
+     "id": "p3",
+     "role": "other"
+    },
+    {
+     "id": "p4",
+     "role": "other"
+    },
+    {
+     "id": "p5",
+     "role": "other"
+    },
+    {
+     "id": "p6",
+     "role": "other"
+    }
+   ],
+   "edges": [
+    [
+     "p1",
+     "p2"
+    ],
+    [
+     "p1",
+     "p3"
+    ],
+    [
+     "p1",
+     "p4"
+    ],
+    [
+     "p1",
+     "p5"
+    ],
+    [
+     "p1",
+     "p6"
+    ],
+    [
+     "p2",
+     "p3"
+    ],
+    [
+     "p2",
+     "p4"
+    ],
+    [
+     "p2",
+     "p5"
+    ],
+    [
+     "p2",
+     "p6"
+    ],
+    [
+     "p3",
+     "p4"
+    ],
+    [
+     "p3",
+     "p5"
+    ],
+    [
+     "p3",
+     "p6"
+    ],
+    [
+     "p4",
+     "p5"
+    ],
+    [
+     "p4",
+     "p6"
+    ],
+    [
+     "p5",
+     "p6"
+    ]
+   ],
+   "traces": {
+    "p1": [
+     [
+      1,
+      0.512
+     ],
+     [
+      2,
+      0.57
+     ],
+     [
+      3,
+      0.75
+     ]
+    ],
+    "p2": [
+     [
+      1,
+      0.998
+     ],
+     [
+      2,
+      0.9
+     ],
+     [
+      3,
+      0.91
+     ]
+    ],
+    "p3": [
+     [
+      1,
+      0.44
+     ],
+     [
+      2,
+      0.47
+     ],
+     [
+      3,
+      0.53
+     ]
+    ],
+    "p4": [
+     [
+      1,
+      0.9
+     ],
+     [
+      2,
+      0.9
+     ],
+     [
+      3,
+      0.9
+     ]
+    ],
+    "p5": [
+     [
+      1,
+      0.4
+     ],
+     [
+      2,
+      0.46
+     ],
+     [
+      3,
+      0.48
+     ]
+    ],
+    "p6": [
+     [
+      1,
+      0.792
+     ],
+     [
+      2,
+      0.792
+     ],
+     [
+      3,
+      0.792
+     ]
+    ]
+   },
+   "events": [
+    {
+     "node": "p1",
+     "t": 1,
+     "x_before": 0.512,
+     "x_after": 0.57
+    },
+    {
+     "node": "p2",
+     "t": 1,
+     "x_before": 0.998,
+     "x_after": 0.9
+    },
+    {
+     "node": "p3",
+     "t": 1,
+     "x_before": 0.44,
+     "x_after": 0.47
+    },
+    {
+     "node": "p4",
+     "t": 1,
+     "x_before": 0.9,
+     "x_after": 0.9
+    },
+    {
+     "node": "p5",
+     "t": 1,
+     "x_before": 0.4,
+     "x_after": 0.46
+    },
+    {
+     "node": "p6",
+     "t": 1,
+     "x_before": 0.792,
+     "x_after": 0.792
+    },
+    {
+     "node": "p1",
+     "t": 2,
+     "x_before": 0.57,
+     "x_after": 0.75
+    },
+    {
+     "node": "p2",
+     "t": 2,
+     "x_before": 0.9,
+     "x_after": 0.91
+    },
+    {
+     "node": "p3",
+     "t": 2,
+     "x_before": 0.47,
+     "x_after": 0.53
+    },
+    {
+     "node": "p4",
+     "t": 2,
+     "x_before": 0.9,
+     "x_after": 0.9
+    },
+    {
+     "node": "p5",
+     "t": 2,
+     "x_before": 0.46,
+     "x_after": 0.48
+    },
+    {
+     "node": "p6",
+     "t": 2,
+     "x_before": 0.792,
+     "x_after": 0.792
+    }
+   ],
+   "truth": 0.832,
+   "n_nonzero_updates": 8
+  }
+ ]
+}

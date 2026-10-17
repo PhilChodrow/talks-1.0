@@ -243,3 +243,20 @@ filter: none;
 	font-size: 80%;
 }
 
+/* small italicized grey text in bottom corner of slide */
+.ht {
+    position: absolute;
+    bottom: 0.5em;
+    right: 1em;
+    font-size: 70%;
+    color: #666666;
+    font-style: italic;
+}
+
+.absolute-header {
+    position: absolute;
+    top: 2em;
+    left: 1em;
+}
+
+

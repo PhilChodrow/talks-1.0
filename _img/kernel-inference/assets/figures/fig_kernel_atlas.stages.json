@@ -1,0 +1,37 @@
+{
+  "figure": "fig_kernel_atlas",
+  "bbox_pt": [
+    699.6,
+    598.8
+  ],
+  "stages": [
+    {
+      "k": 1,
+      "name": "panel-1",
+      "claim": "Kernel 1 of 4: DeGroot.",
+      "pdf": "fig_kernel_atlas_step_1.pdf",
+      "svg": "fig_kernel_atlas_step_1.svg"
+    },
+    {
+      "k": 2,
+      "name": "panel-2",
+      "claim": "Kernel 2 of 4: sigmoidal bounded confidence.",
+      "pdf": "fig_kernel_atlas_step_2.pdf",
+      "svg": "fig_kernel_atlas_step_2.svg"
+    },
+    {
+      "k": 3,
+      "name": "panel-3",
+      "claim": "Kernel 3 of 4: bounded confidence.",
+      "pdf": "fig_kernel_atlas_step_3.pdf",
+      "svg": "fig_kernel_atlas_step_3.svg"
+    },
+    {
+      "k": 4,
+      "name": "panel-4",
+      "claim": "Kernel 4 of 4: SAR.",
+      "pdf": "fig_kernel_atlas_step_4.pdf",
+      "svg": "fig_kernel_atlas_step_4.svg"
+    }
+  ]
+}

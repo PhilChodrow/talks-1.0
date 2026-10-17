@@ -1,0 +1,37 @@
+{
+  "figure": "scene_selection_ticks",
+  "bbox_pt": [
+    820.8,
+    333.84
+  ],
+  "stages": [
+    {
+      "k": 1,
+      "name": "graph",
+      "claim": "on a network i sees several neighbours, each at its own discrepancy",
+      "pdf": "scene_selection_ticks_step_1.pdf",
+      "svg": "scene_selection_ticks_step_1.svg"
+    },
+    {
+      "k": 2,
+      "name": "ticks",
+      "claim": "each neighbour would read the kernel at its own d_j",
+      "pdf": "scene_selection_ticks_step_2.pdf",
+      "svg": "scene_selection_ticks_step_2.svg"
+    },
+    {
+      "k": 3,
+      "name": "mean",
+      "claim": "a regression on the mean discrepancy reads it at d_bar, where no neighbour sits",
+      "pdf": "scene_selection_ticks_step_3.pdf",
+      "svg": "scene_selection_ticks_step_3.svg"
+    },
+    {
+      "k": 4,
+      "name": "heed",
+      "claim": "i heeded one neighbour, j_e; the move came from k at d_{j_e}",
+      "pdf": "scene_selection_ticks_step_4.pdf",
+      "svg": "scene_selection_ticks_step_4.svg"
+    }
+  ]
+}

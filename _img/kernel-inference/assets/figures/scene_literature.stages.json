@@ -1,0 +1,30 @@
+{
+  "figure": "scene_literature",
+  "bbox_pt": [
+    835.97,
+    404.659
+  ],
+  "stages": [
+    {
+      "k": 1,
+      "name": "linear",
+      "claim": "linear: the pull grows with distance",
+      "pdf": "scene_literature_step_1.pdf",
+      "svg": "scene_literature_step_1.svg"
+    },
+    {
+      "k": 2,
+      "name": "bc",
+      "claim": "bounded confidence: no pull beyond a radius",
+      "pdf": "scene_literature_step_2.pdf",
+      "svg": "scene_literature_step_2.svg"
+    },
+    {
+      "k": 3,
+      "name": "repulsion",
+      "claim": "repulsion: far opinions push away",
+      "pdf": "scene_literature_step_3.pdf",
+      "svg": "scene_literature_step_3.svg"
+    }
+  ]
+}

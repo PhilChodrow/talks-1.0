@@ -1,0 +1,51 @@
+{
+  "figure": "fig_synthetic_rzb_2x2",
+  "bbox_pt": [
+    499.44,
+    145.385
+  ],
+  "stages": [
+    {
+      "k": 1,
+      "name": "truth",
+      "claim": "Synthetic SAR truth, with the true retention probability 0.5.",
+      "pdf": "fig_synthetic_rzb_2x2_step_1.pdf",
+      "svg": "fig_synthetic_rzb_2x2_step_1.svg"
+    },
+    {
+      "k": 2,
+      "name": "omit-retention",
+      "claim": "Omit retention and the recovered kernel is about half the true magnitude.",
+      "pdf": "fig_synthetic_rzb_2x2_step_2.pdf",
+      "svg": "fig_synthetic_rzb_2x2_step_2.svg"
+    },
+    {
+      "k": 3,
+      "name": "retention-recovers",
+      "claim": "With the gate on, shape and magnitude recover; non-linearity is 0.47 for the truth against 0.48 with the gate off.",
+      "pdf": "fig_synthetic_rzb_2x2_step_3.pdf",
+      "svg": "fig_synthetic_rzb_2x2_step_3.svg"
+    },
+    {
+      "k": 4,
+      "name": "omit-selection",
+      "claim": "Omit neighbour selection and the kernel is smoothed, a Berkson-like effect: non-linearity 0.35 against a truth of 0.63.",
+      "pdf": "fig_synthetic_rzb_2x2_step_4.pdf",
+      "svg": "fig_synthetic_rzb_2x2_step_4.svg"
+    },
+    {
+      "k": 5,
+      "name": "selection-recovers",
+      "claim": "Selecting the neighbour recovers the shape.",
+      "pdf": "fig_synthetic_rzb_2x2_step_5.pdf",
+      "svg": "fig_synthetic_rzb_2x2_step_5.svg"
+    },
+    {
+      "k": 6,
+      "name": "held-out-scores",
+      "claim": "The linear against RFF held-out difference is 0.019 nats without retention and 0.144 with it, about six times larger.",
+      "pdf": "fig_synthetic_rzb_2x2_step_6.pdf",
+      "svg": "fig_synthetic_rzb_2x2_step_6.svg"
+    }
+  ]
+}

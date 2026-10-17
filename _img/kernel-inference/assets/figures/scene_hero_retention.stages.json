@@ -1,0 +1,23 @@
+{
+  "figure": "scene_hero_retention",
+  "bbox_pt": [
+    872.64,
+    397.44
+  ],
+  "stages": [
+    {
+      "k": 1,
+      "name": "kernel",
+      "claim": "where the selection slide left off: i picks a neighbour j_e, and every update is influence, one bump around k(d_e)",
+      "pdf": "scene_hero_retention_step_1.pdf",
+      "svg": "scene_hero_retention_step_1.svg"
+    },
+    {
+      "k": 2,
+      "name": "gate",
+      "claim": "a gate z_e ~ Bern(pi) decides whether i attends to j_e at all; when it does not, the update is a retention bump at mu_0",
+      "pdf": "scene_hero_retention_step_2.pdf",
+      "svg": "scene_hero_retention_step_2.svg"
+    }
+  ]
+}

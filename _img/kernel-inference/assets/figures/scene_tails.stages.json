@@ -1,0 +1,30 @@
+{
+  "figure": "scene_tails",
+  "bbox_pt": [
+    459.892,
+    354.079
+  ],
+  "stages": [
+    {
+      "k": 1,
+      "name": "updates",
+      "claim": "the pooled updates pile up at zero and reach far into the tails",
+      "pdf": "scene_tails_step_1.pdf",
+      "svg": "scene_tails_step_1.svg"
+    },
+    {
+      "k": 2,
+      "name": "gaussian",
+      "claim": "a Gaussian misses both the spike and the tails",
+      "pdf": "scene_tails_step_2.pdf",
+      "svg": "scene_tails_step_2.svg"
+    },
+    {
+      "k": 3,
+      "name": "laplace",
+      "claim": "a Laplace is far closer in the core and the tails, so we fit Laplace noise throughout",
+      "pdf": "scene_tails_step_3.pdf",
+      "svg": "scene_tails_step_3.svg"
+    }
+  ]
+}

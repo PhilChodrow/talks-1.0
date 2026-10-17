@@ -1,0 +1,30 @@
+{
+  "figure": "scene_data",
+  "bbox_pt": [
+    838.64,
+    364.849
+  ],
+  "stages": [
+    {
+      "k": 1,
+      "name": "traces",
+      "claim": "the data are opinion trajectories: each agent's x over time",
+      "pdf": "scene_data_step_1.pdf",
+      "svg": "scene_data_step_1.svg"
+    },
+    {
+      "k": 2,
+      "name": "event",
+      "claim": "one event e: agent i updates from x_i^- to x_i^+, a jump delta_e = x_i^+ - x_i^-",
+      "pdf": "scene_data_step_2.pdf",
+      "svg": "scene_data_step_2.svg"
+    },
+    {
+      "k": 3,
+      "name": "events",
+      "claim": "we observe every update but not why it happened: whom i heeded, or whether it heeded anyone",
+      "pdf": "scene_data_step_3.pdf",
+      "svg": "scene_data_step_3.svg"
+    }
+  ]
+}

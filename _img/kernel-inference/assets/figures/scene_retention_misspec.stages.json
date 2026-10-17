@@ -1,0 +1,51 @@
+{
+  "figure": "scene_retention_misspec",
+  "bbox_pt": [
+    854.72,
+    474.325
+  ],
+  "stages": [
+    {
+      "k": 1,
+      "name": "shrink_mechanism",
+      "claim": "at one discrepancy the update is a stay bump at zero or a move; a fit with one arm lands between them",
+      "pdf": "scene_retention_misspec_step_1.pdf",
+      "svg": "scene_retention_misspec_step_1.svg"
+    },
+    {
+      "k": 2,
+      "name": "shrink_naive",
+      "claim": "averaged over stays and moves, the updates trace the kernel shrunk by about pi",
+      "pdf": "scene_retention_misspec_step_2.pdf",
+      "svg": "scene_retention_misspec_step_2.svg"
+    },
+    {
+      "k": 3,
+      "name": "shrink_model",
+      "claim": "weighting by the gate's responsibilities splits them into a retention arm at mu_0 and an influence arm on the true kernel",
+      "pdf": "scene_retention_misspec_step_3.pdf",
+      "svg": "scene_retention_misspec_step_3.svg"
+    },
+    {
+      "k": 4,
+      "name": "bc_mechanism",
+      "claim": "if people far away are more likely to keep their opinion, the stays depend on distance",
+      "pdf": "scene_retention_misspec_step_4.pdf",
+      "svg": "scene_retention_misspec_step_4.svg"
+    },
+    {
+      "k": 5,
+      "name": "bc_naive",
+      "claim": "a linear kernel then looks like bounded confidence",
+      "pdf": "scene_retention_misspec_step_5.pdf",
+      "svg": "scene_retention_misspec_step_5.svg"
+    },
+    {
+      "k": 6,
+      "name": "bc_model",
+      "claim": "weighted by the responsibilities, the moves sit on the linear kernel again",
+      "pdf": "scene_retention_misspec_step_6.pdf",
+      "svg": "scene_retention_misspec_step_6.svg"
+    }
+  ]
+}

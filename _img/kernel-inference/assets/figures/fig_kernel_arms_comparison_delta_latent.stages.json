@@ -1,0 +1,44 @@
+{
+  "figure": "fig_kernel_arms_comparison_delta_latent",
+  "bbox_pt": [
+    563.099,
+    217.334
+  ],
+  "stages": [
+    {
+      "k": 1,
+      "name": "raw-record",
+      "claim": "The raw record: the update toward the source against the discrepancy, one dot per event, in three kinds of panel: a known source, a latent source in a six-group, and a cosponsorship network.",
+      "pdf": "fig_kernel_arms_comparison_delta_latent_step_1.pdf",
+      "svg": "fig_kernel_arms_comparison_delta_latent_step_1.svg"
+    },
+    {
+      "k": 2,
+      "name": "baseline",
+      "claim": "The best model without latent mechanisms is pulled toward zero by the no-move mass.",
+      "pdf": "fig_kernel_arms_comparison_delta_latent_step_2.pdf",
+      "svg": "fig_kernel_arms_comparison_delta_latent_step_2.svg"
+    },
+    {
+      "k": 3,
+      "name": "empirical-mean",
+      "claim": "The empirical conditional mean sits above the baseline at large discrepancy: the kernel-only fit under-reads influence.",
+      "pdf": "fig_kernel_arms_comparison_delta_latent_step_3.pdf",
+      "svg": "fig_kernel_arms_comparison_delta_latent_step_3.svg"
+    },
+    {
+      "k": 4,
+      "name": "influence-arm",
+      "claim": "Conditioning on the retention gate and the attended source unmixes a steeper influence arm; the band is a 95% interval from the observed information.",
+      "pdf": "fig_kernel_arms_comparison_delta_latent_step_4.pdf",
+      "svg": "fig_kernel_arms_comparison_delta_latent_step_4.svg"
+    },
+    {
+      "k": 5,
+      "name": "retention-arm",
+      "claim": "The retention arm is flat near the baseline opinion; the estimated gate probability is 0.86 on TAKACS-S2-control and 0.75 on VK-gauging, and SENATE's selected model has no gate.",
+      "pdf": "fig_kernel_arms_comparison_delta_latent_step_5.pdf",
+      "svg": "fig_kernel_arms_comparison_delta_latent_step_5.svg"
+    }
+  ]
+}

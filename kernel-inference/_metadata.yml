@@ -1,8 +1,10 @@
 theme: 
   - default      
-  - ../_assets/reveal-style/layouts.css 
+  # - ../_assets/reveal-style/layouts.css 
   - ../_assets/reveal-style/components.css 
-  - ../_assets/reveal-style/colors-fonts/casual.scss
+  # - ../_assets/reveal-style/colors-fonts/casual.scss
+  - ../_assets/reveal-style/experimental/theme.scss
+
 
 author: '<span class="speaker-highlight">Phil Chodrow</span> <br>Department of Computer Science<br>Middlebury College'    
 title-slide-attributes:
@@ -10,3 +12,11 @@ title-slide-attributes:
   data-background-color: "#A4303F"  
 bibliography: 
   - refs.bib
+
+html-math-method: mathjax
+include-in-header: [_mathjax-macros.html]
+shortcodes: [staged.lua]
+
+width: 1280
+height: 720
+margin: 0.05

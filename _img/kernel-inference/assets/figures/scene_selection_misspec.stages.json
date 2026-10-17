@@ -1,0 +1,58 @@
+{
+  "figure": "scene_selection_misspec",
+  "bbox_pt": [
+    858.645,
+    473.536
+  ],
+  "stages": [
+    {
+      "k": 1,
+      "name": "process",
+      "claim": "we see the update, not whom i heeded; the update points back at the likely source, B_ej",
+      "pdf": "scene_selection_misspec_step_1.pdf",
+      "svg": "scene_selection_misspec_step_1.svg"
+    },
+    {
+      "k": 2,
+      "name": "smooth_mechanism",
+      "claim": "each neighbour shifts the same curve by its offset from the neighbourhood mean",
+      "pdf": "scene_selection_misspec_step_2.pdf",
+      "svg": "scene_selection_misspec_step_2.svg"
+    },
+    {
+      "k": 3,
+      "name": "smooth_naive",
+      "claim": "binned against the mean discrepancy, the updates trace a smoother, flatter curve",
+      "pdf": "scene_selection_misspec_step_3.pdf",
+      "svg": "scene_selection_misspec_step_3.svg"
+    },
+    {
+      "k": 4,
+      "name": "smooth_model",
+      "claim": "weighting each neighbour by its responsibility B_ej puts the data back on the kernel",
+      "pdf": "scene_selection_misspec_step_4.pdf",
+      "svg": "scene_selection_misspec_step_4.svg"
+    },
+    {
+      "k": 5,
+      "name": "repulsion_mechanism",
+      "claim": "if i heeds a neighbour on the far side of the crowd, it moves away from the mean",
+      "pdf": "scene_selection_misspec_step_5.pdf",
+      "svg": "scene_selection_misspec_step_5.svg"
+    },
+    {
+      "k": 6,
+      "name": "repulsion_naive",
+      "claim": "binned against the mean discrepancy, an attractive kernel looks repulsive",
+      "pdf": "scene_selection_misspec_step_6.pdf",
+      "svg": "scene_selection_misspec_step_6.svg"
+    },
+    {
+      "k": 7,
+      "name": "repulsion_model",
+      "claim": "weighted by B_ej, the same updates sit on the attractive kernel",
+      "pdf": "scene_selection_misspec_step_7.pdf",
+      "svg": "scene_selection_misspec_step_7.svg"
+    }
+  ]
+}

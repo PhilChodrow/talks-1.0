@@ -1,0 +1,51 @@
+{
+  "figure": "fig_capability_ladder",
+  "bbox_pt": [
+    714.24,
+    355.26
+  ],
+  "stages": [
+    {
+      "k": 1,
+      "name": "one-row",
+      "claim": "How to read a bar: the share of the held-out log likelihood ratio over the random-walk null, left to right as capabilities switch on; the total is the per-transition likelihood multiplier.",
+      "pdf": "fig_capability_ladder_step_1.pdf",
+      "svg": "fig_capability_ladder_step_1.svg"
+    },
+    {
+      "k": 2,
+      "name": "baseline",
+      "claim": "The classical model, influence plus kernel shape, alone: its share runs from 0.6% on VKontakte to 98% on SPINOS.",
+      "pdf": "fig_capability_ladder_step_2.pdf",
+      "svg": "fig_capability_ladder_step_2.svg"
+    },
+    {
+      "k": 3,
+      "name": "tail",
+      "claim": "The heavy tail (Laplace over Gaussian) adds on 13 of 15 panels, and is the largest segment on 9.",
+      "pdf": "fig_capability_ladder_step_3.pdf",
+      "svg": "fig_capability_ladder_step_3.svg"
+    },
+    {
+      "k": 4,
+      "name": "retention",
+      "claim": "Latent retention adds on 13 of 15 panels; it is 63% of the gain on CMV and 42% on VKontakte.",
+      "pdf": "fig_capability_ladder_step_4.pdf",
+      "svg": "fig_capability_ladder_step_4.svg"
+    },
+    {
+      "k": 5,
+      "name": "selection",
+      "claim": "Neighbour selection adds on 6 of 8 networked panels. The totals: CMV 6.26x, VKontakte 2.90x, ADAMS-high 2.03x, SPINOS 1.08x.",
+      "pdf": "fig_capability_ladder_step_5.pdf",
+      "svg": "fig_capability_ladder_step_5.svg"
+    },
+    {
+      "k": 6,
+      "name": "pictograms",
+      "claim": "Each pictogram is the fitted kernel at that step: flat dotted is DeGroot, solid is RFF. Shapes bend as mechanisms switch on.",
+      "pdf": "fig_capability_ladder_step_6.pdf",
+      "svg": "fig_capability_ladder_step_6.svg"
+    }
+  ]
+}

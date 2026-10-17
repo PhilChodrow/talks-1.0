@@ -1,0 +1,37 @@
+{
+  "figure": "scene_dissensus",
+  "bbox_pt": [
+    893.84,
+    397.824
+  ],
+  "stages": [
+    {
+      "k": 1,
+      "name": "theory",
+      "claim": "the first theories: linear influence, a flat DeGroot kernel",
+      "pdf": "scene_dissensus_step_1.pdf",
+      "svg": "scene_dissensus_step_1.svg"
+    },
+    {
+      "k": 2,
+      "name": "converge",
+      "claim": "a flat kernel pulls everyone to consensus",
+      "pdf": "scene_dissensus_step_2.pdf",
+      "svg": "scene_dissensus_step_2.svg"
+    },
+    {
+      "k": 3,
+      "name": "world",
+      "claim": "the world we observe is dominated by dissensus and polarization",
+      "pdf": "scene_dissensus_step_3.pdf",
+      "svg": "scene_dissensus_step_3.svg"
+    },
+    {
+      "k": 4,
+      "name": "unknown",
+      "claim": "which kernel produces that is an open question",
+      "pdf": "scene_dissensus_step_4.pdf",
+      "svg": "scene_dissensus_step_4.svg"
+    }
+  ]
+}

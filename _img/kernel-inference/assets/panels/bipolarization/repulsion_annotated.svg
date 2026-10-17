@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="403.2pt" height="172.8pt" viewBox="0 0 403.2 172.8" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-11T22:27:47.147784</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.7.1, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 172.8 
+L 403.2 172.8 
+L 403.2 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 52.416 138.24 
+L 391.104 138.24 
+L 391.104 6.912 
+L 52.416 6.912 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 52.416 71.1168 
+L 52.416 6.912 
+L 391.104 6.912 
+L 391.104 71.1168 
+z
+" clip-path="url(#pdf556ded6d)" style="fill: #17868f; opacity: 0.1"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 52.416 138.24 
+L 52.416 71.1168 
+L 391.104 71.1168 
+L 391.104 138.24 
+z
+" clip-path="url(#pdf556ded6d)" style="fill: #d1d5db; opacity: 0.55"/>
+   </g>
+   <g id="line2d_1">
+    <path d="M 52.416 71.1168 
+L 391.104 71.1168 
+" clip-path="url(#pdf556ded6d)" style="fill: none; stroke: #1a1a1a; stroke-width: 1.3; stroke-linecap: round"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_2">
+      <defs>
+       <path id="mcfbbc35532" d="M 0 0 
+L 0 4 
+" style="stroke: #1a1a1a; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#mcfbbc35532" x="52.416" y="138.24" style="fill: #1a1a1a; stroke: #1a1a1a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <text style="fill: #1a1a1a; font: 13px 'Helvetica Neue', 'Helvetica', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start" x="52.416" y="155.022812" transform="rotate(-0 52.416 155.022812)">same view</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_3">
+      <g>
+       <use xlink:href="#mcfbbc35532" x="391.104" y="138.24" style="fill: #1a1a1a; stroke: #1a1a1a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <text style="fill: #1a1a1a; font: 13px 'Helvetica Neue', 'Helvetica', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: end" x="391.104" y="155.022812" transform="rotate(-0 391.104 155.022812)">opposite view</text>
+     </g>
+    </g>
+    <g id="text_3">
+     <text style="fill: #1a1a1a; font: 14px 'Helvetica Neue', 'Helvetica', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle" x="221.76" y="169.692656" transform="rotate(-0 221.76 169.692656)">How different your opinion is from mine</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="text_4">
+     <text style="fill: #1a1a1a; font: 14px 'Helvetica Neue', 'Helvetica', 'Arial', 'DejaVu Sans', sans-serif" transform="translate(28.762875 119.769125) rotate(-90)">How much you</text>
+     <text style="fill: #1a1a1a; font: 14px 'Helvetica Neue', 'Helvetica', 'Arial', 'DejaVu Sans', sans-serif" transform="translate(43.657562 101.500219) rotate(-90)">move me</text>
+    </g>
+   </g>
+   <g id="patch_5">
+    <path d="M 52.416 138.24 
+L 52.416 6.912 
+" style="fill: none; stroke: #1a1a1a; stroke-width: 1.1; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 52.416 138.24 
+L 391.104 138.24 
+" style="fill: none; stroke: #1a1a1a; stroke-width: 1.1; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_5">
+    <text style="fill: #17868f; font: 700 14px 'Helvetica Neue', 'Helvetica', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: end" x="386.02368" y="25.053219" transform="rotate(-0 386.02368 25.053219)">I move toward you</text>
+   </g>
+   <g id="text_6">
+    <text style="fill: #555555; font: 700 14px 'Helvetica Neue', 'Helvetica', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start" x="57.49632" y="126.08564" transform="rotate(-0 57.49632 126.08564)">I move away from you</text>
+   </g>
+   <g id="text_7">
+    <text style="fill: #767676; font: 11px 'Helvetica Neue', 'Helvetica', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: end" x="386.02368" y="65.447376" transform="rotate(-0 386.02368 65.447376)">no effect</text>
+   </g>
+   <g id="line2d_4">
+    <path d="M 52.416 71.1168 
+L 65.997474 64.200498 
+L 73.637053 60.545069 
+L 80.427789 57.546866 
+L 86.369684 55.173828 
+L 91.462737 53.359456 
+L 96.555789 51.773196 
+L 101.648842 50.436336 
+L 105.893053 49.526187 
+L 110.137263 48.811145 
+L 114.381474 48.298738 
+L 118.625684 47.994917 
+L 122.869895 47.904022 
+L 127.114105 48.028762 
+L 131.358316 48.370216 
+L 135.602526 48.927835 
+L 139.846737 49.699473 
+L 144.090947 50.681421 
+L 148.335158 51.868457 
+L 152.579368 53.253911 
+L 157.672421 55.166947 
+L 162.765474 57.337713 
+L 167.858526 59.747428 
+L 173.800421 62.832705 
+L 179.742316 66.17812 
+L 186.533053 70.269378 
+L 194.172632 75.13907 
+L 204.358737 81.917534 
+L 228.126316 97.841678 
+L 236.614737 103.185475 
+L 243.405474 107.21243 
+L 250.196211 110.968989 
+L 256.138105 114.002922 
+L 262.08 116.777066 
+L 267.173053 118.934055 
+L 272.266105 120.877324 
+L 277.359158 122.599795 
+L 282.452211 124.096538 
+L 287.545263 125.364718 
+L 292.638316 126.403525 
+L 297.731368 127.214085 
+L 302.824421 127.799349 
+L 307.917474 128.16397 
+L 313.010526 128.314173 
+L 318.103579 128.257602 
+L 323.196632 128.003173 
+L 329.138526 127.469703 
+L 335.080421 126.698155 
+L 341.022316 125.707485 
+L 347.813053 124.332705 
+L 354.603789 122.728948 
+L 362.243368 120.690479 
+L 370.731789 118.187573 
+L 380.917895 114.936047 
+L 391.104 111.507847 
+L 391.104 111.507847 
+" clip-path="url(#pdf556ded6d)" style="fill: none; stroke: #c4552b; stroke-width: 3.2; stroke-linecap: round"/>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pdf556ded6d">
+   <rect x="52.416" y="6.912" width="338.688" height="131.328"/>
+  </clipPath>
+ </defs>
+</svg>

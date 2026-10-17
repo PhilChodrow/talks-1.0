@@ -1,0 +1,37 @@
+{
+  "figure": "scene_kernel",
+  "bbox_pt": [
+    872.64,
+    450.759
+  ],
+  "stages": [
+    {
+      "k": 1,
+      "name": "dyad",
+      "claim": "agent i hears neighbour j; their discrepancy is d_e = x_j - x_i^-",
+      "pdf": "scene_kernel_step_1.pdf",
+      "svg": "scene_kernel_step_1.svg"
+    },
+    {
+      "k": 2,
+      "name": "kernel",
+      "claim": "the kernel k turns the distance |d_e| into a gain",
+      "pdf": "scene_kernel_step_2.pdf",
+      "svg": "scene_kernel_step_2.svg"
+    },
+    {
+      "k": 3,
+      "name": "density",
+      "claim": "the update is a noisy draw around k(d_e), a fraction of the way toward j",
+      "pdf": "scene_kernel_step_3.pdf",
+      "svg": "scene_kernel_step_3.svg"
+    },
+    {
+      "k": 4,
+      "name": "outcome",
+      "claim": "we observe the outcome: x_i^+ = x_i^- + delta_e",
+      "pdf": "scene_kernel_step_4.pdf",
+      "svg": "scene_kernel_step_4.svg"
+    }
+  ]
+}

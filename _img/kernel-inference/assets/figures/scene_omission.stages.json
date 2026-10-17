@@ -1,0 +1,23 @@
+{
+  "figure": "scene_omission",
+  "bbox_pt": [
+    850.064,
+    376.056
+  ],
+  "stages": [
+    {
+      "k": 1,
+      "name": "retention",
+      "claim": "leave retention out and the fit is the truth squashed toward zero",
+      "pdf": "scene_omission_step_1.pdf",
+      "svg": "scene_omission_step_1.svg"
+    },
+    {
+      "k": 2,
+      "name": "selection",
+      "claim": "leave selection out and the fit is a smoothed copy of the truth",
+      "pdf": "scene_omission_step_2.pdf",
+      "svg": "scene_omission_step_2.svg"
+    }
+  ]
+}

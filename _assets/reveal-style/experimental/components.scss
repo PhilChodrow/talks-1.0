@@ -1,0 +1,1082 @@
+// Hand-written components. Colours come from the CSS custom properties in _tokens.scss only.
+
+.reveal {
+  --staged-h: 540px;
+  --hero-h: 560px;
+
+  color: var(--ink);
+
+  h1, h2, h3 {
+    color: var(--ink);
+    text-transform: none;
+  }
+  h2 {
+    font-size: 1.3em;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    margin-bottom: 0.2em;
+  }
+
+  // Staged figure: the stack has a fixed height and the manifest's aspect ratio, so every
+  // stage occupies the same box and nothing moves when a fragment appears.
+  // Height is capped by --staged-h and width by the slide, whichever binds first; the
+  // inline aspect-ratio then fixes the other side, so a wide figure (rzb is 3.4:1) shrinks
+  // instead of overflowing the slide.
+  .r-stack.staged {
+    width: min(100%, calc(var(--staged-h) * var(--staged-ar)));
+    height: auto;
+    margin: 0 auto;
+    img {
+      height: 100%;
+      width: 100%;
+      max-height: none;
+      object-fit: contain;
+      margin: 0;
+    }
+  }
+
+  .staged-captions {
+    margin-top: 0.4em;
+    font-size: 0.7em;
+    color: var(--grey);
+    p { margin: 0; }
+  }
+
+  // Static hero figure.
+  img.hero {
+    display: block;
+    height: var(--hero-h);
+    width: auto;
+    max-width: 100%;
+    max-height: none;
+    margin: 0 auto;
+  }
+
+  // Unstaged backup figures (paper PDFs converted to SVG).
+  img.backup-fig {
+    display: block;
+    height: 560px;
+    width: auto;
+    max-width: 100%;
+    max-height: none;
+    margin: 0 auto;
+  }
+
+  // Roster table (generated), set in Latin Modern Mono like the paper's \texttt.
+  table.roster {
+    font-family: var(--font-mono), "Latin Modern Mono", monospace;
+    font-size: 0.55em;
+    border-collapse: collapse;
+    margin: 0 auto;
+    th, td { padding: 0.12em 0.7em; border: none; }
+    tr.group td {
+      color: var(--ink);
+      border-bottom: 1px solid var(--grey-hairline);
+      padding-top: 0.5em;
+      font-weight: bold;
+    }
+    td.sub { padding-left: 2em; color: var(--grey); }
+    td.num { text-align: right; }
+  }
+
+  .placeholder-will { color: var(--grey); }
+}
+
+
+.reveal .staged-missing {
+  color: var(--grey);
+  border: 1px dashed var(--grey-hairline);
+  padding: 2em;
+  text-align: center;
+}
+
+// Archival figures from other papers: up to two side by side, each with a credit line.
+.reveal .history-pair {
+  display: flex;
+  gap: 2.5em;
+  justify-content: center;
+  align-items: flex-end;
+  figure { margin: 0; text-align: center; }
+  img { height: 470px; width: auto; max-width: 100%; max-height: none; margin: 0; }
+  &.single img { height: 520px; }
+  figcaption { font-size: 0.45em; color: var(--grey); margin-top: 0.3em; }
+}
+
+// Literature slide: four plain columns, theory papers marked in grey.
+.reveal .lit-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.2em;
+  margin-top: 2.2em;
+  font-size: 0.82em;
+  h3 {
+    font-size: 1em;
+    font-weight: normal;
+    color: var(--grey);
+    border-bottom: 1px solid var(--grey-hairline);
+    padding-bottom: 0.2em;
+    margin-bottom: 0.6em;
+  }
+  p { margin: 0 0 0.45em; line-height: 1.25; }
+  .th { color: var(--grey); }
+}
+.reveal .lit-foot { margin-top: 3em; font-size: 0.6em; color: var(--grey); }
+
+// Background argument: two papers' figures at one shared height, the claim under each.
+.reveal .argument-pair {
+  display: flex;
+  gap: 1.6em;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 2.6em;  // two wide figures cap the height at 300px; centre the block instead
+  figure { margin: 0; }
+  img { height: 300px; width: auto; max-width: none; max-height: none; margin: 0; }
+  .claim { font-size: 0.62em; line-height: 1.3; margin-top: 0.7em; max-width: 30em; }
+  figcaption { font-size: 0.45em; color: var(--grey); margin-top: 0.4em; }
+}
+.reveal .argument-pair.single img { height: 400px; }
+
+// Dataset specimens: one column per dataset, revealed whole. The platform's own screen on top,
+// then the unit as the model sees it: who can see whom, and everyone's opinion over time.
+.reveal .specimen-grid {
+  display: grid;
+  grid-template-columns: 1.4em repeat(5, 1fr);
+  column-gap: 0.75em;
+  row-gap: 0.35em;
+  align-items: center;
+  margin-top: 0.6em;
+  .spec-name {
+    margin: 0;
+    font-size: 0.56em;
+    line-height: 1.2;
+    font-weight: 600;
+    border-bottom: 1px solid var(--grey-hairline);
+    padding-bottom: 0.2em;
+    align-self: end;
+    span { display: block; font-weight: 400; color: var(--grey); font-size: 0.82em; }
+  }
+  .spec-row {
+    margin: 0;
+    font-size: 0.4em;
+    color: var(--grey);
+    white-space: nowrap;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    justify-self: center;
+  }
+  img { display: block; width: 100%; height: auto; max-width: none; max-height: none; margin: 0; }
+  .spec-raw { border: 1px solid var(--grey-hairline); aspect-ratio: 3 / 2; object-fit: cover; }
+  .spec-x { margin: 0; font-size: 0.42em; line-height: 1.3; color: var(--grey); align-self: start; }
+  // dataset type over each column
+  .spec-type {
+    margin: 0; font-size: 0.4em; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase;
+    color: var(--influence-ink); align-self: end;
+  }
+  // curly brace under a group of columns: a 6x2 grid of border pieces, ends curl up, tip points down
+  .spec-group { text-align: center; margin-top: 0.1em;
+    p { margin: 0.15em 0 0; font-size: 0.48em; font-weight: 600; color: var(--ink); }
+  }
+  .spec-brace {
+    --r: 12px; --w: 2px;
+    display: grid; grid-template-columns: var(--r) 1fr var(--r) var(--r) 1fr var(--r);
+    grid-template-rows: var(--r) var(--r);
+    i { display: block; border: 0 solid var(--grey); }
+    i:nth-child(1) { border-left-width: var(--w); border-bottom-width: var(--w); border-bottom-left-radius: var(--r); }
+    i:nth-child(2), i:nth-child(5) { border-bottom-width: var(--w); }
+    i:nth-child(6) { border-right-width: var(--w); border-bottom-width: var(--w); border-bottom-right-radius: var(--r); }
+    i:nth-child(9) { margin-top: calc(-1 * var(--w)); border-top-width: var(--w); border-right-width: var(--w); border-top-right-radius: var(--r); }
+    i:nth-child(10) { margin-top: calc(-1 * var(--w)); border-top-width: var(--w); border-left-width: var(--w); border-top-left-radius: var(--r); }
+  }
+}
+
+// "The world if": two framed panels side by side, the real world revealed second.
+.reveal .world-if {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2em;
+  margin-top: 1.2em;
+  .world-label { font-size: 0.7em; font-weight: 600; margin: 0 0 0.4em; color: var(--ink); }
+  .world-frame {
+    border: 1px solid var(--grey-hairline);
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img { width: 90%; height: auto; max-height: none; margin: 0; }
+  }
+  .world-missing { color: var(--grey); font-size: 0.6em; border-style: dashed; }
+}
+
+// Three explanations of dissensus: one column per kernel family, pro and con under its curve.
+.reveal .explain-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2em;
+  margin-top: 1.4em;
+  h3 {
+    font-size: 0.8em;
+    border-bottom: 1px solid var(--grey-hairline);
+    padding-bottom: 0.2em;
+    margin: 0 0 0.4em;
+  }
+  img { display: block; width: 100%; height: auto; max-height: none; margin: 0 0 0.6em; }
+  p { font-size: 0.66em; margin: 0 0 0.35em; padding-left: 1.2em; text-indent: -1.2em; line-height: 1.3; }
+  .pro::before { content: "+"; display: inline-block; width: 1.2em; text-indent: 0; color: var(--ink); font-weight: 700; }
+  .con::before { content: "\2212"; display: inline-block; width: 1.2em; text-indent: 0; color: var(--influence); font-weight: 700; }
+}
+
+// Mechanism slide: prior work on the left, the model scene on the right.
+.reveal .mech-pair {
+  display: grid;
+  grid-template-columns: 30% 1fr;
+  gap: 1.6em;
+  align-items: center;
+  margin-top: 0.6em;
+  figure { margin: 0 0 0.5em; }
+  .mech-why img { display: block; width: 100%; height: auto; max-height: 230px; object-fit: contain; margin: 0; }
+  figcaption { font-size: 0.38em; color: var(--grey); margin-top: 0.2em; }
+  .claim { font-size: 0.55em; line-height: 1.3; margin: 0.4em 0 0; }
+  .mech-how { --staged-h: 480px; }
+}
+
+// Part divider.
+.reveal .part-divider h1 { color: var(--ink); }
+
+// Dataset roster as columns, one per group.
+.reveal .roster-cols {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.2em;
+  margin-top: 1em;
+  p { margin: 0; }
+  .roster-head {
+    font-size: 0.62em;
+    font-weight: 700;
+    color: var(--ink);
+    border-bottom: 1px solid var(--grey-hairline);
+    padding-bottom: 0.25em;
+    margin-bottom: 0.6em;
+    span { display: block; font-weight: 400; color: var(--grey); font-size: 0.8em; }
+  }
+  .roster-item {
+    font-size: 0.5em;
+    line-height: 1.25;
+    margin-bottom: 0.7em;
+    b { display: block; font-family: var(--font-mono), "Latin Modern Mono", monospace; color: var(--ink); }
+    span { display: block; color: var(--grey); }
+    .n { font-size: 0.9em; }
+    &.sub { padding-left: 1em; }
+  }
+}
+// quarto's `.reveal .slide figure>figcaption` (0.7em) outranks the nested rule above
+.reveal .slide .mech-pair figure > figcaption { font-size: 0.38em; }
+
+// Small "simulated" tag under a staged toy scene that does not draw its own.
+.reveal .sim-label {
+  font-size: 0.4em;
+  color: var(--grey);
+  text-align: right;
+  margin: 0.2em 0 0;
+}
+
+// One-line literature note under a staged scene (the Chacoma & Zanette finding on #model-retention).
+.reveal .scene-note {
+  display: block;
+  font-size: 0.55em;
+  color: var(--grey);
+  text-align: center;
+  margin: 0.3em auto 0;
+  max-width: 44em;
+}
+
+// Iteration 2026-10-06: fill the empty lower thirds.
+.reveal .slide .world-if .world-frame {
+  height: 440px;
+  img { width: auto; height: 380px; max-width: 100%; max-height: none; }
+}
+.reveal .slide .explain-grid img { width: 100%; height: auto; max-height: 300px; }
+.reveal .slide .mech-pair { min-height: 560px; }
+.reveal .slide .explain-grid p { font-size: 0.78em; }
+.reveal .slide .explain-punch { margin-top: 1.6em; text-align: center; font-size: 0.9em; color: var(--ink); }
+
+// Motivation row: up to three figures side by side, a note under each (retention).
+.reveal .motive-row {
+  display: grid;
+  grid-template-columns: 0.8fr 1.1fr 1.1fr;
+  gap: 1.4em;
+  align-items: start;
+  margin-top: 0.8em;
+  figure { margin: 0; text-align: center; }
+  img { display: block; width: 100%; height: auto; max-height: 380px; object-fit: contain; margin: 0 auto; }
+  figcaption { font-size: 0.38em; color: var(--grey); margin-top: 0.3em; }
+  .motive-note { font-size: 0.62em; line-height: 1.3; margin: 0.6em 0 0; color: var(--ink); text-align: center; }
+}
+
+// Kozitsin's cartoon is small and wide.
+.reveal .history-pair.single.kozitsin img { height: auto; width: 900px; }
+
+// A big, clean statement slide.
+.reveal .statement .statement-text {
+  font-size: 1.5em;
+  line-height: 1.3;
+  color: var(--ink);
+  width: 22em;
+  margin: 0;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  .influence { color: var(--influence); }
+  .selection { color: var(--mech-selection); }
+  .retention { color: var(--mech-retention); }
+  // attention is both mechanisms at once: an even mix of their two colours
+  .attention { color: color-mix(in srgb, var(--mech-retention), var(--mech-selection)); }
+}
+.reveal .slides section.statement > h2:empty { display: none; }
+// data-state="no-number" hides the slide number on that slide
+.reveal-viewport.no-number .reveal .slide-number { display: none !important; }  // reveal sets display inline
+
+// Panel slides: matplotlib draws the plots (assets/panels/<slide>/, from panels/<slide>.py);
+// headings, captions and maths are slide text. A row is a grid of columns, each a head, a
+// panel (or an .r-stack of build states) and a caption; .panel-sep is the chevron between them.
+.reveal .panel-row {
+  display: grid;
+  align-items: start;
+  column-gap: 0.4em;
+  margin-top: 0.4em;
+  img { width: 100%; height: auto; max-height: none; margin: 0; display: block; }
+  .r-stack { width: 100%; }
+  p { margin: 0; }
+}
+.reveal .panel-col { display: flex; flex-direction: column; min-width: 0; }
+.reveal .panel-head {
+  font-weight: bold;
+  font-size: 0.75em;
+  color: var(--ink);
+  &.influence { color: var(--influence-ink); }
+  &.retention { color: var(--mech-retention); }
+  &.selection { color: var(--mech-selection); }
+}
+.reveal .panel-sub { font-size: 0.6em; color: var(--grey); min-height: 1.4em; }
+.reveal .panel-cap {
+  font-size: 0.6em;
+  line-height: 1.35;
+  text-align: center;
+  margin-top: 0.3em;
+  mjx-container[display="true"] { margin: 0.25em 0 !important; font-size: 115%; }
+}
+.reveal .panel-sep {
+  align-self: center;
+  font-size: 0.7em;
+  color: var(--ink);
+  margin-top: 1.5em;
+}
+.reveal .panel-foot { font-size: 0.45em; color: var(--grey); margin-top: 0.6em; }
+
+// #model-kernel: discrepancy | kernel + density | outcome, widths in the panels' inches.
+.reveal .kernel-row { grid-template-columns: 3.3fr 3.9fr 3.3fr; }
+
+// #why-dissensus: theory on the left, our world on the right; kernels on top, dynamics below.
+.reveal .dissensus-row {
+  grid-template-columns: 1fr 1fr;
+  column-gap: 2em;
+  .qmark-box { position: relative; }
+  .qmark {
+    position: absolute;
+    left: 55%;
+    top: 42%;
+    transform: translate(-50%, -50%);
+    font-size: 2.4em;
+    font-weight: bold;
+    color: var(--ink);
+    background: var(--page);
+    border-radius: 50%;
+    width: 1.3em;
+    height: 1.3em;
+    line-height: 1.3em;
+    text-align: center;
+  }
+}
+.reveal .slide .dissensus-punch { margin-top: 0.5em; }
+
+// #explanations: one shape per column, after Kozitsin (2021) Table 1.
+.reveal .shapes-row {
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 1.2em;
+  .panel-sub { display: block; line-height: 1.3; min-height: 2.6em; }
+  .panel-dyn { display: block; text-align: center; font-size: 0.6em; font-style: italic; margin: -0.1em 0 0.2em; }
+  .cites-wrap { position: relative; }
+  .cites-label { position: absolute; left: -0.6em; top: 50%; transform: translate(-50%, -50%) rotate(-90deg);
+    white-space: nowrap; font-size: 0.45em; letter-spacing: 0.04em; text-transform: uppercase; color: #777; }
+  ul.cites {
+    // a normal bulleted list, the block centred in its column
+    width: fit-content;
+    margin: 0.2em auto 0.3em;
+    padding-left: 1.1em;
+    font-size: 0.5em;
+    line-height: 1.35;
+    height: 8em;
+    li { margin: 0; }
+  }
+}
+// #retention-why: Moussaid's claim on the left, the replication on the right.
+.reveal .why-row {
+  grid-template-columns: 1fr 1fr;
+  column-gap: 2.4em;
+  align-items: start;
+  margin-top: 0.4em;
+  .panel-col { align-items: center; text-align: center; }
+  img.why-moussaid { width: auto; height: 270px; }
+  ol { font-size: 0.6em; line-height: 1.35; text-align: left; margin: 0.4em 0 0.8em; }
+  .panel-foot { margin-top: 0.3em; }
+}
+.reveal .kernel-row .panel-cap { font-size: 0.68em; }
+
+// Slide body sits centred in the space under the title: the auto margins on the title and on
+// the trailing pseudo-element split the free height evenly. Reveal sets display inline, hence
+// !important; only the present slide is touched, and statement / divider slides keep their own.
+.reveal .slides > section.present:not(.statement):not(.part-divider):not(.title-slide-custom) {
+  display: flex !important;
+  flex-direction: column;
+  > h2 { margin-bottom: auto; }
+  &::after { content: ""; margin-top: auto; }
+}
+.reveal .slide-number {
+  font-size: 0.5em;
+  color: var(--grey);
+  background: none;
+  right: 1.2em;
+  bottom: 0.9em;
+}
+
+// The gap scatter is square; let it use the height the slide has.
+.reveal #results-nonlinearity { --staged-h: 610px; }
+
+// Title: three bands. Title on top; authors with a small two-column affiliation list in the
+// middle; venue and logo bottom left, the data-to-kernel strip bottom right.
+.reveal .title-slide-custom {
+  p { margin: 0; text-align: left; }
+  .talk-title { position: absolute; left: 0; right: 4em; top: 11%; font-size: 1.7em; font-weight: 600; line-height: 1.15; letter-spacing: -0.015em; }
+  .talk-authors { position: absolute; left: 0; right: 0; top: 35%; font-size: 0.6em; line-height: 1.35; }
+  .talk-authors sup { font-size: 0.6em; margin-left: 0.1em; }
+  .talk-affils { position: absolute; left: 0; width: 860px; top: 41.5%; margin: 0; padding: 0; list-style: none;
+    columns: 2; column-gap: 2.5em; font-size: 0.34em; line-height: 1.5; color: var(--grey); text-align: left;
+    li { margin: 0; break-inside: avoid; } sup { margin: 0 0.3em 0 0; } }
+  .talk-venue { position: absolute; left: 0; top: 63%; font-size: 0.55em; color: var(--grey); }
+  .talk-logo { position: absolute; left: 0; top: 70%; height: 72px; width: auto; max-width: none; max-height: none; margin: 0; }
+  .t-influence { color: var(--influence); }
+  .t-attention { color: var(--mech-selection); }
+  .talk-graphic { position: absolute; right: 0; top: 59%; width: 600px; max-width: none; max-height: none; margin: 0; }
+}
+
+// #selection-average: kernel left, ego network and the argument right.
+.reveal .avg-row {
+  grid-template-columns: 1.55fr 1fr;
+  column-gap: 1.6em;
+  align-items: start;
+  .avg-text { font-size: 0.62em; line-height: 1.35; text-align: left; align-items: stretch; }
+  .avg-text p { margin: 0 0 0.25em; }
+  .avg-text > div { margin-bottom: 0.7em; }
+  > .panel-col:first-child img { width: 100%; }
+  img.avg-ego { width: 360px; margin: 0 auto 0.6em; }
+  .avg-cite { display: block; font-size: 0.75em; color: var(--grey); }
+  .selection { color: var(--mech-selection); }
+}
+
+// Fitting slide: the EM loop as three lines on the left, the heavy-tail picture on the right.
+.reveal .fit-pair {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 1.6em;
+  align-items: center;
+  margin-top: 0.6em;
+  min-height: 520px;
+  .fit-step { font-size: 1.15em; line-height: 1.25; margin: 0 0 1.1em; color: var(--ink); b { display: block; color: var(--influence); font-size: 0.8em; letter-spacing: 0.04em; text-transform: uppercase; } }
+  .fit-fig { --staged-h: 560px; .staged { --staged-h: 560px; } }
+}
+
+// #lit-gap and #hypotheses
+.reveal .gap-row { grid-template-columns: 1fr 1fr; column-gap: 2em; font-size: 0.7em; text-align: left; }
+.reveal .gap-row .panel-head.selection { color: var(--mech-selection); }
+.reveal .gap-row .panel-head.retention { color: var(--mech-retention); }
+.reveal .hyp-list { font-size: 0.8em; text-align: left; max-width: 30em; margin: 0 auto; }
+.reveal .hyp-list > .fragment { margin-bottom: 1.1em; }
+.reveal .hyp-list .selection { color: var(--mech-selection); font-weight: 600; margin-right: 0.4em; }
+.reveal .hyp-list .retention { color: var(--mech-retention); font-weight: 600; margin-right: 0.4em; }
+.reveal .hyp-unless { display: block; color: var(--grey); font-size: 0.85em; margin-top: 0.3em; }
+
+// #selection-average Kozitsin column, #mech-omission
+.reveal .avg-row .avg-kozitsin img { width: 100%; max-width: 440px; margin: 0.2em auto 0; display: block; }
+.reveal .avg-row .avg-note { display: block; font-size: 0.6em; text-align: center; margin-top: 0.3em; }
+.reveal .avg-row .avg-implaus { font-weight: 600; }
+.reveal .avg-row .avg-select { display: block; color: var(--mech-selection); font-size: 1.1em; text-align: center; margin-bottom: 0.3em; }
+.reveal .avg-row .avg-punch { font-size: 1.25em; margin-top: 0.6em; }
+.reveal .omit-row { grid-template-columns: 1fr 1fr 1fr; column-gap: 1.2em; }
+.reveal .omit-row img { width: 100%; }
+.reveal .omit-row .panel-head.selection { color: var(--mech-selection); }
+.reveal .omit-row .panel-head.retention { color: var(--mech-retention); }
+.reveal .omit-sim { display: block; text-align: right; font-size: 0.45em; color: var(--grey); }
+.reveal .omit-row .panel-head { font-size: 0.8em; white-space: nowrap; }
+
+// #mech-omission captions, #retention-bc, #model-hero goal card, #noise
+.reveal .omit-row .omit-cap { display: block; font-size: 0.72em; line-height: 1.25; margin-top: 0.3em; color: var(--ink); }
+.reveal .omit-row .omit-cap.retention { color: var(--mech-retention); }
+.reveal .omit-row .omit-cap.selection { color: var(--mech-selection); }
+.reveal .bc-row { grid-template-columns: 0.75fr 1.6fr; column-gap: 1.5em; align-items: start; }
+.reveal .bc-row img { width: 100%; max-height: 470px; object-fit: contain; }
+.reveal .goal-card { margin: 0.5em auto 0; max-width: 900px; padding: 0.5em 1em; border: 2px solid var(--grey); border-radius: 10px; background: var(--page); font-size: 0.82em; }
+.reveal .goal-card .goal-head { display: block; font-weight: 700; margin-bottom: 0.2em; }
+.reveal .goal-card ul { margin: 0; }
+.reveal .goal-card ul ul { margin-left: 1.4em; font-size: 0.92em; }
+.reveal .noise-stack img { width: 760px; }
+.reveal .noise-punch { display: block; text-align: center; font-size: 1.05em; margin-top: 0.4em; }
+.reveal .gap-lead { text-align: center; font-size: 0.85em; margin-bottom: 0.5em; }
+.reveal .gap-lead .influence { color: var(--influence); }
+.reveal .gap-lead .selection { color: var(--mech-selection); }
+.reveal .gap-lead .retention { color: var(--mech-retention); }
+.reveal .gap-lead .attention { color: color-mix(in srgb, var(--mech-retention), var(--mech-selection)); }
+.reveal #lit-gap .gap-row { font-size: 0.8em; margin-top: 0.6em; }
+.reveal #lit-gap .gap-row .panel-head { font-size: 1em; }
+.reveal #lit-gap .gap-row p { margin: 0 0 0.5em; }
+.reveal .ladder-stack { width: 1000px; margin: 0 auto; position: relative; left: 55px; }  // room for .ladder-nest
+.reveal .ladder-stack img { width: 1000px; max-width: none; max-height: none; }
+
+// #results-ladder: one-column ladder left, what each mechanism buys right.
+.reveal .ladder-row {
+  grid-template-columns: 640px 1fr;
+  column-gap: 1.4em;
+  align-items: center;
+  > .panel-col:first-child img { width: 640px; max-width: none; max-height: none; }
+  .ladder-text { font-size: 0.7em; line-height: 1.35; text-align: left; align-items: stretch; }
+  .ladder-text > div { margin-bottom: 1.1em; }
+  .ladder-text p { margin: 0; }
+  .panel-head { display: block; text-align: left; font-size: 1em; font-weight: 600; }
+  .panel-head.tail { color: var(--tail); }
+  .panel-head.retention { color: var(--mech-retention); }
+  .panel-head.selection { color: var(--mech-selection); }
+}
+
+// #results-ladder, second half: the right column is a fixed stage of layers. The intro text
+// fades out, a kernel card (top) and the nonlinearity scatter (bottom) build per dataset; when
+// every point is up the card fades, the scatter slides to the top and the verdict fills the bottom.
+.reveal .lc-stage {
+  position: relative; width: 580px; height: 570px; flex-shrink: 0;
+  > .ladder-text { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: center; }
+  .ladder-final { text-align: left; font-size: 1em; margin-top: 0.3em; }
+  .lc-card, .lc-nlq { position: absolute; left: 0; width: 580px; }
+  .lc-card { top: 0; }
+  .lc-nlq { top: 292px; transition: top 0.7s ease; }
+  img { width: 580px; max-width: none; max-height: none; }
+  &:has(.lc-up.visible) .lc-nlq { top: 0; }
+  .lc-verdict { position: absolute; left: 30px; right: 0; top: 300px; font-size: 0.68em; line-height: 1.35; text-align: left; }
+  .lc-verdict > div { margin-bottom: 0.45em; }
+  .lc-verdict > div + div { padding-left: 1em; }
+}
+
+// #results-arms: three panels built left to right, from panels/arms.py.
+.reveal .arms-stack { width: 1200px; margin: 0 auto; }
+.reveal .arms-stack img { width: 1200px; max-width: none; max-height: none; }
+
+.reveal .ladder-final { text-align: center; font-size: 0.8em; margin-top: 0.4em; }
+.reveal .goal-card.goal-plain { border: none; background: none; width: fit-content; max-width: 1000px; margin: 0.4em auto 0; padding: 0; }
+.reveal .goal-card.goal-plain .goal-head { text-align: center; }
+.reveal .nlq-stack { width: 700px; margin: 0 auto; }
+.reveal .nlq-stack img { width: 700px; max-width: none; max-height: none; }
+.reveal .nlq-captions { font-size: 0.75em; text-align: center; margin-top: 0.2em; }
+.reveal .nlq-captions p { margin: 0; }
+.reveal .concl { font-size: 0.72em; }
+.reveal .concl .concl-block { margin-bottom: 0.5em; }
+.reveal .concl .concl-head { display: block; font-weight: 700; color: var(--grey); margin-bottom: 0.1em; }
+.reveal .concl ul { margin: 0 0 0 1em; }
+.reveal .concl li { margin-bottom: 0.15em; }
+.reveal .concl .concl-take { margin-top: 0.7em; padding-top: 0.4em; border-top: 1px solid var(--grey-hairline); font-weight: 600; text-align: center; }
+.reveal .history-pair.sherif-pair img { height: 440px; }
+.reveal .sherif-punch { text-align: center; font-size: 0.8em; margin-top: 0.5em; }
+
+// #omission-flow: two decision columns, question -> yes -> effect, twice.
+.reveal .flow-chart { display: grid; grid-template-columns: 1fr 1fr; column-gap: 3em; width: 1150px; margin: 0.6em auto 0; font-size: 0.62em; }
+.reveal .flow-col { display: flex; flex-direction: column; align-items: center; }
+.reveal .flow-node { width: 82%; text-align: center; padding: 0.45em 0.8em; border-radius: 8px; line-height: 1.3; }
+.reveal .flow-node p { margin: 0; }
+.reveal .flow-small { display: block; font-size: 0.78em; opacity: 0.85; margin-top: 0.15em; }
+.reveal .flow-q { border: 2.5px solid currentColor; background: white; }
+.reveal .flow-q.retention { color: var(--mech-retention); }
+.reveal .flow-q.selection { color: var(--mech-selection); }
+.reveal .flow-q strong { font-weight: 700; }
+.reveal .flow-toward { background: color-mix(in srgb, var(--grey) 18%, white); color: var(--ink); border: 2px solid var(--grey); }
+.reveal .flow-away { background: color-mix(in srgb, var(--influence) 18%, white); color: var(--ink); border: 2px solid var(--influence); }
+.reveal .flow-arrow { position: relative; height: 1.9em; width: 82%; text-align: center; font-size: 0.8em; color: var(--grey); }
+.reveal .flow-arrow::before { content: ""; position: absolute; left: 50%; top: 0.1em; bottom: 0.45em; border-left: 2px solid #555; }
+.reveal .flow-arrow::after { content: ""; position: absolute; left: calc(50% - 6px); bottom: 0.1em; border: 6px solid transparent; border-top: 8px solid #555; border-bottom: 0; }
+.reveal .flow-arrow p { margin: 0; position: absolute; left: calc(50% + 0.6em); top: 0.3em; font-style: italic; }
+.reveal .flow-legend { text-align: center; margin-top: 0.7em; font-size: 0.55em; }
+.reveal .flow-key { display: inline-block; padding: 0.15em 0.8em; border-radius: 6px; margin: 0 0.5em; }
+.reveal .flow-punch { text-align: center; font-size: 0.8em; margin-top: 0.5em; }
+
+/* #taxonomy-results: dataset chips inside the taxonomy boxes */
+.flow-results .chips { display: block; margin-top: 0.3em; line-height: 1.7; }
+.flow-results .chip {
+  display: inline-block; padding: 0 0.45em; margin: 0 0.12em;
+  border: 1.5px solid var(--ink); border-radius: 0.6em;
+  background: white; color: var(--ink); font-size: 0.82em; font-weight: 600;
+}
+.flow-results .chip-weak { border-style: dashed; color: var(--grey); border-color: var(--grey); }
+.flow-results .flow-none { font-weight: 400; font-style: italic; }
+
+// #omission-flow: one illustration per outcome box, flashed over the other column.
+.reveal .flow-chart { position: relative; }
+.reveal .flow-flash {
+  position: absolute; top: -0.4em; height: 430px; width: calc(50% - 0.5em);
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  background: white; border: 2.5px solid var(--grey); border-radius: 10px;
+  box-shadow: 0 6px 22px color-mix(in srgb, var(--ink) 22%, transparent);
+  padding: 0.5em 0.8em; box-sizing: border-box; z-index: 5;
+  p { margin: 0; }
+  img { max-height: 320px; max-width: 100%; object-fit: contain; margin: 0; flex: 0 1 auto; min-height: 0; }
+  &.on-left { left: 0; }
+  &.on-right { right: 0; }
+  &.away { border-color: var(--influence); }
+  .flash-cap { display: block; font-size: 0.78em; text-align: center; margin-top: 0.4em; color: var(--ink); line-height: 1.3; }
+}
+
+// #omission-flow with a row-label column: one grid, rows shared across the three columns.
+.reveal .flow-chart.flow-labeled {
+  --flow-lab: 230px;
+  grid-template-columns: var(--flow-lab) 1fr 1fr; grid-template-rows: repeat(7, auto); grid-auto-flow: column;
+  column-gap: 2em; width: 1200px;
+  .flow-col { display: contents; }
+  .flow-node, .flow-arrow { justify-self: center; }
+  .flow-node { width: 88%; box-sizing: border-box; display: flex; flex-direction: column; justify-content: center; }
+  .flow-arrow { width: 88%; }
+  .flow-lab-head { grid-row: span 2; align-self: start; text-align: right; font-size: 0.9em; line-height: 1.3; color: var(--ink); font-style: italic; }
+  .flow-lab-head p, .flow-lab p { margin: 0; }
+  .flow-lab { align-self: center; justify-self: end; padding: 0.3em 0.9em; border-radius: 8px; font-weight: 700; white-space: nowrap; }
+  .flow-flash.on-left { left: calc(var(--flow-lab) + 2em); width: calc((100% - var(--flow-lab) - 4em) / 2); }
+  .flow-flash.on-right { width: calc((100% - var(--flow-lab) - 4em) / 2); }
+}
+
+// #model-retention: label under the scene, swapped on the gate click
+.reveal .method-swap { font-size: 0.85em; margin-top: 0.2em; text-align: center; justify-items: center; }
+.reveal .method-swap p { margin: 0; }
+.reveal .method-swap .method-trad { color: var(--grey); }
+.reveal .method-swap .method-ours { color: var(--ink); font-weight: 700; }
+
+/* #model-kernel: the opinion update, foregrounded under the kernel column */
+.reveal .kernel-row .update-eq { display: block; font-size: 1.5em; margin-top: 0.25em; }
+.reveal .kernel-row .cap-line { display: block; }
+
+// #model-attention (2026-10-11): selection + retention on one slide. The hero stages are
+// cropped to their selection / retention / kernel columns (x 0.02-0.675, y 0.11-0.837; stage 1 captions below it are cut on purpose of the
+// 872.64 x 397.44 pt scene), and the text grid below uses the same column fractions.
+.reveal .attn-fig {
+  --w: 840px;
+  --full-w: calc(var(--w) / 0.655);
+  --full-h: calc(var(--full-w) / 2.1957);
+  position: relative;
+  width: var(--w);
+  height: calc(var(--full-h) * 0.727);
+  overflow: hidden;
+  margin: 0 auto;
+  img {
+    position: absolute;
+    width: var(--full-w);
+    height: var(--full-h);
+    left: calc(var(--full-w) * -0.02);
+    top: calc(var(--full-h) * -0.11);
+    max-width: none;
+    max-height: none;
+    margin: 0;
+  }
+}
+.reveal .attn-cols {
+  width: 840px;
+  margin: 0.2em auto 0;
+  display: grid;
+  grid-template-columns: 0.33fr 0.31fr 0.36fr;
+  column-gap: 1.1em;
+  font-size: 0.54em;
+  line-height: 1.25;
+  text-align: left;
+  .attn-col > p { margin: 0 0 0.45em; }
+  .attn-col span { display: block; }
+  .attn-trad { color: var(--grey); }
+  .attn-cite { display: inline !important; color: var(--grey); }
+  .attn-sel strong { color: var(--mech-selection); }
+  .attn-ret strong { color: var(--mech-retention); }
+}
+
+// #model-attention noise beat (2026-10-11): residual popup over the figure at click 7, legend words at click 8
+.reveal .attn-fig .attn-pop {
+  position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+  width: 54%; padding: 0.4em 0.5em 0.3em;
+  background: var(--page); border: 2px solid var(--tail); border-radius: 6px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.18);
+  img { position: static; width: 100%; height: auto; }
+  p { margin: 0.2em 0 0; font-size: 0.45em; color: var(--grey); text-align: center; }
+}
+.reveal .attn-cols {
+  .attn-noise strong { color: var(--tail); }
+  .attn-lap { display: inline !important; color: var(--tail); font-weight: 600; }
+  .attn-gau { display: inline !important; color: var(--grey); font-weight: 600; }
+}
+
+// #model-attention fit beat (2026-10-11): at click 9 the crop window opens to the whole hero
+// figure at 1160px (about 0.9x the cropped scale), revealing the data column; transitions animate it
+.reveal .attn-fig {
+  transition: width 0.7s ease, height 0.7s ease;
+  > img { transition: width 0.7s ease, height 0.7s ease, left 0.7s ease, top 0.7s ease; }
+  // the slide is a flex column and the faded-out .attn-cols still hold their height, so without
+  // flex-shrink: 0 the opened window gets squeezed back to about 456px
+  &:has(> .attn-wide.visible) {
+    flex-shrink: 0;
+    width: 1160px; height: calc(1160px / 2.1957);
+    > img { width: 1160px; height: calc(1160px / 2.1957); left: 0; top: 0; }
+  }
+}
+
+// #ladder-intro nested-model rings (2026-10-11): each rung's ring fades in with its rung
+.reveal .ladder-nest {
+  position: absolute; left: 0; top: 150px; width: 235px;
+  svg { width: 100%; height: auto; overflow: visible; }
+  circle { stroke-width: 2; }
+  text { font-size: 13.5px; text-anchor: middle; font-weight: 600; }
+  .nest-base circle { fill: color-mix(in srgb, var(--mech-baseline) 22%, var(--page)); stroke: var(--mech-baseline); }
+  .nest-base text { fill: var(--ink); }
+  .nest-tail circle { fill: color-mix(in srgb, var(--tail) 14%, var(--page)); stroke: var(--tail); }
+  .nest-tail text { fill: var(--tail); }
+  .nest-retention circle { fill: color-mix(in srgb, var(--mech-retention) 10%, var(--page)); stroke: var(--mech-retention); }
+  .nest-retention text { fill: var(--mech-retention); }
+  .nest-selection circle { fill: color-mix(in srgb, var(--mech-selection) 10%, var(--page)); stroke: var(--mech-selection); }
+  .nest-selection text { fill: var(--mech-selection); }
+  // a rung the panel does not select (SENATE: retention), greyed to match panels/ladder_intro.py OFF
+  .nest-retention.nest-off circle { fill: var(--page); stroke: var(--grey-light); stroke-dasharray: 5 4; }
+  .nest-retention.nest-off text { fill: var(--grey-light); }
+}
+
+// #model-attention click 12 (2026-10-11): the goal card from #model-hero. The faded .attn-cols
+// keep their height, so the card sits absolutely at the slide's foot instead of below them.
+.reveal .goal-card.attn-goal {
+  position: absolute; left: 50%; bottom: -0.2em; transform: translateX(-50%);
+  margin: 0; font-size: 0.56em; padding-top: 0.3em; padding-bottom: 0.3em;
+}
+.reveal .goal-card.attn-goal .goal-head { margin-bottom: 0.2em; }
+.reveal .goal-card.attn-goal ul { margin-top: 0; }
+.reveal .goal-card.attn-goal p { margin: 0; }
+
+// #attention-confounds (2026-10-11): two colour-coded columns, retention left, neighbor selection right.
+.reveal .conf-row {
+  grid-template-columns: 1fr 1.25fr; column-gap: 0.8em; margin-top: 0.6em;
+  .conf-col { border-top: 6px solid var(--grey); padding-top: 0.3em; }
+  .conf-ret { border-top-color: var(--mech-retention); }
+  .conf-sel { border-top-color: var(--mech-selection); }
+  .panel-head { font-size: 0.9em; }
+  .panel-sub { font-size: 0.55em; margin-bottom: 0.4em; }
+  figure { margin: 0; }
+  figcaption { font-size: 0.42em; color: var(--grey); line-height: 1.25; margin-top: 0.3em; }
+  .conf-pair { display: grid; grid-template-columns: 1fr auto 1.2fr; column-gap: 0.25em; align-items: start; }
+  .conf-pair img { width: 100%; height: auto; }
+  .conf-arrow { font-size: 1.2em; color: var(--mech-retention); align-self: center; margin-top: -1em; }
+  .conf-single img { width: 100%; height: auto; margin-top: 1.2em; }
+  .conf-take { display: block; font-size: 0.62em; margin-top: 0.8em; line-height: 1.3; }
+  .conf-ret .conf-take strong { color: var(--mech-retention); }
+  .conf-sel .conf-take strong { color: var(--mech-selection); }
+}
+.reveal .conf-row figure figcaption { font-size: 0.48em; line-height: 1.25; margin-top: 0.3em; color: var(--grey); }
+.reveal .conf-row .conf-pair img { height: 300px; width: auto; max-width: 100%; object-fit: contain; }
+.reveal .conf-row .conf-arrow { font-size: 2em; margin-top: -0.6em; }
+.reveal .conf-row .conf-take { font-size: 0.7em; }
+
+// #goal (2026-10-11): the project goal as its own card, one goal per click
+.reveal .slides section.goal-slide > h2:empty { display: none; }
+.reveal .goal-big {
+  position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+  width: 26em; padding: 0.8em 1.4em; border: 3px solid var(--grey); border-radius: 14px;
+  background: var(--page); color: var(--ink); font-size: 1.05em; line-height: 1.35;
+  .goal-head { display: block; text-align: center; font-weight: 700; font-size: 1.25em; margin-bottom: 0.5em; }
+  ol { margin: 0; padding-left: 1.3em; }
+  li { margin: 0.45em 0; }
+  li::marker { font-weight: 700; }
+  // the fragment sits on the text, so hide the number until its text arrives
+  li:has(> .fragment:not(.visible)) { visibility: hidden; }
+  .selection { color: var(--mech-selection); font-weight: 700; }
+  .retention { color: var(--mech-retention); font-weight: 700; }
+}
+
+// #bipolarization (2026-10-11): the opener, two answers to "why two camps?"
+.reveal .bipol-row {
+  grid-template-columns: repeat(2, 1fr); column-gap: 2.5em; margin-top: 0.6em;
+  .panel-sub { display: block; line-height: 1.3; min-height: 2.6em; }
+}
+.reveal .bipol-col { align-items: center; text-align: center; }
+.reveal .bipol-row .bipol-col img { width: auto; max-width: 100%; max-height: 220px; margin: 0.3em auto; }
+.reveal .bipol-col ul.cites { text-align: left; font-size: 0.62em; margin: 0.3em 0 0; }
+.reveal .bipol-col ul.cites li { margin: 0.25em 0; }
+.reveal .bipol-punch { margin-top: 0.8em; }
+.reveal .bipol-punch { font-size: 1em; .influence { color: var(--influence); font-weight: 700; } .selection { color: var(--mech-selection); font-weight: 700; } }
+
+// #bipolarization (2026-10-11): Bail et al. design figure above the repulsive kernel
+.reveal .bipol-row .bipol-col img.bail-fig { max-height: 285px; margin: 0.1em auto 0; }
+.reveal .bipol-row .bipol-col img.bipol-kernel { max-height: 135px; }
+.reveal .bipol-col .bail-cap { display: block; font-size: 0.55em; line-height: 1.25; color: var(--grey); margin: 0.15em 0 0.2em; }
+// the annotated repulsion kernel (panels/bipolarization.py): about as tall as the Bail thumbnail
+.reveal .bipol-row .bipol-col img.bail-fig { max-height: 235px; }
+.reveal .bipol-row .bipol-col img.bipol-annot { max-height: 240px; margin-top: 0.1em; }
+.reveal .bipol-row .panel-sub { min-height: 0; margin-bottom: 0.2em; }
+.reveal .bipol-col .bail-cap { white-space: nowrap; margin: 0.1em 0; }
+.reveal .bipol-punch { margin-top: 0.3em; }
+
+/* #bipolarization, simplified 2026-10-11: Congress histogram on top, two answers below */
+.reveal img.polar-fig { display: block; max-height: 215px; margin: 0.2em auto 0; }
+.reveal .polar-cap { display: block; text-align: center; font-size: 0.5em; color: var(--grey); margin: 0 0 0.25em; }
+.reveal .bipol-row .bipol-col img.bipol-annot { max-height: 175px; margin-top: 0; }
+.reveal .bipol-row .panel-head { margin-bottom: 0; }
+/* #bipolarization punch: the talk's argument, mechanism colours */
+.reveal .bipol-punch .selection { color: var(--mech-selection); font-weight: 600; }
+.reveal .bipol-punch .retention { color: var(--mech-retention); font-weight: 600; }
+.reveal .slide .explain-punch.bipol-punch { margin-top: 0.2em; font-size: 0.82em; line-height: 1.3; }
+.reveal img.polar-fig { max-height: 200px; }
+.reveal .bipol-row .bipol-col img.bipol-annot { max-height: 160px; }
+/* #thanks: preprint first page and link */
+.reveal img.thanks-paper { display: block; max-height: 500px; margin: 0.2em auto 0; border: 1px solid var(--grey); }
+.reveal .thanks-link { display: block; text-align: center; font-size: 0.7em; margin-top: 0.5em; }
+.reveal .thanks-row { display: grid; grid-template-columns: auto auto; justify-content: center; align-items: center; column-gap: 2.5em; }
+.reveal .thanks-row img.thanks-paper { margin: 0; max-height: 520px; }
+.reveal .thanks-qr { text-align: center; }
+.reveal .thanks-qr img.thanks-qr-img { display: block; width: 240px; max-height: none; margin: 0 auto; }
+.reveal .thanks-qr-cap { display: block; font-size: 0.75em; font-weight: 600; margin-top: 0.3em; }
+.reveal .thanks-qr .thanks-link { font-size: 0.55em; margin-top: 0.4em; color: var(--grey); }
+/* #bipolarization after the kernel plots moved to #model-kernel */
+.reveal img.polar-fig { max-height: 270px; }
+.reveal .bipol-row .bail-cap { margin-top: 0.3em; }
+.reveal .slide .explain-punch.bipol-punch { margin-top: 0.9em; }
+/* #thanks: collaborator headshots */
+.reveal .thanks-row img.thanks-paper { max-height: 400px; }
+.reveal .thanks-qr img.thanks-qr-img { width: 190px; }
+.reveal .headshot-row { display: flex; justify-content: center; align-items: flex-start; gap: 1.2em; margin-top: 0.6em; }
+.reveal .headshot { text-align: center; }
+.reveal .headshot img { display: block; width: 90px; height: 90px; object-fit: cover; border-radius: 50%; margin: 0 auto 0.2em; }
+.reveal .headshot-name { display: block; font-size: 0.45em; color: var(--ink); }
+
+/* #attention-confounds lead line, moved from #lit-gap (2026-10-11) */
+.reveal .conf-lead { font-size: 0.62em; text-align: center; color: var(--ink); margin: -0.2em auto 0.4em; max-width: 92%; }
+
+// Title, 2026-10-11 late: title, then the data-to-kernel+attention strip, then authors,
+// affiliations, venue and logo along the bottom.
+.reveal .title-slide-custom {
+  .talk-title { top: 6%; }
+  .talk-graphic { left: 0; right: auto; top: 30%; width: 100%; }
+  .talk-authors { top: 66%; right: 230px; }
+  .talk-affils { top: 72.5%; width: 820px; }
+  .talk-venue { left: auto; right: 0; top: 66%; text-align: right; }
+  .talk-logo { left: auto; right: 0; top: 73%; }
+}
+.reveal .title-slide-custom {
+  .talk-graphic { top: 27%; }
+  .talk-authors { top: 77%; }
+  .talk-affils { top: 83%; }
+  .talk-venue { top: 77%; }
+  .talk-logo { top: 83%; height: 62px; }
+}
+
+// #model-attention (2026-10-11 night): the old #attention-confounds evidence as boxes popping up at the
+// bottom of the slide, selection at click 1, retention at click 4, each gone on the next click
+.reveal .attn-box {
+  position: absolute; bottom: 10px; z-index: 5;
+  padding: 0.35em 0.6em 0.4em;
+  background: var(--page); border: 2px solid var(--grey); border-top-width: 6px; border-radius: 6px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.18);
+  figure { margin: 0; }
+  img { display: block; margin: 0 auto; max-width: 100%; max-height: none; }
+  figcaption { font-size: 0.42em; line-height: 1.25; margin-top: 0.25em; color: var(--grey); text-align: center; }
+  .attn-box-take { display: block; font-size: 0.6em; margin-top: 0.35em; text-align: center; }
+}
+.reveal .attn-box-sel {
+  left: 50%; transform: translateX(-50%); width: 520px; border-color: var(--mech-selection);
+  img { width: 470px; height: auto; }
+  .attn-box-take strong { color: var(--mech-selection); }
+}
+.reveal .attn-box-ret {
+  left: 50%; transform: translateX(-50%); width: 760px; border-color: var(--mech-retention);
+  .attn-box-pair { display: grid; grid-template-columns: 1fr auto 1.2fr; column-gap: 0.3em; align-items: center; }
+  img { height: 250px; width: auto; object-fit: contain; }
+  .attn-box-arrow { font-size: 1.6em; color: var(--mech-retention); margin-top: -0.8em; }
+  .attn-box-take strong { color: var(--mech-retention); }
+}
+.reveal .attn-box {
+  figcaption { font-size: 0.36em; }
+  .attn-box-take { font-size: 0.72em; }
+}
+.reveal .attn-box-sel { width: 440px; img { width: 380px; } }
+
+/* #bipolarization (2026-10-11): Bonacich & Lu quote replaces the two answer columns */
+.reveal .bipol-quote { max-width: 900px; margin: 0.5em auto 0; text-align: center; }
+.reveal .bipol-quote .bipol-quote-text { display: block; font-size: 0.95em; font-style: italic; line-height: 1.3; color: var(--ink, #222); }
+.reveal .bipol-quote .bipol-quote-cite { display: block; font-size: 0.55em; color: var(--grey); margin-top: 0.4em; }
+
+/* #bipolarization punch on one line after the 2026-10-11 rewording */
+.reveal .slide .explain-punch.bipol-punch { font-size: 0.76em; white-space: nowrap; }
+.reveal .concl ul ul, .reveal .concl ol { margin-top: 0.15em; }
+.reveal .concl .concl-foot { display: block; font-size: 0.7em; color: var(--grey); margin: 0.3em 0 0 1em; }
+.reveal .concl .concl-cite { font-size: 0.8em; color: var(--grey); }
+.reveal .concl .concl-foot { margin-bottom: 0.9em; }
+
+/* #takeaways: block centred on the slide, larger bullets, bold takeaway at the foot */
+.reveal #takeaways .concl { font-size: 0.95em; width: 100%; height: 85%; display: flex; flex-direction: column; justify-content: center; align-items: center; }
+.reveal #takeaways .concl .concl-block { text-align: left; }
+.reveal #takeaways .concl li { margin-bottom: 0.35em; }
+.reveal #takeaways .concl .concl-take { display: block; max-width: 80%; margin: 1em auto 0; font-weight: 700; }
+
+/* #theory-experiment (deck_theory_experiment.qmd): Monti citation under the PGABM bullet */
+.reveal .te-cite { display: block; font-size: 0.6em; color: var(--grey); margin-top: 0.2em; }
+/* mechanism words inside punch lines take the mechanism hue (was uncoloured) */
+.reveal .explain-punch .selection { color: var(--mech-selection); }
+.reveal .explain-punch .retention { color: var(--mech-retention); }
+.reveal .slide li .selection { color: var(--mech-selection); }
+.reveal .slide li .retention { color: var(--mech-retention); }
+
+// Opt-in for text-heavy slides: body starts just under the title instead of centring in the free height.
+.reveal .slides > section.present.top-align > h2 { margin-bottom: 0.6em !important; }
+
+// Quarto's Markdown images are wrapped in paragraphs. Keep the presentation grid
+// and staged images in the same positions as the earlier hand-written HTML.
+.reveal .title-slide-custom {
+  .talk-title p, .talk-authors p, .talk-venue p { margin: 0; }
+  .talk-affils { width: 860px; }
+  .talk-affils ul { margin: 0; padding: 0; list-style: none; }
+  .talk-affils li { margin: 0; break-inside: avoid; }
+  .talk-affils sup { margin: 0 0.3em 0 0; }
+}
+.reveal .shapes-row .cites ul {
+  width: fit-content;
+  margin: 0.2em auto 0.3em;
+  padding-left: 1.1em;
+  font-size: 0.5em;
+  line-height: 1.35;
+  height: 8em;
+  li { margin: 0; }
+}
+.reveal .attn-fig {
+  > p { margin: 0; }
+  > p > img { transition: width 0.7s ease, height 0.7s ease, left 0.7s ease, top 0.7s ease; }
+  &:has(.attn-wide.visible) {
+    flex-shrink: 0;
+    width: 1160px;
+    height: calc(1160px / 2.1957);
+    > p > img { width: 1160px; height: calc(1160px / 2.1957); left: 0; top: 0; }
+  }
+  .attn-pop p:first-child { margin: 0; }
+  .attn-pop p:last-child { margin: 0.2em 0 0; font-size: 0.45em; color: var(--grey); text-align: center; }
+}
+.reveal .attn-box {
+  > p:has(> img) { margin: 0; }
+  .attn-example p { margin: 0; }
+  .attn-caption { display: block; font-size: 0.36em; line-height: 1.25; margin-top: 0.25em; color: var(--grey); text-align: center; }
+}
+.reveal #data-specimens.markdown-source .specimen-grid {
+  > p { margin: 0; }
+  > p:nth-child(1), > .spec-name:nth-child(6), > p:nth-child(11), > p:nth-child(16) { grid-column: 2; }
+  > p:has(> .spec-type) { align-self: end; }
+  .spec-type { display: block; font-size: 0.4em; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--influence-ink); }
+  .spec-name p { margin: 0; }
+  .spec-detail { display: block; font-weight: 400; color: var(--grey); font-size: 0.82em; }
+  .spec-group p { margin: 0.15em 0 0; font-size: 0.48em; font-weight: 600; color: var(--ink); }
+  .spec-lab { grid-column: 2 / 4; }
+  .spec-wild { grid-column: 4 / 7; }
+  .spec-brace { height: 14px; border-bottom: 2px solid var(--grey); border-radius: 0 0 12px 12px; }
+}
+.reveal .ladder-nest {
+  height: 235px;
+  > p { margin: 0; }
+  span[class*="nest-"] {
+    position: absolute; left: 50%; display: flex; align-items: flex-start;
+    justify-content: center; box-sizing: border-box; border: 2px solid;
+    border-radius: 50%; transform: translateX(-50%);
+    font-size: 17.6px; font-weight: 600; white-space: nowrap;
+  }
+  .nest-selection { top: 5px; width: 225px; height: 225px; padding-top: 16px; border-color: var(--mech-selection); color: var(--mech-selection); background: color-mix(in srgb, var(--mech-selection) 10%, var(--page)); }
+  .nest-retention { top: 57px; width: 172px; height: 172px; padding-top: 13px; border-color: var(--mech-retention); color: var(--mech-retention); background: color-mix(in srgb, var(--mech-retention) 10%, var(--page)); }
+  .nest-retention.nest-off { border-color: var(--grey-light); border-style: dashed; color: var(--grey-light); background: var(--page); }
+  .nest-tail { top: 104px; width: 125px; height: 125px; padding-top: 13px; border-color: var(--tail); color: var(--tail); background: color-mix(in srgb, var(--tail) 14%, var(--page)); }
+  .nest-base { top: 151px; width: 78px; height: 78px; align-items: center !important; border-color: var(--mech-baseline); color: var(--ink); background: color-mix(in srgb, var(--mech-baseline) 22%, var(--page)); }
+}
+
+
+// phil additional components and layouts
+
+/*-- scss:rules --*/
+
+/************* splits ****************/
+.nosplit>.column:first-of-type {width: 100%; height:100%; position: absolute; top: 0; left: 0; }
+.split-33>.column:first-of-type {width: 33.33333333333%; height:100%; position: absolute; top: 0; left: 0; }
+.split-33>.column:nth-of-type(2) {width: 66.66666666667%;height:100%;position: absolute;top: 0;right: 0;}
+.split-66>.column:first-of-type {width: 66.66666666667%; height:100%; position: absolute; top: 0; left: 0; }
+.split-66>.column:nth-of-type(2) {width: 33.33333333333%;height:100%;position: absolute;top: 0;right: 0;}
+.split-25>.column:first-of-type {width: 25%; height:100%; position: absolute; top: 0; left: 0; }
+.split-25>.column:nth-of-type(2) {width: 75%;height:100%;position: absolute;top: 0;right: 0;}
+.split-75>.column:first-of-type {width: 75%; height:100%; position: absolute; top: 0; left: 0; }
+.split-75>.column:nth-of-type(2) {width: 25%;height:100%;position: absolute;top: 0;right: 0;}
+.split-10>.column:first-of-type {width: 10%; height:100%; position: absolute; top: 0; left: 0; }
+.split-10>.column:nth-of-type(2) {width: 90%;height:100%;position: absolute;top: 0;right: 0;}
+.split-20>.column:first-of-type {width: 20%; height:100%; position: absolute; top: 0; left: 0; }
+.split-20>.column:nth-of-type(2) {width: 80%;height:100%;position: absolute;top: 0;right: 0;}
+.split-30>.column:first-of-type {width: 30%; height:100%; position: absolute; top: 0; left: 0; }
+.split-30>.column:nth-of-type(2) {width: 70%;height:100%;position: absolute;top: 0;right: 0;}
+.split-40>.column:first-of-type {width: 40%; height:100%; position: absolute; top: 0; left: 0; }
+.split-40>.column:nth-of-type(2) {width: 60%; height:100%; position: absolute; top: 0; right: 0;}
+.split-50>.column:first-of-type {width: 50%; height:100%; position: absolute; top: 0; left: 0; }
+.split-50>.column:nth-of-type(2) {width: 50%; height:100%; position: absolute; top: 0; right: 0;}
+.split-60>.column:first-of-type {width: 60%; height:100%; position: absolute; top: 0; left: 0;}
+.split-60>.column:nth-of-type(2) {width: 40%; height:100%; position: absolute; top: 0; right: 0;}
+.split-70>.column:first-of-type {width: 70%; height:100%; position: absolute; top: 0; left: 0; }
+.split-70>.column:nth-of-type(2) {width: 30%; height:100%; position: absolute; top: 0; right: 0;}
+.split-two>.column:first-of-type {width: 50%; height:100%; position: absolute; top: 0; left: 0; }
+.split-two>.column:nth-of-type(2) {width: 50%; height:100%; position: absolute; top: 0; right: 0;}
+.split-three>.column:first-of-type {width: 33.33333333333%; height:100%; position: absolute; top: 0; left: 0; }
+.split-three>.column:nth-of-type(2) {width: 33.33333333333%; height:100%; position: absolute; top: 0; left: 33.33333333333%;}
+.split-three>.column:nth-of-type(3) {width: 33.33333333333%; height:100%; position: absolute; top: 0; right: 0;}
+.split-four>.column:first-of-type {width: 25%; height:100%; position: absolute; top: 0; left: 0; }
+.split-four>.column:nth-of-type(2) {width: 25%; height:100%; position: absolute; top: 0; left: 25%;}
+.split-four>.column:nth-of-type(3) {width: 25%; height:100%; position: absolute; top: 0; right: 25%;}
+.split-four>.column:nth-of-type(4) {width: 25%; height:100%; position: absolute; top: 0; right: 0;}
+.split-five>.column:first-of-type {width: 20%; height:100%; position: absolute; top: 0; left: 0; }
+.split-five>.column:nth-of-type(2) {width: 20%; height:100%; position: absolute; top: 0; left: 20%;}
+.split-five>.column:nth-of-type(3) {width: 20%; height:100%; position: absolute; top: 0; left: 40%;}
+.split-five>.column:nth-of-type(4) {width: 20%; height:100%; position: absolute; top: 0; right: 20%;}
+.split-five>.column:nth-of-type(5) {width: 20%; height:100%; position: absolute; top: 0; right: 0;}
+
+.split-2-1-1>.column:first-of-type {width: 50%; height:100%; position: absolute; top: 0; left: 0; }
+.split-2-1-1>.column:nth-of-type(2) {width: 25%; height:100%; position: absolute; top: 0; right: 25%;}
+.split-2-1-1>.column:nth-of-type(3) {width: 25%; height:100%; position: absolute; top: 0; right: 0;}
+.split-1-1-2>.column:first-of-type {width: 25%; height:100%; position: absolute; top: 0; left: 0; }
+.split-1-1-2>.column:nth-of-type(2) {width: 25%; height:100%; position: absolute; top: 0; left: 25%;}
+.split-1-1-2>.column:nth-of-type(3) {width: 50%; height:100%; position: absolute; top: 0; right: 0;}
+.split-1-2-1>.column:first-of-type {width: 25%; height:100%; position: absolute; top: 0; left: 0; }
+.split-1-2-1>.column:nth-of-type(2) {width: 50%; height:100%; position: absolute; top: 0; left: 25%;}
+.split-1-2-1>.column:nth-of-type(3) {width: 25%; height:100%; position: absolute; top: 0; right: 0;}
+
+
+
+
+
+.footnote {
+	position: absolute;
+	bottom: 2em;
+	padding-right: 2em;
+	padding-left: 0.0em;
+	padding-bottom: 4em;
+	font-size: 70%;
+	text-align: left;
+  }
+  
+.column .footnote { 
+	padding-left: 0.5em;
+}
+
+.retention {
+    color: var(--mech-retention);
+}
+
+.selection {
+    color: var(--mech-selection);
+}

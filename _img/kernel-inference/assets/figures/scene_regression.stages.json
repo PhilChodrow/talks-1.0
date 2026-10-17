@@ -1,0 +1,37 @@
+{
+  "figure": "scene_regression",
+  "bbox_pt": [
+    862.37,
+    356.09
+  ],
+  "stages": [
+    {
+      "k": 1,
+      "name": "dyad",
+      "claim": "classical kernel inference: one known source, so bin the update delta by the discrepancy d",
+      "pdf": "scene_regression_step_1.pdf",
+      "svg": "scene_regression_step_1.svg"
+    },
+    {
+      "k": 2,
+      "name": "recover",
+      "claim": "with a known source and no retention, the binned mean recovers lambda k(d)",
+      "pdf": "scene_regression_step_2.pdf",
+      "svg": "scene_regression_step_2.svg"
+    },
+    {
+      "k": 3,
+      "name": "network",
+      "claim": "on a network the source is unknown, so the analyst regresses on the mean discrepancy d_bar",
+      "pdf": "scene_regression_step_3.pdf",
+      "svg": "scene_regression_step_3.svg"
+    },
+    {
+      "k": 4,
+      "name": "problems",
+      "claim": "the same estimator is flattened: averaging over neighbours and over non-movers shrinks the kernel",
+      "pdf": "scene_regression_step_4.pdf",
+      "svg": "scene_regression_step_4.svg"
+    }
+  ]
+}

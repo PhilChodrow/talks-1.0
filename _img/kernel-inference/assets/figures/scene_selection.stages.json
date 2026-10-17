@@ -1,0 +1,37 @@
+{
+  "figure": "scene_selection",
+  "bbox_pt": [
+    838.08,
+    362.639
+  ],
+  "stages": [
+    {
+      "k": 1,
+      "name": "network",
+      "claim": "on a network, agent i has several neighbours, and we do not observe which one it heeded",
+      "pdf": "scene_selection_step_1.pdf",
+      "svg": "scene_selection_step_1.svg"
+    },
+    {
+      "k": 2,
+      "name": "candidates",
+      "claim": "each candidate j would pull i by its own lambda k(|d_j|) d_j",
+      "pdf": "scene_selection_step_2.pdf",
+      "svg": "scene_selection_step_2.svg"
+    },
+    {
+      "k": 3,
+      "name": "mixture",
+      "claim": "selection j_e ~ U(neighbours of i) makes the update a mixture over candidates",
+      "pdf": "scene_selection_step_3.pdf",
+      "svg": "scene_selection_step_3.svg"
+    },
+    {
+      "k": 4,
+      "name": "observed",
+      "claim": "the observed update delta_e is most likely under one source: inference recovers P(j_e = j | delta_e)",
+      "pdf": "scene_selection_step_4.pdf",
+      "svg": "scene_selection_step_4.svg"
+    }
+  ]
+}

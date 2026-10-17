@@ -1,0 +1,37 @@
+{
+  "figure": "scene_full",
+  "bbox_pt": [
+    872.64,
+    397.44
+  ],
+  "stages": [
+    {
+      "k": 1,
+      "name": "dyad",
+      "claim": "where the retention slide left off: i hears one known neighbour",
+      "pdf": "scene_full_step_1.pdf",
+      "svg": "scene_full_step_1.svg"
+    },
+    {
+      "k": 2,
+      "name": "selection",
+      "claim": "selection: on a network i picks a neighbour j_e uniformly at random, and we do not see which",
+      "pdf": "scene_full_step_2.pdf",
+      "svg": "scene_full_step_2.svg"
+    },
+    {
+      "k": 3,
+      "name": "frames",
+      "claim": "the outcome x_i^+ = x_i^- + delta_e is all we observe; selection, retention and the kernel are latent",
+      "pdf": "scene_full_step_3.pdf",
+      "svg": "scene_full_step_3.svg"
+    },
+    {
+      "k": 4,
+      "name": "backward",
+      "claim": "use EM to infer the model from data: from observed updates to the kernel, pi and the attended neighbour",
+      "pdf": "scene_full_step_4.pdf",
+      "svg": "scene_full_step_4.svg"
+    }
+  ]
+}

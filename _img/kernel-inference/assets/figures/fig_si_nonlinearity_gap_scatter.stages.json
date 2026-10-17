@@ -1,0 +1,37 @@
+{
+  "figure": "fig_si_nonlinearity_gap_scatter",
+  "bbox_pt": [
+    218.64,
+    207.073
+  ],
+  "stages": [
+    {
+      "k": 1,
+      "name": "axes",
+      "claim": "x: RFF minus DeGroot held-out likelihood with the kernel alone. y: the same with every mechanism on. Above the diagonal the mechanisms made the data look more nonlinear.",
+      "pdf": "fig_si_nonlinearity_gap_scatter_step_1.pdf",
+      "svg": "fig_si_nonlinearity_gap_scatter_step_1.svg"
+    },
+    {
+      "k": 2,
+      "name": "unchanged",
+      "claim": "For seven panels the verdict does not move; six of 15 are nonlinear under the kernel alone.",
+      "pdf": "fig_si_nonlinearity_gap_scatter_step_2.pdf",
+      "svg": "fig_si_nonlinearity_gap_scatter_step_2.svg"
+    },
+    {
+      "k": 3,
+      "name": "flipped",
+      "claim": "ADAMS-high and CMV look nonlinear only when retention is omitted.",
+      "pdf": "fig_si_nonlinearity_gap_scatter_step_3.pdf",
+      "svg": "fig_si_nonlinearity_gap_scatter_step_3.svg"
+    },
+    {
+      "k": 4,
+      "name": "switched",
+      "claim": "Six panels are linear under the kernel-only fit and nonlinear under the full model: SENATE, HOUSE, BECKER, TAKACS-S1, TAKACS-S2-disliking and VK-counting. Nine of 15 are nonlinear with the mechanisms.",
+      "pdf": "fig_si_nonlinearity_gap_scatter_step_4.pdf",
+      "svg": "fig_si_nonlinearity_gap_scatter_step_4.svg"
+    }
+  ]
+}

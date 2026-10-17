@@ -1,0 +1,23 @@
+{
+  "figure": "scene_hero_selection",
+  "bbox_pt": [
+    872.64,
+    397.44
+  ],
+  "stages": [
+    {
+      "k": 1,
+      "name": "average",
+      "claim": "on a network the usual model averages: i hears all its neighbours at once, and the kernel is read once at d-bar, the average of their discrepancies",
+      "pdf": "scene_hero_selection_step_1.pdf",
+      "svg": "scene_hero_selection_step_1.svg"
+    },
+    {
+      "k": 2,
+      "name": "selection",
+      "claim": "selection: on a network i picks a neighbour j_e uniformly at random, and we do not see which; every update is still influence",
+      "pdf": "scene_hero_selection_step_2.pdf",
+      "svg": "scene_hero_selection_step_2.svg"
+    }
+  ]
+}

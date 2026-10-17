@@ -1,0 +1,23 @@
+{
+  "figure": "scene_hero_noise",
+  "bbox_pt": [
+    872.64,
+    397.44
+  ],
+  "stages": [
+    {
+      "k": 1,
+      "name": "gate",
+      "claim": "where the retention slide left off: selection, the gate z_e ~ Bern(pi), and a Gaussian influence bump next to the retention bump at mu_0",
+      "pdf": "scene_hero_noise_step_1.pdf",
+      "svg": "scene_hero_noise_step_1.svg"
+    },
+    {
+      "k": 2,
+      "name": "tails",
+      "claim": "the influence bump's shape is a choice: a Gaussian (grey dotted) or a Laplace (teal dotted) with the same mean and variance; the Laplace is taller at the peak and heavier in the tails; the retention bump at mu_0 gets the same teal Laplace",
+      "pdf": "scene_hero_noise_step_2.pdf",
+      "svg": "scene_hero_noise_step_2.svg"
+    }
+  ]
+}

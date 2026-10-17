@@ -1,0 +1,37 @@
+{
+  "figure": "scene_retention",
+  "bbox_pt": [
+    857.6,
+    358.991
+  ],
+  "stages": [
+    {
+      "k": 1,
+      "name": "scatter",
+      "claim": "with the source known, a large share of updates are exactly zero",
+      "pdf": "scene_retention_step_1.pdf",
+      "svg": "scene_retention_step_1.svg"
+    },
+    {
+      "k": 2,
+      "name": "naive",
+      "claim": "averaging delta over d mixes those zeros in, so the fitted kernel comes out too weak",
+      "pdf": "scene_retention_step_2.pdf",
+      "svg": "scene_retention_step_2.svg"
+    },
+    {
+      "k": 3,
+      "name": "gate",
+      "claim": "a latent gate z_e ~ Bern(pi): with probability pi agent i moves, otherwise it stays",
+      "pdf": "scene_retention_step_3.pdf",
+      "svg": "scene_retention_step_3.svg"
+    },
+    {
+      "k": 4,
+      "name": "mixture",
+      "claim": "the update is a mixture of a mover and a stayer arm; a zero is explained by z_e = 0, not by a small kernel",
+      "pdf": "scene_retention_step_4.pdf",
+      "svg": "scene_retention_step_4.svg"
+    }
+  ]
+}
