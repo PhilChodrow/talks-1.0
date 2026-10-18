@@ -31,7 +31,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-cc0b58555bc0307f56922ae5e7e13363.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-b0aad77967bd5e385469a6c27efc7d7b.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -556,7 +556,7 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" data-background-color="#A4303F" data-background-opacity="0.0" class="quarto-title-block center">
+<section id="title-slide" data-background-color="#C4552B" data-background-opacity="0.0" class="quarto-title-block center">
   <h1 class="title">Learning Social Influence</h1>
   <p class="subtitle">The Santa Fe Institute <br> October 21st, 2026</p>
 
@@ -569,27 +569,28 @@
 </div>
 
 </section>
-<section id="section" class="slide level2 split-40" data-background-image="../_img/midd/midd-banner-light.jpg" data-background-size="cover" data-background-position="center" data-background-repeat="no-repeat">
-<h2></h2>
-<h4 id="hi-everyone-im-phil-chodrow"><span class="absolute-header">Hi everyone! I’m Phil Chodrow</span></h4>
+<section id="hi-everyone-im-phil-chodrow" class="slide level2 split-40" data-background-image="../_img/midd/midd-banner-light.jpg" data-background-size="cover" data-background-position="center" data-background-repeat="no-repeat">
+<h2>Hi everyone! I’m Phil Chodrow</h2>
 <div class="column">
-<p><br> <br></p>
-<div class="textblock">
-<p>Prof.&nbsp;of CS at Middlebury College, a small liberal arts college in Vermont.</p>
+<p><br></p>
+<div class="textblock-1 center">
+<p>Prof.&nbsp;of CS at <span class="alert-1">Middlebury College</span>, a small liberal arts college in Vermont. I teach courses in discrete math, machine learning, data science, and network science.</p>
 </div>
-<div class="textblock-inverse">
-<p><em>Students/postdocs: ask me about <span class="alert"><strong>#LiberalArtsLife</strong></span> if you’re curious.</em></p>
+<p><br></p>
+<div class="textblock-2 center">
+<p><em>Junior folks: ask me about <span class="alert-2"><strong>#LiberalArtsLife</strong></span> if you’re curious.</em></p>
 </div>
-<div class="textblock">
-<p>I like aikido, tea, my cats, being outside, hypergraphs, and <span class="alert">math models of social systems</span>.</p>
+<p><br></p>
+<div class="textblock-3 center">
+<p>I like aikido, tea, my cats, being outside, hypergraphs, and <span class="alert-3">math models of social systems</span>.</p>
 </div>
 </div><div class="column">
-<p><img data-src="../_img/personal/aikido.png" class="absolute" style="top: 120px; left: 50px; width: 45%; "> <img data-src="../_img/personal/opinion-dynamics.png" class="absolute" style="top: 400px; left: 50px; width: 45%; "> <img data-src="../_img/personal/cats.jpeg" class="absolute" style="top: 120px; right: 80px; width: 25.5%; "> <img data-src="../_img/personal/xgi-hypergraph.webp" class="absolute" style="top: 250px; right: 80px; width: 25.5%; "> <img data-src="../_img/personal/tea.jpeg" class="absolute" style="top: 380px; right: 80px; width: 25.5%; "> <img data-src="../_img/personal/cycling-2.jpeg" class="absolute" style="top: 510px; right: 80px; width: 25.5%; "></p>
+<p><img data-src="../_img/personal/aikido.png" class="absolute" style="top: 10%; left: 10%; width: 45%; "> <img data-src="../_img/personal/opinion-dynamics.png" class="absolute" style="top: 55%; left: 10%; width: 45%; "> <img data-src="../_img/personal/cats.jpeg" class="absolute" style="top: 10%; right: 12%; width: 25.5%; "> <img data-src="../_img/personal/xgi-hypergraph.webp" class="absolute" style="top: 31%; right: 12%; width: 25.5%; "> <img data-src="../_img/personal/tea.jpeg" class="absolute" style="top: 52%; right: 12%; width: 25.5%; "> <img data-src="../_img/personal/cycling-2.jpeg" class="absolute" style="top: 73%; right: 12%; width: 25.5%; "></p>
 </div></section>
-<section id="section-1" class="slide level2 split-50">
+<section id="section" class="slide level2 split-50">
 <h2></h2>
 <div class="column">
-<h5 id="on-a-scale-from-0-5-hows-this-talk"><span class="fragment">On a scale from 0-5, how’s this talk?</span></h5>
+<h3 id="on-a-scale-from-0-5-hows-this-talk">On a scale from 0-5, how’s this talk?</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="../_img/kernel-inference/experiment.png" class="fragment quarto-figure quarto-figure-center" style="width:80.0%;height:80.0%"></p>
@@ -611,7 +612,7 @@
 </div><div class="column">
 <p><img data-src="../_img/kernel-inference/sherif.jpg" class="absolute fragment" style="top: 0px; left: 0px; width: 100%; height: 100%; "></p>
 </div></section>
-<section id="section-2" class="slide level2" data-background-color="black">
+<section id="section-1" class="slide level2" data-background-color="black">
 <h2></h2>
 <p><br> <br> <br> <br> <br> <br> <br> <br> <br></p>
 <div class="r-stack">
@@ -623,19 +624,31 @@
 <p><br><br><br></p>
 <p><span class="fragment"><strong><em>Autokinetic effect</em></strong>: a still point of light in a dark room will appear to move if you stare at it long enough.</span></p>
 </section>
-<section id="section-3" class="slide level2">
-<h2></h2>
+<section id="so-how-far-did-the-light-move" class="slide level2">
+<h2>“So, how far did the light move?”</h2>
 
 <img data-src="../_img/kernel-inference/autokinetic.png" class="quarto-figure quarto-figure-center r-stretch" style="width:90.0%"><p><span class="footnote">Sherif (1935)</span></p>
 </section>
-<section id="section-4" class="slide level2">
-<h2></h2>
+<section id="so-how-far-did-the-light-move-1" class="slide level2">
+<h2>“So, how far did the light move?”</h2>
 
 <img data-src="../_img/kernel-inference/autokinetic-line.png" class="quarto-figure quarto-figure-center r-stretch" style="width:90.0%"><p><span class="footnote">Sherif (1935)</span></p>
 </section>
-<section id="section-5" class="slide level2">
-<h2></h2>
-<h3 id="towards-formalization-interaction-structure">Towards Formalization: Interaction Structure</h3>
+<section id="social-influence" class="slide level2">
+<h2>Social Influence</h2>
+<div class="textblock-3 standout">
+<p><em>Any <span class="alert-1">change</span> in an individual’s thoughts, feelings, or behaviors caused by <span class="alert-2">other people</span>, who may be actually present or whose presence is imagined, expected, or only implied.</em> <br><br> - American Psychological Association (APA) Dictionary of Psychology, 2026</p>
+</div>
+<div class="fragment">
+<p>Models of social influence address:</p>
+<ul>
+<li><span class="alert-2">Which other people?</span></li>
+<li><span class="alert-1">What kind of change?</span></li>
+</ul>
+</div>
+</section>
+<section id="towards-formalization-which-other-people" class="slide level2">
+<h2>Towards Formalization: <span class="alert-2">Which Other People?</span></h2>
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="../_img/kernel-inference/interaction-choice.png" class="quarto-figure quarto-figure-center" style="width:80.0%;height:80.0%"></p>
@@ -655,10 +668,10 @@
 </div>
 </section>
 <section id="model-kernel" class="slide level2">
-<h2>Towards Formalization: Influence Kernels</h2>
+<h2>Towards Formalization: <span class="alert-1">What Kind of Change?</span></h2>
 <!-- TODO: At the bottom of this slide add a citaiotn to Sherif, Taub and Hovland (1958) -->
 <div class="gap-lead">
-<p>Modeling one-to-one influence with interaction kernels</p>
+<p><br></p>
 </div>
 <div class="panel-row kernel-row">
 <div class="panel-col">
@@ -719,10 +732,9 @@
           display:block!important;
       }</style></aside>
 </section>
-<section id="section-6" class="slide level2">
-<h2></h2>
-<h4 id="a-realistic-model"><span class="absolute-header">A realistic model?</span></h4>
-<p>We’ll start with the DeGroot or <em>linear</em> kernel (DeGroot 1974): <span class="math inline">\(k(d) = \lambda d\)</span>.</p>
+<section id="a-first-model-random-neighbor-choice-and-linear-influence" class="slide level2">
+<h2>A first model: random neighbor choice and linear influence</h2>
+<p>DeGroot or <em>linear</em> kernel (DeGroot 1974): <span class="math inline">\(k(d) = \lambda d\)</span>.</p>
 <p><br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br></p>
 <div class="absolute" style="top: 3%; right: 0%; ">
 <div class="cell">
@@ -747,8 +759,9 @@
 </div>
 </div>
 </div>
+<p><span class="fragment">Across a broad range of model choices, linear influence with <span class="math inline">\(\lambda &gt; 0\)</span> tends to produce consensus.</span></p>
 </section>
-<section id="section-7" class="slide level2" data-background-image="../_img/kernel-inference/polarized-report.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
+<section id="section-2" class="slide level2" data-background-image="../_img/kernel-inference/polarized-report.png" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat">
 <h2></h2>
 </section>
 <section id="explanations" class="slide level2">
@@ -803,8 +816,22 @@
 </div>
 </div>
 </div>
-<div class="explain-punch dissensus-punch fragment" data-fragment-index="3">
-<p>No one agrees on the shape.</p>
+<!-- ::: {.explain-punch .dissensus-punch .fragment fragment-index=3}
+So, which of these is "right"?
+::: -->
+<div class="attn-box attn-box-influence fragment fade-in-then-out" data-fragment-index="4">
+<p>Or do it nonparametrically!</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="sfi_files/figure-revealjs/unnamed-chunk-3-1.png" class="quarto-figure quarto-figure-center" width="576"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><span class="attn-caption">Rahimi + Recht (2007)</span></p>
+<p><br><br><br></p>
 </div>
 <aside class="notes">
 <p>[WILL: the first models said influence is linear: DeGroot, a flat kernel, every update a fixed fraction of the gap. Run that and everyone meets. Our world does not look like that; it is dominated by dissensus and polarization. So what kernel makes this world? Each kernel shape is a hypothesis about why we disagree, and each has its backers. Walk the columns left to right: the shape, who reports it, and the world it makes. Linear pulls everyone together; repulsion pushes far opinions away and leaves two poles; bounded confidence stops listening past a radius and leaves clusters. Same kind of experiment, every possible answer. Last click: no one agrees on the shape]</p>
@@ -848,12 +875,7 @@
       }</style></aside>
 <p><span class="ht">Slide h/t Will Thompson</span></p>
 </section>
-<section id="an-alternative-nonparametric-kernels" class="slide level2">
-<h2>An Alternative: Nonparametric Kernels</h2>
-
-<img data-src="sfi_files/figure-revealjs/unnamed-chunk-3-1.png" class="quarto-figure quarto-figure-center r-stretch" width="576"><p><span class="footnote">Rahimi + Recht (2007)</span></p>
-</section>
-<section id="section-8" class="slide level2 split-50">
+<section id="section-3" class="slide level2 split-50">
 <h2></h2>
 <h4 id="how-do-we-learn-the-kernel-from-data"><span class="absolute-header">How do we learn the kernel from data?</span></h4>
 <div class="column">
@@ -861,7 +883,7 @@
 <p>Easiest case: for each <span class="math inline">\(i\)</span> there is only one neighbor <span class="math inline">\(j\)</span>.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="../_img/kernel-inference/pair.png" class="quarto-figure quarto-figure-center" style="width:50.0%;height:50.0%"></p>
+<p><img data-src="../_img/kernel-inference/one-neighbor.png" class="quarto-figure quarto-figure-center" style="width:50.0%;height:50.0%"></p>
 </figure>
 </div>
 <p><span class="math display">\[
@@ -875,21 +897,21 @@
 <p><br></p>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="../_img/kernel-inference/adams_p08_scatter_only.png" class="quarto-figure quarto-figure-center"></p>
+<p><img data-src="../_img/kernel-inference/adams_p08_scatter_only.png" class="bordered-fig quarto-figure quarto-figure-center"></p>
 </figure>
 </div>
 <p><span class="footnote">Adams, White, and Araujo (2022). “Person-to-person opinion dynamics: An empirical study using an online game.” <em>PLoS ONE</em>.</span></p>
 </div></section>
-<section id="section-9" class="slide level2">
+<section id="section-4" class="slide level2">
 <h2></h2>
-<p><img data-src="../_img/kernel-inference/adams_p08_scatter_only.png" class="absolute" style="top: 30px; right: 150px; width: 30%; "></p>
+<p><img data-src="../_img/kernel-inference/adams_p08_scatter_only.png" class="absolute bordered-fig" style="top: 30px; right: 150px; width: 30%; "></p>
 </section>
-<section id="section-10" class="slide level2" data-background-image="../_img/kernel-inference/is-this-a.jpeg" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat" data-background-color="black">
+<section id="section-5" class="slide level2" data-background-image="../_img/kernel-inference/is-this-a.jpeg" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat" data-background-color="black">
 <h2></h2>
-<p><img data-src="../_img/kernel-inference/adams_p08_scatter_only.png" class="absolute" style="top: 30px; right: 150px; width: 30%; "></p>
-<p><img data-src="../_img/kernel-inference/adams_p08_scatter_and_conditional_mean.png" class="absolute fragment" style="top: 30px; right: 150px; width: 30%; "></p>
+<p><img data-src="../_img/kernel-inference/adams_p08_scatter_only.png" class="absolute bordered-fig" style="top: 30px; right: 150px; width: 30%; "></p>
+<p><img data-src="../_img/kernel-inference/adams_p08_scatter_and_conditional_mean.png" class="absolute fragment bordered-fig" style="top: 30px; right: 150px; width: 30%; "></p>
 </section>
-<section id="section-11" class="slide level2 split-30">
+<section id="section-6" class="slide level2 split-30">
 <h2></h2>
 <h4 id="a-more-complex-case-multiple-neighbors"><span class="absolute-header">A more complex case: multiple neighbors</span></h4>
 <div class="column">
@@ -907,17 +929,17 @@
 <p><br></p>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="../_img/kernel-inference/plos_gauging_scatter_and_conditional_mean.png" class="quarto-figure quarto-figure-center" style="width:70.0%"></p>
+<p><img data-src="../_img/kernel-inference/plos_gauging_scatter_and_conditional_mean.png" class="bordered-fig quarto-figure quarto-figure-center" style="width:70.0%"></p>
 </figure>
 </div>
 <p><span class="footnote">Vande Kerckhove + al.&nbsp;(2016). “Modelling Influence and Opinion Evolution in Online Collective Behaviour.” <em>PLoS ONE</em>.</span></p>
 </div></section>
-<section id="section-12" class="slide level2 split-40">
+<section id="section-7" class="slide level2 split-40">
 <h2></h2>
 <h3 id="some-common-implicit-assumptions"><span class="absolute-header">Some common implicit assumptions</span></h3>
 <div class="column">
 <p><br> <br> <br></p>
-<p><span style="font-size: 1.5em;">At each timestep <br> each agent <span class="retention"><strong><em>always</em></strong></span> interacts <br> with <span class="selection"><strong><em>all</em></strong></span> of their neighbors.</span></p>
+<p><span style="font-size: 1.5em;">At each timestep <br> each agent <span class="alert-1"><strong><em>always</em></strong></span> interacts <br> with <span class="alert-2"><strong><em>all</em></strong></span> of their neighbors.</span></p>
 </div><div class="column">
 <p><br></p>
 <p><span class="math display">\[
@@ -935,14 +957,14 @@
 </figure>
 </div>
 </div></section>
-<section id="section-13" class="slide level2 split-50">
+<section id="section-8" class="slide level2 split-50">
 <h2></h2>
 <h3 id="core-idea-for-today-selective-attention"><span class="absolute-header">Core idea for today: selective attention</span></h3>
 <div class="column">
 <p><br> <br></p>
-<p><span style="font-size: 1.5em;">At each timestep <br> each agent <span class="retention"><strong><em><del>always</del> sometimes</em></strong></span> interacts <br> with <span class="selection"><strong><em><del>all</del> some</em></strong></span> of their neighbors.</span></p>
-<div class="footnote">
-<p>The reason this is empirically challenging is that we typically <em>don’t observe</em> these attentional mechanisms: we only observe the opinion changes that result.</p>
+<p><span style="font-size: 1.5em;">At each timestep <br> each agent <span class="alert-1"><strong><em><del>always</del> sometimes</em></strong></span> interacts <br> with <span class="alert-2"><strong><em><del>all</del> some</em></strong></span> of their neighbors.</span></p>
+<div class="attn-box attn-box-influence fragment fade-in-then-out" data-fragment-index="4">
+<p>This is complex because we typically <em>don’t observe</em> these attentional mechanisms: we only observe the opinion changes that result.</p>
 </div>
 </div><div class="column">
 <div class="quarto-figure quarto-figure-center">
@@ -951,9 +973,8 @@
 </figure>
 </div>
 </div></section>
-<section id="section-14" class="slide level2">
-<h2></h2>
-<h3 id="the-team"><span class="absolute-header">The Team</span></h3>
+<section id="the-team" class="slide level2">
+<h2>The Team</h2>
 <table style="padding:0px; border-bottom:0px; margin: 0px auto; width: 100%;">
 <tbody><tr style="border:0px;padding:0px;margin:0px;">
 <td style="padding:0px;border-bottom:0px">
@@ -1026,7 +1047,7 @@
 </tr>
 </tbody></table>
 <p><img data-src="../_img/kernel-inference/ams-logo.png" class="absolute fragment" style="top: 300px; right: 490px; width: 25%; " data-fragment-index="1"></p>
-<div class="absolute fragment" data-fragment-index="1" style="height: 7rem;top: 590px; right: 450px; ">
+<div class="textblock-1 fragment" data-fragment-index="1">
 <p>Work initiated at the AMS Mathematics Research Community on <em>Complex Social Systems</em> (2023)!</p>
 </div>
 <!-- 
@@ -1129,7 +1150,7 @@
       }</style></aside>
 <p><span class="ht">Slide h/t Will Thompson</span></p>
 </section>
-<section id="section-15" class="slide level2 split-50">
+<section id="section-9" class="slide level2 split-50">
 <h2></h2>
 <div class="column">
 <h3 id="learning-the-model">Learning the model</h3>
@@ -1140,10 +1161,22 @@
 </div>
 </div><div class="column">
 <p><br></p>
-<p>Our stochastic model defines a likelihood function over observed opinion trajectories.</p>
-<p>We learn the kernel parameters by maximizing this likelihood via the expectation-maximization (EM) algorithm (Dempster et al., 1977).</p>
-<p>We select between competing models (kernels, mechanisms, etc.) by evaluating their predictive likelihoods on held-out validation data.</p>
+<div class="textblock-1">
+<p>Our stochastic model defines a <span class="alert-1">likelihood function</span> over observed opinion trajectories, given an observation of a fixed network of possible interactions.</p>
+</div>
+<p><br></p>
+<div class="textblock-2">
+<p>We learn the kernel parameters by maximizing this likelihood via the <span class="alert-2">expectation-maximization (EM) algorithm</span> (Dempster et al., 1977).</p>
+</div>
+<p><br></p>
+<div class="textblock-3">
+<p>We <span class="alert-3">select between competing models</span> (kernels, mechanisms, etc.) by evaluating their predictive likelihoods on held-out validation data.</p>
+</div>
 </div></section>
+<section id="omitting-retention-and-neighbor-selection-alters-learned-kernels" class="slide level2">
+<h2>Omitting retention and neighbor selection alters learned kernels</h2>
+
+<img data-src="../_img/kernel-inference/synthetic-experiment.png" class="bordered-fig r-stretch"></section>
 <section id="data-specimens" class="slide level2 markdown-source">
 <h2>Our Data</h2>
 <div class="specimen-grid">
@@ -1269,7 +1302,7 @@
 <!-- ===== 32_results_ladder ===== -->
 </section>
 <section id="results-ladder" class="slide level2">
-<h2>Latent mechanims make models more predictive</h2>
+<h2>Latent mechanisms make models more predictive</h2>
 <!-- TODO: Add pictograms of best fit kernel shapes back to each section of the bar -->
 <!-- TODO: change the VK-gausing to the Senate data -->
 <div class="panel-row ladder-row">
@@ -1290,6 +1323,9 @@
 <div class="ladder-text fragment fade-out" data-fragment-index="3">
 <div>
 <p>One bar per dataset: its held-out gain over a random-walk null, segmented into mechanisms by order of addition.</p>
+</div>
+<div class="fragment" data-fragment-index="1">
+<p><span class="panel-head" style="color: #767676;">Influence kernel</span> Presence of any social influence (rather than random drift)</p>
 </div>
 <div class="fragment" data-fragment-index="1">
 <p><span class="panel-head tail">Heavy tail</span> Selected on 13/15 datasets; on average 28% more predictive power per update.</p>
@@ -1327,13 +1363,13 @@
 <p><strong>Adding attention makes</strong></p>
 </div>
 <div class="fragment" data-fragment-index="9">
-<p>the model more predictive on <strong>14/15</strong> datasets</p>
+<p>the model more predictive (on heldout data!) on <strong>14/15</strong> datasets</p>
 </div>
 <div class="fragment" data-fragment-index="10">
-<p>the kernel <strong>less linear</strong> on <strong>6/15</strong> (upper left)</p>
+<p>the inferred kernel <strong>less linear</strong> on <strong>6/15</strong> (upper left)</p>
 </div>
 <div class="fragment" data-fragment-index="11">
-<p>the kernel <strong>more linear</strong> on <strong>2/15</strong> (lower right)</p>
+<p>the inferred kernel <strong>more linear</strong> on <strong>2/15</strong> (lower right)</p>
 </div>
 </div>
 </div>
@@ -1388,28 +1424,51 @@
       }</style></aside>
 <p><span class="ht">Slide h/t Will Thompson</span></p>
 </section>
-<section id="section-16" class="slide level2">
-<h2></h2>
-<h3 id="thanks-everyone">Thanks everyone!</h3>
+<section id="some-learnings" class="slide level2 split-40">
+<h2>Some Learnings</h2>
 <div class="column">
 <p><br></p>
-<p><img data-src="../_img/kernel-inference/preprint.png"></p>
-<p><a href="arxiv.org/abs/2610.12616">arxiv:2610.12616</a></p>
+<div class="textblock-1 fragment fade-in-then-semi-out" data-fragment-index="1">
+<p><span class="alert-1">Potential exposure <span class="math inline">\(\neq\)</span> interaction</span></p>
+<p>In experiments and online settings, relationship networks (proximity, following, etc.) define <em>possible</em> rather than <em>actual</em> interactions.</p>
+</div>
+<div class="textblock-2 fragment fade-in-then-semi-out" data-fragment-index="2">
+<p><span class="alert-2">Model latent variables</span></p>
+<p>We can model what we don’t observe directly: we just need to tie it statistically to things that we do observe.</p>
+</div>
+<div class="textblock-3 fragment fade-in-then-semi-out" data-fragment-index="3">
+<p><span class="alert-3">Attentional mechanisms</span></p>
+<p>Even simple representations of attention can improve prediction and alter our conclusions.</p>
+</div>
 </div><div class="column">
+<p><img data-src="../_img/kernel-inference/interaction-choice-2.png" class="fragment fade-in-then-out absolute" style="top: 5%; left: 25%; width: 30%; " data-fragment-index="1"></p>
+<p><img data-src="../_img/kernel-inference/assets/figures/scene_hero_attn_fit_step_2.svg" class="fragment fade-in-then-out absolute" style="top: 27%; left: 0%; width: 98%; " data-fragment-index="2"></p>
+<p><img data-src="../_img/kernel-inference/assets/panels/capability_ladder/selection.svg" class="fragment fade-in-then-out absolute" style="top: 7%; left: 0%; width: 95%; " data-fragment-index="3"></p>
+</div></section>
+<section id="thanks-everyone" class="slide level2 split-40">
+<h2>Thanks everyone!</h2>
+<div class="column">
+<p><br></p>
+<p><img data-src="../_img/kernel-inference/preprint.png" class="bordered-fig"></p>
+<div class="absolute" style="bottom: 15%; right: 25%; ">
+<p><a href="https://arxiv.org/abs/2610.12616">arxiv:2610.12616</a></p>
+</div>
+</div><div class="column">
+<p><br><br></p>
 <table style="padding:0px;border-bottom:0pxmargin: 0px auto; ">
 <tbody><tr style="border:0px;padding:0px;margin:0px;">
 <td style="padding:0px;border-bottom:0px">
-<img data-src="../_img/people/will-thompson.jpg" class="portrait-smallest">
+<img data-src="../_img/people/will-thompson.jpg" class="portrait-smallish">
 </td>
 <td style="vertical-align: middle;white-space:nowrap;padding:0px;border-bottom:0px">
 <p style="padding:0px">
 <strong>Will Thompson</strong> <br> UVM
 </p>
 </td>
-</tr>
-<tr style="border:0px;padding:0px;margin:0px;">
+<!-- </tr>
+<tr style="border:0px;padding:0px;margin:0px;"> -->
 <td style="vertical-align: middle;padding:0px;border-bottom:0px">
-<img data-src="../_img/people/moyi-tian.jpeg" class="portrait-smallest">
+<img data-src="../_img/people/moyi-tian.jpeg" class="portrait-smallish">
 </td>
 <td style="vertical-align: middle;white-space:nowrap;padding:0px;border-bottom:0px">
 <p style="padding:0px">
@@ -1419,17 +1478,17 @@
 </tr>
 <tr style="border:0px;padding:0px;margin:0px;">
 <td style="vertical-align: middle;padding:0px;border-bottom:0px">
-<img data-src="../_img/people/linh-huynh.jpg" class="portrait-smallest">
+<img data-src="../_img/people/linh-huynh.jpg" class="portrait-smallish">
 </td>
 <td style="vertical-align: middle;white-space:nowrap;padding:0px;border-bottom:0px">
 <p style="padding:0px">
 <strong>Linh Huynh</strong> <br> Texas Tech
 </p>
 </td>
-</tr>
-<tr style="border:0px;padding:0px;margin:0px;">
+<!-- </tr>
+<tr style="border:0px;padding:0px;margin:0px;"> -->
 <td style="vertical-align: middle;padding:0px;border-bottom:0px">
-<img data-src="../_img/people/alex-wiedemann.jpg" class="portrait-smallest">
+<img data-src="../_img/people/alex-wiedemann.jpg" class="portrait-smallish">
 </td>
 <td style="vertical-align: middle;white-space:nowrap;padding:0px;border-bottom:0px">
 <p style="padding:0px">
@@ -1438,24 +1497,20 @@
 </td>
 </tr>
 <tr style="border:0px;padding:0px;margin:0px;">
+<!-- </tr>
+<tr style="border:0px;padding:0px;margin:0px;"> -->
 <td style="vertical-align: middle;padding:0px;border-bottom:0px">
-</td>
-<td style="vertical-align: middle;padding:0px;border-bottom:0px">
-</td>
-</tr>
-<tr style="border:0px;padding:0px;margin:0px;">
-<td style="vertical-align: middle;padding:0px;border-bottom:0px">
-<img data-src="../_img/people/vicki-modisette.jpg" class="portrait-smallest">
+<img data-src="../_img/people/vicki-modisette.jpg" class="portrait-smallish">
 </td>
 <td style="vertical-align: middle;white-space:nowrap;padding:0px;border-bottom:0px">
 <p style="padding:0px">
 <strong>Vicki Modisette</strong> <br> Eastern Kentucky
 </p>
 </td>
-</tr>
-<tr style="border:0px;padding:0px;margin:0px;">
+<!-- </tr>
+<tr style="border:0px;padding:0px;margin:0px;"> -->
 <td style="vertical-align: middle;padding:0px;border-bottom:0px">
-<img data-src="../_img/people/brooks.jpg" class="portrait-smallest">
+<img data-src="../_img/people/brooks.jpg" class="portrait-smallish">
 </td>
 <td style="vertical-align: middle;white-space:nowrap;padding:0px;border-bottom:0px">
 <p style="padding:0px">
@@ -1464,6 +1519,7 @@
 </td>
 </tr>
 </tbody></table>
+<p><img data-src="../_img/orgs/ams-logo.png" class="absolute" style="bottom: 13%; right: 28%; width: 20%; "> <img data-src="../_img/orgs/nsf-logo.jpeg" class="absolute" style="bottom: 10%; right: 53%; width: 20%; "></p>
 </div></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">

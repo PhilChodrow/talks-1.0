@@ -1080,3 +1080,123 @@
 .selection {
     color: var(--mech-selection);
 }
+
+
+
+// css textblock with a colored border and rounded corners, for use in slides with a lot of text
+
+.textblock-1 { 
+    font-family: 'Figtree', sans-serif;
+    font-size: 1.4rem;
+    color: var(--ink);
+    padding: 0.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-color: var(--influence);
+    border-style: solid;
+    border-radius: 1rem;
+    border-width: 3px;
+    width: 80%;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.textblock-2 { 
+    font-family: 'Figtree', sans-serif;
+    font-size: 1.4rem;
+    color: var(--ink);
+    padding: 0.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-color: var(--tail);
+    border-style: solid;
+    border-radius: 1rem;
+    border-width: 3px;
+    width: 80%;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+
+.textblock-3 { 
+    font-family: 'Figtree', sans-serif;
+    font-size: 1.4rem;
+    color: var(--ink);
+    padding: 0.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-color: var(--goldenrod);
+    border-style: solid;
+    border-radius: 1rem;
+    border-width: 3px;
+    width: 80%;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.textblock-1 p {
+  margin: 0.5rem 0;
+  padding: 0;
+}
+
+.textblock-2 p {
+  margin: 0.5rem 0;
+  padding: 0;
+}
+
+.textblock-3 p {
+  margin: 0.5rem 0;
+  padding: 0;
+}
+
+.alert-1 {
+  color: var(--influence);
+  font-weight: bold;
+}
+
+.alert-2 {
+  color: var(--tail);
+  font-weight: bold;
+}
+
+.alert-3 {
+  color: var(--goldenrod);
+  font-weight: bold;
+}
+
+.speaker-highlight {
+  // color: var(--goldenrod);
+  font-weight: bold;
+}
+
+.bigger {
+  font-size: 1.8rem;
+}
+
+.standout {
+  width: 90%;
+  font-size: 1.6rem;
+}
+
+.standout p {
+  margin: 0.5rem 0;
+  padding: 1rem;
+}
+
+
+.reveal .attn-box-influence {
+  left: 50%; transform: translateX(-50%); width: 520px; border-color: var(--influence);
+  img { width: 470px; height: auto; }
+  .attn-box-take strong { color: var(--influence); }
+}
+
+.bordered-fig {
+  border: 2px solid #333333;
+  padding: 4px;
+  border-radius: 4px;
+  border-color: #333333;
+  fill: #ffffff;
+  background-clip: padding-box;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.18);
+}
+

@@ -4,47 +4,57 @@ subtitle: "The Santa Fe Institute <br> October 21st, 2026"
 date: ""
 ---
 
-## {.split-40 background-image="../_img/midd/midd-banner-light.jpg" background-size="cover" background-position="center" background-repeat="no-repeat"} 
 
+## Hi everyone! I'm Phil Chodrow {.split-40 background-image="../_img/midd/midd-banner-light.jpg" background-size="cover" background-position="center" background-repeat="no-repeat"} 
 
-
-#### [Hi everyone! I'm Phil Chodrow]{.absolute-header}
 
 ::: {.column}
 
 
+<br>
 
-<br> <br> 
+::: {.textblock-1 .center}
 
-::: {.textblock}
-
-Prof. of CS at Middlebury College, a small liberal arts college in Vermont.  
-
-:::
-
-::: {.textblock-inverse}
-
-*Students/postdocs: ask me about [**\#LiberalArtsLife**]{.alert} if you're curious.*
+Prof. of CS at [Middlebury College]{.alert-1}, a small liberal arts college in Vermont. I teach courses in discrete math, machine learning, data science, and network science. 
 
 :::
 
-::: {.textblock}
+<br>
 
-I like  aikido, tea, my cats, being outside, hypergraphs, and [math models of social systems]{.alert}. 
+::: {.textblock-2 .center}
+
+*Junior folks: ask me about [**\#LiberalArtsLife**]{.alert-2} if you're curious.*
 
 :::
+
+
+
+<br>
+
+
+::: {.textblock-3 .center}
+
+I like aikido, tea, my cats, being outside, hypergraphs, and [math models of social systems]{.alert-3}. 
+
+:::
+
+
+
+
+
+
 
 
 :::
 
 ::: {.column}
 
-![](../_img/personal/aikido.png){.absolute left=50 top=120 width=45%}
-![](../_img/personal/opinion-dynamics.png){.absolute left=50 top=400 width=45%}
-![](../_img/personal/cats.jpeg){.absolute right=80 top=120 width=25.5%}
-![](../_img/personal/xgi-hypergraph.webp){.absolute right=80 top=250 width=25.5%}
-![](../_img/personal/tea.jpeg){.absolute right=80 top=380 width=25.5%}
-![](../_img/personal/cycling-2.jpeg){.absolute right=80 top=510 width=25.5%}
+![](../_img/personal/aikido.png){.absolute left=10% top=10% width=45%}
+![](../_img/personal/opinion-dynamics.png){.absolute left=10% top=55% width=45%}
+![](../_img/personal/cats.jpeg){.absolute right=12% top=10% width=25.5%}
+![](../_img/personal/xgi-hypergraph.webp){.absolute right=12% top=31% width=25.5%}
+![](../_img/personal/tea.jpeg){.absolute right=12% top=52% width=25.5%}
+![](../_img/personal/cycling-2.jpeg){.absolute right=12% top=73% width=25.5%}
 
 ::: 
 
@@ -54,7 +64,7 @@ I like  aikido, tea, my cats, being outside, hypergraphs, and [math models of so
 
 ::: {.column}
 
-##### [On a scale from 0-5, how's this talk?]{.fragment}
+### On a scale from 0-5, how's this talk?
 
 ![](../_img/kernel-inference/experiment.png){.fragment width="80%" height="80%" fig-align="center"}
 
@@ -69,8 +79,6 @@ I like  aikido, tea, my cats, being outside, hypergraphs, and [math models of so
 <!-- A simple styled box or rectangle -->
 <div style="background: #ffffff; width: 800px; height: 800px; border-radius: 8px;"></div>
 :::
-
-
 
 :::
 
@@ -99,22 +107,47 @@ I like  aikido, tea, my cats, being outside, hypergraphs, and [math models of so
 
 [***Autokinetic effect***: a still point of light in a dark room will appear to move if you stare at it long enough.]{.fragment}
 
-## 
+
+## "So, how far did the light move?" 
 
 ![](../_img/kernel-inference/autokinetic.png){fig-align="center" width="90%"}
 
 [Sherif (1935)]{.footnote}
 
-## 
+
+
+## "So, how far did the light move?" 
 
 ![](../_img/kernel-inference/autokinetic-line.png){fig-align="center" width="90%"}
 
 [Sherif (1935)]{.footnote}
 
 
-## 
+## Social Influence
 
-### Towards Formalization: Interaction Structure
+::: {.textblock-3 .standout}
+
+*Any [change]{.alert-1} in an individual’s thoughts, feelings, or behaviors caused by [other people]{.alert-2}, who may be actually present or whose presence is imagined, expected, or only implied.*
+<br><br>
+\- American Psychological Association (APA) Dictionary of Psychology, 2026
+
+:::
+
+::: {.fragment}
+Models of social influence address: 
+
+- [Which other people?]{.alert-2}
+- [What kind of change?]{.alert-1}
+
+:::
+
+
+
+
+
+
+
+## Towards Formalization: [Which Other People?]{.alert-2}
 
 
 ![](../_img/kernel-inference/interaction-choice.png){width="80%" height="80%" fig-align="center"}
@@ -129,11 +162,11 @@ I like  aikido, tea, my cats, being outside, hypergraphs, and [math models of so
 <div style="background: #ffffff; width: 400px; height: 800px; border-radius: 8px;"></div>
 :::
 
-## Towards Formalization: Influence Kernels {#model-kernel}
+## Towards Formalization: [What Kind of Change?]{.alert-1} {#model-kernel}
 
 <!-- TODO: At the bottom of this slide add a citaiotn to Sherif, Taub and Hovland (1958) -->
 ::: {.gap-lead}
-Modeling one-to-one influence with interaction kernels
+<br>
 :::
 
 ::::::: {.panel-row .kernel-row}
@@ -210,15 +243,11 @@ Facts, with sources:
 
 
 
-
-
-## 
-
-#### [A realistic model?]{.absolute-header}
+## A first model: random neighbor choice and linear influence
 
 
 
-We'll start with the DeGroot or *linear* kernel (DeGroot 1974): $k(d) = \lambda d$.
+DeGroot or *linear* kernel (DeGroot 1974): $k(d) = \lambda d$.
 
 <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> 
 
@@ -282,10 +311,13 @@ df |> ggplot() +
   labs(x="Model timestep", y="Opinion") + 
   scale_y_continuous(limits=c(0, 10)) +
   scale_linetype_manual(values=c("dotted", "dashed", "solid")) + 
-  ggtitle("DeGroot (1974) model with random neighbor choice")
+  ggtitle("Linear influence with random neighbor choice and Gaussian noise")
 ```
 
 :::
+
+[Across a broad range of model choices, linear influence with $\lambda > 0$ tends to produce consensus.]{.fragment}
+
 
 
 
@@ -357,45 +389,13 @@ df |> ggplot() +
 :::
 ::::
 
-::: {.explain-punch .dissensus-punch .fragment fragment-index=3}
-No one agrees on the shape.
-:::
+<!-- ::: {.explain-punch .dissensus-punch .fragment fragment-index=3}
+So, which of these is "right"?
+::: -->
 
-::: notes
-[WILL: the first models said influence is linear: DeGroot, a flat kernel, every update a fixed fraction of the gap. Run that and everyone meets. Our world does not look like that; it is dominated by dissensus and polarization. So what kernel makes this world? Each kernel shape is a hypothesis about why we disagree, and each has its backers. Walk the columns left to right: the shape, who reports it, and the world it makes. Linear pulls everyone together; repulsion pushes far opinions away and leaves two poles; bounded confidence stops listening past a radius and leaves clusters. Same kind of experiment, every possible answer. Last click: no one agrees on the shape]
+::: {.attn-box .attn-box-influence .fragment .fade-in-then-out fragment-index=4}
 
-Three clicks: repulsion column, bounded confidence column, then the punch line. (2026-10-11: order swapped from BC then repulsion.)
-
-Facts, with sources:
-
-- One curve per column, drawn as influence k(d) (each column on its own y scale; bounded confidence peaks at 0.045, just inside its radius), from the paper's gain functions: DeGroot k = 1, the diagonal; hard bounded confidence, radius 0.15 (full gain inside, zero beyond: Deffuant/Hegselmann-Krause); SAR with crossover 0.4 [presentations/ccs_2026/panels/explanations.py; kernel_inference/paper_figures/kernel_gains.py].
-- Bottom row is simulated, not data: 60 agents, each step every agent hears one agent drawn at random and moves 0.3 k(d), clipped to [0, 1], 80 steps, seed 1. Linear ends in consensus, bounded confidence in clusters, repulsion in two poles at the edges [same].
-- Citations are Kozitsin (2021) Table 1, "Studies testing influence assumptions against real data", by its three columns: linear positive, moderated positive, positive + negative. All approved (+) except Krizan & Baron 2007, which rejected the positive + negative hypothesis. Kozitsin's footnotes, dropped from the slide: Mazen & Leventhal 1972 ignores trends in opinion shifts; van Knippenberg et al. 1990 does not separate in-group and out-group influence; Liu & Srivastava 2015 is nonlinear, with an increasing rate [~/Zotero/storage/2Q4MVCCW, Table 1].
-- Column headings are ours: Kozitsin's "moderated positive" is influence that fades with distance, which is the bounded confidence shape; "positive + negative" is assimilation near, repulsion far.
-
-Literature (verified 2026-10-05 against the papers where reachable; otherwise the manuscript):
-
-- Takács, Flache & Mäs 2016, PLoS ONE 11(6):e0157948: "positive and rather linear" (Study 1, distance coefficient 0.34); "We did not find support for the negative influence hypothesis." One manuscript sentence (background.tex:10) calls Takács bounded confidence; that contradicts the paper.
-- Vande Kerckhove et al. 2016, PLOS ONE 11(6):e0157685: constant influenceability alpha per player; bounded confidence only mentioned as an alternative.
-- Kozitsin 2021, J. Math. Sociol. 46(1): positive shifts "largely through a linear form or an inverted U-shaped form", hence in two columns. Its negative shifts "may be partially explained ... without referring to the notion of repulsive influence".
-- Deffuant et al. 2000; Hegselmann & Krause 2002: step kernels, theory only. DeGroot 1974: constant gain, theory. Noise destroys BC clusters: Pineda, Toral & Hernández-García 2009 [not re-verified].
-- Moussaïd et al. 2013, PLOS ONE 8(11):e78433: "Social influence is negligible when opinions are initially too distant." The far zone is fading influence, not repulsion.
-- Sherif, Taub & Hovland 1958: assimilation near the anchor, contrast far from it. Latitudes of acceptance are Sherif & Hovland 1961, not 1958.
-- Adams et al. 2022, PLOS ONE 17(10):e0275473: the manuscript (introduction.tex:4) says it observed repulsive dynamics, reported as an anomaly. The paper itself tests the Martins model. [WILL: check before saying this out loud]
-- If asked about backfire in the field: Bail et al. 2018 (PNAS); failures to find it: Wood & Porter 2019, Guess & Coppock 2020 [not re-verified]. Mäs & Flache 2013, PLoS ONE 8(11):e74516: "bi-polarization can be explained without negative influence".
-- Becker et al. 2017 left off: no kernel-shape claim found.
-
-Folded in from the dissensus slide (#why-dissensus, now in backup), which showed a DeGroot consensus run against a bounded-confidence dissensus run and a tangle of candidate kernels with a question mark:
-
-- Its trajectory panels are simulated, not data: 60 agents, each step every agent hears one agent drawn at random and moves 0.3 k(d), clipped to [0, 1], 80 steps, seed 1. DeGroot, k = 1, ends in consensus. Sigmoidal bounded confidence (sharpness 200, squared radius 0.05, so radius 0.22) ends in two groups near 0.31 and 0.79, away from the edges: dissensus without extremes [panels/why_dissensus.py]. The linear column's dynamics panel on this slide is the same consensus run.
-- DeGroot in the paper's notation: k(|d|) = 1, so the mean move is lambda d.
-- Its tangle of candidate kernels was illustrative: sigmoidal BC at four radii, SAR at four crossovers, an inverted U and a concave decline; not a list of fitted kernels [panels/why_dissensus.py, CANDIDATES].
-- Picture options if the slide gets real data later: Voteview's party means over time, or a protest photo shot from a distance with no identifiable faces.
-:::
-
-[Slide h/t Will Thompson]{.ht}
-
-## An Alternative: Nonparametric Kernels
+Or do it nonparametrically!
 
 ```{r}
 #| fig.width: 6
@@ -447,7 +447,7 @@ y_pred <- predict(lm_model, newdata = data_train)
 df_to_plot <- data.frame(x = X[, 1], y_pred = y_pred)
 df_to_plot |> 
   ggplot(aes(x = x, y = y_pred)) +
-  geom_line() +
+  geom_line(color="#C4552B", linewidth=2) +
   theme_minimal() +
   labs(x = expression(italic(d)), y = expression(italic(k(d)))) +
   ggtitle("Random Fourier Feature Kernel") +
@@ -455,7 +455,47 @@ df_to_plot |>
   ylim(0, NA)
 ```
 
-[Rahimi + Recht (2007)]{.footnote}
+[Rahimi + Recht (2007)]{.attn-caption}
+
+<br><br><br>
+
+:::
+
+
+
+::: notes
+[WILL: the first models said influence is linear: DeGroot, a flat kernel, every update a fixed fraction of the gap. Run that and everyone meets. Our world does not look like that; it is dominated by dissensus and polarization. So what kernel makes this world? Each kernel shape is a hypothesis about why we disagree, and each has its backers. Walk the columns left to right: the shape, who reports it, and the world it makes. Linear pulls everyone together; repulsion pushes far opinions away and leaves two poles; bounded confidence stops listening past a radius and leaves clusters. Same kind of experiment, every possible answer. Last click: no one agrees on the shape]
+
+Three clicks: repulsion column, bounded confidence column, then the punch line. (2026-10-11: order swapped from BC then repulsion.)
+
+Facts, with sources:
+
+- One curve per column, drawn as influence k(d) (each column on its own y scale; bounded confidence peaks at 0.045, just inside its radius), from the paper's gain functions: DeGroot k = 1, the diagonal; hard bounded confidence, radius 0.15 (full gain inside, zero beyond: Deffuant/Hegselmann-Krause); SAR with crossover 0.4 [presentations/ccs_2026/panels/explanations.py; kernel_inference/paper_figures/kernel_gains.py].
+- Bottom row is simulated, not data: 60 agents, each step every agent hears one agent drawn at random and moves 0.3 k(d), clipped to [0, 1], 80 steps, seed 1. Linear ends in consensus, bounded confidence in clusters, repulsion in two poles at the edges [same].
+- Citations are Kozitsin (2021) Table 1, "Studies testing influence assumptions against real data", by its three columns: linear positive, moderated positive, positive + negative. All approved (+) except Krizan & Baron 2007, which rejected the positive + negative hypothesis. Kozitsin's footnotes, dropped from the slide: Mazen & Leventhal 1972 ignores trends in opinion shifts; van Knippenberg et al. 1990 does not separate in-group and out-group influence; Liu & Srivastava 2015 is nonlinear, with an increasing rate [~/Zotero/storage/2Q4MVCCW, Table 1].
+- Column headings are ours: Kozitsin's "moderated positive" is influence that fades with distance, which is the bounded confidence shape; "positive + negative" is assimilation near, repulsion far.
+
+Literature (verified 2026-10-05 against the papers where reachable; otherwise the manuscript):
+
+- Takács, Flache & Mäs 2016, PLoS ONE 11(6):e0157948: "positive and rather linear" (Study 1, distance coefficient 0.34); "We did not find support for the negative influence hypothesis." One manuscript sentence (background.tex:10) calls Takács bounded confidence; that contradicts the paper.
+- Vande Kerckhove et al. 2016, PLOS ONE 11(6):e0157685: constant influenceability alpha per player; bounded confidence only mentioned as an alternative.
+- Kozitsin 2021, J. Math. Sociol. 46(1): positive shifts "largely through a linear form or an inverted U-shaped form", hence in two columns. Its negative shifts "may be partially explained ... without referring to the notion of repulsive influence".
+- Deffuant et al. 2000; Hegselmann & Krause 2002: step kernels, theory only. DeGroot 1974: constant gain, theory. Noise destroys BC clusters: Pineda, Toral & Hernández-García 2009 [not re-verified].
+- Moussaïd et al. 2013, PLOS ONE 8(11):e78433: "Social influence is negligible when opinions are initially too distant." The far zone is fading influence, not repulsion.
+- Sherif, Taub & Hovland 1958: assimilation near the anchor, contrast far from it. Latitudes of acceptance are Sherif & Hovland 1961, not 1958.
+- Adams et al. 2022, PLOS ONE 17(10):e0275473: the manuscript (introduction.tex:4) says it observed repulsive dynamics, reported as an anomaly. The paper itself tests the Martins model. [WILL: check before saying this out loud]
+- If asked about backfire in the field: Bail et al. 2018 (PNAS); failures to find it: Wood & Porter 2019, Guess & Coppock 2020 [not re-verified]. Mäs & Flache 2013, PLoS ONE 8(11):e74516: "bi-polarization can be explained without negative influence".
+- Becker et al. 2017 left off: no kernel-shape claim found.
+
+Folded in from the dissensus slide (#why-dissensus, now in backup), which showed a DeGroot consensus run against a bounded-confidence dissensus run and a tangle of candidate kernels with a question mark:
+
+- Its trajectory panels are simulated, not data: 60 agents, each step every agent hears one agent drawn at random and moves 0.3 k(d), clipped to [0, 1], 80 steps, seed 1. DeGroot, k = 1, ends in consensus. Sigmoidal bounded confidence (sharpness 200, squared radius 0.05, so radius 0.22) ends in two groups near 0.31 and 0.79, away from the edges: dissensus without extremes [panels/why_dissensus.py]. The linear column's dynamics panel on this slide is the same consensus run.
+- DeGroot in the paper's notation: k(|d|) = 1, so the mean move is lambda d.
+- Its tangle of candidate kernels was illustrative: sigmoidal BC at four radii, SAR at four crossovers, an inverted U and a concave decline; not a list of fitted kernels [panels/why_dissensus.py, CANDIDATES].
+- Picture options if the slide gets real data later: Voteview's party means over time, or a protest photo shot from a distance with no identifiable faces.
+:::
+
+[Slide h/t Will Thompson]{.ht}
 
 
 
@@ -469,7 +509,7 @@ df_to_plot |>
 
 Easiest case: for each $i$ there is only one neighbor $j$. 
 
-![](../_img/kernel-inference/pair.png){width="50%" height="50%" fig-align="center"}
+![](../_img/kernel-inference/one-neighbor.png){width="50%" height="50%" fig-align="center"}
 
 $$
 \begin{aligned}
@@ -485,7 +525,7 @@ $$
 
 <br> 
 
-![](../_img/kernel-inference/adams_p08_scatter_only.png){fig-align="center"}
+![](../_img/kernel-inference/adams_p08_scatter_only.png){fig-align="center" .bordered-fig}
 
 [Adams, White, and Araujo (2022). "Person-to-person opinion dynamics: An empirical study using an online game." *PLoS ONE*.]{.footnote}
 
@@ -495,16 +535,25 @@ $$
 
 
 
+
 ## 
 
-![](../_img/kernel-inference/adams_p08_scatter_only.png){.absolute top=30 right=150 width="30%"}
+
+
+![](../_img/kernel-inference/adams_p08_scatter_only.png){.absolute top=30 right=150 width="30%" .bordered-fig}
+
+
 
 
 ## {background-image="../_img/kernel-inference/is-this-a.jpeg" background-size="contain" background-position="center" background-repeat="no-repeat" background-color="black"}
 
-![](../_img/kernel-inference/adams_p08_scatter_only.png){.absolute top=30 right=150 width="30%"}
 
-![](../_img/kernel-inference/adams_p08_scatter_and_conditional_mean.png){.absolute top=30 right=150 width="30%" .fragment}
+![](../_img/kernel-inference/adams_p08_scatter_only.png){.absolute top=30 right=150 width="30%" .bordered-fig}
+
+![](../_img/kernel-inference/adams_p08_scatter_and_conditional_mean.png){.absolute top=30 right=150 width="30%" .fragment .bordered-fig}
+
+
+
 
 ## {.split-30}
 
@@ -531,7 +580,7 @@ $$
 
 <br> 
 
-![](../_img/kernel-inference/plos_gauging_scatter_and_conditional_mean.png){width="70%" fig-align="center"}
+![](../_img/kernel-inference/plos_gauging_scatter_and_conditional_mean.png){width="70%" fig-align="center" .bordered-fig}
 
 [Vande Kerckhove + al. (2016). "Modelling Influence and Opinion Evolution in Online Collective Behaviour." *PLoS ONE*.]{.footnote}
 
@@ -550,8 +599,8 @@ $$
 
 [
   At each timestep <br> 
-  each agent [***always***]{.retention}  interacts <br> 
-  with [***all***]{.selection} of their neighbors.
+  each agent [***always***]{.alert-1}  interacts <br> 
+  with [***all***]{.alert-2} of their neighbors.
 ]{style="font-size: 1.5em;"} 
 
 
@@ -588,13 +637,14 @@ $$
 
 [
   At each timestep <br> 
-  each agent [***~~always~~ sometimes***]{.retention} interacts <br> 
-  with [***~~all~~ some***]{.selection} of their neighbors.
+  each agent [***~~always~~ sometimes***]{.alert-1} interacts <br> 
+  with [***~~all~~ some***]{.alert-2} of their neighbors.
 ]{style="font-size: 1.5em;"} 
 
-::: {.footnote}
 
-The reason this is empirically challenging is that we typically *don't observe* these attentional mechanisms: we only observe the opinion changes that result. 
+::: {.attn-box .attn-box-influence .fragment .fade-in-then-out fragment-index=4}
+
+This is complex because we typically *don't observe* these attentional mechanisms: we only observe the opinion changes that result. 
 
 :::
 
@@ -610,9 +660,9 @@ The reason this is empirically challenging is that we typically *don't observe* 
 
 
 
-## 
 
-### [The Team]{.absolute-header}
+
+## The Team
 
 
 <table style="padding:0px; border-bottom:0px; margin: 0px auto; width: 100%;">
@@ -693,7 +743,7 @@ The reason this is empirically challenging is that we typically *don't observe* 
 
 ![](../_img/kernel-inference/ams-logo.png){.absolute top=300 right=490 width=25% .fragment fragment-index=1}
 
-::: {.absolute top=590 right=450 .fragment fragment-index=1 style="height: 7rem;"}
+::: {.textblock-1  .fragment fragment-index=1}
 
 Work initiated at the AMS Mathematics Research Community on *Complex Social Systems* (2023)!
 
@@ -837,14 +887,35 @@ Facts, with sources:
 
 <br> 
 
-Our stochastic model defines a likelihood function over observed opinion trajectories. 
+::: {.textblock-1}
 
-We learn the kernel parameters by maximizing this likelihood via the expectation-maximization (EM) algorithm (Dempster et al., 1977).
-
-We select between competing models (kernels, mechanisms, etc.) by evaluating their predictive likelihoods on held-out validation data. 
-
+Our stochastic model defines a [likelihood function]{.alert-1} over observed opinion trajectories, given an observation of a fixed network of possible interactions. 
 
 :::
+
+<br>
+
+::: {.textblock-2}
+
+We learn the kernel parameters by maximizing this likelihood via the [expectation-maximization (EM) algorithm]{.alert-2} (Dempster et al., 1977).
+
+:::
+
+<br>
+
+::: {.textblock-3}
+
+We [select between competing models]{.alert-3} (kernels, mechanisms, etc.) by evaluating their predictive likelihoods on held-out validation data. 
+
+:::
+
+:::
+
+
+## Omitting retention and neighbor selection alters learned kernels
+
+
+![](../_img/kernel-inference/synthetic-experiment.png){.bordered-fig}
 
 
 
@@ -987,7 +1058,7 @@ Facts, with sources:
 
 <!-- ===== 32_results_ladder ===== -->
 
-## Latent mechanims make models more predictive {#results-ladder}
+## Latent mechanisms make models more predictive {#results-ladder}
 
 <!-- TODO: Add pictograms of best fit kernel shapes back to each section of the bar -->
 
@@ -1020,6 +1091,12 @@ Facts, with sources:
 ::: {}
 One bar per dataset: its held-out gain over a random-walk null, segmented into mechanisms by order of addition. 
 :::
+
+::: {.fragment fragment-index=1}
+[Influence kernel]{.panel-head style="color: #767676;"}
+Presence of any social influence (rather than random drift)
+:::
+
 
 ::: {.fragment fragment-index=1}
 [Heavy tail]{.panel-head .tail}
@@ -1075,15 +1152,15 @@ On average, heavy tails, retention and selection tend to matter *more* than the 
 :::
 
 ::: {.fragment fragment-index=9}
-the model more predictive on **14/15** datasets
+the model more predictive (on heldout data!) on **14/15** datasets
 :::
 
 ::: {.fragment fragment-index=10}
-the kernel **less linear** on **6/15** (upper left)
+the inferred kernel **less linear** on **6/15** (upper left)
 :::
 
 ::: {.fragment fragment-index=11}
-the kernel **more linear** on **2/15** (lower right)
+the inferred kernel **more linear** on **2/15** (lower right)
 :::
 ::::
 :::::
@@ -1132,45 +1209,90 @@ Facts, with sources:
 
 [Slide h/t Will Thompson]{.ht}
 
-
-
-
-
-##
-
-### Thanks everyone!
+## Some Learnings {.split-40}
 
 ::: {.column}
 
 <br>
 
-![](../_img/kernel-inference/preprint.png)
+::: {.textblock-1 .fragment .fade-in-then-semi-out fragment-index=1}
 
-[arxiv:2610.12616](arxiv.org/abs/2610.12616)
+[Potential exposure $\neq$ interaction]{.alert-1}
+
+In experiments and online settings, relationship networks (proximity, following, etc.) define *possible* rather than *actual* interactions. 
+
+:::
+
+::: {.textblock-2 .fragment .fade-in-then-semi-out fragment-index=2}
+
+[Model latent variables]{.alert-2}
+
+We can model what we don't observe directly: we just need to tie it statistically to things that we do observe. 
+
+:::
 
 
+
+::: {.textblock-3 .fragment .fade-in-then-semi-out fragment-index=3}
+
+[Attentional mechanisms]{.alert-3}
+
+Even simple representations of attention can improve prediction and alter our conclusions. 
+
+:::
+
+:::
+
+::: {.column}
+
+![](../_img/kernel-inference/interaction-choice-2.png){.fragment fragment-index=1  .fade-in-then-out .absolute top="5%" left="25%" width="30%" }
+
+
+
+![](../_img/kernel-inference/assets/figures/scene_hero_attn_fit_step_2.svg){.fragment fragment-index=2 .fade-in-then-out .absolute top="27%" left="0%" width="98%"}
+
+![](../_img/kernel-inference/assets/panels/capability_ladder/selection.svg){.fragment fragment-index=3 .fade-in-then-out .absolute top="7%" left="0%" width="95%"}
+
+
+
+:::
+
+
+## Thanks everyone! {.split-40}
+
+::: {.column}
+
+<br>
+
+![](../_img/kernel-inference/preprint.png){.bordered-fig}
+
+::: {.absolute bottom="15%" right="25%"} 
+
+[arxiv:2610.12616](https://arxiv.org/abs/2610.12616)
+
+:::
 
 :::
 
 ::: {.column}
 
 
-
+<br><br>
 
 <table style="padding:0px;border-bottom:0pxmargin: 0px auto; ">
 <tr style="border:0px;padding:0px;margin:0px;">
 <td style="padding:0px;border-bottom:0px"> 
-![](../_img/people/will-thompson.jpg){.portrait-smallest} 
+![](../_img/people/will-thompson.jpg){.portrait-smallish} 
 </td>
 <td style="vertical-align: middle;white-space:nowrap;padding:0px;border-bottom:0px">
 <p style="padding:0px">**Will Thompson** <br> UVM</p>
 </td>
 
-</tr>
-<tr style="border:0px;padding:0px;margin:0px;">
+<!-- </tr>
+<tr style="border:0px;padding:0px;margin:0px;"> -->
 
 <td style="vertical-align: middle;padding:0px;border-bottom:0px"> 
-![](../_img/people/moyi-tian.jpeg){.portrait-smallest} 
+![](../_img/people/moyi-tian.jpeg){.portrait-smallish} 
 </td>
 <td style="vertical-align: middle;white-space:nowrap;padding:0px;border-bottom:0px">
 <p style="padding:0px">**Moyi Tian** <br> CU Boulder</p>
@@ -1181,17 +1303,17 @@ Facts, with sources:
 
 
 <td style="vertical-align: middle;padding:0px;border-bottom:0px"> 
-![](../_img/people/linh-huynh.jpg){.portrait-smallest} 
+![](../_img/people/linh-huynh.jpg){.portrait-smallish} 
 </td>
 <td style="vertical-align: middle;white-space:nowrap;padding:0px;border-bottom:0px">
 <p style="padding:0px">**Linh Huynh** <br> Texas Tech</p>
 </td>
 
-</tr>
-<tr style="border:0px;padding:0px;margin:0px;">
+<!-- </tr>
+<tr style="border:0px;padding:0px;margin:0px;"> -->
 
 <td style="vertical-align: middle;padding:0px;border-bottom:0px"> 
-![](../_img/people/alex-wiedemann.jpg){.portrait-smallest} 
+![](../_img/people/alex-wiedemann.jpg){.portrait-smallish} 
 </td>
 <td style="vertical-align: middle;white-space:nowrap;padding:0px;border-bottom:0px">
 <p style="padding:0px">**Alex Wiedemann** <br> Hamline University</p>
@@ -1200,27 +1322,24 @@ Facts, with sources:
 </tr>
 <tr style="border:0px;padding:0px;margin:0px;">
 
-<td style="vertical-align: middle;padding:0px;border-bottom:0px"> 
-</td>
-<td style="vertical-align: middle;padding:0px;border-bottom:0px"> 
-</td>
 
-</tr>
-<tr style="border:0px;padding:0px;margin:0px;">
+
+<!-- </tr>
+<tr style="border:0px;padding:0px;margin:0px;"> -->
 
 <td style="vertical-align: middle;padding:0px;border-bottom:0px"> 
-![](../_img/people/vicki-modisette.jpg){.portrait-smallest} 
+![](../_img/people/vicki-modisette.jpg){.portrait-smallish} 
 </td>
 <td style="vertical-align: middle;white-space:nowrap;padding:0px;border-bottom:0px">
 <p style="padding:0px">**Vicki Modisette** <br> Eastern Kentucky</p>
 </td>
 
 
-</tr>
-<tr style="border:0px;padding:0px;margin:0px;">
+<!-- </tr>
+<tr style="border:0px;padding:0px;margin:0px;"> -->
 
 <td style="vertical-align: middle;padding:0px;border-bottom:0px"> 
-![](../_img/people/brooks.jpg){.portrait-smallest} 
+![](../_img/people/brooks.jpg){.portrait-smallish} 
 </td>
 <td style="vertical-align: middle;white-space:nowrap;padding:0px;border-bottom:0px">
 <p style="padding:0px">**Heather Brooks** <br> Harvey Mudd</p>
@@ -1230,6 +1349,21 @@ Facts, with sources:
 
 </table>
 
+![](../_img/orgs/ams-logo.png){.absolute bottom="13%" right="28%" width="20%"}
+![](../_img/orgs/nsf-logo.jpeg){.absolute bottom="10%" right="53%" width="20%"}
 
 :::
+
+
+
+
+
+
+
+
+
+
+
+
+
 

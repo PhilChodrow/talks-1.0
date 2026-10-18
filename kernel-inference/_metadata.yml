@@ -9,7 +9,7 @@ theme:
 author: '<span class="speaker-highlight">Phil Chodrow</span> <br>Department of Computer Science<br>Middlebury College'    
 title-slide-attributes:
   data-background-opacity: "0.0"  
-  data-background-color: "#A4303F"  
+  data-background-color: "#C4552B"  
 bibliography: 
   - refs.bib
 
