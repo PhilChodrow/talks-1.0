@@ -12,7 +12,7 @@
   <meta name="generator" content="quarto-1.8.25">
 
   <meta name="author" content="Phil Chodrow  Department of Computer Science Middlebury College">
-  <title>Learning Social Influence</title>
+  <title>Learning Social Influence with Unobserved Mechanisms</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -31,7 +31,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-b0aad77967bd5e385469a6c27efc7d7b.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-068da26b92d0f9ee48cf44be8ec87e09.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -556,14 +556,14 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" data-background-color="#C4552B" data-background-opacity="0.0" class="quarto-title-block center">
-  <h1 class="title">Learning Social Influence</h1>
+<section id="title-slide" data-background-color="#17868F" data-background-opacity="0.0" class="quarto-title-block center">
+  <h1 class="title">Learning Social Influence<br><span style="font-size: 0.6em;">with Unobserved Mechanisms</span></h1>
   <p class="subtitle">The Santa Fe Institute <br> October 21st, 2026</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-<span class="speaker-highlight">Phil Chodrow</span> <br>Department of Computer Science<br>Middlebury College 
+<span style="color: #DAA520; font-weight: bold;">Phil Chodrow</span> <br>Department of Computer Science<br>Middlebury College 
 </div>
 </div>
 </div>
@@ -585,12 +585,12 @@
 <p>I like aikido, tea, my cats, being outside, hypergraphs, and <span class="alert-3">math models of social systems</span>.</p>
 </div>
 </div><div class="column">
-<p><img data-src="../_img/personal/aikido.png" class="absolute" style="top: 10%; left: 10%; width: 45%; "> <img data-src="../_img/personal/opinion-dynamics.png" class="absolute" style="top: 55%; left: 10%; width: 45%; "> <img data-src="../_img/personal/cats.jpeg" class="absolute" style="top: 10%; right: 12%; width: 25.5%; "> <img data-src="../_img/personal/xgi-hypergraph.webp" class="absolute" style="top: 31%; right: 12%; width: 25.5%; "> <img data-src="../_img/personal/tea.jpeg" class="absolute" style="top: 52%; right: 12%; width: 25.5%; "> <img data-src="../_img/personal/cycling-2.jpeg" class="absolute" style="top: 73%; right: 12%; width: 25.5%; "></p>
+<p><img data-src="../_img/personal/aikido.png" class="absolute bordered-fig-tight" style="top: 10%; left: 10%; width: 45%; "> <img data-src="../_img/personal/opinion-dynamics.png" class="absolute bordered-fig-tight" style="top: 55%; left: 10%; width: 45%; "> <img data-src="../_img/personal/cats.jpeg" class="absolute bordered-fig-tight" style="top: 10%; right: 12%; width: 25.5%; "> <img data-src="../_img/personal/xgi-hypergraph.webp" class="absolute bordered-fig-tight" style="top: 31%; right: 12%; width: 25.5%; "> <img data-src="../_img/personal/tea.jpeg" class="absolute bordered-fig-tight" style="top: 52%; right: 12%; width: 25.5%; "> <img data-src="../_img/personal/cycling-2.jpeg" class="absolute bordered-fig-tight" style="top: 73%; right: 12%; width: 25.5%; "></p>
 </div></section>
 <section id="section" class="slide level2 split-50">
 <h2></h2>
 <div class="column">
-<h3 id="on-a-scale-from-0-5-hows-this-talk">On a scale from 0-5, how’s this talk?</h3>
+<h3 id="from-0-5-hows-this-talk">From 0-5, how’s this talk?</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="../_img/kernel-inference/experiment.png" class="fragment quarto-figure quarto-figure-center" style="width:80.0%;height:80.0%"></p>
@@ -603,7 +603,7 @@
 
 </div>
 </div>
-<div class="r-stack fragment fade-out absolute" style="top: 550px; left: 10px; ">
+<div class="r-stack fragment fade-out absolute" style="top: 510px; left: 10px; ">
 <!-- A simple styled box or rectangle -->
 <div style="background: #ffffff; width: 800px; height: 800px; border-radius: 8px;">
 
@@ -934,21 +934,18 @@ So, which of these is "right"?
 </div>
 <p><span class="footnote">Vande Kerckhove + al.&nbsp;(2016). “Modelling Influence and Opinion Evolution in Online Collective Behaviour.” <em>PLoS ONE</em>.</span></p>
 </div></section>
-<section id="section-7" class="slide level2 split-40">
+<section id="section-7" class="slide level2 split-50">
 <h2></h2>
 <h3 id="some-common-implicit-assumptions"><span class="absolute-header">Some common implicit assumptions</span></h3>
 <div class="column">
 <p><br> <br> <br></p>
-<p><span style="font-size: 1.5em;">At each timestep <br> each agent <span class="alert-1"><strong><em>always</em></strong></span> interacts <br> with <span class="alert-2"><strong><em>all</em></strong></span> of their neighbors.</span></p>
+<p><span style="font-size: 1.5em;">At each timestep each agent <br> <span class="alert-1"><strong><em>always</em></strong></span> <br> interacts with <br> <span class="alert-2"><strong><em>all</em></strong></span> <br> of their neighbors.</span></p>
 </div><div class="column">
 <p><br></p>
 <p><span class="math display">\[
 \begin{aligned}
   \delta_i
     &amp;\approx  \frac{1}{|\partial i|} \sum_{j \in \partial i} k(d_{ij}) \;?
-  \quad \delta_i \approx k\left(
-\frac{1}{|\partial i|} \sum_{j \in \partial i} d_{ij}
-  \right) \;?
 \end{aligned}
 \]</span></p>
 <div class="quarto-figure quarto-figure-center">
@@ -961,9 +958,9 @@ So, which of these is "right"?
 <h2></h2>
 <h3 id="core-idea-for-today-selective-attention"><span class="absolute-header">Core idea for today: selective attention</span></h3>
 <div class="column">
-<p><br> <br></p>
-<p><span style="font-size: 1.5em;">At each timestep <br> each agent <span class="alert-1"><strong><em><del>always</del> sometimes</em></strong></span> interacts <br> with <span class="alert-2"><strong><em><del>all</del> some</em></strong></span> of their neighbors.</span></p>
-<div class="attn-box attn-box-influence fragment fade-in-then-out" data-fragment-index="4">
+<p><br> <br> <br></p>
+<p><span style="font-size: 1.5em;">At each timestep each agent <br> <span class="alert-1"><strong><em><del>always</del> sometimes</em></strong></span> <br> interacts with <br> <span class="alert-2"><strong><em><del>all</del> some</em></strong></span> <br> of their neighbors.</span></p>
+<div class="textblock-3 fragment fade-in-then-out" data-fragment-index="4">
 <p>This is complex because we typically <em>don’t observe</em> these attentional mechanisms: we only observe the opinion changes that result.</p>
 </div>
 </div><div class="column">
@@ -1047,7 +1044,7 @@ So, which of these is "right"?
 </tr>
 </tbody></table>
 <p><img data-src="../_img/kernel-inference/ams-logo.png" class="absolute fragment" style="top: 300px; right: 490px; width: 25%; " data-fragment-index="1"></p>
-<div class="textblock-1 fragment" data-fragment-index="1">
+<div class="textblock-1 fragment center" data-fragment-index="1">
 <p>Work initiated at the AMS Mathematics Research Community on <em>Complex Social Systems</em> (2023)!</p>
 </div>
 <!-- 
@@ -1154,22 +1151,20 @@ So, which of these is "right"?
 <h2></h2>
 <div class="column">
 <h3 id="learning-the-model">Learning the model</h3>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="../_img/kernel-inference/data-schematic.png" class="quarto-figure quarto-figure-center" style="width:70.0%"></p>
-</figure>
-</div>
+<p><img data-src="../_img/kernel-inference/data-schematic.png" class="fragment fade-out absolute" style="top: 15%; left: 5%; width: 70%; " data-fragment-index="1"></p>
+<p><img data-src="../_img/kernel-inference/em.png" class="fragment fade-in-then-out absolute" style="top: 20%; left: 5%; width: 70%; " data-fragment-index="1"></p>
+<p><img data-src="../_img/kernel-inference/model-selection-cartoon.png" class="fragment fade-in-then-out absolute" style="top: 30%; left: 5%; width: 100%; " data-fragment-index="2"></p>
 </div><div class="column">
 <p><br></p>
-<div class="textblock-1">
+<div class="textblock-1 fragment semi-fade-out" data-fragment-index="1">
 <p>Our stochastic model defines a <span class="alert-1">likelihood function</span> over observed opinion trajectories, given an observation of a fixed network of possible interactions.</p>
 </div>
 <p><br></p>
-<div class="textblock-2">
+<div class="textblock-2 fragment fade-in-then-semi-out" data-fragment-index="1">
 <p>We learn the kernel parameters by maximizing this likelihood via the <span class="alert-2">expectation-maximization (EM) algorithm</span> (Dempster et al., 1977).</p>
 </div>
 <p><br></p>
-<div class="textblock-3">
+<div class="textblock-3 fragment fade-in-then-semi-out" data-fragment-index="2">
 <p>We <span class="alert-3">select between competing models</span> (kernels, mechanisms, etc.) by evaluating their predictive likelihoods on held-out validation data.</p>
 </div>
 </div></section>
@@ -1178,7 +1173,7 @@ So, which of these is "right"?
 
 <img data-src="../_img/kernel-inference/synthetic-experiment.png" class="bordered-fig r-stretch"></section>
 <section id="data-specimens" class="slide level2 markdown-source">
-<h2>Our Data</h2>
+<h2>But what about real people?</h2>
 <div class="specimen-grid">
 <p><span class="spec-type fragment" data-fragment-index="1">Controlled, single source</span></p>
 <p><span class="spec-type fragment" data-fragment-index="2">Controlled, network</span></p>
@@ -1342,20 +1337,20 @@ So, which of these is "right"?
 </div>
 <div class="lc-card fragment fade-out" data-fragment-index="8">
 <div class="r-stack">
-<p><img data-src="../_img/kernel-inference/assets/panels/ladder_cases/card_senate_base.svg" class="fragment" data-fragment-index="3"></p>
-<p><img data-src="../_img/kernel-inference/assets/panels/ladder_cases/card_senate.svg" class="fragment" data-fragment-index="4"></p>
-<p><img data-src="../_img/kernel-inference/assets/panels/ladder_cases/card_becker.svg" class="fragment" data-fragment-index="6"></p>
-<p><img data-src="../_img/kernel-inference/assets/panels/ladder_cases/card_adams.svg" class="fragment" data-fragment-index="7"></p>
+<p><img data-src="../_img/kernel-inference/assets/panels/ladder_cases/card_senate_base.svg" class="fragment bordered-fig-tight" data-fragment-index="3"></p>
+<p><img data-src="../_img/kernel-inference/assets/panels/ladder_cases/card_senate.svg" class="fragment bordered-fig-tight" data-fragment-index="4"></p>
+<p><img data-src="../_img/kernel-inference/assets/panels/ladder_cases/card_becker.svg" class="fragment bordered-fig-tight" data-fragment-index="6"></p>
+<p><img data-src="../_img/kernel-inference/assets/panels/ladder_cases/card_adams.svg" class="fragment bordered-fig-tight" data-fragment-index="7"></p>
 </div>
 </div>
 <div class="lc-nlq">
 <div class="r-stack">
-<p><img data-src="../_img/kernel-inference/assets/panels/ladder_cases/nlq_senate.svg" class="fragment" data-fragment-index="5"></p>
-<p><img data-src="../_img/kernel-inference/assets/panels/ladder_cases/nlq_becker.svg" class="fragment" data-fragment-index="6"></p>
-<p><img data-src="../_img/kernel-inference/assets/panels/ladder_cases/nlq_adams.svg" class="fragment" data-fragment-index="7"></p>
-<p><img data-src="../_img/kernel-inference/assets/panels/ladder_cases/nlq_all.svg" class="fragment lc-up" data-fragment-index="8"></p>
-<p><img data-src="../_img/kernel-inference/assets/panels/ladder_cases/nlq_ul.svg" class="fragment" data-fragment-index="10"></p>
-<p><img data-src="../_img/kernel-inference/assets/panels/ladder_cases/nlq_br.svg" class="fragment" data-fragment-index="11"></p>
+<p><img data-src="../_img/kernel-inference/assets/panels/ladder_cases/nlq_senate.svg" class="fragment bordered-fig-tight" data-fragment-index="5"></p>
+<p><img data-src="../_img/kernel-inference/assets/panels/ladder_cases/nlq_becker.svg" class="fragment bordered-fig-tight" data-fragment-index="6"></p>
+<p><img data-src="../_img/kernel-inference/assets/panels/ladder_cases/nlq_adams.svg" class="fragment bordered-fig-tight" data-fragment-index="7"></p>
+<p><img data-src="../_img/kernel-inference/assets/panels/ladder_cases/nlq_all.svg" class="fragment lc-up bordered-fig-tight" data-fragment-index="8"></p>
+<p><img data-src="../_img/kernel-inference/assets/panels/ladder_cases/nlq_ul.svg" class="fragment bordered-fig-tight" data-fragment-index="10"></p>
+<p><img data-src="../_img/kernel-inference/assets/panels/ladder_cases/nlq_br.svg" class="fragment bordered-fig-tight" data-fragment-index="11"></p>
 </div>
 </div>
 <div class="lc-verdict">
@@ -1433,11 +1428,11 @@ So, which of these is "right"?
 <p>In experiments and online settings, relationship networks (proximity, following, etc.) define <em>possible</em> rather than <em>actual</em> interactions.</p>
 </div>
 <div class="textblock-2 fragment fade-in-then-semi-out" data-fragment-index="2">
-<p><span class="alert-2">Model latent variables</span></p>
+<p><span class="alert-2">Model latent mechanisms</span></p>
 <p>We can model what we don’t observe directly: we just need to tie it statistically to things that we do observe.</p>
 </div>
 <div class="textblock-3 fragment fade-in-then-semi-out" data-fragment-index="3">
-<p><span class="alert-3">Attentional mechanisms</span></p>
+<p><span class="alert-3">We direct our attention!</span></p>
 <p>Even simple representations of attention can improve prediction and alter our conclusions.</p>
 </div>
 </div><div class="column">

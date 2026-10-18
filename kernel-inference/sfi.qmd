@@ -1,5 +1,5 @@
 ---
-title: "Learning Social Influence"  
+title: "Learning Social Influence<br><span style='font-size: 0.6em;'>with Unobserved Mechanisms</span>"  
 subtitle: "The Santa Fe Institute <br> October 21st, 2026"  
 date: ""
 ---
@@ -45,16 +45,18 @@ I like aikido, tea, my cats, being outside, hypergraphs, and [math models of soc
 
 
 
+
+
 :::
 
 ::: {.column}
 
-![](../_img/personal/aikido.png){.absolute left=10% top=10% width=45%}
-![](../_img/personal/opinion-dynamics.png){.absolute left=10% top=55% width=45%}
-![](../_img/personal/cats.jpeg){.absolute right=12% top=10% width=25.5%}
-![](../_img/personal/xgi-hypergraph.webp){.absolute right=12% top=31% width=25.5%}
-![](../_img/personal/tea.jpeg){.absolute right=12% top=52% width=25.5%}
-![](../_img/personal/cycling-2.jpeg){.absolute right=12% top=73% width=25.5%}
+![](../_img/personal/aikido.png){.absolute left=10% top=10% width=45% .bordered-fig-tight}
+![](../_img/personal/opinion-dynamics.png){.absolute left=10% top=55% width=45% .bordered-fig-tight}
+![](../_img/personal/cats.jpeg){.absolute right=12% top=10% width=25.5% .bordered-fig-tight}
+![](../_img/personal/xgi-hypergraph.webp){.absolute right=12% top=31% width=25.5% .bordered-fig-tight}
+![](../_img/personal/tea.jpeg){.absolute right=12% top=52% width=25.5% .bordered-fig-tight}
+![](../_img/personal/cycling-2.jpeg){.absolute right=12% top=73% width=25.5% .bordered-fig-tight}
 
 ::: 
 
@@ -64,7 +66,7 @@ I like aikido, tea, my cats, being outside, hypergraphs, and [math models of soc
 
 ::: {.column}
 
-### On a scale from 0-5, how's this talk?
+### From 0-5, how's this talk?
 
 ![](../_img/kernel-inference/experiment.png){.fragment width="80%" height="80%" fig-align="center"}
 
@@ -75,7 +77,7 @@ I like aikido, tea, my cats, being outside, hypergraphs, and [math models of soc
 <div style="background: #ffffff; width: 800px; height: 800px; border-radius: 8px;"></div>
 :::
 
-::: {.r-stack .fragment .fade-out .absolute top=550 left=10}
+::: {.r-stack .fragment .fade-out .absolute top=510 left=10}
 <!-- A simple styled box or rectangle -->
 <div style="background: #ffffff; width: 800px; height: 800px; border-radius: 8px;"></div>
 :::
@@ -587,7 +589,7 @@ $$
 :::
 
 
-## {.split-40}
+## {.split-50}
 
 ### [Some common implicit assumptions]{.absolute-header}
 
@@ -598,13 +600,16 @@ $$
 
 
 [
-  At each timestep <br> 
-  each agent [***always***]{.alert-1}  interacts <br> 
-  with [***all***]{.alert-2} of their neighbors.
+  At each timestep
+  each agent <br> [***always***]{.alert-1} <br> interacts 
+  with <br> [***all***]{.alert-2} <br> of their neighbors.
 ]{style="font-size: 1.5em;"} 
 
 
 :::
+
+
+
 
 ::: {.column}
 
@@ -614,10 +619,7 @@ $$
 $$
 \begin{aligned}
   \delta_i
-    &\approx  \frac{1}{|\partial i|} \sum_{j \in \partial i} k(d_{ij}) \;?
-  \quad \delta_i \approx k\left(
-\frac{1}{|\partial i|} \sum_{j \in \partial i} d_{ij}
-  \right) \;?
+    &\approx  \frac{1}{|\partial i|} \sum_{j \in \partial i} k(d_{ij}) \;? 
 \end{aligned}
 $$
 
@@ -633,16 +635,15 @@ $$
 
 ::: {.column} 
 
-<br> <br> 
+<br> <br> <br>
 
 [
-  At each timestep <br> 
-  each agent [***~~always~~ sometimes***]{.alert-1} interacts <br> 
-  with [***~~all~~ some***]{.alert-2} of their neighbors.
+  At each timestep each agent <br> [***~~always~~ sometimes***]{.alert-1} <br> interacts 
+  with  <br> [***~~all~~ some***]{.alert-2} <br> of their neighbors.
 ]{style="font-size: 1.5em;"} 
 
 
-::: {.attn-box .attn-box-influence .fragment .fade-in-then-out fragment-index=4}
+::: {.textblock-3 .fragment .fade-in-then-out fragment-index=4}
 
 This is complex because we typically *don't observe* these attentional mechanisms: we only observe the opinion changes that result. 
 
@@ -743,7 +744,7 @@ This is complex because we typically *don't observe* these attentional mechanism
 
 ![](../_img/kernel-inference/ams-logo.png){.absolute top=300 right=490 width=25% .fragment fragment-index=1}
 
-::: {.textblock-1  .fragment fragment-index=1}
+::: {.textblock-1  .fragment fragment-index=1 .center}
 
 Work initiated at the AMS Mathematics Research Community on *Complex Social Systems* (2023)!
 
@@ -879,7 +880,11 @@ Facts, with sources:
 
 ### Learning the model 
 
-![](../_img/kernel-inference/data-schematic.png){width="70%" fig-align="center"}
+![](../_img/kernel-inference/data-schematic.png){width="70%" .fragment .fade-out fragment-index=1 .absolute left="5%" top="15%"}
+
+![](../_img/kernel-inference/em.png){width="70%" .fragment .fade-in-then-out fragment-index=1 .absolute left="5%" top="20%"}
+
+![](../_img/kernel-inference/model-selection-cartoon.png){width="100%" .fragment .fade-in-then-out fragment-index=2 .absolute left="5%" top="30%"}
 
 :::
 
@@ -887,7 +892,7 @@ Facts, with sources:
 
 <br> 
 
-::: {.textblock-1}
+::: {.textblock-1 .fragment .semi-fade-out fragment-index=1}
 
 Our stochastic model defines a [likelihood function]{.alert-1} over observed opinion trajectories, given an observation of a fixed network of possible interactions. 
 
@@ -895,7 +900,7 @@ Our stochastic model defines a [likelihood function]{.alert-1} over observed opi
 
 <br>
 
-::: {.textblock-2}
+::: {.textblock-2 .fragment .fade-in-then-semi-out fragment-index=1}
 
 We learn the kernel parameters by maximizing this likelihood via the [expectation-maximization (EM) algorithm]{.alert-2} (Dempster et al., 1977).
 
@@ -903,7 +908,7 @@ We learn the kernel parameters by maximizing this likelihood via the [expectatio
 
 <br>
 
-::: {.textblock-3}
+::: {.textblock-3 .fragment .fade-in-then-semi-out fragment-index=2}
 
 We [select between competing models]{.alert-3} (kernels, mechanisms, etc.) by evaluating their predictive likelihoods on held-out validation data. 
 
@@ -920,7 +925,7 @@ We [select between competing models]{.alert-3} (kernels, mechanisms, etc.) by ev
 
 
 
-## Our Data {#data-specimens .markdown-source}
+## But what about real people? {#data-specimens .markdown-source}
 
 ::: {.specimen-grid}
 [Controlled, single source]{.spec-type .fragment fragment-index=1}
@@ -1120,29 +1125,29 @@ On average, heavy tails, retention and selection tend to matter *more* than the 
 
 :::: {.lc-card .fragment .fade-out fragment-index=8}
 ::: {.r-stack}
-![](../_img/kernel-inference/assets/panels/ladder_cases/card_senate_base.svg){.fragment fragment-index=3}
+![](../_img/kernel-inference/assets/panels/ladder_cases/card_senate_base.svg){.fragment fragment-index=3 .bordered-fig-tight}
 
-![](../_img/kernel-inference/assets/panels/ladder_cases/card_senate.svg){.fragment fragment-index=4}
+![](../_img/kernel-inference/assets/panels/ladder_cases/card_senate.svg){.fragment fragment-index=4 .bordered-fig-tight}
 
-![](../_img/kernel-inference/assets/panels/ladder_cases/card_becker.svg){.fragment fragment-index=6}
+![](../_img/kernel-inference/assets/panels/ladder_cases/card_becker.svg){.fragment fragment-index=6 .bordered-fig-tight}
 
-![](../_img/kernel-inference/assets/panels/ladder_cases/card_adams.svg){.fragment fragment-index=7}
+![](../_img/kernel-inference/assets/panels/ladder_cases/card_adams.svg){.fragment fragment-index=7 .bordered-fig-tight}
 :::
 ::::
 
 :::: {.lc-nlq}
 ::: {.r-stack}
-![](../_img/kernel-inference/assets/panels/ladder_cases/nlq_senate.svg){.fragment fragment-index=5}
+![](../_img/kernel-inference/assets/panels/ladder_cases/nlq_senate.svg){.fragment fragment-index=5 .bordered-fig-tight}
 
-![](../_img/kernel-inference/assets/panels/ladder_cases/nlq_becker.svg){.fragment fragment-index=6}
+![](../_img/kernel-inference/assets/panels/ladder_cases/nlq_becker.svg){.fragment fragment-index=6 .bordered-fig-tight}
 
-![](../_img/kernel-inference/assets/panels/ladder_cases/nlq_adams.svg){.fragment fragment-index=7}
+![](../_img/kernel-inference/assets/panels/ladder_cases/nlq_adams.svg){.fragment fragment-index=7 .bordered-fig-tight}
 
-![](../_img/kernel-inference/assets/panels/ladder_cases/nlq_all.svg){.fragment .lc-up fragment-index=8}
+![](../_img/kernel-inference/assets/panels/ladder_cases/nlq_all.svg){.fragment .lc-up fragment-index=8 .bordered-fig-tight}
 
-![](../_img/kernel-inference/assets/panels/ladder_cases/nlq_ul.svg){.fragment fragment-index=10}
+![](../_img/kernel-inference/assets/panels/ladder_cases/nlq_ul.svg){.fragment fragment-index=10 .bordered-fig-tight}
 
-![](../_img/kernel-inference/assets/panels/ladder_cases/nlq_br.svg){.fragment fragment-index=11}
+![](../_img/kernel-inference/assets/panels/ladder_cases/nlq_br.svg){.fragment fragment-index=11 .bordered-fig-tight}
 :::
 ::::
 
@@ -1225,7 +1230,7 @@ In experiments and online settings, relationship networks (proximity, following,
 
 ::: {.textblock-2 .fragment .fade-in-then-semi-out fragment-index=2}
 
-[Model latent variables]{.alert-2}
+[Model latent mechanisms]{.alert-2}
 
 We can model what we don't observe directly: we just need to tie it statistically to things that we do observe. 
 
@@ -1235,7 +1240,7 @@ We can model what we don't observe directly: we just need to tie it statisticall
 
 ::: {.textblock-3 .fragment .fade-in-then-semi-out fragment-index=3}
 
-[Attentional mechanisms]{.alert-3}
+[We direct our attention!]{.alert-3}
 
 Even simple representations of attention can improve prediction and alter our conclusions. 
 
@@ -1353,6 +1358,10 @@ Even simple representations of attention can improve prediction and alter our co
 ![](../_img/orgs/nsf-logo.jpeg){.absolute bottom="10%" right="53%" width="20%"}
 
 :::
+
+
+
+
 
 
 

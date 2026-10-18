@@ -1099,6 +1099,8 @@
     width: 80%;
     margin-left: 2rem;
     margin-right: 2rem;
+    background-color: var(--page);
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.18);
 }
 
 .textblock-2 { 
@@ -1115,6 +1117,8 @@
     width: 80%;
     margin-left: 2rem;
     margin-right: 2rem;
+    background-color: var(--page);
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.18);
 }
 
 
@@ -1132,6 +1136,8 @@
     width: 80%;
     margin-left: 2rem;
     margin-right: 2rem;
+    background-color: var(--page);
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.18);
 }
 
 .textblock-1 p {
@@ -1196,6 +1202,18 @@
   border-radius: 4px;
   border-color: #333333;
   fill: #ffffff;
+  background-color: var(--page);
+  background-clip: padding-box;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.18);
+}
+
+.bordered-fig-tight {
+  border: 1px solid #333333;
+  padding: 0px;
+  border-radius: 4px;
+  border-color: #333333;
+  fill: #ffffff;
+  background-color: var(--page);
   background-clip: padding-box;
   box-shadow: 0 4px 18px rgba(0, 0, 0, 0.18);
 }

@@ -6,10 +6,12 @@ theme:
   - ../_assets/reveal-style/experimental/theme.scss
 
 
-author: '<span class="speaker-highlight">Phil Chodrow</span> <br>Department of Computer Science<br>Middlebury College'    
+
+
+author: '<span style="color: #DAA520; font-weight: bold;">Phil Chodrow</span> <br>Department of Computer Science<br>Middlebury College'    
 title-slide-attributes:
   data-background-opacity: "0.0"  
-  data-background-color: "#C4552B"  
+  data-background-color: "#17868F"  
 bibliography: 
   - refs.bib
 
