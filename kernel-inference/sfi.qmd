@@ -75,7 +75,7 @@ I like aikido, tea, my cats, being outside, hypergraphs, and [math models of soc
 <div style="background: #ffffff; width: 800px; height: 800px; border-radius: 8px;"></div>
 :::
 
-::: {.r-stack .fragment .fade-out .absolute top=500 left=10}
+::: {.r-stack .fragment .fade-out .absolute top=550 left=10}
 <!-- A simple styled box or rectangle -->
 <div style="background: #ffffff; width: 800px; height: 800px; border-radius: 8px;"></div>
 :::
