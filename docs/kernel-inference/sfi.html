@@ -12,7 +12,7 @@
   <meta name="generator" content="quarto-1.8.25">
 
   <meta name="author" content="Phil Chodrow  Department of Computer Science Middlebury College">
-  <title>Learning Social Influence with Unobserved Mechanisms</title>
+  <title>Learning Social Influence with Unobserved Attention</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -557,7 +557,7 @@
     <div class="slides">
 
 <section id="title-slide" data-background-color="#17868F" data-background-opacity="0.0" class="quarto-title-block center">
-  <h1 class="title">Learning Social Influence<br><span style="font-size: 0.6em;">with Unobserved Mechanisms</span></h1>
+  <h1 class="title">Learning Social Influence<br><span style="font-size: 0.6em;">with Unobserved Attention</span></h1>
   <p class="subtitle">The Santa Fe Institute <br> October 21st, 2026</p>
 
 <div class="quarto-title-authors">
@@ -639,8 +639,58 @@
 <div class="textblock-3 standout">
 <p><em>Any <span class="alert-1">change</span> in an individual’s thoughts, feelings, or behaviors caused by <span class="alert-2">other people</span>, who may be actually present or whose presence is imagined, expected, or only implied.</em> <br><br> - American Psychological Association (APA) Dictionary of Psychology, 2026</p>
 </div>
+</section>
+<section id="some-other-social-influence-experiments" class="slide level2 split-50">
+<h2>Some Other Social Influence Experiments</h2>
+<div class="column">
+<p><br></p>
+<div class="textblock-1 center fragment fade-in-then-semi-out" data-fragment-index="1">
+<p><span class="alert-1">Asch social conformity experiments (1950s)</span></p>
+<p>Face-to-face group gaslighting works, even on obvious problems.</p>
+<p>“<em>That intelligent, well-meaning young people are willing to call white black is a matter of concern.</em>”</p>
+</div>
+<div class="textblock-2 center fragment fade-in-then-semi-out" data-fragment-index="2">
+<p><span class="alert-2">Crutchfield experiments (1950s)</span></p>
+<p>Face-to-face interaction not required: works if the participants only <em>think</em> they are interacting with the group opinions.</p>
+</div>
+<div class="textblock-3 center fragment fade-in-then-semi-out" data-fragment-index="3">
+<p><span class="alert-3">Modern experiments</span></p>
+<p>Many modern experiments study intervening role of internet, social media, other technological media of opinion exposure.</p>
+</div>
+</div><div class="column">
+<div class="fragment fade-in-then-out absolute" data-fragment-index="1" style="top: 10%; left: 10%; ">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../_img/kernel-inference/asch.svg"></p>
+<figcaption><em>Image adapted from Wikimedia Commons, CC BY-SA 4.0</em></figcaption>
+</figure>
+</div>
+</div>
+<div class="fragment fade-in-then-out absolute" data-fragment-index="2" style="top: 20%; left: 10%; ">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="../_img/kernel-inference/crutchfield.png"></p>
+<figcaption><em>Image adapted from Wikimedia Commons, CC BY-SA 4.0</em></figcaption>
+</figure>
+</div>
+</div>
+<div class="fragment fade-in-then-out absolute" data-fragment-index="3" style="top: 10%; left: 0%; width: 100%; ">
+<p><img data-src="../_img/kernel-inference/social-influence-bias.png"></p>
+</div>
+<div class="fragment fade-in-then-out absolute" data-fragment-index="3" style="top: 40%; left: 0%; width: 100%; ">
+<p><img data-src="../_img/kernel-inference/61-million.png"></p>
+</div>
+<div class="fragment fade-in-then-out absolute" data-fragment-index="3" style="top: 70%; left: 0%; width: 100%; ">
+<p>+ LLMs, virtual reality environments, etc. etc.</p>
+</div>
+</div></section>
+<section id="social-influence-1" class="slide level2">
+<h2>Social Influence</h2>
+<div class="textblock-3 standout">
+<p><em>Any <span class="alert-1">change</span> in an individual’s thoughts, feelings, or behaviors caused by <span class="alert-2">other people</span>, who may be actually present or whose presence is imagined, expected, or only implied.</em> <br><br> - American Psychological Association (APA) Dictionary of Psychology, 2026</p>
+</div>
 <div class="fragment">
-<p>Models of social influence address:</p>
+<p>To formalize <strong>models</strong> of social influence, we need to decide:</p>
 <ul>
 <li><span class="alert-2">Which other people?</span></li>
 <li><span class="alert-1">What kind of change?</span></li>

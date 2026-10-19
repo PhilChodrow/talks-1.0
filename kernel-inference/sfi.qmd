@@ -1,5 +1,5 @@
 ---
-title: "Learning Social Influence<br><span style='font-size: 0.6em;'>with Unobserved Mechanisms</span>"  
+title: "Learning Social Influence<br><span style='font-size: 0.6em;'>with Unobserved Attention</span>"  
 subtitle: "The Santa Fe Institute <br> October 21st, 2026"  
 date: ""
 ---
@@ -135,17 +135,97 @@ I like aikido, tea, my cats, being outside, hypergraphs, and [math models of soc
 
 :::
 
-::: {.fragment}
-Models of social influence address: 
 
-- [Which other people?]{.alert-2}
-- [What kind of change?]{.alert-1}
+
+
+## Some Other Social Influence Experiments {.split-50}
+
+::: {.column}
+
+<br> 
+
+::: {.textblock-1 .center .fragment .fade-in-then-semi-out fragment-index=1}
+
+[Asch social conformity experiments (1950s)]{.alert-1}
+
+Face-to-face group gaslighting works, even on obvious problems. 
+
+"*That intelligent, well-meaning young people are willing to call white black is a matter of concern.*"
+
+:::
+
+
+::: {.textblock-2 .center .fragment .fade-in-then-semi-out fragment-index=2}
+
+[Crutchfield experiments (1950s)]{.alert-2}
+
+Face-to-face interaction not required: works if the participants only *think* they are interacting with the group opinions. 
+
+:::
+
+::: {.textblock-3 .center .fragment .fade-in-then-semi-out fragment-index=3}
+
+[Modern experiments]{.alert-3}
+
+Many modern experiments study intervening role of internet, social media, other technological media of opinion exposure. 
+
+:::
+
+:::
+
+::: {.column}
+
+::: {.fragment .fade-in-then-out fragment-index=1 .absolute top="10%" left="10%"}
+
+![*Image adapted from Wikimedia Commons, CC BY-SA 4.0*](../_img/kernel-inference/asch.svg)
+
+:::
+
+::: {.fragment .fade-in-then-out fragment-index=2 .absolute top="20%" left="10%"}
+
+![*Image adapted from Wikimedia Commons, CC BY-SA 4.0*](../_img/kernel-inference/crutchfield.png)
+
+:::
+
+::: {.fragment .fade-in-then-out fragment-index=3 .absolute top="10%" left="0%" width="100%"}
+
+![](../_img/kernel-inference/social-influence-bias.png)
+
+:::
+
+::: {.fragment .fade-in-then-out fragment-index=3 .absolute top="40%" left="0%" width="100%"}
+
+![](../_img/kernel-inference/61-million.png)
+
+:::
+
+::: {.fragment .fade-in-then-out fragment-index=3 .absolute top="70%" left="0%" width="100%"}
+
+\+ LLMs, virtual reality environments, etc. etc. 
+
+:::
 
 :::
 
 
 
+## Social Influence
 
+::: {.textblock-3 .standout}
+
+*Any [change]{.alert-1} in an individual’s thoughts, feelings, or behaviors caused by [other people]{.alert-2}, who may be actually present or whose presence is imagined, expected, or only implied.*
+<br><br>
+\- American Psychological Association (APA) Dictionary of Psychology, 2026
+
+:::
+
+::: {.fragment}
+To formalize **models** of social influence, we need to decide: 
+
+- [Which other people?]{.alert-2}
+- [What kind of change?]{.alert-1}
+
+:::
 
 
 
