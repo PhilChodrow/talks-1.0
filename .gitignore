@@ -5,3 +5,8 @@
 */*_files
 */*_cache
 /.luarc.json
+.DS_Store
+*/*/.DS_Store
+*/*/.Rhistory
+*/*/.RData
+*/*/.Rproj.user
