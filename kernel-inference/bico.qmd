@@ -13,7 +13,7 @@ date: ""
 
 <br>
 
-::: {.textblock-1 .center .fragment}
+::: {.textblock-1 .center .fragment fragment-index=1}
 
 - BA in **philosophy** + **theoretical math**, *Swarthmore College*(!)
 - PhD in **operations research**(?), *MIT*
@@ -24,7 +24,7 @@ date: ""
 
 <!-- <br> -->
 
-::: {.textblock-2 .center .fragment}
+::: {.textblock-2 .center .fragment fragment-index=2}
 
 I [teach courses]{.alert-2} in discrete math, data science, machine learning and network science. 
 
@@ -35,7 +35,8 @@ I [teach courses]{.alert-2} in discrete math, data science, machine learning and
 <!-- <br> -->
 
 
-::: {.textblock-3 .center .fragment}
+
+::: {.textblock-3 .center .fragment fragment-index=3}
 
 
 
@@ -56,12 +57,12 @@ I like aikido, tea, my cats, being outside, reading, cooking, and [cool math stu
 
 ::: {.column}
 
-![](../_img/personal/aikido.png){.absolute left=10% top=10% width=45% .bordered-fig-tight}
-![](../_img/personal/opinion-dynamics.png){.absolute left=10% top=55% width=45% .bordered-fig-tight}
-![](../_img/personal/cats.jpeg){.absolute right=12% top=10% width=25.5% .bordered-fig-tight}
-![](../_img/personal/xgi-hypergraph.webp){.absolute right=12% top=31% width=25.5% .bordered-fig-tight}
-![](../_img/personal/tea.jpeg){.absolute right=12% top=52% width=25.5% .bordered-fig-tight}
-![](../_img/personal/cycling-2.jpeg){.absolute right=12% top=73% width=25.5% .bordered-fig-tight}
+![](../_img/personal/aikido.png){.absolute left=10% top=10% width=45% .bordered-fig-tight .fragment fragment-index=3}
+![](../_img/personal/opinion-dynamics.png){.absolute left=10% top=55% width=45% .bordered-fig-tight .fragment fragment-index=3}
+![](../_img/personal/cats.jpeg){.absolute right=12% top=10% width=25.5% .bordered-fig-tight .fragment fragment-index=3}
+![](../_img/personal/xgi-hypergraph.webp){.absolute right=12% top=31% width=25.5% .bordered-fig-tight .fragment fragment-index=3}
+![](../_img/personal/tea.jpeg){.absolute right=12% top=52% width=25.5% .bordered-fig-tight .fragment fragment-index=3}
+![](../_img/personal/cycling-2.jpeg){.absolute right=12% top=73% width=25.5% .bordered-fig-tight .fragment fragment-index=3}
 
 ::: 
 
@@ -169,7 +170,7 @@ Big idea: we don't need *direct data* on a phenomenon to include it in our model
 
 ## Today
 
-###  [stochastic dynamics]{.alert-3} with [latent variables]{.alert-2} for [modeling social influence]{.alert-1}
+###  [stochastic dynamics]{.alert-3 .fragment} [with [latent variables]{.alert-2}]{.fragment} [for [modeling social influence]{.alert-1}]{.fragment}
 
 <br><br><br>
 
@@ -1103,7 +1104,7 @@ $$
 
 ##
 
-### Learning the model: expectation-maximization ((Dempster et al., 1977))
+### Learning the model: expectation-maximization (Dempster et al., 1977)
 
 We want a sequence $\theta^{(0)}, \theta^{(1)},\ldots \rightarrow \hat{\theta} = \arg \max_{\theta}  \mathbb{P}(\mathcal{D}; \theta)$.
 
