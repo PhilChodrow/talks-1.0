@@ -37,7 +37,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-b940a7423a90b80d09bd3f74c98c2a0a.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-3125e8335bae091f7c88ccd564fa7247.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -1302,19 +1302,19 @@ $$
 <h2></h2>
 <h3 id="learning-the-model-expectation-maximization-dempster-et-al.-1977">Learning the model: expectation-maximization (Dempster et al., 1977)</h3>
 <p>We want a sequence <span class="math inline">\(\theta^{(0)}, \theta^{(1)},\ldots \rightarrow \hat{\theta} = \arg \max_{\theta}  \mathbb{P}(\mathcal{D}; \theta)\)</span>.</p>
-<div class="textblock-1 fragment">
+<div class="textblock-1 fragment centered">
 <p><span class="alert-1">E-step</span>: Update our beliefs about the unobserved mechanisms.</p>
 <p><span class="math display">\[
 \begin{aligned}
-  z^{(k)}_{t,u} = \frac{\mathbb{P} (X_{t+1} = x_{t+1} | X_{t} = x_t, U_t = u; \theta^{(k)}) \mathbb{P}(U_t = u | X_{t} = x_t; \theta^{(k)})}{\sum_{u' \in \mathcal{U}_t}\mathbb{P}(X_{t+1} = x_{t+1} | X_{t} = x_t, U_t = u'; \theta^{(k)}) \mathbb{P}(U_t = u' | X_{t} = x_t; \theta^{(k)})}
+  z^{(k)}_{t,u} = \frac{\mathbb{P} (X_{t+1} = x_{t+1} | X_{t} = x_t, U_t = u; \theta^{(k)}) \mathbb{P}(U_t = u | X_{t} = x_t; \theta^{(k)})}{\sum_{u' \in \mathcal{U}_t}\mathbb{P}(X_{t+1} = x_{t+1} | X_{t} = x_t, U_t = u'; \theta^{(k)}) \mathbb{P}(U_t = u' | X_{t} = x_t; \theta^{(k)})}\;.
 \end{aligned}
 \]</span></p>
 </div>
-<div class="textblock-2 fragment">
+<div class="textblock-2 fragment centered">
 <p><span class="alert-2">M-step</span>: Update the model parameters to maximize the expected log-likelihood.</p>
 <p><span class="math display">\[
 \begin{aligned}
-  \theta^{(k+1)} = \arg \max_{\theta} \sum_{t=0}^{T-1} \sum_{u \in \mathcal{U_t}} z^{(k)}_{t,u} \log \left[\mathbb{P}(X_{t+1} = x_{t+1} | X_{t} = x_t, U_t = u; \theta) \mathbb{P}(U_t = u | X_{t} = x_t; \theta)\right]
+  \theta^{(k+1)} = \arg \max_{\theta} \sum_{t=0}^{T-1} \sum_{u \in \mathcal{U_t}} z^{(k)}_{t,u} \log \left[\mathbb{P}(X_{t+1} = x_{t+1} | X_{t} = x_t, U_t = u; \theta) \mathbb{P}(U_t = u | X_{t} = x_t; \theta)\right]\;.
 \end{aligned}
 \]</span></p>
 </div>
@@ -1332,7 +1332,7 @@ $$
 <!-- ![](../_img/kernel-inference/synthetic-experiment.png){.bordered-fig} -->
 <img data-src="../_img/kernel-inference/model-selection-cartoon.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"></section>
 <section id="data-specimens" class="slide level2 markdown-source">
-<h2>But what about real people?</h2>
+<h2>Our Data</h2>
 <div class="specimen-grid">
 <p><span class="spec-type fragment" data-fragment-index="1">Controlled, single source</span></p>
 <p><span class="spec-type fragment" data-fragment-index="2">Controlled, network</span></p>

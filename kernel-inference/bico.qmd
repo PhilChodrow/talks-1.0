@@ -1108,31 +1108,40 @@ $$
 
 We want a sequence $\theta^{(0)}, \theta^{(1)},\ldots \rightarrow \hat{\theta} = \arg \max_{\theta}  \mathbb{P}(\mathcal{D}; \theta)$.
 
-::: {.textblock-1 .fragment}
+
+
+::: {.textblock-1 .fragment .centered}
 
 [E-step]{.alert-1}: Update our beliefs about the unobserved mechanisms. 
 
 $$
 \begin{aligned}
-  z^{(k)}_{t,u} = \frac{\mathbb{P} (X_{t+1} = x_{t+1} | X_{t} = x_t, U_t = u; \theta^{(k)}) \mathbb{P}(U_t = u | X_{t} = x_t; \theta^{(k)})}{\sum_{u' \in \mathcal{U}_t}\mathbb{P}(X_{t+1} = x_{t+1} | X_{t} = x_t, U_t = u'; \theta^{(k)}) \mathbb{P}(U_t = u' | X_{t} = x_t; \theta^{(k)})}
+  z^{(k)}_{t,u} = \frac{\mathbb{P} (X_{t+1} = x_{t+1} | X_{t} = x_t, U_t = u; \theta^{(k)}) \mathbb{P}(U_t = u | X_{t} = x_t; \theta^{(k)})}{\sum_{u' \in \mathcal{U}_t}\mathbb{P}(X_{t+1} = x_{t+1} | X_{t} = x_t, U_t = u'; \theta^{(k)}) \mathbb{P}(U_t = u' | X_{t} = x_t; \theta^{(k)})}\;.
 \end{aligned}
 $$
 
-
 :::
 
-::: {.textblock-2 .fragment}
+
+
+
+
+
+
+
+::: {.textblock-2 .fragment .centered}
 
 [M-step]{.alert-2}: Update the model parameters to maximize the expected log-likelihood.
 
 $$
 \begin{aligned}
-  \theta^{(k+1)} = \arg \max_{\theta} \sum_{t=0}^{T-1} \sum_{u \in \mathcal{U_t}} z^{(k)}_{t,u} \log \left[\mathbb{P}(X_{t+1} = x_{t+1} | X_{t} = x_t, U_t = u; \theta) \mathbb{P}(U_t = u | X_{t} = x_t; \theta)\right]
+  \theta^{(k+1)} = \arg \max_{\theta} \sum_{t=0}^{T-1} \sum_{u \in \mathcal{U_t}} z^{(k)}_{t,u} \log \left[\mathbb{P}(X_{t+1} = x_{t+1} | X_{t} = x_t, U_t = u; \theta) \mathbb{P}(U_t = u | X_{t} = x_t; \theta)\right]\;.
 \end{aligned}
 $$
 
 
 :::
+
 
 
 
@@ -1159,7 +1168,8 @@ We [select between competing models]{.alert-3} (kernels, mechanisms, etc.) by ev
 
 
 
-## But what about real people? {#data-specimens .markdown-source}
+
+## Our Data {#data-specimens .markdown-source}
 
 ::: {.specimen-grid}
 [Controlled, single source]{.spec-type .fragment fragment-index=1}
