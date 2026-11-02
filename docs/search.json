@@ -935,7 +935,7 @@
     "href": "kernel-inference/bico.html#hi-everyone-im-phil-chodrow",
     "title": "Learning Social Influencewith Unobserved Attention",
     "section": "Hi everyone! I’m Phil Chodrow",
-    "text": "Hi everyone! I’m Phil Chodrow\n\n\n\nProf. of CS at Middlebury College, a small liberal arts college in Vermont. I teach courses in discrete math, machine learning, data science, and network science.\n\n\n\nJunior folks: ask me about #LiberalArtsLife if you’re curious.\n\n\n\nI like aikido, tea, my cats, being outside, hypergraphs, and math models of social systems."
+    "text": "Hi everyone! I’m Phil Chodrow\n\n\n\n\nBA in philosophy + theoretical math, Swarthmore College(!)\nPhD in operations research(?), MIT\nPostdoc in applied math, UCLA\nFaculty in computer science(??), Middlebury College\n\n\n\n\nI teach courses in discrete math, data science, machine learning and network science.\n\n\n\nI like aikido, tea, my cats, being outside, reading, cooking, and cool math stuff (modeling + data science)."
   },
   {
     "objectID": "kernel-inference/bico.html#section",
@@ -1019,28 +1019,28 @@
     "href": "kernel-inference/bico.html#section-3",
     "title": "Learning Social Influencewith Unobserved Attention",
     "section": "",
-    "text": "How do we learn the kernel from data?\n\n \nEasiest case: for each \\(i\\) there is only one neighbor \\(j\\).\n\n\n\n\n\n\\[\n\\begin{aligned}\n  x_i(t+1) - x_i(t)\n    &=  k(|d|) + \\text{noise}\\\\\n    d &= x_j(t) - x_i(t)\n\\end{aligned}\n\\]\n\n\n\n\n\n\n\nAdams, White, and Araujo (2022). “Person-to-person opinion dynamics: An empirical study using an online game.” PLoS ONE."
+    "text": "Some common implicit assumptions\n\n  \nAt each timestep each agent  always  interacts with  all  of their neighbors."
   },
   {
     "objectID": "kernel-inference/bico.html#section-6",
     "href": "kernel-inference/bico.html#section-6",
     "title": "Learning Social Influencewith Unobserved Attention",
     "section": "",
-    "text": "A more complex case: multiple neighbors\n\n\n \\[\n\\begin{aligned}\n  \\delta_i\n    &\\approx  \\frac{1}{|\\partial i|} \\sum_{j \\in \\partial i} k(d_{ij}) \\;?\\\\\n  \\delta_i &\\approx k\\left(\n\\frac{1}{|\\partial i|} \\sum_{j \\in \\partial i} d_{ij}\n  \\right) \\;?\n\\end{aligned}\n\\]\n\n\n\n\n\n\n\nVande Kerckhove + al. (2016). “Modelling Influence and Opinion Evolution in Online Collective Behaviour.” PLoS ONE."
+    "text": "Learning the model: expectation-maximization ((Dempster et al., 1977))\nWe want a sequence \\(\\theta^{(0)}, \\theta^{(1)},\\ldots \\rightarrow \\hat{\\theta} = \\arg \\max_{\\theta}  \\mathbb{P}(\\mathcal{D}; \\theta)\\).\n\nE-step: Update our beliefs about the unobserved mechanisms.\n\\[\n\\begin{aligned}\n  z^{(k)}_{t,u} = \\frac{\\mathbb{P} (X_{t+1} = x_{t+1} | X_{t} = x_t, U_t = u; \\theta^{(k)}) \\mathbb{P}(U_t = u | X_{t} = x_t; \\theta^{(k)})}{\\sum_{u' \\in \\mathcal{U}_t}\\mathbb{P}(X_{t+1} = x_{t+1} | X_{t} = x_t, U_t = u'; \\theta^{(k)}) \\mathbb{P}(U_t = u' | X_{t} = x_t; \\theta^{(k)})}\n\\end{aligned}\n\\]\n\n\nM-step: Update the model parameters to maximize the expected log-likelihood.\n\\[\n\\begin{aligned}\n  \\theta^{(k+1)} = \\arg \\max_{\\theta} \\sum_{t=0}^{T-1} \\sum_{u \\in \\mathcal{U_t}} z^{(k)}_{t,u} \\log \\left[\\mathbb{P}(X_{t+1} = x_{t+1} | X_{t} = x_t, U_t = u; \\theta) \\mathbb{P}(U_t = u | X_{t} = x_t; \\theta)\\right]\n\\end{aligned}\n\\]"
   },
   {
     "objectID": "kernel-inference/bico.html#section-7",
     "href": "kernel-inference/bico.html#section-7",
     "title": "Learning Social Influencewith Unobserved Attention",
     "section": "",
-    "text": "Some common implicit assumptions\n\n  \nAt each timestep each agent  always  interacts with  all  of their neighbors.\n\n\n\\[\n\\begin{aligned}\n  \\delta_i\n    &\\approx  \\frac{1}{|\\partial i|} \\sum_{j \\in \\partial i} k(d_{ij}) \\;?\n\\end{aligned}\n\\]"
+    "text": "Learning the model: expectation-maximization ((Dempster et al., 1977))\nWe want a sequence \\(\\theta^{(0)}, \\theta^{(1)},\\ldots \\rightarrow \\hat{\\theta} = \\arg \\max_{\\theta}  \\mathbb{P}(\\mathcal{D}; \\theta)\\).\n\nE-step: Update our beliefs about the unobserved mechanisms.\n\\[\n\\begin{aligned}\n  z^{(k)}_{t,u} = \\frac{\\mathbb{P} (X_{t+1} = x_{t+1} | X_{t} = x_t, U_t = u; \\theta^{(k)}) \\mathbb{P}(U_t = u | X_{t} = x_t; \\theta^{(k)})}{\\sum_{u' \\in \\mathcal{U}_t}\\mathbb{P}(X_{t+1} = x_{t+1} | X_{t} = x_t, U_t = u'; \\theta^{(k)}) \\mathbb{P}(U_t = u' | X_{t} = x_t; \\theta^{(k)})}\n\\end{aligned}\n\\]\n\n\nM-step: Update the model parameters to maximize the expected log-likelihood.\n\\[\n\\begin{aligned}\n  \\theta^{(k+1)} = \\arg \\max_{\\theta} \\sum_{t=0}^{T-1} \\sum_{u \\in \\mathcal{U_t}} z^{(k)}_{t,u} \\log \\left[\\mathbb{P}(X_{t+1} = x_{t+1} | X_{t} = x_t, U_t = u; \\theta) \\mathbb{P}(U_t = u | X_{t} = x_t; \\theta)\\right]\n\\end{aligned}\n\\]"
   },
   {
     "objectID": "kernel-inference/bico.html#section-8",
     "href": "kernel-inference/bico.html#section-8",
     "title": "Learning Social Influencewith Unobserved Attention",
     "section": "",
-    "text": "Core idea for today: selective attention\n\n  \nAt each timestep each agent  always sometimes  interacts with  all some  of their neighbors.\n\nThis is complex because we typically don’t observe these attentional mechanisms: we only observe the opinion changes that result."
+    "text": "Learning the model: maximum likelihood\nOur stochastic model defines a likelihood function over observed opinion trajectories, given an observation of a fixed network of possible interactions: \\[\n\\begin{aligned}\n  \\overbrace{\\mathbb{P}(\\mathcal{D}; \\theta)}^{\\text{Data set}} &= \\underbrace{\\mathbb{P}(X_{0} = x_{0})}_{\\text{Initial \\\\state}}\\prod_{t=0}^{T-1} \\underbrace{\\mathbb{P}(X_{t+1} = x_{t+1} | X_{t} = x_t; \\theta)}_{\\text{Transition \\\\probabilities}} \\\\\n  \\mathbb{P}(X_{t+1} &= x_{t+1} | X_{t} = x_t; \\theta) = \\sum_{u \\in \\mathcal{U}_t}\\mathbb{P}(X_{t+1} = x_{t+1} | X_{t} = x_t, \\underbrace{U_t = u}_{\\text{unobserved\\\\mechanisms }}; \\theta)\\mathbb{P}(U_t = u | X_{t} = x_t; \\theta)\n\\end{aligned}\n\\] Maximum likelihood: \\[\n\\begin{aligned}\n  \\hat{\\theta} = \\arg \\max_{\\theta} \\log \\mathbb{P}(\\mathcal{D}; \\theta)\n\\end{aligned}\n\\]"
   },
   {
     "objectID": "kernel-inference/bico.html#the-team",
@@ -1061,7 +1061,7 @@
     "href": "kernel-inference/bico.html#section-9",
     "title": "Learning Social Influencewith Unobserved Attention",
     "section": "",
-    "text": "Learning the model\n\n\n\n\n\n\nOur stochastic model defines a likelihood function over observed opinion trajectories, given an observation of a fixed network of possible interactions.\n\n\n\nWe learn the kernel parameters by maximizing this likelihood via the expectation-maximization (EM) algorithm (Dempster et al., 1977).\n\n\n\nWe select between competing models (kernels, mechanisms, etc.) by evaluating their predictive likelihoods on held-out validation data."
+    "text": "Learning the model: expectation-maximization\nWant: a sequence \\(\\theta^{(0)}, \\theta^{(1)},\\ldots \\rightarrow \\hat{\\theta}\\).\n\nE-step\nUpdate our beliefs about the unobserved mechanisms:\n\\[\n\\begin{aligned}\n  z^{(k)}_{t,u} = \\frac{\\mathbb{P} (X_{t+1} = x_{t+1} | X_{t} = x_t, U_t = u; \\theta^{(k)}) \\mathbb{P}(U_t = u | X_{t} = x_t; \\theta^{(k)})}{\\sum_{u' \\in \\mathcal{U}_t}\\mathbb{P}(X_{t+1} = x_{t+1} | X_{t} = x_t, U_t = u'; \\theta^{(k)}) \\mathbb{P}(U_t = u' | X_{t} = x_t; \\theta^{(k)})}\n\\end{aligned}\n\\]\n\n\nM-step\nUpdate the model parameters to maximize the expected log-likelihood:\n\\[\n\\begin{aligned}\n  \\theta^{(k+1)} = \\arg \\max_{\\theta} \\sum_{t=0}^{T-1} \\sum_{u \\in \\mathcal{U_t}} z^{(k)}_{t,u} \\log \\left[\\mathbb{P}(X_{t+1} = x_{t+1} | X_{t} = x_t, U_t = u; \\theta) \\mathbb{P}(U_t = u | X_{t} = x_t; \\theta)\\right]\n\\end{aligned}\n\\]\n\nTheorem (Dempster et al., 1977): This works!"
   },
   {
     "objectID": "kernel-inference/bico.html#omitting-retention-and-neighbor-selection-alters-learned-kernels",
@@ -1096,7 +1096,7 @@
     "href": "kernel-inference/bico.html#some-learnings",
     "title": "Learning Social Influencewith Unobserved Attention",
     "section": "Some Learnings",
-    "text": "Some Learnings\n\n\n\nPotential exposure \\(\\neq\\) interaction\nIn experiments and online settings, relationship networks (proximity, following, etc.) define possible rather than actual interactions.\n\n\nModel latent mechanisms\nWe can model what we don’t observe directly: we just need to tie it statistically to things that we do observe.\n\n\nWe direct our attention!\nEven simple representations of attention can improve prediction and alter our conclusions."
+    "text": "Some Learnings\n\n\n\nPotential exposure \\(\\neq\\) interaction\nIn experiments and online settings, relationship networks (proximity, following, etc.) define possible rather than actual interactions.\n\n\nModel latent mechanisms\nWe can model what we don’t observe directly: we just need to tie it statistically to things that we do observe.\n\n\nFlexible modeling\nStochastic dynamics + algorithms offer us a rich toolbox for learning about complex systems."
   },
   {
     "objectID": "kernel-inference/bico.html#thanks-everyone",
@@ -1104,5 +1104,89 @@
     "title": "Learning Social Influencewith Unobserved Attention",
     "section": "Thanks everyone!",
     "text": "Thanks everyone!\n\n\n\n\narxiv:2610.12616\n\n\n\n\n\n\n\n\n\n\nWill Thompson  UVM\n\n\n\n\n\n\n\n\nMoyi Tian  CU Boulder\n\n\n\n\n\n\n\n\n\nLinh Huynh  Texas Tech\n\n\n\n\n\n\n\n\nAlex Wiedemann  Hamline University\n\n\n\n\n\n\n\n\n\n\nVicki Modisette  Eastern Kentucky\n\n\n\n\n\n\n\n\nHeather Brooks  Harvey Mudd"
+  },
+  {
+    "objectID": "kernel-inference/bico.html#section-2",
+    "href": "kernel-inference/bico.html#section-2",
+    "title": "Learning Social Influencewith Unobserved Attention",
+    "section": "",
+    "text": "Autokinetic effect: a still point of light in a dark room will appear to move if you stare at it long enough."
+  },
+  {
+    "objectID": "kernel-inference/bico.html#section-4",
+    "href": "kernel-inference/bico.html#section-4",
+    "title": "Learning Social Influencewith Unobserved Attention",
+    "section": "",
+    "text": "Core idea for today: selective attention\n\n  \nAt each timestep each agent  always sometimes  interacts with  all some  of their neighbors.\n\nStochastic dynamics with latent variables! We typically don’t observe the interactions: we only observe the opinion changes that result."
+  },
+  {
+    "objectID": "kernel-inference/bico.html#section-10",
+    "href": "kernel-inference/bico.html#section-10",
+    "title": "Learning Social Influencewith Unobserved Attention",
+    "section": "",
+    "text": "Learning the model\n\n\n\n\n\n\nOur stochastic model defines a likelihood function over observed opinion trajectories, given an observation of a fixed network of possible interactions.\n\n\n\nWe learn the kernel parameters by maximizing this likelihood via the expectation-maximization (EM) algorithm (Dempster et al., 1977).\n\n\n\nWe select between competing models (kernels, mechanisms, etc.) by evaluating their predictive likelihoods on held-out validation data."
+  },
+  {
+    "objectID": "kernel-inference/bico.html#whats-cool-to-me-lately",
+    "href": "kernel-inference/bico.html#whats-cool-to-me-lately",
+    "title": "Learning Social Influencewith Unobserved Attention",
+    "section": "What’s cool to me (lately)",
+    "text": "What’s cool to me (lately)\n\n\nDynamical systems: deterministic evolution of a system over time. \\[\n\\mathbf{x}_{t+1} = g_{\\color{#17868F}{\\theta}}(\\mathbf{x}_t)\n\\] \\(\\theta\\) is a system parameter that tunes the dynamics.\n\nWhat is the long-term behavior of a system governed by evolution rules \\(g_\\theta\\)?"
+  },
+  {
+    "objectID": "kernel-inference/bico.html#whats-cool-to-me-lately-1",
+    "href": "kernel-inference/bico.html#whats-cool-to-me-lately-1",
+    "title": "Learning Social Influencewith Unobserved Attention",
+    "section": "What’s cool to me (lately)",
+    "text": "What’s cool to me (lately)\n\n\nStochastic processes: noisy evolution of a system over time. \\[\n\\begin{aligned}\n  X_{t+1} \\sim \\mathbb{P}\\left(\\cdot | X_t = x_t; \\theta\\right)\n\\end{aligned}\n\\]\n\nCommon application: tune the probability structure so that \\(X_t\\) has a certain specified distribution as \\(t \\rightarrow \\infty\\). (Markov chain Monte Carlo, simulated annealing)"
+  },
+  {
+    "objectID": "kernel-inference/bico.html#whats-cool-to-me-lately-2",
+    "href": "kernel-inference/bico.html#whats-cool-to-me-lately-2",
+    "title": "Learning Social Influencewith Unobserved Attention",
+    "section": "What’s cool to me (lately)",
+    "text": "What’s cool to me (lately)\n\n\nStochastic processes with latent variables: noisy evolution of a partially observed system \\[\n\\begin{aligned}\n  X_{t+1} \\sim \\mathbb{P}\\left(\\cdot | X_t = x_t, {\\color{#17868F}{U_t = u_t}}; \\theta\\right)\n\\end{aligned}\n\\]\nHere, \\(U_t\\) is some process in the system which we postulate but do not observe.\n\nBig idea: we don’t need direct data on a phenomenon to include it in our models."
+  },
+  {
+    "objectID": "kernel-inference/bico.html#section-5",
+    "href": "kernel-inference/bico.html#section-5",
+    "title": "Learning Social Influencewith Unobserved Attention",
+    "section": "",
+    "text": "Learning the model: maximum likelihood\nOur stochastic model defines a likelihood function over observed opinion trajectories, given an observation of a fixed network of possible interactions:\n\n\\[\n\\begin{aligned}\n  \\overbrace{\\mathbb{P}(\\mathcal{D}; \\theta)}^{\\text{Data set}} &= \\underbrace{\\mathbb{P}(X_{0} = x_{0})}_{\\text{Initial state}}\\prod_{t=0}^{T-1} \\overbrace{\\mathbb{P}(X_{t+1} = x_{t+1} | X_{t} = x_t; \\theta)}^{\\text{Transition probabilities } q_\\theta(x_{t+1}, x_t)} \\\\\n  q_\\theta(x_{t+1}, x_t) &= \\sum_{u \\in \\mathcal{U}_t}\\mathbb{P}(X_{t+1} = x_{t+1} | X_{t} = x_t, \\underbrace{U_t = u}_{\\text{unobserved\\\\mechanisms }}; \\theta)\\mathbb{P}(U_t = u | X_{t} = x_t; \\theta)\n\\end{aligned}\n\\]\n\n\nWe’ll try to learn this model by solving an optimization problem: \\[\n\\begin{aligned}\n  \\hat{\\theta} = \\arg \\max_{\\theta}  \\mathbb{P}(\\mathcal{D}; \\theta)\n\\end{aligned}\n\\]"
+  },
+  {
+    "objectID": "kernel-inference/bico.html#learning-the-model-model-selection",
+    "href": "kernel-inference/bico.html#learning-the-model-model-selection",
+    "title": "Learning Social Influencewith Unobserved Attention",
+    "section": "Learning the model: model selection",
+    "text": "Learning the model: model selection\nWe select between competing models (kernels, mechanisms, etc.) by evaluating their predictive likelihoods on held-out validation data."
+  },
+  {
+    "objectID": "kernel-inference/bico.html#sidebar-information-geometry",
+    "href": "kernel-inference/bico.html#sidebar-information-geometry",
+    "title": "Learning Social Influencewith Unobserved Attention",
+    "section": "Sidebar: information geometry",
+    "text": "Sidebar: information geometry\n\nGeometry of EM and related iterative algorithms"
+  },
+  {
+    "objectID": "kernel-inference/bico.html#sidebar-information-geometry-is-really-cool",
+    "href": "kernel-inference/bico.html#sidebar-information-geometry-is-really-cool",
+    "title": "Learning Social Influencewith Unobserved Attention",
+    "section": "Sidebar: information geometry is really cool",
+    "text": "Sidebar: information geometry is really cool\n\nHino et al. (2024). “Geometry of EM and related iterative algorithms”"
+  },
+  {
+    "objectID": "kernel-inference/bico.html#today-stochastic-dynamics-with-latent-variables-for-modeling-social-influence",
+    "href": "kernel-inference/bico.html#today-stochastic-dynamics-with-latent-variables-for-modeling-social-influence",
+    "title": "Learning Social Influencewith Unobserved Attention",
+    "section": "Today: stochastic dynamics with latent variables for modeling social influence",
+    "text": "Today: stochastic dynamics with latent variables for modeling social influence"
+  },
+  {
+    "objectID": "kernel-inference/bico.html#today",
+    "href": "kernel-inference/bico.html#today",
+    "title": "Learning Social Influencewith Unobserved Attention",
+    "section": "Today",
+    "text": "Today\nstochastic dynamics with latent variables for modeling social influence"
   }
 ]

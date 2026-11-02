@@ -13,28 +13,33 @@ date: ""
 
 <br>
 
-::: {.textblock-1 .center}
+::: {.textblock-1 .center .fragment}
 
-Prof. of CS at [Middlebury College]{.alert-1}, a small liberal arts college in Vermont. I teach courses in discrete math, machine learning, data science, and network science. 
-
-:::
-
-<br>
-
-::: {.textblock-2 .center}
-
-*Junior folks: ask me about [**\#LiberalArtsLife**]{.alert-2} if you're curious.*
+- BA in **philosophy** + **theoretical math**, *Swarthmore College*(!)
+- PhD in **operations research**(?), *MIT*
+- Postdoc in **applied math**, *UCLA*
+- Faculty in **computer science**(??), *Middlebury College*
 
 :::
 
+<!-- <br> -->
+
+::: {.textblock-2 .center .fragment}
+
+I [teach courses]{.alert-2} in discrete math, data science, machine learning and network science. 
+
+:::
 
 
-<br>
+
+<!-- <br> -->
 
 
-::: {.textblock-3 .center}
+::: {.textblock-3 .center .fragment}
 
-I like aikido, tea, my cats, being outside, hypergraphs, and [math models of social systems]{.alert-3}. 
+
+
+I like aikido, tea, my cats, being outside, reading, cooking, and [cool math stuff]{.alert-3} (modeling + data science). 
 
 :::
 
@@ -60,7 +65,118 @@ I like aikido, tea, my cats, being outside, hypergraphs, and [math models of soc
 
 ::: 
 
+## What's cool to me (lately) {.split-40}
+
+
+
+
+::: {.column}
+
+<br>
+
+[Dynamical systems]{.alert-1}: deterministic evolution of a system over time. 
+$$
+\mathbf{x}_{t+1} = g_{\color{#17868F}{\theta}}(\mathbf{x}_t)
+$$
+[$\theta$]{.alert-2} is a system parameter that tunes the dynamics. 
+
+
+
+::: {.textblock-1}
+
+What is the long-term behavior of a system governed by evolution rules $g_\theta$? 
+
+:::
+
+:::
+
+::: {.column}
+
+![](../_img/shared/sbcm.png){.bordered-fig-tight}
+![](../_img/shared/sbcm-network.png){.bordered-fig-tight width="55%" height="55%" fig-align="center"}
+![](../_img/shared/sbcm-phase-diagram.png){.bordered-fig-tight width="39%" height="39%" fig-align="center"}
+
+:::
+
+## What's cool to me (lately) {.split-40}
+
+::: {.column}
+
+<br>
+
+[Stochastic processes]{.alert-2}: *noisy* evolution of a system over time. 
+$$
+\begin{aligned}
+  X_{t+1} \sim \mathbb{P}\left(\cdot | X_t = x_t; \theta\right)
+\end{aligned}
+$$
+
+::: {.textblock-2}
+
+Common application: tune the probability structure so that $X_t$ has a certain specified distribution as $t \rightarrow \infty$. (Markov chain Monte Carlo, simulated annealing)
+
+:::
+
+:::
+
+
+::: {.column}
+
+![](../_img/shared/hyper-config.png){.bordered-fig-tight}
+![](../_img/shared/hyper-config-fig.png){.bordered-fig-tight fig-align="center"}
+
+
+
+:::
+
+
+## What's cool to me (lately) {.split-40}
+
+::: {.column}
+
+<br>
+
+[Stochastic processes with latent variables]{.alert-3}: noisy evolution of a *partially observed* system 
+$$
+\begin{aligned}
+  X_{t+1} \sim \mathbb{P}\left(\cdot | X_t = x_t, {\color{#17868F}{U_t = u_t}}; \theta\right)
+\end{aligned}
+$$
+
+Here, [$U_t$]{.alert-2} is some process in the system which we postulate but do not observe. 
+
+
+::: {.textblock-3}
+
+Big idea: we don't need *direct data* on a phenomenon to include it in our models. 
+
+:::
+
+:::
+
+
+
+::: {.column}
+
+![](../_img/shared/hcm.png){.bordered-fig-tight}
+![](../_img/shared/hcm-fig.png){.bordered-fig-tight fig-align="center"}
+
+
+
+
+
+:::
+
+## Today
+
+###  [stochastic dynamics]{.alert-3} with [latent variables]{.alert-2} for [modeling social influence]{.alert-1}
+
+<br><br><br>
+
+
+
 ## {.split-50}
+
 
 
 
@@ -134,6 +250,8 @@ I like aikido, tea, my cats, being outside, hypergraphs, and [math models of soc
 \- American Psychological Association (APA) Dictionary of Psychology, 2026
 
 :::
+
+
 
 
 
@@ -404,7 +522,7 @@ df |> ggplot() +
 
 
 
-## {background-image="../_img/kernel-inference/polarized-report.png" background-size="contain" background-position="center" background-repeat="no-repeat"}
+## {background-image="../_img/kernel-inference/polarized-report.png" background-size="contain" background-position="center" background-repeat="no-repeat"} 
 
 
 ## Many Kernels, Many Mechanisms {#explanations}
@@ -515,7 +633,7 @@ transform_rff <- function(X, rff_model) {
   return(Z)
 }
 
-X <- matrix(runif(1000, min = 0, max = 3), ncol = 1)
+X <- matrix(runif(1000, min = 0, max = .5), ncol = 1)
 y <- abs(sin(0.1 * pi * X) + rnorm(1000, sd = 0.1))
 
 # X <- matrix(seq(0, 1, length.out = 100), ncol = 1)
@@ -581,7 +699,7 @@ Folded in from the dissensus slide (#why-dissensus, now in backup), which showed
 [Slide h/t Will Thompson]{.ht}
 
 
-
+<!-- 
 ## {.split-50}
 
 #### [How do we learn the kernel from data?]{.absolute-header}
@@ -612,30 +730,30 @@ $$
 
 [Adams, White, and Araujo (2022). "Person-to-person opinion dynamics: An empirical study using an online game." *PLoS ONE*.]{.footnote}
 
-:::
+::: -->
 
 
 
 
 
 
-## 
+<!-- ##  -->
 
 
 
-![](../_img/kernel-inference/adams_p08_scatter_only.png){.absolute top=30 right=150 width="30%" .bordered-fig}
+<!-- ![](../_img/kernel-inference/adams_p08_scatter_only.png){.absolute top=30 right=150 width="30%" .bordered-fig} -->
 
 
-
+<!-- 
 
 ## {background-image="../_img/kernel-inference/is-this-a.jpeg" background-size="contain" background-position="center" background-repeat="no-repeat" background-color="black"}
 
 
 ![](../_img/kernel-inference/adams_p08_scatter_only.png){.absolute top=30 right=150 width="30%" .bordered-fig}
 
-![](../_img/kernel-inference/adams_p08_scatter_and_conditional_mean.png){.absolute top=30 right=150 width="30%" .fragment .bordered-fig}
+![](../_img/kernel-inference/adams_p08_scatter_and_conditional_mean.png){.absolute top=30 right=150 width="30%" .fragment .bordered-fig} -->
 
-
+<!-- 
 
 
 ## {.split-30}
@@ -667,7 +785,7 @@ $$
 
 [Vande Kerckhove + al. (2016). "Modelling Influence and Opinion Evolution in Online Collective Behaviour." *PLoS ONE*.]{.footnote}
 
-:::
+::: -->
 
 
 ## {.split-50}
@@ -687,11 +805,11 @@ $$
 ]{style="font-size: 1.5em;"} 
 
 
-:::
+::: 
 
 
 
-
+<!-- 
 ::: {.column}
 
 <br>
@@ -708,7 +826,7 @@ $$
 
 ![](../_img/kernel-inference/neighborhood-averaging.png){width="50%" height="0%" fig-align="center"}
 
-::: 
+:::  -->
 
 ## {.split-50}
 
@@ -726,7 +844,7 @@ $$
 
 ::: {.textblock-3 .fragment .fade-in-then-out fragment-index=4}
 
-This is complex because we typically *don't observe* these attentional mechanisms: we only observe the opinion changes that result. 
+Stochastic dynamics with latent variables! **We typically don't observe the interactions**: we only observe the opinion changes that result. 
 
 :::
 
@@ -955,53 +1073,87 @@ Facts, with sources:
 [Slide h/t Will Thompson]{.ht}
 
 
-## {.split-50}
+## 
 
-::: {.column}
 
-### Learning the model 
 
-![](../_img/kernel-inference/data-schematic.png){width="70%" .fragment .fade-out fragment-index=1 .absolute left="5%" top="15%"}
+### Learning the model: maximum likelihood
 
-![](../_img/kernel-inference/em.png){width="70%" .fragment .fade-in-then-out fragment-index=1 .absolute left="5%" top="20%"}
+Our stochastic model defines a [likelihood function]{.alert-1} over observed opinion trajectories, given an observation of a fixed network of possible interactions:
 
-![](../_img/kernel-inference/model-selection-cartoon.png){width="100%" .fragment .fade-in-then-out fragment-index=2 .absolute left="5%" top="30%"}
+:::{.fragment}
+$$
+\begin{aligned}
+  \overbrace{\mathbb{P}(\mathcal{D}; \theta)}^{\text{Data set}} &= \underbrace{\mathbb{P}(X_{0} = x_{0})}_{\text{Initial state}}\prod_{t=0}^{T-1} \overbrace{\mathbb{P}(X_{t+1} = x_{t+1} | X_{t} = x_t; \theta)}^{\text{Transition probabilities } q_\theta(x_{t+1}, x_t)} \\ 
+  q_\theta(x_{t+1}, x_t) &= \sum_{u \in \mathcal{U}_t}\mathbb{P}(X_{t+1} = x_{t+1} | X_{t} = x_t, \underbrace{U_t = u}_{\text{unobserved\\mechanisms }}; \theta)\mathbb{P}(U_t = u | X_{t} = x_t; \theta)
+\end{aligned}
+$$
+:::
+
+::: {.fragment}
+
+We'll try to learn this model by solving an optimization problem: 
+$$
+\begin{aligned}
+  \hat{\theta} = \arg \max_{\theta}  \mathbb{P}(\mathcal{D}; \theta)
+\end{aligned}
+$$
 
 :::
 
-::: {.column}
+##
 
-<br> 
+### Learning the model: expectation-maximization ((Dempster et al., 1977))
 
-::: {.textblock-1 .fragment .semi-fade-out fragment-index=1}
+We want a sequence $\theta^{(0)}, \theta^{(1)},\ldots \rightarrow \hat{\theta} = \arg \max_{\theta}  \mathbb{P}(\mathcal{D}; \theta)$.
 
-Our stochastic model defines a [likelihood function]{.alert-1} over observed opinion trajectories, given an observation of a fixed network of possible interactions. 
+::: {.textblock-1 .fragment}
+
+[E-step]{.alert-1}: Update our beliefs about the unobserved mechanisms. 
+
+$$
+\begin{aligned}
+  z^{(k)}_{t,u} = \frac{\mathbb{P} (X_{t+1} = x_{t+1} | X_{t} = x_t, U_t = u; \theta^{(k)}) \mathbb{P}(U_t = u | X_{t} = x_t; \theta^{(k)})}{\sum_{u' \in \mathcal{U}_t}\mathbb{P}(X_{t+1} = x_{t+1} | X_{t} = x_t, U_t = u'; \theta^{(k)}) \mathbb{P}(U_t = u' | X_{t} = x_t; \theta^{(k)})}
+\end{aligned}
+$$
+
 
 :::
 
-<br>
+::: {.textblock-2 .fragment}
 
-::: {.textblock-2 .fragment .fade-in-then-semi-out fragment-index=1}
+[M-step]{.alert-2}: Update the model parameters to maximize the expected log-likelihood.
 
-We learn the kernel parameters by maximizing this likelihood via the [expectation-maximization (EM) algorithm]{.alert-2} (Dempster et al., 1977).
+$$
+\begin{aligned}
+  \theta^{(k+1)} = \arg \max_{\theta} \sum_{t=0}^{T-1} \sum_{u \in \mathcal{U_t}} z^{(k)}_{t,u} \log \left[\mathbb{P}(X_{t+1} = x_{t+1} | X_{t} = x_t, U_t = u; \theta) \mathbb{P}(U_t = u | X_{t} = x_t; \theta)\right]
+\end{aligned}
+$$
+
 
 :::
 
-<br>
 
-::: {.textblock-3 .fragment .fade-in-then-semi-out fragment-index=2}
+
+## *Sidebar: information geometry is really cool* 
+
+![](../_img/kernel-inference/em-geometry.png){width="100%" fig-align="center"}
+
+[Hino et al. (2024). "Geometry of EM and related iterative algorithms"]{.absolute bottom=0 right=0 width="100%"}
+
+## Learning the model: model selection
 
 We [select between competing models]{.alert-3} (kernels, mechanisms, etc.) by evaluating their predictive likelihoods on held-out validation data. 
 
-:::
-
-:::
+![](../_img/kernel-inference/model-selection-cartoon.png){width="100%" fig-align="center"}
 
 
-## Omitting retention and neighbor selection alters learned kernels
 
 
-![](../_img/kernel-inference/synthetic-experiment.png){.bordered-fig}
+<!-- ## Omitting retention and neighbor selection alters learned kernels -->
+
+
+<!-- ![](../_img/kernel-inference/synthetic-experiment.png){.bordered-fig} -->
 
 
 
@@ -1321,9 +1473,9 @@ We can model what we don't observe directly: we just need to tie it statisticall
 
 ::: {.textblock-3 .fragment .fade-in-then-semi-out fragment-index=3}
 
-[We direct our attention!]{.alert-3}
+[Flexible modeling]{.alert-3}
 
-Even simple representations of attention can improve prediction and alter our conclusions. 
+Stochastic dynamics + algorithms offer us a rich toolbox for learning about complex systems.  
 
 :::
 

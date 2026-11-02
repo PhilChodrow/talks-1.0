@@ -579,20 +579,74 @@
 <h2>Hi everyone! I’m Phil Chodrow</h2>
 <div class="column">
 <p><br></p>
-<div class="textblock-1 center">
-<p>Prof.&nbsp;of CS at <span class="alert-1">Middlebury College</span>, a small liberal arts college in Vermont. I teach courses in discrete math, machine learning, data science, and network science.</p>
+<div class="textblock-1 center fragment">
+<ul>
+<li>BA in <strong>philosophy</strong> + <strong>theoretical math</strong>, <em>Swarthmore College</em>(!)</li>
+<li>PhD in <strong>operations research</strong>(?), <em>MIT</em></li>
+<li>Postdoc in <strong>applied math</strong>, <em>UCLA</em></li>
+<li>Faculty in <strong>computer science</strong>(??), <em>Middlebury College</em></li>
+</ul>
 </div>
-<p><br></p>
-<div class="textblock-2 center">
-<p><em>Junior folks: ask me about <span class="alert-2"><strong>#LiberalArtsLife</strong></span> if you’re curious.</em></p>
+<!-- <br> -->
+<div class="textblock-2 center fragment">
+<p>I <span class="alert-2">teach courses</span> in discrete math, data science, machine learning and network science.</p>
 </div>
-<p><br></p>
-<div class="textblock-3 center">
-<p>I like aikido, tea, my cats, being outside, hypergraphs, and <span class="alert-3">math models of social systems</span>.</p>
+<!-- <br> -->
+<div class="textblock-3 center fragment">
+<p>I like aikido, tea, my cats, being outside, reading, cooking, and <span class="alert-3">cool math stuff</span> (modeling + data science).</p>
 </div>
 </div><div class="column">
 <p><img data-src="../_img/personal/aikido.png" class="absolute bordered-fig-tight" style="top: 10%; left: 10%; width: 45%; "> <img data-src="../_img/personal/opinion-dynamics.png" class="absolute bordered-fig-tight" style="top: 55%; left: 10%; width: 45%; "> <img data-src="../_img/personal/cats.jpeg" class="absolute bordered-fig-tight" style="top: 10%; right: 12%; width: 25.5%; "> <img data-src="../_img/personal/xgi-hypergraph.webp" class="absolute bordered-fig-tight" style="top: 31%; right: 12%; width: 25.5%; "> <img data-src="../_img/personal/tea.jpeg" class="absolute bordered-fig-tight" style="top: 52%; right: 12%; width: 25.5%; "> <img data-src="../_img/personal/cycling-2.jpeg" class="absolute bordered-fig-tight" style="top: 73%; right: 12%; width: 25.5%; "></p>
 </div></section>
+<section id="whats-cool-to-me-lately" class="slide level2 split-40">
+<h2>What’s cool to me (lately)</h2>
+<div class="column">
+<p><br></p>
+<p><span class="alert-1">Dynamical systems</span>: deterministic evolution of a system over time. <span class="math display">\[
+\mathbf{x}_{t+1} = g_{\color{#17868F}{\theta}}(\mathbf{x}_t)
+\]</span> <span class="alert-2"><span class="math inline">\(\theta\)</span></span> is a system parameter that tunes the dynamics.</p>
+<div class="textblock-1">
+<p>What is the long-term behavior of a system governed by evolution rules <span class="math inline">\(g_\theta\)</span>?</p>
+</div>
+</div><div class="column">
+<p><img data-src="../_img/shared/sbcm.png" class="bordered-fig-tight"> <img data-src="../_img/shared/sbcm-network.png" class="bordered-fig-tight quarto-figure quarto-figure-center" style="width:55.0%;height:55.0%"> <img data-src="../_img/shared/sbcm-phase-diagram.png" class="bordered-fig-tight quarto-figure quarto-figure-center" style="width:39.0%;height:39.0%"></p>
+</div></section>
+<section id="whats-cool-to-me-lately-1" class="slide level2 split-40">
+<h2>What’s cool to me (lately)</h2>
+<div class="column">
+<p><br></p>
+<p><span class="alert-2">Stochastic processes</span>: <em>noisy</em> evolution of a system over time. <span class="math display">\[
+\begin{aligned}
+  X_{t+1} \sim \mathbb{P}\left(\cdot | X_t = x_t; \theta\right)
+\end{aligned}
+\]</span></p>
+<div class="textblock-2">
+<p>Common application: tune the probability structure so that <span class="math inline">\(X_t\)</span> has a certain specified distribution as <span class="math inline">\(t \rightarrow \infty\)</span>. (Markov chain Monte Carlo, simulated annealing)</p>
+</div>
+</div><div class="column">
+<p><img data-src="../_img/shared/hyper-config.png" class="bordered-fig-tight"> <img data-src="../_img/shared/hyper-config-fig.png" class="bordered-fig-tight quarto-figure quarto-figure-center"></p>
+</div></section>
+<section id="whats-cool-to-me-lately-2" class="slide level2 split-40">
+<h2>What’s cool to me (lately)</h2>
+<div class="column">
+<p><br></p>
+<p><span class="alert-3">Stochastic processes with latent variables</span>: noisy evolution of a <em>partially observed</em> system <span class="math display">\[
+\begin{aligned}
+  X_{t+1} \sim \mathbb{P}\left(\cdot | X_t = x_t, {\color{#17868F}{U_t = u_t}}; \theta\right)
+\end{aligned}
+\]</span></p>
+<p>Here, <span class="alert-2"><span class="math inline">\(U_t\)</span></span> is some process in the system which we postulate but do not observe.</p>
+<div class="textblock-3">
+<p>Big idea: we don’t need <em>direct data</em> on a phenomenon to include it in our models.</p>
+</div>
+</div><div class="column">
+<p><img data-src="../_img/shared/hcm.png" class="bordered-fig-tight"> <img data-src="../_img/shared/hcm-fig.png" class="bordered-fig-tight quarto-figure quarto-figure-center"></p>
+</div></section>
+<section id="today" class="slide level2">
+<h2>Today</h2>
+<h3 id="stochastic-dynamics-with-latent-variables-for-modeling-social-influence"><span class="alert-3">stochastic dynamics</span> with <span class="alert-2">latent variables</span> for <span class="alert-1">modeling social influence</span></h3>
+<p><br><br><br></p>
+</section>
 <section id="section" class="slide level2 split-50">
 <h2></h2>
 <div class="column">
@@ -930,94 +984,115 @@ So, which of these is "right"?
           display:block!important;
       }</style></aside>
 <p><span class="ht">Slide h/t Will Thompson</span></p>
-</section>
-<section id="section-3" class="slide level2 split-50">
-<h2></h2>
-<h4 id="how-do-we-learn-the-kernel-from-data"><span class="absolute-header">How do we learn the kernel from data?</span></h4>
-<div class="column">
-<p><br> <br></p>
-<p>Easiest case: for each <span class="math inline">\(i\)</span> there is only one neighbor <span class="math inline">\(j\)</span>.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="../_img/kernel-inference/one-neighbor.png" class="quarto-figure quarto-figure-center" style="width:50.0%;height:50.0%"></p>
-</figure>
-</div>
-<p><span class="math display">\[
+<!-- 
+## {.split-50}
+
+#### [How do we learn the kernel from data?]{.absolute-header}
+
+::: {.column}
+
+<br> <br> 
+
+Easiest case: for each $i$ there is only one neighbor $j$. 
+
+![](../_img/kernel-inference/one-neighbor.png){width="50%" height="50%" fig-align="center"}
+
+$$
 \begin{aligned}
   x_i(t+1) - x_i(t)
-    &amp;=  k(|d|) + \text{noise}\\
-    d &amp;= x_j(t) - x_i(t)
+    &=  k(|d|) + \text{noise}\\ 
+    d &= x_j(t) - x_i(t)
 \end{aligned}
-\]</span></p>
-</div><div class="column">
-<p><br></p>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="../_img/kernel-inference/adams_p08_scatter_only.png" class="bordered-fig quarto-figure quarto-figure-center"></p>
-</figure>
-</div>
-<p><span class="footnote">Adams, White, and Araujo (2022). “Person-to-person opinion dynamics: An empirical study using an online game.” <em>PLoS ONE</em>.</span></p>
-</div></section>
-<section id="section-4" class="slide level2">
-<h2></h2>
-<p><img data-src="../_img/kernel-inference/adams_p08_scatter_only.png" class="absolute bordered-fig" style="top: 30px; right: 150px; width: 30%; "></p>
-</section>
-<section id="section-5" class="slide level2" data-background-image="../_img/kernel-inference/is-this-a.jpeg" data-background-size="contain" data-background-position="center" data-background-repeat="no-repeat" data-background-color="black">
-<h2></h2>
-<p><img data-src="../_img/kernel-inference/adams_p08_scatter_only.png" class="absolute bordered-fig" style="top: 30px; right: 150px; width: 30%; "></p>
-<p><img data-src="../_img/kernel-inference/adams_p08_scatter_and_conditional_mean.png" class="absolute fragment bordered-fig" style="top: 30px; right: 150px; width: 30%; "></p>
-</section>
-<section id="section-6" class="slide level2 split-30">
-<h2></h2>
-<h4 id="a-more-complex-case-multiple-neighbors"><span class="absolute-header">A more complex case: multiple neighbors</span></h4>
-<div class="column">
-<p><br></p>
-<p><img data-src="../_img/kernel-inference/neighborhood-averaging.png" class="quarto-figure quarto-figure-center" style="width:100.0%;height:100.0%"> <span class="math display">\[
+$$
+
+:::
+
+::: {.column}
+
+<br> 
+
+![](../_img/kernel-inference/adams_p08_scatter_only.png){fig-align="center" .bordered-fig}
+
+[Adams, White, and Araujo (2022). "Person-to-person opinion dynamics: An empirical study using an online game." *PLoS ONE*.]{.footnote}
+
+::: -->
+<!-- ##  -->
+<!-- ![](../_img/kernel-inference/adams_p08_scatter_only.png){.absolute top=30 right=150 width="30%" .bordered-fig} -->
+<!-- 
+
+## {background-image="../_img/kernel-inference/is-this-a.jpeg" background-size="contain" background-position="center" background-repeat="no-repeat" background-color="black"}
+
+
+![](../_img/kernel-inference/adams_p08_scatter_only.png){.absolute top=30 right=150 width="30%" .bordered-fig}
+
+![](../_img/kernel-inference/adams_p08_scatter_and_conditional_mean.png){.absolute top=30 right=150 width="30%" .fragment .bordered-fig} -->
+<!-- 
+
+
+## {.split-30}
+
+#### [A more complex case: multiple neighbors]{.absolute-header}
+
+::: {.column}
+
+<br>
+
+![](../_img/kernel-inference/neighborhood-averaging.png){width="100%" height="100%" fig-align="center"}
+$$
 \begin{aligned}
   \delta_i
-    &amp;\approx  \frac{1}{|\partial i|} \sum_{j \in \partial i} k(d_{ij}) \;?\\
-  \delta_i &amp;\approx k\left(
+    &\approx  \frac{1}{|\partial i|} \sum_{j \in \partial i} k(d_{ij}) \;?\\
+  \delta_i &\approx k\left(
 \frac{1}{|\partial i|} \sum_{j \in \partial i} d_{ij}
   \right) \;?
 \end{aligned}
-\]</span></p>
-</div><div class="column">
-<p><br></p>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="../_img/kernel-inference/plos_gauging_scatter_and_conditional_mean.png" class="bordered-fig quarto-figure quarto-figure-center" style="width:70.0%"></p>
-</figure>
-</div>
-<p><span class="footnote">Vande Kerckhove + al.&nbsp;(2016). “Modelling Influence and Opinion Evolution in Online Collective Behaviour.” <em>PLoS ONE</em>.</span></p>
-</div></section>
-<section id="section-7" class="slide level2 split-50">
+$$
+
+:::
+
+::: {.column}
+
+<br> 
+
+![](../_img/kernel-inference/plos_gauging_scatter_and_conditional_mean.png){width="70%" fig-align="center" .bordered-fig}
+
+[Vande Kerckhove + al. (2016). "Modelling Influence and Opinion Evolution in Online Collective Behaviour." *PLoS ONE*.]{.footnote}
+
+::: -->
+</section>
+<section id="section-3" class="slide level2 split-50">
 <h2></h2>
 <h3 id="some-common-implicit-assumptions"><span class="absolute-header">Some common implicit assumptions</span></h3>
 <div class="column">
 <p><br> <br> <br></p>
 <p><span style="font-size: 1.5em;">At each timestep each agent <br> <span class="alert-1"><strong><em>always</em></strong></span> <br> interacts with <br> <span class="alert-2"><strong><em>all</em></strong></span> <br> of their neighbors.</span></p>
-</div><div class="column">
-<p><br></p>
-<p><span class="math display">\[
+</div><!-- 
+::: {.column}
+
+<br>
+
+
+$$
 \begin{aligned}
   \delta_i
-    &amp;\approx  \frac{1}{|\partial i|} \sum_{j \in \partial i} k(d_{ij}) \;?
+    &\approx  \frac{1}{|\partial i|} \sum_{j \in \partial i} k(d_{ij}) \;? 
 \end{aligned}
-\]</span></p>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="../_img/kernel-inference/neighborhood-averaging.png" class="quarto-figure quarto-figure-center" style="width:50.0%;height:0.0%"></p>
-</figure>
-</div>
-</div></section>
-<section id="section-8" class="slide level2 split-50">
+$$
+
+
+
+![](../_img/kernel-inference/neighborhood-averaging.png){width="50%" height="0%" fig-align="center"}
+
+:::  -->
+</section>
+<section id="section-4" class="slide level2 split-50">
 <h2></h2>
 <h3 id="core-idea-for-today-selective-attention"><span class="absolute-header">Core idea for today: selective attention</span></h3>
 <div class="column">
 <p><br> <br> <br></p>
 <p><span style="font-size: 1.5em;">At each timestep each agent <br> <span class="alert-1"><strong><em><del>always</del> sometimes</em></strong></span> <br> interacts with <br> <span class="alert-2"><strong><em><del>all</del> some</em></strong></span> <br> of their neighbors.</span></p>
 <div class="textblock-3 fragment fade-in-then-out" data-fragment-index="4">
-<p>This is complex because we typically <em>don’t observe</em> these attentional mechanisms: we only observe the opinion changes that result.</p>
+<p>Stochastic dynamics with latent variables! <strong>We typically don’t observe the interactions</strong>: we only observe the opinion changes that result.</p>
 </div>
 </div><div class="column">
 <div class="quarto-figure quarto-figure-center">
@@ -1203,31 +1278,59 @@ So, which of these is "right"?
       }</style></aside>
 <p><span class="ht">Slide h/t Will Thompson</span></p>
 </section>
-<section id="section-9" class="slide level2 split-50">
+<section id="section-5" class="slide level2">
 <h2></h2>
-<div class="column">
-<h3 id="learning-the-model">Learning the model</h3>
-<p><img data-src="../_img/kernel-inference/data-schematic.png" class="fragment fade-out absolute" style="top: 15%; left: 5%; width: 70%; " data-fragment-index="1"></p>
-<p><img data-src="../_img/kernel-inference/em.png" class="fragment fade-in-then-out absolute" style="top: 20%; left: 5%; width: 70%; " data-fragment-index="1"></p>
-<p><img data-src="../_img/kernel-inference/model-selection-cartoon.png" class="fragment fade-in-then-out absolute" style="top: 30%; left: 5%; width: 100%; " data-fragment-index="2"></p>
-</div><div class="column">
-<p><br></p>
-<div class="textblock-1 fragment semi-fade-out" data-fragment-index="1">
-<p>Our stochastic model defines a <span class="alert-1">likelihood function</span> over observed opinion trajectories, given an observation of a fixed network of possible interactions.</p>
+<h3 id="learning-the-model-maximum-likelihood">Learning the model: maximum likelihood</h3>
+<p>Our stochastic model defines a <span class="alert-1">likelihood function</span> over observed opinion trajectories, given an observation of a fixed network of possible interactions:</p>
+<div class="fragment">
+<p><span class="math display">\[
+\begin{aligned}
+  \overbrace{\mathbb{P}(\mathcal{D}; \theta)}^{\text{Data set}} &amp;= \underbrace{\mathbb{P}(X_{0} = x_{0})}_{\text{Initial state}}\prod_{t=0}^{T-1} \overbrace{\mathbb{P}(X_{t+1} = x_{t+1} | X_{t} = x_t; \theta)}^{\text{Transition probabilities } q_\theta(x_{t+1}, x_t)} \\
+  q_\theta(x_{t+1}, x_t) &amp;= \sum_{u \in \mathcal{U}_t}\mathbb{P}(X_{t+1} = x_{t+1} | X_{t} = x_t, \underbrace{U_t = u}_{\text{unobserved\\mechanisms }}; \theta)\mathbb{P}(U_t = u | X_{t} = x_t; \theta)
+\end{aligned}
+\]</span></p>
 </div>
-<p><br></p>
-<div class="textblock-2 fragment fade-in-then-semi-out" data-fragment-index="1">
-<p>We learn the kernel parameters by maximizing this likelihood via the <span class="alert-2">expectation-maximization (EM) algorithm</span> (Dempster et al., 1977).</p>
+<div class="fragment">
+<p>We’ll try to learn this model by solving an optimization problem: <span class="math display">\[
+\begin{aligned}
+  \hat{\theta} = \arg \max_{\theta}  \mathbb{P}(\mathcal{D}; \theta)
+\end{aligned}
+\]</span></p>
 </div>
-<p><br></p>
-<div class="textblock-3 fragment fade-in-then-semi-out" data-fragment-index="2">
-<p>We <span class="alert-3">select between competing models</span> (kernels, mechanisms, etc.) by evaluating their predictive likelihoods on held-out validation data.</p>
+</section>
+<section id="section-6" class="slide level2">
+<h2></h2>
+<h3 id="learning-the-model-expectation-maximization-dempster-et-al.-1977">Learning the model: expectation-maximization ((Dempster et al., 1977))</h3>
+<p>We want a sequence <span class="math inline">\(\theta^{(0)}, \theta^{(1)},\ldots \rightarrow \hat{\theta} = \arg \max_{\theta}  \mathbb{P}(\mathcal{D}; \theta)\)</span>.</p>
+<div class="textblock-1 fragment">
+<p><span class="alert-1">E-step</span>: Update our beliefs about the unobserved mechanisms.</p>
+<p><span class="math display">\[
+\begin{aligned}
+  z^{(k)}_{t,u} = \frac{\mathbb{P} (X_{t+1} = x_{t+1} | X_{t} = x_t, U_t = u; \theta^{(k)}) \mathbb{P}(U_t = u | X_{t} = x_t; \theta^{(k)})}{\sum_{u' \in \mathcal{U}_t}\mathbb{P}(X_{t+1} = x_{t+1} | X_{t} = x_t, U_t = u'; \theta^{(k)}) \mathbb{P}(U_t = u' | X_{t} = x_t; \theta^{(k)})}
+\end{aligned}
+\]</span></p>
 </div>
-</div></section>
-<section id="omitting-retention-and-neighbor-selection-alters-learned-kernels" class="slide level2">
-<h2>Omitting retention and neighbor selection alters learned kernels</h2>
+<div class="textblock-2 fragment">
+<p><span class="alert-2">M-step</span>: Update the model parameters to maximize the expected log-likelihood.</p>
+<p><span class="math display">\[
+\begin{aligned}
+  \theta^{(k+1)} = \arg \max_{\theta} \sum_{t=0}^{T-1} \sum_{u \in \mathcal{U_t}} z^{(k)}_{t,u} \log \left[\mathbb{P}(X_{t+1} = x_{t+1} | X_{t} = x_t, U_t = u; \theta) \mathbb{P}(U_t = u | X_{t} = x_t; \theta)\right]
+\end{aligned}
+\]</span></p>
+</div>
+</section>
+<section id="sidebar-information-geometry-is-really-cool" class="slide level2">
+<h2><em>Sidebar: information geometry is really cool</em></h2>
 
-<img data-src="../_img/kernel-inference/synthetic-experiment.png" class="bordered-fig r-stretch"></section>
+<img data-src="../_img/kernel-inference/em-geometry.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"><p><span class="absolute" style="bottom: 0px; right: 0px; width: 100%; ">Hino et al.&nbsp;(2024). “Geometry of EM and related iterative algorithms”</span></p>
+</section>
+<section id="learning-the-model-model-selection" class="slide level2">
+<h2>Learning the model: model selection</h2>
+<p>We <span class="alert-3">select between competing models</span> (kernels, mechanisms, etc.) by evaluating their predictive likelihoods on held-out validation data.</p>
+
+<!-- ## Omitting retention and neighbor selection alters learned kernels -->
+<!-- ![](../_img/kernel-inference/synthetic-experiment.png){.bordered-fig} -->
+<img data-src="../_img/kernel-inference/model-selection-cartoon.png" class="quarto-figure quarto-figure-center r-stretch" style="width:100.0%"></section>
 <section id="data-specimens" class="slide level2 markdown-source">
 <h2>But what about real people?</h2>
 <div class="specimen-grid">
@@ -1488,8 +1591,8 @@ So, which of these is "right"?
 <p>We can model what we don’t observe directly: we just need to tie it statistically to things that we do observe.</p>
 </div>
 <div class="textblock-3 fragment fade-in-then-semi-out" data-fragment-index="3">
-<p><span class="alert-3">We direct our attention!</span></p>
-<p>Even simple representations of attention can improve prediction and alter our conclusions.</p>
+<p><span class="alert-3">Flexible modeling</span></p>
+<p>Stochastic dynamics + algorithms offer us a rich toolbox for learning about complex systems.</p>
 </div>
 </div><div class="column">
 <p><img data-src="../_img/kernel-inference/interaction-choice-2.png" class="fragment fade-in-then-out absolute" style="top: 5%; left: 25%; width: 30%; " data-fragment-index="1"></p>
