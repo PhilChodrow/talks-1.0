@@ -1115,7 +1115,7 @@ We want a sequence $\theta^{(0)}, \theta^{(1)},\ldots \rightarrow \hat{\theta} =
 
 [E-step]{.alert-1}: Update our beliefs about the unobserved mechanisms. 
 
-
+<br>
 
 $$
 \begin{aligned}
@@ -1136,7 +1136,7 @@ $$
 
 [M-step]{.alert-2}: Update the model parameters to maximize the expected log-likelihood.
 
-
+<br>
 
 $$
 \begin{aligned}

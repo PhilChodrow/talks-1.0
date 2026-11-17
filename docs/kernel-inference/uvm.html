@@ -1304,6 +1304,7 @@ $$
 <p>We want a sequence <span class="math inline">\(\theta^{(0)}, \theta^{(1)},\ldots \rightarrow \hat{\theta} = \arg \max_{\theta}  \mathbb{P}(\mathcal{D}; \theta)\)</span>.</p>
 <div class="textblock-1 fragment">
 <p><span class="alert-1">E-step</span>: Update our beliefs about the unobserved mechanisms.</p>
+<p><br></p>
 <p><span class="math display">\[
 \begin{aligned}
   z^{(k)}_{t,u} = \frac{\mathbb{P} (X_{t+1} = x_{t+1} | X_{t} = x_t, U_t = u; \theta^{(k)}) \mathbb{P}(U_t = u | X_{t} = x_t; \theta^{(k)})}{\sum_{u' \in \mathcal{U}_t}\mathbb{P}(X_{t+1} = x_{t+1} | X_{t} = x_t, U_t = u'; \theta^{(k)}) \mathbb{P}(U_t = u' | X_{t} = x_t; \theta^{(k)})}\;.
@@ -1312,6 +1313,7 @@ $$
 </div>
 <div class="textblock-2 fragment">
 <p><span class="alert-2">M-step</span>: Update the model parameters to maximize the expected log-likelihood.</p>
+<p><br></p>
 <p><span class="math display">\[
 \begin{aligned}
   \theta^{(k+1)} = \arg \max_{\theta} \sum_{t=0}^{T-1} \sum_{u \in \mathcal{U_t}} z^{(k)}_{t,u} \log \left[\mathbb{P}(X_{t+1} = x_{t+1} | X_{t} = x_t, U_t = u; \theta) \mathbb{P}(U_t = u | X_{t} = x_t; \theta)\right]\;.
